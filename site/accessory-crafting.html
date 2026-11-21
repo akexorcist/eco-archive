@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accessory Crafting · ECO Archive</title>
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="stylesheet" href="site.css">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body class="article">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/></symbol>
+<symbol id="i-left" viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></symbol>
+<symbol id="i-right" viewBox="0 0 24 24"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></symbol>
+<symbol id="i-unfold" viewBox="0 0 24 24"><path d="M12 5.83 15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"/></symbol>
+<symbol id="i-fold" viewBox="0 0 24 24"><path d="M7.41 18.59 8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM2 13h2a1 1 0 0 0 0-2H2a1 1 0 0 0 0 2zm18 0h2a1 1 0 0 0 0-2h-2a1 1 0 0 0 0 2zM11 2v2a1 1 0 0 0 2 0V2a1 1 0 0 0-2 0zm0 18v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-2 0zM5.99 4.58a1 1 0 0 0-1.41 1.41l1.06 1.06a1 1 0 0 0 1.41-1.41L5.99 4.58zm12.37 12.37a1 1 0 0 0-1.41 1.41l1.06 1.06a1 1 0 0 0 1.41-1.41l-1.06-1.06zm1.06-10.96a1 1 0 0 0-1.41-1.41l-1.06 1.06a1 1 0 0 0 1.41 1.41l1.06-1.06zM7.05 18.36a1 1 0 0 0-1.41-1.41l-1.06 1.06a1 1 0 0 0 1.41 1.41l1.06-1.06z"/></symbol>
+<symbol id="i-auto" viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zm1-17.93a8 8 0 0 1 0 15.86V4.07z"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="iconbtn" id="menubtn" aria-label="Open navigation" aria-controls="drawer" aria-expanded="false"><svg class="i"><use href="#i-menu"/></svg></button>
+  <a class="brand" href="index.html"><img class="logo" src="assets/misc_img/logo/eco_logo_topbar.png" alt="" width="56" height="44"><span class="name">ECO Archive</span></a>
+  <div class="search" role="search">
+    <label for="q"><svg class="i"><use href="#i-search"/></svg><span class="visually-hidden">Search pages</span></label>
+    <input id="q" type="search" placeholder="Search jobs, quests, items…" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list">
+    <ul class="results" id="results" role="listbox" aria-label="Search results" hidden></ul>
+  </div>
+  <div class="thememenu">
+    <button class="iconbtn" id="themebtn" aria-haspopup="menu" aria-expanded="false" aria-controls="thememenu" aria-label="Theme"><svg class="i"><use href="#i-auto"/></svg></button>
+    <div class="menu" id="thememenu" role="menu" aria-label="Theme" hidden>
+      <button role="menuitemradio" data-mode="system" aria-checked="true"><svg class="i"><use href="#i-auto"/></svg>System<svg class="i check"><use href="#i-check"/></svg></button>
+      <button role="menuitemradio" data-mode="light" aria-checked="false"><svg class="i"><use href="#i-sun"/></svg>Light<svg class="i check"><use href="#i-check"/></svg></button>
+      <button role="menuitemradio" data-mode="dark" aria-checked="false"><svg class="i"><use href="#i-moon"/></svg>Dark<svg class="i check"><use href="#i-check"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+<div class="frame">
+  <nav class="drawer" id="drawer" aria-label="Site">
+    <div class="head"><span>ECO Archive</span><button class="iconbtn" aria-label="Close navigation"><svg class="i"><use href="#i-close"/></svg></button></div>
+    <ul><li><a href="index.html">Home</a></li><li><details><summary>Story<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="story.html">Story Overview</a></li><li><a href="story-the-path-we-walk.html">The Path We Walk</a></li><li><a href="story-the-world-begins-to-move.html">The World Begins to Move</a></li><li><a href="story-beyond-the-truth.html">Beyond the Truth</a></li><li><a href="story-final-battle.html">Final Battle</a></li><li><a href="story-saga14.html">Gate of Emerald Forest</a></li><li><a href="story-saga15.html">Everlasting Union</a></li><li><a href="story-saga16.html">Memories of the Ice Queen</a></li><li><a href="story-saga18.html">Carmine Brick</a></li></ul></details></li><li><details><summary>Getting started<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="game-basics.html">Game Basics</a></li><li><a href="races.html">Races</a></li><li><a href="stat-points.html">Status Points</a></li><li><a href="city-passes.html">City Passes</a></li><li><a href="enigma-pass.html">Enigma Group Pass</a></li></ul></details></li><li><details><summary>Game systems<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="automata.html">Automata</a></li><li><a href="bosses.html">Bosses</a></li><li><a href="catties.html">Catties</a></li><li><a href="demic-chips.html">DEMIC Chips</a></li><li><a href="dragon-mount.html">Dragon Mount</a></li><li><a href="dual-job.html">Dual Job</a></li><li><a href="dungeons.html">Dungeons</a></li><li><a href="element-fairies.html">Element Fairies</a></li><li><a href="equipment-upgrades.html">Equipment Upgrades</a></li><li><a href="fame.html">Fame</a></li><li><a href="farming.html">Farming</a></li><li><a href="fishing.html">Fishing</a></li><li><a href="flying-garden.html">Flying Garden</a></li><li><a href="flying-garden-parts.html">Flying Garden Parts</a></li><li><a href="furniture.html">Furniture</a></li><li><a href="hair-dye.html">Hair Dye</a></li><li><a href="hairstyles.html">Hairstyles</a></li><li><a href="getting-pets.html">How to Get Pets</a></li><li><a href="iris-cards.html">Iris Cards</a></li><li><a href="ability-vectors.html">Iris Cards – Ability Vectors</a></li><li><a href="item-repair.html">Item Repair</a></li><li><a href="job-switching.html">Job Switching</a></li><li><a href="marionettes.html">Marionettes &amp; Golems</a></li><li><a href="medal-machines.html">Medal Machines</a></li><li><a href="partners.html">Partners</a></li><li><a href="pet-raising.html">Pet Raising</a></li><li><a href="possession.html">Possession</a></li><li><a href="ring.html">Ring</a></li><li><a href="shops.html">Shops &amp; Merchants</a></li><li><a href="stamps.html">Stamps</a></li><li><a href="tiny-island.html">Tiny Island</a></li></ul></details></li><li><details><summary>Jobs<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="jobs.html">All jobs</a></li><li><details><summary>Fighter<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-scout.html">Scout</a></li><li><a href="job-assassin.html">Assassin</a></li><li><a href="job-commando.html">Commando</a></li><li><a href="job-eraser.html">Eraser</a></li><li><a href="job-swordsman.html">Swordsman</a></li><li><a href="job-blade-master.html">Blade Master</a></li><li><a href="job-bounty-hunter.html">Bounty Hunter</a></li><li><a href="job-gladiator.html">Gladiator</a></li><li><a href="job-fencer.html">Fencer</a></li><li><a href="job-knight.html">Knight</a></li><li><a href="job-dark-stalker.html">Dark Stalker</a></li><li><a href="job-guardian.html">Guardian</a></li><li><a href="job-archer.html">Archer</a></li><li><a href="job-striker.html">Striker</a></li><li><a href="job-gunner.html">Gunner</a></li><li><a href="job-hawkeye.html">Hawkeye</a></li></ul></details></li><li><details><summary>Spell User<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-warlock.html">Warlock</a></li><li><a href="job-cabalist.html">Cabalist</a></li><li><a href="job-necromancer.html">Necromancer</a></li><li><a href="job-soultaker.html">Soul Taker</a></li><li><a href="job-vates.html">Vates</a></li><li><a href="job-druid.html">Druid</a></li><li><a href="job-bard.html">Bard</a></li><li><a href="job-cardinal.html">Cardinal</a></li><li><a href="job-shaman.html">Shaman</a></li><li><a href="job-elementalist.html">Elementalist</a></li><li><a href="job-enchanter.html">Enchanter</a></li><li><a href="job-astralist.html">Astralist</a></li><li><a href="job-wizard.html">Wizard</a></li><li><a href="job-sorcerer.html">Sorcerer</a></li><li><a href="job-sage.html">Sage</a></li><li><a href="job-force-master.html">Force Master</a></li></ul></details></li><li><details><summary>Backpacker<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-farmer.html">Farmer</a></li><li><a href="job-alchemist.html">Alchemist</a></li><li><a href="job-marionettist.html">Marionettist</a></li><li><a href="job-harvester.html">Harvester</a></li><li><a href="job-miner.html">Miner (Tatarabe)</a></li><li><a href="job-blacksmith.html">Blacksmith</a></li><li><a href="job-engineer.html">Engineer (Machinery)</a></li><li><a href="job-maestro.html">Maestro</a></li><li><a href="job-ranger.html">Ranger</a></li><li><a href="job-explorer.html">Explorer</a></li><li><a href="job-treasure-hunter.html">Treasure Hunter</a></li><li><a href="job-strider.html">Strider</a></li><li><a href="job-merchant.html">Merchant</a></li><li><a href="job-trader.html">Trader</a></li><li><a href="job-gambler.html">Gambler</a></li><li><a href="job-royal-dealer.html">Royal Dealer</a></li></ul></details></li><li><details><summary>Other jobs<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-breeder.html">Breeder</a></li><li><a href="job-gardener.html">Gardener</a></li><li><a href="job-joker.html">Joker</a></li><li><a href="job-novice.html">Novice</a></li></ul></details></li></ul></details></li><li><details><summary>Quests<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="quest-catty-ai.html">Catty (Ai) Quest</a></li><li><a href="quest-catty-akane.html">Catty (Akane) Quest</a></li><li><a href="quest-catty-anzu.html">Catty (Anzu) Quest</a></li><li><a href="quest-catty-kurumi.html">Catty (Kurumi Wakana) Quest</a></li><li><a href="quest-catty-momo.html">Catty (Momo) Quest</a></li><li><a href="quest-catty-sora.html">Catty (Sora) Quest</a></li><li><a href="quest-catty-sumire.html">Catty (Sumire) Quest</a></li><li><a href="quest-catty-yamabuki.html">Catty (Yamabuki) Quest</a></li><li><a href="quest-cleaning.html">Cleaning Quests</a></li><li><a href="quest-endless-corridor.html">Endless Corridor Quests</a></li><li><a href="free-skill-points.html">Free Skill Points</a></li><li><a href="quest-heart-of-the-machine.html">Heart of the Machine</a></li><li><a href="quest-lv35-armor.html">Lv 35 Armor Quest</a></li><li><a href="quest-lv45-armor.html">Lv 45 Armor Quest</a></li><li><a href="quest-lv55-armor.html">Lv 55 Armor Quest</a></li><li><a href="quest-lv55-hat-shoes.html">Lv 55 Backpacker Hat &amp; Shoes Quest</a></li><li><a href="quest-lv60-weapon.html">Lv 60 Weapon Quest</a></li><li><a href="quest-lv65-armor.html">Lv 65 Armor Quest</a></li><li><a href="quest-lv75-armor.html">Lv 75 Armor Quest</a></li><li><a href="quest-lv85-armor.html">Lv 85 Armor Quest</a></li><li><a href="quest-lv90-weapon.html">Lv 90 Weapon Quest</a></li><li><a href="quest-lv99-armor.html">Lv 99 Armor Quest</a></li><li><a href="quest-lv99-weapon.html">Lv 99 Weapon Quest</a></li><li><a href="quest-counter.html">Quest Counter</a></li><li><a href="quest-reincarnation.html">Reincarnation Quest</a></li><li><a href="quest-ride-crawler.html">Ride Crawler Quest</a></li><li><a href="quest-tutorial.html">Tutorial Quests</a></li></ul></details></li><li><details><summary>Items<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="boxes.html">Boxes</a></li><li><a href="petals.html">Flower Petals</a></li><li><a href="food-items.html">Food and Healing Items</a></li><li><a href="upgrade-crystals.html">Upgrade Crystals</a></li><li><a href="equipment.html">Weapons &amp; Armor</a></li></ul></details></li><li><details open><summary>Crafting<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="accessory-crafting.html" aria-current="page">Accessory Crafting</a></li><li><a href="armor-crafting.html">Armor Crafting</a></li><li><a href="chemical-preparation.html">Chemical Preparation</a></li><li><a href="cooking.html">Cooking</a></li><li><details><summary>Recipes &amp; Materials<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="crafting.html">Craftable Items</a></li><li><a href="materials.html">Crafting Materials</a></li></ul></details></li><li><a href="fairy-scrolls.html">Fairy Scrolls</a></li><li><a href="machinery-crafting.html">Machinery Crafting</a></li><li><a href="metal-refining.html">Metal Refining</a></li><li><a href="refining.html">Refining</a></li><li><a href="tailoring.html">Tailoring</a></li><li><a href="weapon-crafting.html">Weapon Crafting</a></li><li><a href="woodcraft.html">Woodcraft</a></li></ul></details></li><li><a href="monsters.html">Monsters</a></li><li><a href="maps.html">Maps</a></li><li><details><summary>Miscellaneous<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="misc-logo.html">Logo</a></li><li><a href="misc-videos.html">Trailer</a></li><li><details><summary>Artwork<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="misc-catty-art.html">Catty &amp; Pet Art</a></li><li><a href="art-partners.html">Partner Art</a></li><li><a href="art-races.html">Character Art</a></li><li><a href="art-jobs.html">Job Art</a></li><li><a href="misc-monster-artwork.html">Marionette &amp; Monster Artwork</a></li><li><a href="art-seasonal.html">Seasonal Art</a></li><li><a href="art-sketches.html">Concept Sketches</a></li></ul></details></li><li><a href="misc-servers.html">Official Servers</a></li></ul></details></li><li><a href="references.html">Sources &amp; Credits</a></li></ul>
+  </nav>
+  <main class="content" id="main" tabindex="-1">
+<nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li>Crafting</li></ol></nav><header class="hero plain"><div><h1>Accessory Crafting</h1><p class="lead">Accessory Construction, the craft that makes hair ornaments, glasses, pendants and cut gems.</p></div></header><details class="toc-inline"><summary>On this page</summary><ul><li><a href="#how-it-works">How it works</a></li><li><a href="#tools-and-common-parts">Tools and common parts</a></li><li><a href="#cutting-gems">Cutting gems</a></li><li><a href="#glasses">Glasses</a></li><li><a href="#notable-accessories">Notable accessories</a></li><li><a href="#related">Related</a></li></ul></details>
+
+
+
+<h2 id="how-it-works">How it works</h2>
+<p>Talk to the <b class="enttip" tabindex="0" data-pic="assets/npc_img/11000043.png">Jewelry Shop</b> in the <a class="ent" data-pic="assets/minimap/m023.png" data-tip="room" data-pin="60.0%,38.5%" data-cap="Uptown" href="maps.html#map:10023000">Jewelry Shop</a>, <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10023000">Uptown</a>, with the materials and the tool in your inventory. She makes every recipe up to Lv 5.</p>
+<div class="npc" role="group" aria-label="Jewelry Shop"><div class="who"><img src="assets/npc_thumb/11000043.png" alt="" loading="lazy"><b>Jewelry Shop</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m023.png" alt="Map of Uptown" loading="lazy"><span class="pin hl below" data-name="Jewelry Shop entrance" style="left:60.0%;top:38.5%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10023000">Uptown</a></figcaption></figure>
+<figure class="scene"><img src="assets/scene_img/npc_11000043.webp" alt="Jewelry Shop in the game" loading="lazy"></figure></div>
+
+<ul>
+<li>No job learns Accessory Construction.</li>
+<li>Almost every recipe is free. Only the <a class="ent" href="crafting.html#recipe:2540"><img class="inicon" src="assets/item_icon/61082500.png" alt="">Mark of the Familiar</a> recipes cost 5,000 G.</li>
+<li>Most accessories come out as the normal item 91% of the time. The other 9% come out better:<ul>
+<li>5%: the +1 version, such as <img class="inicon" src="assets/item_icon/50040800.png" alt=""><b>Red Round-Rimmed Glasses +1</b></li>
+<li>3%: the +2 version</li>
+<li>1%: the +3 version</li>
+</ul>
+</li>
+<li>Cut gems always succeed.</li>
+<li>The <a href="crafting.html">Crafting</a> page lists every Accessory Construction recipe.</li>
+</ul>
+<h2 id="tools-and-common-parts">Tools and common parts</h2>
+<div class="lettergrid toolgrid">
+<div class="lettercard"><h4><a class="ent" href="materials.html#item:10043501"><img class="inicon" src="assets/item_icon/10043500.png" alt="">Jewelry Tools</a></h4><dl><div><dt>Use</dt><dd>Tool for most accessories</dd></div><div><dt>Where to get it</dt><dd>Jewelry shops:<ul class="toollist"><li><span class="nm"><a class="ent" data-pic="assets/minimap/m063.png" data-tip="room" data-pin="53.7%,69.3%" data-cap="Upper Iron City" href="maps.html#map:10063100">Iron City Jewelry Shop</a>,</span> <span class="nm"><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="28.46,87.69" href="maps.html#map:10063100">Upper Iron City</a></span></li><li><span class="nm"><a class="ent" data-pic="assets/minimap/m057.png" data-tip="room" data-pin="55.3%,33.8%" data-cap="Fareast City" href="maps.html#map:10057000">Fareast Jewelry Shop</a>,</span> <span class="nm"><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="87.69,36.92" href="maps.html#map:10057000">Fareast City</a></span></li><li><span class="nm"><a class="ent" data-pic="assets/minimap/m060.png" data-tip="room" data-pin="65.4%,51.0%" data-cap="Morg City" href="maps.html#map:10060000">Morg Jewelry Shop</a>,</span> <span class="nm"><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="11.54,79.23" href="maps.html#map:10060000">Morg City</a></span></li></ul></dd></div></dl></div>
+<div class="lettercard"><h4><a class="ent" href="materials.html#item:10023700"><img class="inicon" src="assets/item_icon/10023700.png" alt="">Pliers</a></h4><dl><div><dt>Use</dt><dd>Tool for the <a class="ent" href="materials.html#item:10041100"><img class="inicon" src="assets/item_icon/10041100.png" alt="">Glass Frame</a> and the <a class="ent" href="equipment.html#item:50036000"><img class="inicon" src="assets/item_icon/50036000.png" alt="">Tiara of Protection</a></dd></div><div><dt>Where to get it</dt><dd>Jewelry shops (same as <a class="ent" href="materials.html#item:10043501"><img class="inicon" src="assets/item_icon/10043500.png" alt="">Jewelry Tools</a>), plus:<ul class="toollist"><li><span class="nm"><a class="ent" data-pic="assets/minimap/m065.png" data-tip="room" data-pin="37.0%,69.1%" data-cap="Northern Promenade" href="maps.html#map:10065000">Northern Jewelry Shop</a>,</span> <span class="nm"><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,3.08" href="maps.html#map:10065000">Northern Promenade</a></span></li></ul></dd></div></dl></div>
+<div class="lettercard"><h4><a class="ent" href="materials.html#item:10038501"><img class="inicon" src="assets/item_icon/10038500.png" alt="">Diamond File</a></h4><dl><div><dt>Use</dt><dd>Tool for talismans and some pendants</dd></div><div><dt>Where to get it</dt><dd>Crafted in 2 steps:<ul class="toollist"><li>Make <a class="ent" href="materials.html#item:10046600"><img class="inicon" src="assets/item_icon/10001112.png" alt="">Diamond Dust</a> (<a href="crafting.html#recipe:796">Lv&nbsp;5</a>):<ul><li><span class="amt">1 × <a class="ent" href="materials.html#item:10011800"><img class="inicon" src="assets/item_icon/10011800.png" alt="">Diamond</a></span></li><li><a class="ent" href="materials.html#item:10023800"><img class="inicon" src="assets/item_icon/10023800.png" alt="">Iron Hammer</a> (tool)</li></ul></li><li>Make <a class="ent" href="materials.html#item:10038501"><img class="inicon" src="assets/item_icon/10038500.png" alt="">Diamond File</a> (<a href="crafting.html#recipe:797">Lv&nbsp;5</a>):<ul><li><span class="amt">1 × <a class="ent" href="materials.html#item:10046600"><img class="inicon" src="assets/item_icon/10001112.png" alt="">Diamond Dust</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10020300"><img class="inicon" src="assets/item_icon/10020300.png" alt="">Leather</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024300"><img class="inicon" src="assets/item_icon/10024300.png" alt="">Glue</a></span></li></ul></li></ul></dd></div></dl></div>
+<div class="lettercard"><h4><a class="ent" href="materials.html#item:10038101"><img class="inicon" src="assets/item_icon/10038100.png" alt="">Pin</a></h4><dl><div><dt>Use</dt><dd>Part in most brooches and pendants</dd></div><div><dt>Where to get it</dt><dd>Made with <a class="ent" href="job-blacksmith.html#skill:2010"><img class="inicon skicon" src="assets/ext/nekogame-wiki/assets/images/wiki/skills/SI_2010.png" alt="">Weapon Construction</a> (<a href="crafting.html#recipe:802">recipe</a>):<ul class="toollist"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038100"><img class="inicon" src="assets/item_icon/10035200.png" alt="">Needle</a></span></li><li><a class="ent" href="materials.html#item:10023700"><img class="inicon" src="assets/item_icon/10023700.png" alt="">Pliers</a> (tool)</li></ul></dd></div></dl></div>
+<div class="lettercard"><h4><a class="ent" href="materials.html#item:10024300"><img class="inicon" src="assets/item_icon/10024300.png" alt="">Glue</a></h4><dl><div><dt>Use</dt><dd>Part in most accessories</dd></div><div><dt>Where to get it</dt><dd>Made with <a class="ent" href="job-alchemist.html#skill:2022"><img class="inicon skicon" src="assets/ext/nekogame-wiki/assets/images/wiki/skills/SI_2022.png" alt="">Chemical Preparation</a> (<a href="crafting.html#recipe:567">recipe</a>):<ul class="toollist"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10008600"><img class="inicon" src="assets/item_icon/10008600.png" alt="">Snakehead Fish Sweat</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10032800"><img class="inicon" src="assets/item_icon/10032800.png" alt="">Jerico</a></span></li></ul></dd></div></dl></div>
+<div class="lettercard"><h4><a class="ent" href="materials.html#item:10045800"><img class="inicon" src="assets/item_icon/10001110.png" alt="">Abradant</a></h4><dl><div><dt>Use</dt><dd>Used to cut gems and lenses</dd></div><div><dt>Where to get it</dt><dd>Made with <a class="ent" href="job-alchemist.html#skill:2022"><img class="inicon skicon" src="assets/ext/nekogame-wiki/assets/images/wiki/skills/SI_2022.png" alt="">Chemical Preparation</a> (<a href="crafting.html#recipe:563">recipe</a>):<ul class="toollist"><li><span class="amt">4 × <a class="ent" href="materials.html#item:10014600"><img class="inicon" src="assets/item_icon/10014600.png" alt="">Pebble</a></span></li><li><a class="ent" href="materials.html#item:10023800"><img class="inicon" src="assets/item_icon/10023800.png" alt="">Iron Hammer</a> (tool)</li></ul></dd></div></dl></div>
+</div>
+
+<h2 id="cutting-gems">Cutting gems</h2>
+<p>At Lv 4, one crystal and <span class="amt">4 × <a class="ent" href="materials.html#item:10045800"><img class="inicon" src="assets/item_icon/10001110.png" alt="">Abradant</a></span> make one gem. The crystal's colour and number decide the gem.</p>
+<div class="lettergrid gemgrid">
+<div class="lettercard"><h4>Red crystal</h4><ul class="gemlines"><li><span class="nm"><a class="ent" href="materials.html#item:10046100"><img class="inicon" src="assets/item_icon/10011201.png" alt="">Red Crystal 1</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10012100"><img class="inicon" src="assets/item_icon/10012100.png" alt="">Heart Ruby</a></span></span></li><li><span class="nm"><a class="ent" href="materials.html#item:10046101"><img class="inicon" src="assets/item_icon/10011201.png" alt="">Red Crystal 2</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10013100"><img class="inicon" src="assets/item_icon/10013100.png" alt="">Garnet</a></span></span></li><li><span class="nm"><a class="ent" href="materials.html#item:10046102"><img class="inicon" src="assets/item_icon/10011201.png" alt="">Red Crystal 3</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10011302"><img class="inicon" src="assets/item_icon/10011302.png" alt="">Melody Stone</a></span></span></li><li><span class="nm"><a class="ent" href="materials.html#item:10046103"><img class="inicon" src="assets/item_icon/10011201.png" alt="">Red Crystal 4</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10011201"><img class="inicon" src="assets/item_icon/10011201.png" alt="">Flame Summonstone</a></span></span></li></ul></div>
+<div class="lettercard"><h4>Yellow crystal</h4><ul class="gemlines"><li><span class="nm"><a class="ent" href="materials.html#item:10046200"><img class="inicon" src="assets/item_icon/10011207.png" alt="">Yellow Crystal 1</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10012000"><img class="inicon" src="assets/item_icon/10012000.png" alt="">Imperial Topaz</a></span></span></li><li><span class="nm"><a class="ent" href="materials.html#item:10046201"><img class="inicon" src="assets/item_icon/10011207.png" alt="">Yellow Crystal 2</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10012800"><img class="inicon" src="assets/item_icon/10012800.png" alt="">Rutile</a></span></span></li><li><span class="nm"><a class="ent" href="materials.html#item:10046202"><img class="inicon" src="assets/item_icon/10011207.png" alt="">Yellow Crystal 3</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10011208"><img class="inicon" src="assets/item_icon/10011208.png" alt="">Electric Stone</a></span></span></li><li><span class="nm"><a class="ent" href="materials.html#item:10046203"><img class="inicon" src="assets/item_icon/10011207.png" alt="">Yellow Crystal 4</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10011207"><img class="inicon" src="assets/item_icon/10011207.png" alt="">Wind Summonstone</a></span></span></li></ul></div>
+<div class="lettercard"><h4>Blue crystal</h4><ul class="gemlines"><li><span class="nm"><a class="ent" href="materials.html#item:10046300"><img class="inicon" src="assets/item_icon/10011204.png" alt="">Blue Crystal 1</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10012200"><img class="inicon" src="assets/item_icon/10012200.png" alt="">Aquamarine</a></span></span></li><li><span class="nm"><a class="ent" href="materials.html#item:10046301"><img class="inicon" src="assets/item_icon/10011204.png" alt="">Blue Crystal 2</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10012500"><img class="inicon" src="assets/item_icon/10012500.png" alt="">Lapis Lazuli</a></span></span></li><li><span class="nm"><a class="ent" href="materials.html#item:10046302"><img class="inicon" src="assets/item_icon/10011204.png" alt="">Blue Crystal 3</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="crafting.html#recipe:771"><img class="inicon" src="assets/item_icon/10012900.png" alt="">Cheater Rock</a></span></span></li><li><span class="nm"><a class="ent" href="materials.html#item:10046303"><img class="inicon" src="assets/item_icon/10011204.png" alt="">Blue Crystal 4</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10011203"><img class="inicon" src="assets/item_icon/10011203.png" alt="">Water Summonstone</a></span></span></li></ul></div>
+<div class="lettercard"><h4>Green crystal</h4><ul class="gemlines"><li><span class="nm"><a class="ent" href="materials.html#item:10046400"><img class="inicon" src="assets/item_icon/10011205.png" alt="">Green Crystal 1</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10012400"><img class="inicon" src="assets/item_icon/10012400.png" alt="">Emerald</a></span></span></li><li><span class="nm"><a class="ent" href="materials.html#item:10046401"><img class="inicon" src="assets/item_icon/10011205.png" alt="">Green Crystal 2</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10012300"><img class="inicon" src="assets/item_icon/10012300.png" alt="">Peridot</a></span></span></li><li><span class="nm"><a class="ent" href="materials.html#item:10046402"><img class="inicon" src="assets/item_icon/10011205.png" alt="">Green Crystal 3</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="crafting.html#recipe:775"><img class="inicon" src="assets/item_icon/10013000.png" alt="">Jade</a></span></span></li><li><span class="nm"><a class="ent" href="materials.html#item:10046403"><img class="inicon" src="assets/item_icon/10011205.png" alt="">Green Crystal 4</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10011205"><img class="inicon" src="assets/item_icon/10011205.png" alt="">Earth Summonstone</a></span></span></li></ul></div>
+<div class="lettercard"><h4>Milky crystal</h4><ul class="gemlines"><li><span class="nm"><a class="ent" href="materials.html#item:10046500"><img class="inicon" src="assets/item_icon/10011211.png" alt="">Milky Crystal 1</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10011800"><img class="inicon" src="assets/item_icon/10011800.png" alt="">Diamond</a></span></span></li><li><span class="nm"><a class="ent" href="materials.html#item:10046501"><img class="inicon" src="assets/item_icon/10011211.png" alt="">Milky Crystal 2</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10011850"><img class="inicon" src="assets/item_icon/10011800.png" alt="">Cubic Zirconia</a></span></span></li><li><span class="nm"><a class="ent" href="materials.html#item:10046502"><img class="inicon" src="assets/item_icon/10011211.png" alt="">Milky Crystal 3</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10011900"><img class="inicon" src="assets/item_icon/10011900.png" alt="">Amethyst</a></span></span></li><li><span class="nm"><a class="ent" href="materials.html#item:10046503"><img class="inicon" src="assets/item_icon/10011211.png" alt="">Milky Crystal 4</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10012700"><img class="inicon" src="assets/item_icon/10012700.png" alt="">Falcon Eye</a></span></span></li><li><span class="nm"><a class="ent" href="materials.html#item:10046504"><img class="inicon" src="assets/item_icon/10011211.png" alt="">Milky Crystal 5</a></span><span class="to"><span class="arr" aria-hidden="true">→</span><span class="nm"><a class="ent" href="materials.html#item:10011210"><img class="inicon" src="assets/item_icon/10011211.png" alt="">Light Summonstone</a></span></span></li></ul></div>
+</div>
+
+<h2 id="glasses">Glasses</h2>
+<p>Each recipe in the table lists the parts it needs. Most glasses use a lens and a frame; the <a class="ent" href="equipment.html#item:50041300"><img class="inicon" src="assets/item_icon/50041300.png" alt="">Snorkel</a> uses only a lens.</p>
+<h3 id="glass-lenses">Glass Lenses</h3>
+<ul>
+<li>Make <a class="ent" href="materials.html#item:10046800"><img class="inicon" src="assets/item_icon/10031100.png" alt="">Glass Lenses</a> (<a href="crafting.html#recipe:749">Lv 3</a>):<ul>
+<li><span class="amt">1 × <a class="ent" href="materials.html#item:10014300"><img class="inicon" src="assets/item_icon/10014300.png" alt="">Crystal</a></span></li>
+<li><span class="amt">4 × <a class="ent" href="materials.html#item:10045800"><img class="inicon" src="assets/item_icon/10001110.png" alt="">Abradant</a></span></li>
+</ul>
+</li>
+</ul>
+<h3 id="glass-frame">Glass Frame</h3>
+<ol>
+<li>Make <a class="ent" href="materials.html#item:10045200"><img class="inicon" src="assets/item_icon/10024010.png" alt="">Titanium Wire</a> (<a href="crafting.html#recipe:752">Lv 3</a>):<ul>
+<li><span class="amt">1 × <a class="ent" href="materials.html#item:10040001"><img class="inicon" src="assets/item_icon/10039100.png" alt="">Titanium Rod</a></span>, made with <a class="ent" href="job-miner.html#skill:2051"><img class="inicon skicon" src="assets/ext/nekogame-wiki/assets/images/wiki/skills/SI_2051.png" alt="">Advanced Metal Refining</a></li>
+</ul>
+</li>
+<li>Make <a class="ent" href="materials.html#item:10041100"><img class="inicon" src="assets/item_icon/10041100.png" alt="">Glass Frame</a> (<a href="crafting.html#recipe:753">Lv 3</a>):<ul>
+<li><span class="amt">1 × <a class="ent" href="materials.html#item:10045200"><img class="inicon" src="assets/item_icon/10024010.png" alt="">Titanium Wire</a></span></li>
+<li><a class="ent" href="materials.html#item:10023700"><img class="inicon" src="assets/item_icon/10023700.png" alt="">Pliers</a> (tool)</li>
+</ul>
+</li>
+</ol>
+<h3 id="recipes">Recipes</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Glasses</th>
+<th>Materials</th>
+<th>Recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="equipment.html#item:50040800"><img class="inicon" src="assets/item_icon/50040800.png" alt="">Red Round-Rimmed Glasses</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10046800"><img class="inicon" src="assets/item_icon/10031100.png" alt="">Glass Lenses</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10041100"><img class="inicon" src="assets/item_icon/10041100.png" alt="">Glass Frame</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10001101"><img class="inicon" src="assets/item_icon/10001101.png" alt="">Red Powder</a></span></li></ul></td>
+<td><a href="crafting.html#recipe:742">Lv 3</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50042400"><img class="inicon" src="assets/item_icon/50042400.png" alt="">Monocle</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10046800"><img class="inicon" src="assets/item_icon/10031100.png" alt="">Glass Lenses</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10041100"><img class="inicon" src="assets/item_icon/10041100.png" alt="">Glass Frame</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10037601"><img class="inicon" src="assets/item_icon/10037600.png" alt="">Golden Decoration</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024300"><img class="inicon" src="assets/item_icon/10024300.png" alt="">Glue</a></span></li></ul></td>
+<td><a href="crafting.html#recipe:757">Lv 3</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50041900"><img class="inicon" src="assets/item_icon/50041900.png" alt="">Brain Glasses</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10046800"><img class="inicon" src="assets/item_icon/10031100.png" alt="">Glass Lenses</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10041100"><img class="inicon" src="assets/item_icon/10041100.png" alt="">Glass Frame</a></span></li><li><span class="amt">10 × <a class="ent" href="materials.html#item:10000304"><img class="inicon" src="assets/item_icon/10000304.png" alt="">Ether</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10009107"><img class="inicon" src="assets/item_icon/10009107.png" alt="">Lunar Piece</a></span></li></ul></td>
+<td><a href="crafting.html#recipe:782">Lv 4</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50042000"><img class="inicon" src="assets/item_icon/50042000.png" alt="">Oval Framed Glasses</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10046800"><img class="inicon" src="assets/item_icon/10031100.png" alt="">Glass Lenses</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10041100"><img class="inicon" src="assets/item_icon/10041100.png" alt="">Glass Frame</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10012700"><img class="inicon" src="assets/item_icon/10012700.png" alt="">Falcon Eye</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10012800"><img class="inicon" src="assets/item_icon/10012800.png" alt="">Rutile</a></span></li></ul></td>
+<td><a href="crafting.html#recipe:783">Lv 4</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50042150"><img class="inicon" src="assets/item_icon/50042150.png" alt="">Clairvoyance Glasses</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10046800"><img class="inicon" src="assets/item_icon/10031100.png" alt="">Glass Lenses</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10041100"><img class="inicon" src="assets/item_icon/10041100.png" alt="">Glass Frame</a></span></li><li><span class="amt">2 × <a class="ent" href="materials.html#item:10012550"><img class="inicon" src="assets/item_icon/10012500.png" alt="">Cockatrice Eye</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10033300"><img class="inicon" src="assets/item_icon/10033300.png" alt="">Prasm</a></span></li></ul></td>
+<td><a href="crafting.html#recipe:786">Lv 4</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50041300"><img class="inicon" src="assets/item_icon/50041300.png" alt="">Snorkel</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10046800"><img class="inicon" src="assets/item_icon/10031100.png" alt="">Glass Lenses</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10020403"><img class="inicon" src="assets/item_icon/10020403.png" alt="">Insmouse Fabric</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024800"><img class="inicon" src="assets/item_icon/10024800.png" alt="">Unicorn Horn</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024300"><img class="inicon" src="assets/item_icon/10024300.png" alt="">Glue</a></span></li></ul></td>
+<td><a href="crafting.html#recipe:795">Lv 5</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="notable-accessories">Notable accessories</h2>
+<div class="tablewrap recipe recipe-m"><table class="recipe-m">
+<thead>
+<tr>
+<th>Accessory</th>
+<th>Materials</th>
+<th>Tool</th>
+<th>Recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="equipment.html#item:50035600"><img class="inicon" src="assets/item_icon/50035600.png" alt="">Happy Flower</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10005603"><img class="inicon" src="assets/item_icon/10005600.png" alt="">Flower Seed</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10002202"><img class="inicon" src="assets/item_icon/10001902.png" alt="">Mana Water</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:708">Lv 1</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50035601"><img class="inicon" src="assets/item_icon/50035600.png" alt="">Happy Flower of Flame</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10005604"><img class="inicon" src="assets/item_icon/10005600.png" alt="">Red Flower Seed</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10002202"><img class="inicon" src="assets/item_icon/10001902.png" alt="">Mana Water</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:709">Lv 1</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50035602"><img class="inicon" src="assets/item_icon/50035600.png" alt="">Happy Flower of the Darkness</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10005609"><img class="inicon" src="assets/item_icon/10005600.png" alt="">Purple Flower Seed</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10002202"><img class="inicon" src="assets/item_icon/10001902.png" alt="">Mana Water</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:710">Lv 1</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50035603"><img class="inicon" src="assets/item_icon/50035600.png" alt="">Happy Flower of Water</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10005605"><img class="inicon" src="assets/item_icon/10005600.png" alt="">Blue Flower Seed</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10002202"><img class="inicon" src="assets/item_icon/10001902.png" alt="">Mana Water</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:711">Lv 1</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50035604"><img class="inicon" src="assets/item_icon/50035600.png" alt="">Happy Flower of Light</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10005608"><img class="inicon" src="assets/item_icon/10005600.png" alt="">White Flower Seed</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10002202"><img class="inicon" src="assets/item_icon/10001902.png" alt="">Mana Water</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:712">Lv 1</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50035607"><img class="inicon" src="assets/item_icon/50035600.png" alt="">Happy Flower of Wind</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10005606"><img class="inicon" src="assets/item_icon/10005600.png" alt="">Yellow Flower Seed</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10002202"><img class="inicon" src="assets/item_icon/10001902.png" alt="">Mana Water</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:713">Lv 1</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50035608"><img class="inicon" src="assets/item_icon/50035600.png" alt="">Happy Flower of Earth</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10005607"><img class="inicon" src="assets/item_icon/10005600.png" alt="">Orange Flower Seed</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10002202"><img class="inicon" src="assets/item_icon/10001902.png" alt="">Mana Water</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:714">Lv 1</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50040700"><img class="inicon" src="assets/item_icon/50040700.png" alt="">Cowboy Mask</a></td>
+<td><span class="amt">1 × <a class="ent" href="materials.html#item:10021400"><img class="inicon" src="assets/item_icon/10021400.png" alt="">High Class Fabric</a></span></td>
+<td><a class="ent" href="materials.html#item:10031500"><img class="inicon" src="assets/item_icon/10031500.png" alt="">Scissors</a></td>
+<td><a href="crafting.html#recipe:706">Lv 1</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50030100"><img class="inicon" src="assets/item_icon/50030100.png" alt="">Hair Ribbon</a></td>
+<td><span class="amt">2 × <a class="ent" href="materials.html#item:10043800"><img class="inicon" src="assets/item_icon/10043700.png" alt="">Silk Ribbon</a></span></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:725">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50040900"><img class="inicon" src="assets/item_icon/50040900.png" alt="">Persona</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016300"><img class="inicon" src="assets/item_icon/10016300.png" alt="">Timber</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10001101"><img class="inicon" src="assets/item_icon/10001101.png" alt="">Red Powder</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10001103"><img class="inicon" src="assets/item_icon/10001103.png" alt="">Blue Powder</a></span></li></ul></td>
+<td><a class="ent" href="equipment.html#item:60010000"><img class="inicon" src="assets/item_icon/60010000.png" alt="">Knife</a></td>
+<td><a href="crafting.html#recipe:727">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50050105"><img class="inicon" src="assets/item_icon/50050105.png" alt="">Pendant of the Cradle</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024300"><img class="inicon" src="assets/item_icon/10024300.png" alt="">Glue</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038101"><img class="inicon" src="assets/item_icon/10038100.png" alt="">Pin</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10012400"><img class="inicon" src="assets/item_icon/10012400.png" alt="">Emerald</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10005200"><img class="inicon" src="assets/item_icon/10005200.png" alt="">Four Leaf Clover</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10038501"><img class="inicon" src="assets/item_icon/10038500.png" alt="">Diamond File</a></td>
+<td><a href="crafting.html#recipe:736">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50090054"><img class="inicon" src="assets/item_icon/50090004.png" alt="">White Talisman +</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024300"><img class="inicon" src="assets/item_icon/10024300.png" alt="">Glue</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10039300"><img class="inicon" src="assets/item_icon/10024208.png" alt="">Leather Belt</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10043400"><img class="inicon" src="assets/item_icon/10043400.png" alt="">Pearl</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10015704"><img class="inicon" src="assets/item_icon/10015704.png" alt="">Holy Silver</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10038501"><img class="inicon" src="assets/item_icon/10038500.png" alt="">Diamond File</a></td>
+<td><a href="crafting.html#recipe:735">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50090050"><img class="inicon" src="assets/item_icon/50090000.png" alt="">Red Talisman +</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024300"><img class="inicon" src="assets/item_icon/10024300.png" alt="">Glue</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10039300"><img class="inicon" src="assets/item_icon/10024208.png" alt="">Leather Belt</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10013100"><img class="inicon" src="assets/item_icon/10013100.png" alt="">Garnet</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10015701"><img class="inicon" src="assets/item_icon/10015701.png" alt="">Flame Iron</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10038501"><img class="inicon" src="assets/item_icon/10038500.png" alt="">Diamond File</a></td>
+<td><a href="crafting.html#recipe:733">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50090052"><img class="inicon" src="assets/item_icon/50090002.png" alt="">Blue Talisman +</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024300"><img class="inicon" src="assets/item_icon/10024300.png" alt="">Glue</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10039300"><img class="inicon" src="assets/item_icon/10024208.png" alt="">Leather Belt</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10012500"><img class="inicon" src="assets/item_icon/10012500.png" alt="">Lapis Lazuli</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10015703"><img class="inicon" src="assets/item_icon/10015703.png" alt="">Ice Iron</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10038501"><img class="inicon" src="assets/item_icon/10038500.png" alt="">Diamond File</a></td>
+<td><a href="crafting.html#recipe:734">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50040100"><img class="inicon" src="assets/item_icon/50040100.png" alt="">Wing Mask</a></td>
+<td><ul class="cellist stack"><li><span class="amt">30 × <a class="ent" href="equipment.html#item:50031400"><img class="inicon" src="assets/item_icon/50031400.png" alt="">Wing Ornament</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038101"><img class="inicon" src="assets/item_icon/10038100.png" alt="">Pin</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024300"><img class="inicon" src="assets/item_icon/10024300.png" alt="">Glue</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:746">Lv 3</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50053700"><img class="inicon" src="assets/item_icon/50053700.png" alt="">Sage Pendant</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10012100"><img class="inicon" src="assets/item_icon/10012100.png" alt="">Heart Ruby</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10012200"><img class="inicon" src="assets/item_icon/10012200.png" alt="">Aquamarine</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10012400"><img class="inicon" src="assets/item_icon/10012400.png" alt="">Emerald</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10012000"><img class="inicon" src="assets/item_icon/10012000.png" alt="">Imperial Topaz</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:788">Lv 4</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50051100"><img class="inicon" src="assets/item_icon/50051100.png" alt="">Bell</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10043701"><img class="inicon" src="assets/item_icon/10043701.png" alt="">Noble Ribbon</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10043600"><img class="inicon" src="assets/item_icon/10043600.png" alt="">Gold Parts</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038101"><img class="inicon" src="assets/item_icon/10038100.png" alt="">Pin</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024300"><img class="inicon" src="assets/item_icon/10024300.png" alt="">Glue</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:794">Lv 5</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50050350"><img class="inicon" src="assets/item_icon/50050300.png" alt="">Diamond Pendant</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10011800"><img class="inicon" src="assets/item_icon/10011800.png" alt="">Diamond</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038101"><img class="inicon" src="assets/item_icon/10038100.png" alt="">Pin</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024300"><img class="inicon" src="assets/item_icon/10024300.png" alt="">Glue</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10038501"><img class="inicon" src="assets/item_icon/10038500.png" alt="">Diamond File</a></td>
+<td><a href="crafting.html#recipe:791">Lv 5</a></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The <a class="ent" href="equipment.html#item:50050105"><img class="inicon" src="assets/item_icon/50050105.png" alt="">Pendant of the Cradle</a> protects the player who possesses its wearer.</li>
+</ul>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="crafting.html">Crafting</a></li>
+<li><a href="tailoring.html">Tailoring</a></li>
+<li><a href="refining.html">Refining</a></li>
+<li><a href="possession.html">Possession</a></li>
+<li><a href="equipment.html">Weapons &amp; Armor</a></li>
+</ul>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">On this page</h2><ul><li><a href="#how-it-works">How it works</a></li><li><a href="#tools-and-common-parts">Tools and common parts</a></li><li><a href="#cutting-gems">Cutting gems</a></li><li><a href="#glasses">Glasses</a></li><li><a href="#notable-accessories">Notable accessories</a></li><li><a href="#related">Related</a></li></ul></aside>
+</div>
+<script src="search-index.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

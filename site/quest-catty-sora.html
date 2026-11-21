@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catty (Sora) Quest · ECO Archive</title>
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="stylesheet" href="site.css">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body class="article">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/></symbol>
+<symbol id="i-left" viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></symbol>
+<symbol id="i-right" viewBox="0 0 24 24"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></symbol>
+<symbol id="i-unfold" viewBox="0 0 24 24"><path d="M12 5.83 15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"/></symbol>
+<symbol id="i-fold" viewBox="0 0 24 24"><path d="M7.41 18.59 8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM2 13h2a1 1 0 0 0 0-2H2a1 1 0 0 0 0 2zm18 0h2a1 1 0 0 0 0-2h-2a1 1 0 0 0 0 2zM11 2v2a1 1 0 0 0 2 0V2a1 1 0 0 0-2 0zm0 18v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-2 0zM5.99 4.58a1 1 0 0 0-1.41 1.41l1.06 1.06a1 1 0 0 0 1.41-1.41L5.99 4.58zm12.37 12.37a1 1 0 0 0-1.41 1.41l1.06 1.06a1 1 0 0 0 1.41-1.41l-1.06-1.06zm1.06-10.96a1 1 0 0 0-1.41-1.41l-1.06 1.06a1 1 0 0 0 1.41 1.41l1.06-1.06zM7.05 18.36a1 1 0 0 0-1.41-1.41l-1.06 1.06a1 1 0 0 0 1.41 1.41l1.06-1.06z"/></symbol>
+<symbol id="i-auto" viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zm1-17.93a8 8 0 0 1 0 15.86V4.07z"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="iconbtn" id="menubtn" aria-label="Open navigation" aria-controls="drawer" aria-expanded="false"><svg class="i"><use href="#i-menu"/></svg></button>
+  <a class="brand" href="index.html"><img class="logo" src="assets/misc_img/logo/eco_logo_topbar.png" alt="" width="56" height="44"><span class="name">ECO Archive</span></a>
+  <div class="search" role="search">
+    <label for="q"><svg class="i"><use href="#i-search"/></svg><span class="visually-hidden">Search pages</span></label>
+    <input id="q" type="search" placeholder="Search jobs, quests, items…" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list">
+    <ul class="results" id="results" role="listbox" aria-label="Search results" hidden></ul>
+  </div>
+  <div class="thememenu">
+    <button class="iconbtn" id="themebtn" aria-haspopup="menu" aria-expanded="false" aria-controls="thememenu" aria-label="Theme"><svg class="i"><use href="#i-auto"/></svg></button>
+    <div class="menu" id="thememenu" role="menu" aria-label="Theme" hidden>
+      <button role="menuitemradio" data-mode="system" aria-checked="true"><svg class="i"><use href="#i-auto"/></svg>System<svg class="i check"><use href="#i-check"/></svg></button>
+      <button role="menuitemradio" data-mode="light" aria-checked="false"><svg class="i"><use href="#i-sun"/></svg>Light<svg class="i check"><use href="#i-check"/></svg></button>
+      <button role="menuitemradio" data-mode="dark" aria-checked="false"><svg class="i"><use href="#i-moon"/></svg>Dark<svg class="i check"><use href="#i-check"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+<div class="frame">
+  <nav class="drawer" id="drawer" aria-label="Site">
+    <div class="head"><span>ECO Archive</span><button class="iconbtn" aria-label="Close navigation"><svg class="i"><use href="#i-close"/></svg></button></div>
+    <ul><li><a href="index.html">Home</a></li><li><details><summary>Story<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="story.html">Story Overview</a></li><li><a href="story-the-path-we-walk.html">The Path We Walk</a></li><li><a href="story-the-world-begins-to-move.html">The World Begins to Move</a></li><li><a href="story-beyond-the-truth.html">Beyond the Truth</a></li><li><a href="story-final-battle.html">Final Battle</a></li><li><a href="story-saga14.html">Gate of Emerald Forest</a></li><li><a href="story-saga15.html">Everlasting Union</a></li><li><a href="story-saga16.html">Memories of the Ice Queen</a></li><li><a href="story-saga18.html">Carmine Brick</a></li></ul></details></li><li><details><summary>Getting started<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="game-basics.html">Game Basics</a></li><li><a href="races.html">Races</a></li><li><a href="stat-points.html">Status Points</a></li><li><a href="city-passes.html">City Passes</a></li><li><a href="enigma-pass.html">Enigma Group Pass</a></li></ul></details></li><li><details><summary>Game systems<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="automata.html">Automata</a></li><li><a href="bosses.html">Bosses</a></li><li><a href="catties.html">Catties</a></li><li><a href="demic-chips.html">DEMIC Chips</a></li><li><a href="dragon-mount.html">Dragon Mount</a></li><li><a href="dual-job.html">Dual Job</a></li><li><a href="dungeons.html">Dungeons</a></li><li><a href="element-fairies.html">Element Fairies</a></li><li><a href="equipment-upgrades.html">Equipment Upgrades</a></li><li><a href="fame.html">Fame</a></li><li><a href="farming.html">Farming</a></li><li><a href="fishing.html">Fishing</a></li><li><a href="flying-garden.html">Flying Garden</a></li><li><a href="flying-garden-parts.html">Flying Garden Parts</a></li><li><a href="furniture.html">Furniture</a></li><li><a href="hair-dye.html">Hair Dye</a></li><li><a href="hairstyles.html">Hairstyles</a></li><li><a href="getting-pets.html">How to Get Pets</a></li><li><a href="iris-cards.html">Iris Cards</a></li><li><a href="ability-vectors.html">Iris Cards – Ability Vectors</a></li><li><a href="item-repair.html">Item Repair</a></li><li><a href="job-switching.html">Job Switching</a></li><li><a href="marionettes.html">Marionettes &amp; Golems</a></li><li><a href="medal-machines.html">Medal Machines</a></li><li><a href="partners.html">Partners</a></li><li><a href="pet-raising.html">Pet Raising</a></li><li><a href="possession.html">Possession</a></li><li><a href="ring.html">Ring</a></li><li><a href="shops.html">Shops &amp; Merchants</a></li><li><a href="stamps.html">Stamps</a></li><li><a href="tiny-island.html">Tiny Island</a></li></ul></details></li><li><details><summary>Jobs<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="jobs.html">All jobs</a></li><li><details><summary>Fighter<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-scout.html">Scout</a></li><li><a href="job-assassin.html">Assassin</a></li><li><a href="job-commando.html">Commando</a></li><li><a href="job-eraser.html">Eraser</a></li><li><a href="job-swordsman.html">Swordsman</a></li><li><a href="job-blade-master.html">Blade Master</a></li><li><a href="job-bounty-hunter.html">Bounty Hunter</a></li><li><a href="job-gladiator.html">Gladiator</a></li><li><a href="job-fencer.html">Fencer</a></li><li><a href="job-knight.html">Knight</a></li><li><a href="job-dark-stalker.html">Dark Stalker</a></li><li><a href="job-guardian.html">Guardian</a></li><li><a href="job-archer.html">Archer</a></li><li><a href="job-striker.html">Striker</a></li><li><a href="job-gunner.html">Gunner</a></li><li><a href="job-hawkeye.html">Hawkeye</a></li></ul></details></li><li><details><summary>Spell User<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-warlock.html">Warlock</a></li><li><a href="job-cabalist.html">Cabalist</a></li><li><a href="job-necromancer.html">Necromancer</a></li><li><a href="job-soultaker.html">Soul Taker</a></li><li><a href="job-vates.html">Vates</a></li><li><a href="job-druid.html">Druid</a></li><li><a href="job-bard.html">Bard</a></li><li><a href="job-cardinal.html">Cardinal</a></li><li><a href="job-shaman.html">Shaman</a></li><li><a href="job-elementalist.html">Elementalist</a></li><li><a href="job-enchanter.html">Enchanter</a></li><li><a href="job-astralist.html">Astralist</a></li><li><a href="job-wizard.html">Wizard</a></li><li><a href="job-sorcerer.html">Sorcerer</a></li><li><a href="job-sage.html">Sage</a></li><li><a href="job-force-master.html">Force Master</a></li></ul></details></li><li><details><summary>Backpacker<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-farmer.html">Farmer</a></li><li><a href="job-alchemist.html">Alchemist</a></li><li><a href="job-marionettist.html">Marionettist</a></li><li><a href="job-harvester.html">Harvester</a></li><li><a href="job-miner.html">Miner (Tatarabe)</a></li><li><a href="job-blacksmith.html">Blacksmith</a></li><li><a href="job-engineer.html">Engineer (Machinery)</a></li><li><a href="job-maestro.html">Maestro</a></li><li><a href="job-ranger.html">Ranger</a></li><li><a href="job-explorer.html">Explorer</a></li><li><a href="job-treasure-hunter.html">Treasure Hunter</a></li><li><a href="job-strider.html">Strider</a></li><li><a href="job-merchant.html">Merchant</a></li><li><a href="job-trader.html">Trader</a></li><li><a href="job-gambler.html">Gambler</a></li><li><a href="job-royal-dealer.html">Royal Dealer</a></li></ul></details></li><li><details><summary>Other jobs<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-breeder.html">Breeder</a></li><li><a href="job-gardener.html">Gardener</a></li><li><a href="job-joker.html">Joker</a></li><li><a href="job-novice.html">Novice</a></li></ul></details></li></ul></details></li><li><details open><summary>Quests<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="quest-catty-ai.html">Catty (Ai) Quest</a></li><li><a href="quest-catty-akane.html">Catty (Akane) Quest</a></li><li><a href="quest-catty-anzu.html">Catty (Anzu) Quest</a></li><li><a href="quest-catty-kurumi.html">Catty (Kurumi Wakana) Quest</a></li><li><a href="quest-catty-momo.html">Catty (Momo) Quest</a></li><li><a href="quest-catty-sora.html" aria-current="page">Catty (Sora) Quest</a></li><li><a href="quest-catty-sumire.html">Catty (Sumire) Quest</a></li><li><a href="quest-catty-yamabuki.html">Catty (Yamabuki) Quest</a></li><li><a href="quest-cleaning.html">Cleaning Quests</a></li><li><a href="quest-endless-corridor.html">Endless Corridor Quests</a></li><li><a href="free-skill-points.html">Free Skill Points</a></li><li><a href="quest-heart-of-the-machine.html">Heart of the Machine</a></li><li><a href="quest-lv35-armor.html">Lv 35 Armor Quest</a></li><li><a href="quest-lv45-armor.html">Lv 45 Armor Quest</a></li><li><a href="quest-lv55-armor.html">Lv 55 Armor Quest</a></li><li><a href="quest-lv55-hat-shoes.html">Lv 55 Backpacker Hat &amp; Shoes Quest</a></li><li><a href="quest-lv60-weapon.html">Lv 60 Weapon Quest</a></li><li><a href="quest-lv65-armor.html">Lv 65 Armor Quest</a></li><li><a href="quest-lv75-armor.html">Lv 75 Armor Quest</a></li><li><a href="quest-lv85-armor.html">Lv 85 Armor Quest</a></li><li><a href="quest-lv90-weapon.html">Lv 90 Weapon Quest</a></li><li><a href="quest-lv99-armor.html">Lv 99 Armor Quest</a></li><li><a href="quest-lv99-weapon.html">Lv 99 Weapon Quest</a></li><li><a href="quest-counter.html">Quest Counter</a></li><li><a href="quest-reincarnation.html">Reincarnation Quest</a></li><li><a href="quest-ride-crawler.html">Ride Crawler Quest</a></li><li><a href="quest-tutorial.html">Tutorial Quests</a></li></ul></details></li><li><details><summary>Items<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="boxes.html">Boxes</a></li><li><a href="petals.html">Flower Petals</a></li><li><a href="food-items.html">Food and Healing Items</a></li><li><a href="upgrade-crystals.html">Upgrade Crystals</a></li><li><a href="equipment.html">Weapons &amp; Armor</a></li></ul></details></li><li><details><summary>Crafting<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="accessory-crafting.html">Accessory Crafting</a></li><li><a href="armor-crafting.html">Armor Crafting</a></li><li><a href="chemical-preparation.html">Chemical Preparation</a></li><li><a href="cooking.html">Cooking</a></li><li><details><summary>Recipes &amp; Materials<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="crafting.html">Craftable Items</a></li><li><a href="materials.html">Crafting Materials</a></li></ul></details></li><li><a href="fairy-scrolls.html">Fairy Scrolls</a></li><li><a href="machinery-crafting.html">Machinery Crafting</a></li><li><a href="metal-refining.html">Metal Refining</a></li><li><a href="refining.html">Refining</a></li><li><a href="tailoring.html">Tailoring</a></li><li><a href="weapon-crafting.html">Weapon Crafting</a></li><li><a href="woodcraft.html">Woodcraft</a></li></ul></details></li><li><a href="monsters.html">Monsters</a></li><li><a href="maps.html">Maps</a></li><li><details><summary>Miscellaneous<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="misc-logo.html">Logo</a></li><li><a href="misc-videos.html">Trailer</a></li><li><details><summary>Artwork<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="misc-catty-art.html">Catty &amp; Pet Art</a></li><li><a href="art-partners.html">Partner Art</a></li><li><a href="art-races.html">Character Art</a></li><li><a href="art-jobs.html">Job Art</a></li><li><a href="misc-monster-artwork.html">Marionette &amp; Monster Artwork</a></li><li><a href="art-seasonal.html">Seasonal Art</a></li><li><a href="art-sketches.html">Concept Sketches</a></li></ul></details></li><li><a href="misc-servers.html">Official Servers</a></li></ul></details></li><li><a href="references.html">Sources &amp; Credits</a></li></ul>
+  </nav>
+  <main class="content" id="main" tabindex="-1">
+<nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li>Quests</li></ol></nav><header class="hero"><div><h1>Catty (Sora) Quest</h1><p class="lead">A book pulls you into the World of Books, where you save a princess from a demon.</p></div><dl class="facts"><div><dt>Level</dt><dd>30 or higher, with 20 Fame</dd></div><div><dt>Reward</dt><dd><img class="inicon" src="assets/item_icon/10017910.png" alt=""><b>Catty (Sora)</b></dd></div></dl></header><details class="toc-inline"><summary>On this page</summary><ul><li><a href="#before-you-start">Before you start</a></li><li><a href="#walkthrough">Walkthrough</a></li><li><a href="#rewards">Rewards</a></li><li><a href="#acronia-coat-colours">Acronia Coat colours</a></li><li><a href="#good-to-know">Good to know</a></li><li><a href="#related">Related</a></li></ul></details>
+<h2 id="before-you-start">Before you start</h2>
+<ul>
+<li>Finish the <a href="quest-catty-momo.html">Catty (Momo) Quest</a> and <strong>equip a Catty</strong> for the whole quest.</li>
+<li>No Catty? Possess a player who has done the <a href="quest-catty-momo.html">Catty (Momo) Quest</a>, then enter the bookstore.</li>
+<li>Finish any other quest you have open. The bookstore won't start this one until you do.</li>
+<li>Hit hard enough to beat a demon with <strong>very high magic defense</strong>.</li>
+</ul>
+<h2 id="walkthrough">Walkthrough</h2>
+<h3 id="1-the-job-board">1. The job board</h3>
+<ul>
+<li>
+<p>Go to <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10023000">Uptown</a> and check the <b>Job Request Board</b> on the east side. Choose the <strong>first topic</strong>.</p>
+<div class="npc" role="group" aria-label="Job Request Board"><div class="who"><img src="assets/npc_thumb/12002072.png" alt="" loading="lazy"><b>Job Request Board</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m023.png" alt="Map of Uptown" loading="lazy"><span class="pin hl edge-r" data-name="Uptown" style="left:72.9%;top:42.4%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10023000">Uptown</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_12002072.webp" alt="Job Request Board in the game" loading="lazy"></figure></div>
+</li>
+</ul>
+<h3 id="2-the-rental-library">2. The Rental Library</h3>
+<ul>
+<li>Go to <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,53.85" href="maps.html#map:10032000">Lake Utena</a>. The <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,53.85" data-cap="In Lake Utena" href="maps.html#map:10032000">Rental Library</a> is in the house up the cliffs in the northeast.</li>
+<li>
+<p>Wear your Catty and talk to the <b>Rental Bookstore Owner</b>. Choose to enter the World of Books.</p>
+<div class="npc" role="group" aria-label="Rental Bookstore Owner"><div class="who"><img src="assets/npc_thumb/11001453.png" alt="" loading="lazy"><b>Rental Bookstore Owner</b></div><figure class="scene"><img src="assets/scene_img/npc_11001453.webp" alt="Rental Bookstore Owner in the game" loading="lazy"></figure></div>
+</li>
+<li>
+<p>Inside the book, <strong>"Stop reading"</strong> takes you back to the real world. <strong>"Turn to the next page"</strong> goes on with the quest.</p>
+</li>
+</ul>
+<h3 id="3-the-queen-s-chamber">3. The Queen's chamber</h3>
+<ul>
+<li>
+<p>In <a class="ent" data-pic="assets/minimap/m030.png" data-tip="room" data-pin="75.6%,1.4%" data-cap="Acronia Kingdom Territory" href="maps.html#map:10030002">Acronia Royal Palace (Queen Chamber)</a>, talk to the <b>Maid</b> and the <b>Queen</b>.</p>
+<div class="npc" role="group" aria-label="Maid"><div class="who"><img src="assets/npc_thumb/11001454.png" alt="" loading="lazy"><b>Maid</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m030.png" alt="Map of Acronia Kingdom Territory" loading="lazy"><span class="pin hl below edge-r" data-name="Acronia Royal Palace entrance" style="left:75.6%;top:1.4%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="36.92,53.85" href="maps.html#map:10030002">Acronia Kingdom Territory</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11001454.webp" alt="Maid in the game" loading="lazy"></figure></div>
+<div class="npc" role="group" aria-label="Queen"><div class="who"><img src="assets/npc_thumb/11001455.png" alt="" loading="lazy"><b>Queen</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m030.png" alt="Map of Acronia Kingdom Territory" loading="lazy"><span class="pin hl below edge-r" data-name="Acronia Royal Palace entrance" style="left:75.6%;top:1.4%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="36.92,53.85" href="maps.html#map:10030002">Acronia Kingdom Territory</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11001455.webp" alt="Queen in the game" loading="lazy"></figure></div>
+</li>
+<li>
+<p>The Queen lets you open one <b class="enttip" tabindex="0" data-pic="assets/npc_img/11001463.png">Treasure Chest</b>. The <strong>big chest</strong> gives 100 G. The <strong>small chest</strong> gives a <a class="ent" href="equipment.html#item:60072500"><img class="inicon" src="assets/item_icon/60072500.png" alt="">Pururu Staff</a>.</p>
+</li>
+</ul>
+<h3 id="4-across-the-kingdom">4. Across the kingdom</h3>
+<ul>
+<li>Take the portal into <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="36.92,53.85" href="maps.html#map:10030002">Acronia Kingdom Territory</a> and go to the end.</li>
+<li>An <a class="ent" data-pic="assets/npc_img/11001456.png" href="maps.html#map:10030002">Sinister-looking Adventurer</a> and a <a class="ent" data-pic="assets/npc_img/11001457.png" href="maps.html#map:10030002">Sinister-looking Merchant</a> guard the next portal. They ask for 10 mushrooms or this much gold:
+  <span class="formula"><span class="fxout">gold</span> = base level × 1,000 ÷ 2</span>
+  Sneak behind them and you don't pay.</li>
+<li>If you die in the book, you go back to your save point.</li>
+</ul>
+<h3 id="5-the-holy-volcano">5. The Holy Volcano</h3>
+<ul>
+<li>
+<p>Climb to the top of <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="36.92,87.69" href="maps.html#map:10064002">Holy Volcano</a>. Wear your Catty and talk to <strong>both</strong> maidens, <a class="ent" href="maps.html#map:10064002">Shrine Maiden</a> and <a class="ent" data-pic="assets/npc_img/11001459.png" href="maps.html#map:10064002">Shrine Maiden</a>. Leave with them.</p>
+<div class="npc" role="group" aria-label="Shrine Maiden"><div class="who"><img src="assets/npc_thumb/11001458.png" alt="" loading="lazy"><b>Shrine Maiden</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m064.png" alt="Map of Holy Volcano" loading="lazy"><span class="pin hl" data-name="Holy Volcano" style="left:56.4%;top:40.4%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="36.92,87.69" href="maps.html#map:10064002">Holy Volcano</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11001458.webp" alt="Shrine Maiden in the game" loading="lazy"></figure></div>
+</li>
+</ul>
+<h3 id="6-save-the-princess">6. Save the princess</h3>
+<ul>
+<li>
+<p>In the <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="36.92,87.69" data-cap="Reached from Holy Volcano" href="maps.html#map:10064002">Cursed Castle</a>, talk to the <b>Princess</b>. A demon appears.</p>
+<div class="npc" role="group" aria-label="Princess"><div class="who"><img src="assets/npc_thumb/11001460.png" alt="" loading="lazy"><b>Princess</b></div><figure class="scene"><img src="assets/scene_img/npc_11001460.webp" alt="Princess in the game" loading="lazy"></figure></div>
+</li>
+<li>
+<p>Defeat the demon and pick up its drop. <strong>Hit it yourself.</strong> If only your pet kills it, nothing drops and you must fight it again.</p>
+</li>
+<li>Leave through the portal and talk to the <b class="enttip" tabindex="0" data-pic="assets/npc_img/11001460.png">Princess</b> again. You leave the World of Books.</li>
+</ul>
+<h3 id="7-the-blue-bandana">7. The blue bandana</h3>
+<ul>
+<li>Talk to the <b class="enttip" tabindex="0" data-pic="assets/npc_img/11001453.png">Rental Bookstore Owner</b>.</li>
+<li>
+<p>Bring your Catty to the <b>Seamstress</b> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10023000">Uptown</a>. She gives you a <img class="inicon" src="assets/item_icon/10017910.png" alt=""><b>Blue Triangle Bandana</b>.</p>
+<div class="npc" role="group" aria-label="Seamstress"><div class="who"><img src="assets/npc_thumb/11000149.png" alt="" loading="lazy"><b>Seamstress</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m023.png" alt="Map of Uptown" loading="lazy"><span class="pin hl below" data-name="Seamstress&#x27; House entrance" style="left:33.4%;top:38.5%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10023000">Uptown</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11000149.webp" alt="Seamstress in the game" loading="lazy"></figure></div>
+</li>
+</ul>
+<h3 id="8-read-the-book-again">8. Read the book again</h3>
+<ul>
+<li>Go back to the <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,53.85" data-cap="In Lake Utena" href="maps.html#map:10032000">Rental Library</a> and enter the book again. Bring the Catty <strong>whose colour you want for your coat</strong>.</li>
+<li>Talk to the <b class="enttip" tabindex="0" data-pic="assets/npc_img/11001455.png">Queen</b>. Equip that Catty and talk to the <b class="enttip" tabindex="0" data-pic="assets/npc_img/11001454.png">Maid</b>. You get the <strong>Acronia Coat</strong> in that Catty's colour, from <a class="ent" href="equipment.html#item:60108800"><img class="inicon" src="assets/item_icon/60108800.png" alt="">Acronia Coat (Momo)</a> to <a class="ent" href="equipment.html#item:60108807"><img class="inicon" src="assets/item_icon/60108800.png" alt="">Acronia Coat (Sora)</a>. See <a href="#acronia-coat-colours">Acronia Coat colours</a>.</li>
+<li>Cross <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="36.92,53.85" href="maps.html#map:10030002">Acronia Kingdom Territory</a> and climb <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="36.92,87.69" href="maps.html#map:10064002">Holy Volcano</a> again. In the kingdom, go around behind the <a class="ent" data-pic="assets/npc_img/11001456.png" href="maps.html#map:10030002">Sinister-looking Adventurer</a> and the <a class="ent" data-pic="assets/npc_img/11001457.png" href="maps.html#map:10030002">Sinister-looking Merchant</a>; you don't pay a second time.</li>
+<li>Talk to the <b class="enttip" tabindex="0" data-pic="assets/npc_img/11001461.png">Princess</b>. Defeat the demon again and pick up its drop. This time the demon is <img class="inicon" src="assets/item_icon/10017910.png" alt=""><b>Catty (Sora)</b> in human form.</li>
+</ul>
+<h3 id="9-back-to-the-bookstore">9. Back to the bookstore</h3>
+<ul>
+<li>When the book sends you out, talk to the <b class="enttip" tabindex="0" data-pic="assets/npc_img/11001453.png">Rental Bookstore Owner</b>. You receive <img class="inicon" src="assets/item_icon/10017910.png" alt=""><b>Catty (Sora)</b>.</li>
+</ul>
+<h2 id="rewards">Rewards</h2>
+<figure class="scene"><img src="assets/scene_img/catty-reward_sora.webp" alt="Catty (Sora)"></figure>
+
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Reward</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="nm"><img class="inicon" src="assets/item_icon/10017910.png" alt=""><b>Catty (Sora)</b></span></td>
+<td>Skills and details on <a href="catties.html#sora">Catties</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60072500"><img class="inicon" src="assets/item_icon/60072500.png" alt="">Pururu Staff</a> or 100 G</td>
+<td>From the Queen's chest. Pick one</td>
+</tr>
+<tr>
+<td><div class="celllead">One Acronia Coat:</div><ul class="cellist"><li><a class="ent" href="equipment.html#item:60108800"><img class="inicon" src="assets/item_icon/60108800.png" alt="">Acronia Coat (Momo)</a></li><li><a class="ent" href="equipment.html#item:60108801"><img class="inicon" src="assets/item_icon/60108800.png" alt="">Acronia Coat (Midori)</a></li><li><a class="ent" href="equipment.html#item:60108802"><img class="inicon" src="assets/item_icon/60108800.png" alt="">Acronia Coat (Ai)</a></li><li><a class="ent" href="equipment.html#item:60108803"><img class="inicon" src="assets/item_icon/60108800.png" alt="">Acronia Coat (Yamabuki)</a></li><li><a class="ent" href="equipment.html#item:60108804"><img class="inicon" src="assets/item_icon/60108800.png" alt="">Acronia Coat (Sumire)</a></li><li><a class="ent" href="equipment.html#item:60108805"><img class="inicon" src="assets/item_icon/60108800.png" alt="">Acronia Coat (Akane)</a></li><li><a class="ent" href="equipment.html#item:60108806"><img class="inicon" src="assets/item_icon/60108800.png" alt="">Acronia Coat (Anzu)</a></li><li><a class="ent" href="equipment.html#item:60108807"><img class="inicon" src="assets/item_icon/60108800.png" alt="">Acronia Coat (Sora)</a></li></ul></td>
+<td>The colour of the Catty you wear. <span class="nm"><img class="inicon" src="assets/item_icon/10017910.png" alt=""><b>Catty (Sora)</b></span> counts as blue</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="acronia-coat-colours">Acronia Coat colours</h2>
+<div class="hr-sprites hscroll" role="region" aria-label="Acronia Coat colours, scrolls sideways" tabindex="0"><figure><img src="assets/item_wear_img_starter_mannequin/60108800_female.webp" alt="Acronia Coat (Momo)" loading="lazy"><figcaption>Pink<br>Catty (Momo)</figcaption></figure><figure><img src="assets/item_wear_img_starter_mannequin/60108801_female.webp" alt="Acronia Coat (Midori)" loading="lazy"><figcaption>Green<br>Catty (Midori)</figcaption></figure><figure><img src="assets/item_wear_img_starter_mannequin/60108802_female.webp" alt="Acronia Coat (Ai)" loading="lazy"><figcaption>Light blue<br>Catty (Ai)</figcaption></figure><figure><img src="assets/item_wear_img_starter_mannequin/60108803_female.webp" alt="Acronia Coat (Yamabuki)" loading="lazy"><figcaption>Cream yellow<br>Catty (Yamabuki)</figcaption></figure><figure><img src="assets/item_wear_img_starter_mannequin/60108804_female.webp" alt="Acronia Coat (Sumire)" loading="lazy"><figcaption>Lilac<br>Catty (Sumire)</figcaption></figure><figure><img src="assets/item_wear_img_starter_mannequin/60108805_female.webp" alt="Acronia Coat (Akane)" loading="lazy"><figcaption>Red<br>Catty (Akane)</figcaption></figure><figure><img src="assets/item_wear_img_starter_mannequin/60108806_female.webp" alt="Acronia Coat (Anzu)" loading="lazy"><figcaption>Orange<br>Catty (Anzu)</figcaption></figure><figure><img src="assets/item_wear_img_starter_mannequin/60108807_female.webp" alt="Acronia Coat (Sora)" loading="lazy"><figcaption>Dark blue<br>Catty (Sora)</figcaption></figure></div>
+
+<h2 id="good-to-know">Good to know</h2>
+<ul>
+<li><strong><img class="inicon" src="assets/item_icon/10017910.png" alt=""><b>Catty (Sora)</b> is one per account.</strong></li>
+<li><strong>Use the old <img class="inicon" src="assets/item_icon/10017902.png" alt=""><b>Catty (Midori)</b> for the green coat.</strong> The new Midori can't get a coat.</li>
+<li><strong>Sketch the demon.</strong> Catty (Sora) in human form can be drawn with <a class="ent" href="job-sage.html#skill:2294"><img class="inicon skicon" src="assets/ext/nekogame-wiki/assets/images/wiki/skills/SI_2294.png" alt="">Monster Sketch</a> for your <a href="flying-garden.html">Flying Garden</a>. Draw it before you kill it, or leave the quest open to draw again.</li>
+<li><strong>The <a class="ent" href="equipment.html#item:60072500"><img class="inicon" src="assets/item_icon/60072500.png" alt="">Pururu Staff</a> fits any job.</strong> It needs level 30 and has 35 magic attack.</li>
+</ul>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="catties.html#sora">Catties</a></li>
+<li><a href="quest-catty-momo.html">Catty (Momo) Quest</a></li>
+<li><a href="fame.html">Fame</a></li>
+<li><a href="possession.html">Possession</a></li>
+<li><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,53.85" href="maps.html#map:10032000">Lake Utena</a></li>
+</ul>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">On this page</h2><ul><li><a href="#before-you-start">Before you start</a></li><li><a href="#walkthrough">Walkthrough</a></li><li><a href="#rewards">Rewards</a></li><li><a href="#acronia-coat-colours">Acronia Coat colours</a></li><li><a href="#good-to-know">Good to know</a></li><li><a href="#related">Related</a></li></ul></aside>
+</div>
+<script src="search-index.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

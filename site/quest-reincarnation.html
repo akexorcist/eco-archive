@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reincarnation Quest · ECO Archive</title>
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="stylesheet" href="site.css">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body class="article">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/></symbol>
+<symbol id="i-left" viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></symbol>
+<symbol id="i-right" viewBox="0 0 24 24"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></symbol>
+<symbol id="i-unfold" viewBox="0 0 24 24"><path d="M12 5.83 15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"/></symbol>
+<symbol id="i-fold" viewBox="0 0 24 24"><path d="M7.41 18.59 8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM2 13h2a1 1 0 0 0 0-2H2a1 1 0 0 0 0 2zm18 0h2a1 1 0 0 0 0-2h-2a1 1 0 0 0 0 2zM11 2v2a1 1 0 0 0 2 0V2a1 1 0 0 0-2 0zm0 18v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-2 0zM5.99 4.58a1 1 0 0 0-1.41 1.41l1.06 1.06a1 1 0 0 0 1.41-1.41L5.99 4.58zm12.37 12.37a1 1 0 0 0-1.41 1.41l1.06 1.06a1 1 0 0 0 1.41-1.41l-1.06-1.06zm1.06-10.96a1 1 0 0 0-1.41-1.41l-1.06 1.06a1 1 0 0 0 1.41 1.41l1.06-1.06zM7.05 18.36a1 1 0 0 0-1.41-1.41l-1.06 1.06a1 1 0 0 0 1.41 1.41l1.06-1.06z"/></symbol>
+<symbol id="i-auto" viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zm1-17.93a8 8 0 0 1 0 15.86V4.07z"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="iconbtn" id="menubtn" aria-label="Open navigation" aria-controls="drawer" aria-expanded="false"><svg class="i"><use href="#i-menu"/></svg></button>
+  <a class="brand" href="index.html"><img class="logo" src="assets/misc_img/logo/eco_logo_topbar.png" alt="" width="56" height="44"><span class="name">ECO Archive</span></a>
+  <div class="search" role="search">
+    <label for="q"><svg class="i"><use href="#i-search"/></svg><span class="visually-hidden">Search pages</span></label>
+    <input id="q" type="search" placeholder="Search jobs, quests, items…" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list">
+    <ul class="results" id="results" role="listbox" aria-label="Search results" hidden></ul>
+  </div>
+  <div class="thememenu">
+    <button class="iconbtn" id="themebtn" aria-haspopup="menu" aria-expanded="false" aria-controls="thememenu" aria-label="Theme"><svg class="i"><use href="#i-auto"/></svg></button>
+    <div class="menu" id="thememenu" role="menu" aria-label="Theme" hidden>
+      <button role="menuitemradio" data-mode="system" aria-checked="true"><svg class="i"><use href="#i-auto"/></svg>System<svg class="i check"><use href="#i-check"/></svg></button>
+      <button role="menuitemradio" data-mode="light" aria-checked="false"><svg class="i"><use href="#i-sun"/></svg>Light<svg class="i check"><use href="#i-check"/></svg></button>
+      <button role="menuitemradio" data-mode="dark" aria-checked="false"><svg class="i"><use href="#i-moon"/></svg>Dark<svg class="i check"><use href="#i-check"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+<div class="frame">
+  <nav class="drawer" id="drawer" aria-label="Site">
+    <div class="head"><span>ECO Archive</span><button class="iconbtn" aria-label="Close navigation"><svg class="i"><use href="#i-close"/></svg></button></div>
+    <ul><li><a href="index.html">Home</a></li><li><details><summary>Story<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="story.html">Story Overview</a></li><li><a href="story-the-path-we-walk.html">The Path We Walk</a></li><li><a href="story-the-world-begins-to-move.html">The World Begins to Move</a></li><li><a href="story-beyond-the-truth.html">Beyond the Truth</a></li><li><a href="story-final-battle.html">Final Battle</a></li><li><a href="story-saga14.html">Gate of Emerald Forest</a></li><li><a href="story-saga15.html">Everlasting Union</a></li><li><a href="story-saga16.html">Memories of the Ice Queen</a></li><li><a href="story-saga18.html">Carmine Brick</a></li></ul></details></li><li><details><summary>Getting started<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="game-basics.html">Game Basics</a></li><li><a href="races.html">Races</a></li><li><a href="stat-points.html">Status Points</a></li><li><a href="city-passes.html">City Passes</a></li><li><a href="enigma-pass.html">Enigma Group Pass</a></li></ul></details></li><li><details><summary>Game systems<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="automata.html">Automata</a></li><li><a href="bosses.html">Bosses</a></li><li><a href="catties.html">Catties</a></li><li><a href="demic-chips.html">DEMIC Chips</a></li><li><a href="dragon-mount.html">Dragon Mount</a></li><li><a href="dual-job.html">Dual Job</a></li><li><a href="dungeons.html">Dungeons</a></li><li><a href="element-fairies.html">Element Fairies</a></li><li><a href="equipment-upgrades.html">Equipment Upgrades</a></li><li><a href="fame.html">Fame</a></li><li><a href="farming.html">Farming</a></li><li><a href="fishing.html">Fishing</a></li><li><a href="flying-garden.html">Flying Garden</a></li><li><a href="flying-garden-parts.html">Flying Garden Parts</a></li><li><a href="furniture.html">Furniture</a></li><li><a href="hair-dye.html">Hair Dye</a></li><li><a href="hairstyles.html">Hairstyles</a></li><li><a href="getting-pets.html">How to Get Pets</a></li><li><a href="iris-cards.html">Iris Cards</a></li><li><a href="ability-vectors.html">Iris Cards – Ability Vectors</a></li><li><a href="item-repair.html">Item Repair</a></li><li><a href="job-switching.html">Job Switching</a></li><li><a href="marionettes.html">Marionettes &amp; Golems</a></li><li><a href="medal-machines.html">Medal Machines</a></li><li><a href="partners.html">Partners</a></li><li><a href="pet-raising.html">Pet Raising</a></li><li><a href="possession.html">Possession</a></li><li><a href="ring.html">Ring</a></li><li><a href="shops.html">Shops &amp; Merchants</a></li><li><a href="stamps.html">Stamps</a></li><li><a href="tiny-island.html">Tiny Island</a></li></ul></details></li><li><details><summary>Jobs<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="jobs.html">All jobs</a></li><li><details><summary>Fighter<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-scout.html">Scout</a></li><li><a href="job-assassin.html">Assassin</a></li><li><a href="job-commando.html">Commando</a></li><li><a href="job-eraser.html">Eraser</a></li><li><a href="job-swordsman.html">Swordsman</a></li><li><a href="job-blade-master.html">Blade Master</a></li><li><a href="job-bounty-hunter.html">Bounty Hunter</a></li><li><a href="job-gladiator.html">Gladiator</a></li><li><a href="job-fencer.html">Fencer</a></li><li><a href="job-knight.html">Knight</a></li><li><a href="job-dark-stalker.html">Dark Stalker</a></li><li><a href="job-guardian.html">Guardian</a></li><li><a href="job-archer.html">Archer</a></li><li><a href="job-striker.html">Striker</a></li><li><a href="job-gunner.html">Gunner</a></li><li><a href="job-hawkeye.html">Hawkeye</a></li></ul></details></li><li><details><summary>Spell User<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-warlock.html">Warlock</a></li><li><a href="job-cabalist.html">Cabalist</a></li><li><a href="job-necromancer.html">Necromancer</a></li><li><a href="job-soultaker.html">Soul Taker</a></li><li><a href="job-vates.html">Vates</a></li><li><a href="job-druid.html">Druid</a></li><li><a href="job-bard.html">Bard</a></li><li><a href="job-cardinal.html">Cardinal</a></li><li><a href="job-shaman.html">Shaman</a></li><li><a href="job-elementalist.html">Elementalist</a></li><li><a href="job-enchanter.html">Enchanter</a></li><li><a href="job-astralist.html">Astralist</a></li><li><a href="job-wizard.html">Wizard</a></li><li><a href="job-sorcerer.html">Sorcerer</a></li><li><a href="job-sage.html">Sage</a></li><li><a href="job-force-master.html">Force Master</a></li></ul></details></li><li><details><summary>Backpacker<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-farmer.html">Farmer</a></li><li><a href="job-alchemist.html">Alchemist</a></li><li><a href="job-marionettist.html">Marionettist</a></li><li><a href="job-harvester.html">Harvester</a></li><li><a href="job-miner.html">Miner (Tatarabe)</a></li><li><a href="job-blacksmith.html">Blacksmith</a></li><li><a href="job-engineer.html">Engineer (Machinery)</a></li><li><a href="job-maestro.html">Maestro</a></li><li><a href="job-ranger.html">Ranger</a></li><li><a href="job-explorer.html">Explorer</a></li><li><a href="job-treasure-hunter.html">Treasure Hunter</a></li><li><a href="job-strider.html">Strider</a></li><li><a href="job-merchant.html">Merchant</a></li><li><a href="job-trader.html">Trader</a></li><li><a href="job-gambler.html">Gambler</a></li><li><a href="job-royal-dealer.html">Royal Dealer</a></li></ul></details></li><li><details><summary>Other jobs<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-breeder.html">Breeder</a></li><li><a href="job-gardener.html">Gardener</a></li><li><a href="job-joker.html">Joker</a></li><li><a href="job-novice.html">Novice</a></li></ul></details></li></ul></details></li><li><details open><summary>Quests<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="quest-catty-ai.html">Catty (Ai) Quest</a></li><li><a href="quest-catty-akane.html">Catty (Akane) Quest</a></li><li><a href="quest-catty-anzu.html">Catty (Anzu) Quest</a></li><li><a href="quest-catty-kurumi.html">Catty (Kurumi Wakana) Quest</a></li><li><a href="quest-catty-momo.html">Catty (Momo) Quest</a></li><li><a href="quest-catty-sora.html">Catty (Sora) Quest</a></li><li><a href="quest-catty-sumire.html">Catty (Sumire) Quest</a></li><li><a href="quest-catty-yamabuki.html">Catty (Yamabuki) Quest</a></li><li><a href="quest-cleaning.html">Cleaning Quests</a></li><li><a href="quest-endless-corridor.html">Endless Corridor Quests</a></li><li><a href="free-skill-points.html">Free Skill Points</a></li><li><a href="quest-heart-of-the-machine.html">Heart of the Machine</a></li><li><a href="quest-lv35-armor.html">Lv 35 Armor Quest</a></li><li><a href="quest-lv45-armor.html">Lv 45 Armor Quest</a></li><li><a href="quest-lv55-armor.html">Lv 55 Armor Quest</a></li><li><a href="quest-lv55-hat-shoes.html">Lv 55 Backpacker Hat &amp; Shoes Quest</a></li><li><a href="quest-lv60-weapon.html">Lv 60 Weapon Quest</a></li><li><a href="quest-lv65-armor.html">Lv 65 Armor Quest</a></li><li><a href="quest-lv75-armor.html">Lv 75 Armor Quest</a></li><li><a href="quest-lv85-armor.html">Lv 85 Armor Quest</a></li><li><a href="quest-lv90-weapon.html">Lv 90 Weapon Quest</a></li><li><a href="quest-lv99-armor.html">Lv 99 Armor Quest</a></li><li><a href="quest-lv99-weapon.html">Lv 99 Weapon Quest</a></li><li><a href="quest-counter.html">Quest Counter</a></li><li><a href="quest-reincarnation.html" aria-current="page">Reincarnation Quest</a></li><li><a href="quest-ride-crawler.html">Ride Crawler Quest</a></li><li><a href="quest-tutorial.html">Tutorial Quests</a></li></ul></details></li><li><details><summary>Items<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="boxes.html">Boxes</a></li><li><a href="petals.html">Flower Petals</a></li><li><a href="food-items.html">Food and Healing Items</a></li><li><a href="upgrade-crystals.html">Upgrade Crystals</a></li><li><a href="equipment.html">Weapons &amp; Armor</a></li></ul></details></li><li><details><summary>Crafting<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="accessory-crafting.html">Accessory Crafting</a></li><li><a href="armor-crafting.html">Armor Crafting</a></li><li><a href="chemical-preparation.html">Chemical Preparation</a></li><li><a href="cooking.html">Cooking</a></li><li><details><summary>Recipes &amp; Materials<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="crafting.html">Craftable Items</a></li><li><a href="materials.html">Crafting Materials</a></li></ul></details></li><li><a href="fairy-scrolls.html">Fairy Scrolls</a></li><li><a href="machinery-crafting.html">Machinery Crafting</a></li><li><a href="metal-refining.html">Metal Refining</a></li><li><a href="refining.html">Refining</a></li><li><a href="tailoring.html">Tailoring</a></li><li><a href="weapon-crafting.html">Weapon Crafting</a></li><li><a href="woodcraft.html">Woodcraft</a></li></ul></details></li><li><a href="monsters.html">Monsters</a></li><li><a href="maps.html">Maps</a></li><li><details><summary>Miscellaneous<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="misc-logo.html">Logo</a></li><li><a href="misc-videos.html">Trailer</a></li><li><details><summary>Artwork<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="misc-catty-art.html">Catty &amp; Pet Art</a></li><li><a href="art-partners.html">Partner Art</a></li><li><a href="art-races.html">Character Art</a></li><li><a href="art-jobs.html">Job Art</a></li><li><a href="misc-monster-artwork.html">Marionette &amp; Monster Artwork</a></li><li><a href="art-seasonal.html">Seasonal Art</a></li><li><a href="art-sketches.html">Concept Sketches</a></li></ul></details></li><li><a href="misc-servers.html">Official Servers</a></li></ul></details></li><li><a href="references.html">Sources &amp; Credits</a></li></ul>
+  </nav>
+  <main class="content" id="main" tabindex="-1">
+<nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li>Quests</li></ol></nav><header class="hero"><div><h1>Reincarnation Quest</h1><p class="lead">Reincarnate into the higher form of your race and get your <strong>Chronicle job</strong>.</p></div><dl class="facts"><div><dt>Level</dt><dd>100 or higher, Job Level 50</dd></div><div><dt>Reward</dt><dd><ul class="cellist"><li>Your Chronicle job</li><li>The higher form of your race</li><li>Bonus looks or items, based on your level</li></ul></dd></div></dl></header><details class="toc-inline"><summary>On this page</summary><ul><li><a href="#before-you-start">Before you start</a></li><li><a href="#walkthrough">Walkthrough</a></li><li><a href="#rewards">Rewards</a></li><li><a href="#good-to-know">Good to know</a></li><li><a href="#related">Related</a></li></ul></details>
+<h2 id="before-you-start">Before you start</h2>
+<ul>
+<li>You need all of these:<ul>
+<li><strong>Level 100</strong> or higher.</li>
+<li><strong>Job Level 50</strong> in your Expert job, your Technical job, or both.</li>
+<li>Finish the fight with the <a class="ent" data-pic="assets/monster_img/14520000.png" href="monsters.html#monster:14520000">Emil Dragon</a>, which follows the <strong>Lv 99 weapon event</strong>.</li>
+</ul>
+</li>
+<li><strong>Novice:</strong> you need Lv 100 and Job Level 50 as a Novice. You become a <a href="job-joker.html">Joker</a>, and the end of the quest is different (see step 7).</li>
+<li>Your reward depends on <strong>your level when you reincarnate</strong>.</li>
+<li>Bring HP potions. HP regenerates on its own in the fights.</li>
+</ul>
+<h2 id="walkthrough">Walkthrough</h2>
+<h3 id="1-find-the-mysterious-cat">1. Find the mysterious cat</h3>
+<ul>
+<li>
+<p>Go to <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,3.08" href="maps.html#map:10065000">Northern Promenade</a>. When you meet the requirements, a <strong>mysterious creature</strong> (a cat) appears there. If it doesn't appear, you don't meet them yet.</p>
+</li>
+<li>
+<p>Talk to the creature until it runs away.</p>
+<div class="npc" role="group" aria-label="? ? ?"><div class="who"><img src="assets/npc_thumb/11002308.png" alt="" loading="lazy"><b>? ? ?</b></div><figure class="mm"><div class="mmbox" style="width:128px;height:260px;--ar:0.4923"><img src="assets/minimap/m065.png" alt="Map of Northern Promenade" loading="lazy"><span class="pin hl" data-name="Northern Promenade" style="left:49.5%;top:87.0%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,3.08" href="maps.html#map:10065000">Northern Promenade</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11002308.webp" alt="? ? ? in the game" loading="lazy"></figure></div>
+</li>
+</ul>
+<h3 id="2-talk-to-valeria">2. Talk to Valeria</h3>
+<ul>
+<li>
+<p>Go to the <a class="ent" data-pic="assets/minimap/m065.png" data-tip="room" data-pin="37.0%,62.5%" data-cap="Northern Promenade" href="maps.html#map:10065000">Northern Cafe</a> and talk to <b>Valeria</b>.</p>
+<div class="npc" role="group" aria-label="Valeria"><div class="who"><img src="assets/npc_thumb/11000220.png" alt="" loading="lazy"><b>Valeria</b></div><figure class="mm"><div class="mmbox" style="width:128px;height:260px;--ar:0.4923"><img src="assets/minimap/m065.png" alt="Map of Northern Promenade" loading="lazy"><span class="pin hl" data-name="Northern Cafe entrance" style="left:37.0%;top:62.5%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,3.08" href="maps.html#map:10065000">Northern Promenade</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11000220.webp" alt="Valeria in the game" loading="lazy"></figure></div>
+</li>
+</ul>
+<h3 id="3-chase-the-cat">3. Chase the cat</h3>
+<ul>
+<li>Find the creature again in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,3.08" href="maps.html#map:10065000">Northern Promenade</a> and follow it into the <a class="ent" data-pic="assets/minimap/m065.png" data-tip="room" data-pin="49.5%,10.6%" data-cap="Northern Promenade" href="maps.html#map:10065000">Queen Audience Room</a>.</li>
+<li>Follow it into the <strong>magic circle</strong>.</li>
+</ul>
+<h3 id="4-answer-the-cat-s-questions">4. Answer the cat's questions</h3>
+<ul>
+<li>In the <a class="ent" data-pic="assets/minimap/m065.png" data-tip="room" data-pin="49.5%,10.6%" data-cap="Northern Promenade" href="maps.html#map:10065000">White World</a>, walk straight ahead to the creature sleeping there. It asks you 3 questions.<ul>
+<li>Choose <strong>not to wake it</strong>.</li>
+<li>Answer that <strong>it is real</strong>.</li>
+<li>Any answer works for the third question.</li>
+</ul>
+</li>
+<li>A wrong answer sends you back. Walk to the creature again.</li>
+</ul>
+<h3 id="5-talk-to-mucha-and-look-in-the-white-book">5. Talk to Mucha and look in the White Book</h3>
+<ul>
+<li>
+<p>In the room with the book, talk to <b>Mucha</b>.</p>
+<div class="npc" role="group" aria-label="Mucha"><div class="who"><img src="assets/npc_thumb/11002314.png" alt="" loading="lazy"><b>Mucha</b></div><figure class="mm"><div class="mmbox" style="width:128px;height:260px;--ar:0.4923"><img src="assets/minimap/m065.png" alt="Map of Northern Promenade" loading="lazy"><span class="pin hl below" data-name="Northern Palace Ballroom entrance" style="left:49.5%;top:10.6%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,3.08" href="maps.html#map:10065000">Northern Promenade</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11002314.webp" alt="Mucha in the game" loading="lazy"></figure></div>
+</li>
+<li>
+<p>Look inside the <b>White Book</b>. It sends you to face the opponent of your job line. Then return to the room with the book.</p>
+<div class="npc" role="group" aria-label="White Book"><div class="who"><img src="assets/npc_thumb/11002315.png" alt="" loading="lazy"><b>White Book</b></div><figure class="mm"><div class="mmbox" style="width:128px;height:260px;--ar:0.4923"><img src="assets/minimap/m065.png" alt="Map of Northern Promenade" loading="lazy"><span class="pin hl below" data-name="Northern Palace Ballroom entrance" style="left:49.5%;top:10.6%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,3.08" href="maps.html#map:10065000">Northern Promenade</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11002315.webp" alt="White Book in the game" loading="lazy"></figure></div>
+</li>
+<li>
+<p>Talk to <b class="enttip" tabindex="0" data-pic="assets/npc_img/11002314.png">Mucha</b> again.</p>
+</li>
+</ul>
+<h3 id="6-earn-the-proofs-of-strength">6. Earn the proofs of strength</h3>
+<ul>
+<li>Look inside the <b class="enttip" tabindex="0" data-pic="assets/npc_img/11002315.png">White Book</b> and choose <strong>Moment of Emptiness (Time)</strong>. There you earn the <img class="inicon" src="assets/item_icon/10048012.png" alt=""><b>Proof of Great Hero (Event)</b> and the <a class="ent" href="crafting.html#recipe:2272"><img class="inicon" src="assets/item_icon/10048013.png" alt="">Proof of Soul Business Talent (Event)</a>.</li>
+<li>Defeat the <a class="ent" data-pic="assets/monster_img/10410103.png" href="monsters.html#monster:10410103">Being Trapped in the Emptiness</a> there for <a class="ent" href="materials.html#item:10048015"><img class="inicon" src="assets/item_icon/10048015.png" alt="">Pearl Soul</a> and <a class="ent" href="materials.html#item:10048016"><img class="inicon" src="assets/item_icon/10048016.png" alt="">Great Pearl Soul</a>.</li>
+<li>Combine them:<ul>
+<li><strong>50</strong> <a class="ent" href="materials.html#item:10048015"><img class="inicon" src="assets/item_icon/10048015.png" alt="">Pearl Soul</a> or <strong>1</strong> <a class="ent" href="materials.html#item:10048016"><img class="inicon" src="assets/item_icon/10048016.png" alt="">Great Pearl Soul</a> make <strong>1</strong> <a class="ent" href="crafting.html#recipe:77"><img class="inicon" src="assets/item_icon/10048014.png" alt="">Talisman of 100 Battles Practice</a>. A golem there also sells it.</li>
+<li><strong>250</strong> <a class="ent" href="materials.html#item:10048015"><img class="inicon" src="assets/item_icon/10048015.png" alt="">Pearl Soul</a> or <strong>5</strong> <a class="ent" href="materials.html#item:10048016"><img class="inicon" src="assets/item_icon/10048016.png" alt="">Great Pearl Soul</a> make <strong>1</strong> <a class="ent" href="crafting.html#recipe:2272"><img class="inicon" src="assets/item_icon/10048013.png" alt="">Proof of Soul Business Talent (Event)</a>.</li>
+</ul>
+</li>
+<li>Use the <a class="ent" href="crafting.html#recipe:77"><img class="inicon" src="assets/item_icon/10048014.png" alt="">Talisman of 100 Battles Practice</a> to fight a <strong>copy of yourself</strong>. You have <strong>10 minutes</strong>.<ul>
+<li>Each talisman works once. Everyone who goes in needs a talisman and the quest.</li>
+<li><strong>Backpacker lines and the Vates line</strong> skip this fight.</li>
+</ul>
+</li>
+<li>
+<p>Fight the opponent of your job line.</p>
+<div class="tablewrap medium"><table class="medium">
+<thead>
+<tr>
+<th>Job line</th>
+<th>Opponent</th>
+<th>Chronicle job</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="job-swordsman.html">Swordsman</a></td>
+<td><b class="enttip" tabindex="0" data-pic="assets/npc_img/11002316.png">Kamui</b></td>
+<td><a href="job-gladiator.html">Gladiator</a></td>
+</tr>
+<tr>
+<td><a href="job-fencer.html">Fencer</a></td>
+<td><b class="enttip" tabindex="0" data-pic="assets/npc_img/11002317.png">Risel</b></td>
+<td><a href="job-guardian.html">Guardian</a></td>
+</tr>
+<tr>
+<td><a href="job-scout.html">Scout</a></td>
+<td><b class="enttip" tabindex="0" data-pic="assets/npc_img/11002318.png">Kino</b></td>
+<td><a href="job-eraser.html">Eraser</a></td>
+</tr>
+<tr>
+<td><a href="job-archer.html">Archer</a></td>
+<td><b class="enttip" tabindex="0" data-pic="assets/npc_img/11002319.png">Griver</b></td>
+<td><a href="job-hawkeye.html">Hawkeye</a></td>
+</tr>
+<tr>
+<td><a href="job-wizard.html">Wizard</a></td>
+<td><b class="enttip" tabindex="0" data-pic="assets/npc_img/11002320.png">Renette</b></td>
+<td><a href="job-force-master.html">Force Master</a></td>
+</tr>
+<tr>
+<td><a href="job-shaman.html">Shaman</a></td>
+<td><b class="enttip" tabindex="0" data-pic="assets/npc_img/11002320.png">Renette</b></td>
+<td><a href="job-astralist.html">Astralist</a></td>
+</tr>
+<tr>
+<td><a href="job-warlock.html">Warlock</a></td>
+<td><b class="enttip" tabindex="0" data-pic="assets/npc_img/11002320.png">Renette</b></td>
+<td><a href="job-soultaker.html">Soul Taker</a></td>
+</tr>
+<tr>
+<td><a href="job-vates.html">Vates</a></td>
+<td><b class="enttip" tabindex="0" data-pic="assets/npc_img/11002322.png">Flor</b></td>
+<td><a href="job-cardinal.html">Cardinal</a></td>
+</tr>
+<tr>
+<td><a href="job-miner.html">Miner</a></td>
+<td><b class="enttip" tabindex="0" data-pic="assets/npc_img/11002324.png">Camellia</b></td>
+<td><a href="job-maestro.html">Maestro</a></td>
+</tr>
+<tr>
+<td><a href="job-farmer.html">Farmer</a></td>
+<td><b class="enttip" tabindex="0" data-pic="assets/npc_img/11002325.png">Canon</b></td>
+<td><a href="job-harvester.html">Harvester</a></td>
+</tr>
+<tr>
+<td><a href="job-merchant.html">Merchant</a></td>
+<td><b class="enttip" tabindex="0" data-pic="assets/npc_img/11002325.png">Canon</b></td>
+<td><a href="job-royal-dealer.html">Royal Dealer</a></td>
+</tr>
+<tr>
+<td><a href="job-ranger.html">Ranger</a></td>
+<td><b class="enttip" tabindex="0" data-pic="assets/npc_img/11002326.png">Prish</b></td>
+<td><a href="job-strider.html">Strider</a></td>
+</tr>
+</tbody>
+</table></div>
+</li>
+</ul>
+<h3 id="7-reincarnate">7. Reincarnate</h3>
+<ul>
+<li>Look inside the <b class="enttip" tabindex="0" data-pic="assets/npc_img/11002315.png">White Book</b> again. <strong>Take off your equipment</strong> first.</li>
+<li>
+<p>You get your Chronicle job and reincarnate into the higher form of your race. Your level and Job Level go back to <strong>1</strong>.</p>
+<div class="tablewrap medium"><table class="medium">
+<thead>
+<tr>
+<th>Race</th>
+<th>Reincarnates into</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Emil</td>
+<td><strong>High Emil</strong></td>
+</tr>
+<tr>
+<td>Titania</td>
+<td><strong>High Titania</strong></td>
+</tr>
+<tr>
+<td>Dominion</td>
+<td><strong>High Dominion</strong></td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li>
+<p><strong>Novice:</strong> you get the <img class="inicon" src="assets/item_icon/10048017.png" alt=""><b>Book of Rebirth: A Journey to Find Yourself</b>. Fill it at 7 spots around the world, show it to <b class="enttip" tabindex="0" data-pic="assets/npc_img/11002314.png">Mucha</b>, then look inside the <b class="enttip" tabindex="0" data-pic="assets/npc_img/11002315.png">White Book</b> again. See <a href="job-joker.html">Joker</a> for the spots.</p>
+</li>
+</ul>
+<h2 id="rewards">Rewards</h2>
+<p>You get the bonus for <strong>every level from 100 up to the level you reincarnate at</strong>. If you reincarnate at Lv 109, you get the bonuses for Lv 100 to 109, but not Lv 110.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>High Emil</th>
+<th>High Titania</th>
+<th>High Dominion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>Grace effect</td>
+<td>2 Feathers</td>
+<td>2 Feathers</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Aureola effect</td>
+<td>3 Feathers</td>
+<td>3 Feathers</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Ankle Feather effect</td>
+<td>Wing color</td>
+<td>Wing color</td>
+</tr>
+<tr>
+<td>103</td>
+<td><span class="nm"><img class="inicon" src="assets/item_icon/10084700.png" alt=""><b>Catty Medamar Keeper</b></span></td>
+<td>Wing color</td>
+<td>Wing color</td>
+</tr>
+<tr>
+<td>104</td>
+<td><span class="nm"><img class="inicon" src="assets/item_icon/10084701.png" alt=""><b>Catty Medamar Assault</b></span></td>
+<td>Wing color</td>
+<td>Wing color</td>
+</tr>
+<tr>
+<td>105</td>
+<td><span class="nm"><img class="inicon" src="assets/item_icon/10084702.png" alt=""><b>Catty Medamar General</b></span></td>
+<td>Wheel (Powers)</td>
+<td>Tail (Trident)</td>
+</tr>
+<tr>
+<td>106</td>
+<td><span class="nm"><img class="inicon" src="assets/item_icon/10084300.png" alt=""><b>Marionette Nekogurumi (Purple)</b></span></td>
+<td>Ring (Seraphim)</td>
+<td>Tail (Slim)</td>
+</tr>
+<tr>
+<td>107</td>
+<td><span class="nm"><img class="inicon" src="assets/item_icon/10084301.png" alt=""><b>Marionette Nekogurumi (Blue)</b></span></td>
+<td>Wing color</td>
+<td>Wing color</td>
+</tr>
+<tr>
+<td>108</td>
+<td><span class="nm"><img class="inicon" src="assets/item_icon/10084302.png" alt=""><b>Marionette Nekogurumi (Orange)</b></span></td>
+<td>Ex Feather</td>
+<td>Ex Feather</td>
+</tr>
+<tr>
+<td>109</td>
+<td><span class="nm"><img class="inicon" src="assets/item_icon/10084400.png" alt=""><b>Black Cat</b></span></td>
+<td>Ex 2 Feathers</td>
+<td>Ex 2 Feathers</td>
+</tr>
+<tr>
+<td>110</td>
+<td><span class="nm"><img class="inicon" src="assets/item_icon/10084500.png" alt=""><b>Cat Sith</b></span></td>
+<td>Ex 3 Feathers</td>
+<td>Ex 3 Feathers</td>
+</tr>
+</tbody>
+</table></div>
+
+<ul>
+<li>From Lv 103, the High Emil bonuses are <strong>items</strong>.</li>
+<li>Switch <strong>effects, wings, halos and tails</strong> in the <strong>Rebirth window</strong>, opened from the equipment window. Default is your old look.</li>
+<li>Bonuses above the level you reincarnated at can be added later with <strong>Page EXP</strong>, in <strong>Increase Rebirth Privilege</strong>. This needs the <strong>Another Book</strong>, from the Another Chronicle quest <strong>Obtain Another Chronicle</strong>.<ul>
+<li>The High Emil marionettes and partners can't be received a second time.</li>
+</ul>
+</li>
+</ul>
+<h2 id="good-to-know">Good to know</h2>
+<ul>
+<li><strong>You keep your looks and the skills you learned.</strong> After you reincarnate, you can use all your Expert and Technical skills up to the Job Level you reached. There is no 5-skill limit like in Switch Job.</li>
+<li><strong>No Reserve needed.</strong> You can learn every Expert and Technical skill without <a href="job-switching.html">Reserve</a>, so the Reserve tab is gone from the skill window. Each skill opens at its job's Job Level: a Job Level 50 skill needs that job at Job Level 50.</li>
+<li><strong>At most 40 skills in total</strong>, counting first, second and third job skills.</li>
+<li><strong>You can wear gear up to 10 levels above your own level.</strong></li>
+<li><strong><b class="enttip" tabindex="0" data-pic="assets/npc_img/11002320.png">Renette</b> is the hardest opponent.</strong> She is very hard for the Wizard and Shaman lines.</li>
+<li><strong>Vates line tip:</strong> <b class="enttip" tabindex="0" data-pic="assets/npc_img/11002322.png">Flor</b> heals itself and stands on light-element ground.</li>
+</ul>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="races.html">Races</a></li>
+<li><a href="job-joker.html">Joker</a></li>
+<li><a href="job-cardinal.html">Cardinal</a></li>
+<li><a class="ent" data-pic="assets/monster_img/14520000.png" href="monsters.html#monster:14520000">Emil Dragon</a></li>
+<li><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,3.08" href="maps.html#map:10065000">Northern Promenade</a></li>
+</ul>
+
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">On this page</h2><ul><li><a href="#before-you-start">Before you start</a></li><li><a href="#walkthrough">Walkthrough</a></li><li><a href="#rewards">Rewards</a></li><li><a href="#good-to-know">Good to know</a></li><li><a href="#related">Related</a></li></ul></aside>
+</div>
+<script src="search-index.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

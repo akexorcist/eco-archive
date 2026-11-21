@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pet Raising · ECO Archive</title>
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="stylesheet" href="site.css">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body class="article">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/></symbol>
+<symbol id="i-left" viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></symbol>
+<symbol id="i-right" viewBox="0 0 24 24"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></symbol>
+<symbol id="i-unfold" viewBox="0 0 24 24"><path d="M12 5.83 15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"/></symbol>
+<symbol id="i-fold" viewBox="0 0 24 24"><path d="M7.41 18.59 8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM2 13h2a1 1 0 0 0 0-2H2a1 1 0 0 0 0 2zm18 0h2a1 1 0 0 0 0-2h-2a1 1 0 0 0 0 2zM11 2v2a1 1 0 0 0 2 0V2a1 1 0 0 0-2 0zm0 18v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-2 0zM5.99 4.58a1 1 0 0 0-1.41 1.41l1.06 1.06a1 1 0 0 0 1.41-1.41L5.99 4.58zm12.37 12.37a1 1 0 0 0-1.41 1.41l1.06 1.06a1 1 0 0 0 1.41-1.41l-1.06-1.06zm1.06-10.96a1 1 0 0 0-1.41-1.41l-1.06 1.06a1 1 0 0 0 1.41 1.41l1.06-1.06zM7.05 18.36a1 1 0 0 0-1.41-1.41l-1.06 1.06a1 1 0 0 0 1.41 1.41l1.06-1.06z"/></symbol>
+<symbol id="i-auto" viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zm1-17.93a8 8 0 0 1 0 15.86V4.07z"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="iconbtn" id="menubtn" aria-label="Open navigation" aria-controls="drawer" aria-expanded="false"><svg class="i"><use href="#i-menu"/></svg></button>
+  <a class="brand" href="index.html"><img class="logo" src="assets/misc_img/logo/eco_logo_topbar.png" alt="" width="56" height="44"><span class="name">ECO Archive</span></a>
+  <div class="search" role="search">
+    <label for="q"><svg class="i"><use href="#i-search"/></svg><span class="visually-hidden">Search pages</span></label>
+    <input id="q" type="search" placeholder="Search jobs, quests, items…" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list">
+    <ul class="results" id="results" role="listbox" aria-label="Search results" hidden></ul>
+  </div>
+  <div class="thememenu">
+    <button class="iconbtn" id="themebtn" aria-haspopup="menu" aria-expanded="false" aria-controls="thememenu" aria-label="Theme"><svg class="i"><use href="#i-auto"/></svg></button>
+    <div class="menu" id="thememenu" role="menu" aria-label="Theme" hidden>
+      <button role="menuitemradio" data-mode="system" aria-checked="true"><svg class="i"><use href="#i-auto"/></svg>System<svg class="i check"><use href="#i-check"/></svg></button>
+      <button role="menuitemradio" data-mode="light" aria-checked="false"><svg class="i"><use href="#i-sun"/></svg>Light<svg class="i check"><use href="#i-check"/></svg></button>
+      <button role="menuitemradio" data-mode="dark" aria-checked="false"><svg class="i"><use href="#i-moon"/></svg>Dark<svg class="i check"><use href="#i-check"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+<div class="frame">
+  <nav class="drawer" id="drawer" aria-label="Site">
+    <div class="head"><span>ECO Archive</span><button class="iconbtn" aria-label="Close navigation"><svg class="i"><use href="#i-close"/></svg></button></div>
+    <ul><li><a href="index.html">Home</a></li><li><details><summary>Story<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="story.html">Story Overview</a></li><li><a href="story-the-path-we-walk.html">The Path We Walk</a></li><li><a href="story-the-world-begins-to-move.html">The World Begins to Move</a></li><li><a href="story-beyond-the-truth.html">Beyond the Truth</a></li><li><a href="story-final-battle.html">Final Battle</a></li><li><a href="story-saga14.html">Gate of Emerald Forest</a></li><li><a href="story-saga15.html">Everlasting Union</a></li><li><a href="story-saga16.html">Memories of the Ice Queen</a></li><li><a href="story-saga18.html">Carmine Brick</a></li></ul></details></li><li><details><summary>Getting started<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="game-basics.html">Game Basics</a></li><li><a href="races.html">Races</a></li><li><a href="stat-points.html">Status Points</a></li><li><a href="city-passes.html">City Passes</a></li><li><a href="enigma-pass.html">Enigma Group Pass</a></li></ul></details></li><li><details open><summary>Game systems<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="automata.html">Automata</a></li><li><a href="bosses.html">Bosses</a></li><li><a href="catties.html">Catties</a></li><li><a href="demic-chips.html">DEMIC Chips</a></li><li><a href="dragon-mount.html">Dragon Mount</a></li><li><a href="dual-job.html">Dual Job</a></li><li><a href="dungeons.html">Dungeons</a></li><li><a href="element-fairies.html">Element Fairies</a></li><li><a href="equipment-upgrades.html">Equipment Upgrades</a></li><li><a href="fame.html">Fame</a></li><li><a href="farming.html">Farming</a></li><li><a href="fishing.html">Fishing</a></li><li><a href="flying-garden.html">Flying Garden</a></li><li><a href="flying-garden-parts.html">Flying Garden Parts</a></li><li><a href="furniture.html">Furniture</a></li><li><a href="hair-dye.html">Hair Dye</a></li><li><a href="hairstyles.html">Hairstyles</a></li><li><a href="getting-pets.html">How to Get Pets</a></li><li><a href="iris-cards.html">Iris Cards</a></li><li><a href="ability-vectors.html">Iris Cards – Ability Vectors</a></li><li><a href="item-repair.html">Item Repair</a></li><li><a href="job-switching.html">Job Switching</a></li><li><a href="marionettes.html">Marionettes &amp; Golems</a></li><li><a href="medal-machines.html">Medal Machines</a></li><li><a href="partners.html">Partners</a></li><li><a href="pet-raising.html" aria-current="page">Pet Raising</a></li><li><a href="possession.html">Possession</a></li><li><a href="ring.html">Ring</a></li><li><a href="shops.html">Shops &amp; Merchants</a></li><li><a href="stamps.html">Stamps</a></li><li><a href="tiny-island.html">Tiny Island</a></li></ul></details></li><li><details><summary>Jobs<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="jobs.html">All jobs</a></li><li><details><summary>Fighter<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-scout.html">Scout</a></li><li><a href="job-assassin.html">Assassin</a></li><li><a href="job-commando.html">Commando</a></li><li><a href="job-eraser.html">Eraser</a></li><li><a href="job-swordsman.html">Swordsman</a></li><li><a href="job-blade-master.html">Blade Master</a></li><li><a href="job-bounty-hunter.html">Bounty Hunter</a></li><li><a href="job-gladiator.html">Gladiator</a></li><li><a href="job-fencer.html">Fencer</a></li><li><a href="job-knight.html">Knight</a></li><li><a href="job-dark-stalker.html">Dark Stalker</a></li><li><a href="job-guardian.html">Guardian</a></li><li><a href="job-archer.html">Archer</a></li><li><a href="job-striker.html">Striker</a></li><li><a href="job-gunner.html">Gunner</a></li><li><a href="job-hawkeye.html">Hawkeye</a></li></ul></details></li><li><details><summary>Spell User<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-warlock.html">Warlock</a></li><li><a href="job-cabalist.html">Cabalist</a></li><li><a href="job-necromancer.html">Necromancer</a></li><li><a href="job-soultaker.html">Soul Taker</a></li><li><a href="job-vates.html">Vates</a></li><li><a href="job-druid.html">Druid</a></li><li><a href="job-bard.html">Bard</a></li><li><a href="job-cardinal.html">Cardinal</a></li><li><a href="job-shaman.html">Shaman</a></li><li><a href="job-elementalist.html">Elementalist</a></li><li><a href="job-enchanter.html">Enchanter</a></li><li><a href="job-astralist.html">Astralist</a></li><li><a href="job-wizard.html">Wizard</a></li><li><a href="job-sorcerer.html">Sorcerer</a></li><li><a href="job-sage.html">Sage</a></li><li><a href="job-force-master.html">Force Master</a></li></ul></details></li><li><details><summary>Backpacker<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-farmer.html">Farmer</a></li><li><a href="job-alchemist.html">Alchemist</a></li><li><a href="job-marionettist.html">Marionettist</a></li><li><a href="job-harvester.html">Harvester</a></li><li><a href="job-miner.html">Miner (Tatarabe)</a></li><li><a href="job-blacksmith.html">Blacksmith</a></li><li><a href="job-engineer.html">Engineer (Machinery)</a></li><li><a href="job-maestro.html">Maestro</a></li><li><a href="job-ranger.html">Ranger</a></li><li><a href="job-explorer.html">Explorer</a></li><li><a href="job-treasure-hunter.html">Treasure Hunter</a></li><li><a href="job-strider.html">Strider</a></li><li><a href="job-merchant.html">Merchant</a></li><li><a href="job-trader.html">Trader</a></li><li><a href="job-gambler.html">Gambler</a></li><li><a href="job-royal-dealer.html">Royal Dealer</a></li></ul></details></li><li><details><summary>Other jobs<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-breeder.html">Breeder</a></li><li><a href="job-gardener.html">Gardener</a></li><li><a href="job-joker.html">Joker</a></li><li><a href="job-novice.html">Novice</a></li></ul></details></li></ul></details></li><li><details><summary>Quests<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="quest-catty-ai.html">Catty (Ai) Quest</a></li><li><a href="quest-catty-akane.html">Catty (Akane) Quest</a></li><li><a href="quest-catty-anzu.html">Catty (Anzu) Quest</a></li><li><a href="quest-catty-kurumi.html">Catty (Kurumi Wakana) Quest</a></li><li><a href="quest-catty-momo.html">Catty (Momo) Quest</a></li><li><a href="quest-catty-sora.html">Catty (Sora) Quest</a></li><li><a href="quest-catty-sumire.html">Catty (Sumire) Quest</a></li><li><a href="quest-catty-yamabuki.html">Catty (Yamabuki) Quest</a></li><li><a href="quest-cleaning.html">Cleaning Quests</a></li><li><a href="quest-endless-corridor.html">Endless Corridor Quests</a></li><li><a href="free-skill-points.html">Free Skill Points</a></li><li><a href="quest-heart-of-the-machine.html">Heart of the Machine</a></li><li><a href="quest-lv35-armor.html">Lv 35 Armor Quest</a></li><li><a href="quest-lv45-armor.html">Lv 45 Armor Quest</a></li><li><a href="quest-lv55-armor.html">Lv 55 Armor Quest</a></li><li><a href="quest-lv55-hat-shoes.html">Lv 55 Backpacker Hat &amp; Shoes Quest</a></li><li><a href="quest-lv60-weapon.html">Lv 60 Weapon Quest</a></li><li><a href="quest-lv65-armor.html">Lv 65 Armor Quest</a></li><li><a href="quest-lv75-armor.html">Lv 75 Armor Quest</a></li><li><a href="quest-lv85-armor.html">Lv 85 Armor Quest</a></li><li><a href="quest-lv90-weapon.html">Lv 90 Weapon Quest</a></li><li><a href="quest-lv99-armor.html">Lv 99 Armor Quest</a></li><li><a href="quest-lv99-weapon.html">Lv 99 Weapon Quest</a></li><li><a href="quest-counter.html">Quest Counter</a></li><li><a href="quest-reincarnation.html">Reincarnation Quest</a></li><li><a href="quest-ride-crawler.html">Ride Crawler Quest</a></li><li><a href="quest-tutorial.html">Tutorial Quests</a></li></ul></details></li><li><details><summary>Items<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="boxes.html">Boxes</a></li><li><a href="petals.html">Flower Petals</a></li><li><a href="food-items.html">Food and Healing Items</a></li><li><a href="upgrade-crystals.html">Upgrade Crystals</a></li><li><a href="equipment.html">Weapons &amp; Armor</a></li></ul></details></li><li><details><summary>Crafting<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="accessory-crafting.html">Accessory Crafting</a></li><li><a href="armor-crafting.html">Armor Crafting</a></li><li><a href="chemical-preparation.html">Chemical Preparation</a></li><li><a href="cooking.html">Cooking</a></li><li><details><summary>Recipes &amp; Materials<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="crafting.html">Craftable Items</a></li><li><a href="materials.html">Crafting Materials</a></li></ul></details></li><li><a href="fairy-scrolls.html">Fairy Scrolls</a></li><li><a href="machinery-crafting.html">Machinery Crafting</a></li><li><a href="metal-refining.html">Metal Refining</a></li><li><a href="refining.html">Refining</a></li><li><a href="tailoring.html">Tailoring</a></li><li><a href="weapon-crafting.html">Weapon Crafting</a></li><li><a href="woodcraft.html">Woodcraft</a></li></ul></details></li><li><a href="monsters.html">Monsters</a></li><li><a href="maps.html">Maps</a></li><li><details><summary>Miscellaneous<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="misc-logo.html">Logo</a></li><li><a href="misc-videos.html">Trailer</a></li><li><details><summary>Artwork<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="misc-catty-art.html">Catty &amp; Pet Art</a></li><li><a href="art-partners.html">Partner Art</a></li><li><a href="art-races.html">Character Art</a></li><li><a href="art-jobs.html">Job Art</a></li><li><a href="misc-monster-artwork.html">Marionette &amp; Monster Artwork</a></li><li><a href="art-seasonal.html">Seasonal Art</a></li><li><a href="art-sketches.html">Concept Sketches</a></li></ul></details></li><li><a href="misc-servers.html">Official Servers</a></li></ul></details></li><li><a href="references.html">Sources &amp; Credits</a></li></ul>
+  </nav>
+  <main class="content" id="main" tabindex="-1">
+<nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li>Game systems</li></ol></nav><header class="hero plain"><div><h1>Pet Raising</h1><p class="lead">How a partner grows stronger and stays ready to fight.</p></div></header><details class="toc-inline"><summary>On this page</summary><ul><li><a href="#how-partners-grow">How partners grow</a></li><li><a href="#base-lv">Base Lv</a></li><li><a href="#partner-rank">Partner Rank</a></li><li><a href="#snacks">Snacks</a></li><li><a href="#health-and-intimacy">Health and intimacy</a></li><li><a href="#act-cubes">Act cubes</a></li><li><a href="#partner-chronicle-rebirth">Partner Chronicle Rebirth</a></li><li><a href="#good-to-know">Good to know</a></li><li><a href="#related">Related</a></li></ul></details>
+
+
+
+<h2 id="how-partners-grow">How partners grow</h2>
+<p>A partner grows in three separate ways:</p>
+<div class="tablewrap medium"><table class="medium">
+<thead>
+<tr>
+<th>Growth</th>
+<th>Raised by</th>
+<th>Gives</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base Lv</td>
+<td>EXP you earn</td>
+<td><ul class="cellist"><li>Higher base stats</li></ul></td>
+</tr>
+<tr>
+<td>Partner Rank</td>
+<td>Feeding snacks</td>
+<td><ul class="cellist"><li>Growth points to spend</li><li>Partner weapons and armor</li></ul></td>
+</tr>
+<tr>
+<td>Trust</td>
+<td>Fighting together</td>
+<td><ul class="cellist"><li>Stat bonus</li><li>Special lines</li></ul></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Trust shows as a colour, e.g. <strong>Requires Trust</strong> in the Act Cube Information window. Lowest first:<ul>
+<li>Black (lowest)</li>
+<li>Purple</li>
+<li>Blue</li>
+<li>Light Blue</li>
+<li>Green</li>
+<li>Yellow Green</li>
+<li>Yellow</li>
+<li>Orange</li>
+<li>Red</li>
+<li>Pink (highest)</li>
+</ul>
+</li>
+</ul>
+<h2 id="base-lv">Base Lv</h2>
+<ul>
+<li>Your partner gets EXP whenever you do:<ul>
+<li>monsters you or your party defeat</li>
+<li>quests and events</li>
+<li>using items</li>
+<li>Knight drills and sieges</li>
+<li>crafting, only if your main job is a Backpacker job</li>
+</ul>
+</li>
+<li>It still gets EXP when you are at the max level. Your EXP-boost items don't raise it.</li>
+<li><strong>Hit every monster at least once yourself.</strong> If your partner defeats it alone, you get no EXP and no drops.<ul>
+<li>Ride partners are the exception: you get EXP normally while riding.</li>
+</ul>
+</li>
+<li>Your partner doesn't take EXP away from other players fighting the same monster.</li>
+<li>A partner <strong>31 or more Base Lv above you</strong> gets lower stats. A lower-level partner has no penalty.</li>
+</ul>
+<h2 id="partner-rank">Partner Rank</h2>
+<ul>
+<li>Ranks go from <strong>H1</strong> to <strong>SSS10</strong>, 10 steps per letter (H10 → G1).</li>
+<li>Letters, lowest first:<ul>
+<li>H (lowest)</li>
+<li>G</li>
+<li>F</li>
+<li>E</li>
+<li>D</li>
+<li>C</li>
+<li>B</li>
+<li>A</li>
+<li>S</li>
+<li>SS</li>
+<li>SSS (highest)</li>
+</ul>
+</li>
+<li>Every rank-up gives growth points. Spend them on a growth guideline:</li>
+</ul>
+<div class="tablewrap medium"><table class="medium">
+<thead>
+<tr>
+<th>Guideline</th>
+<th>Raises</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strengthen Physical</td>
+<td>Max SP, Min/Max ATK</td>
+</tr>
+<tr>
+<td>Strengthen Magical</td>
+<td>Max MP, Min/Max MATK</td>
+</tr>
+<tr>
+<td>Strengthen Durability</td>
+<td>Max HP, DEF</td>
+</tr>
+<tr>
+<td>Strengthen Mentality</td>
+<td>MDEF, CSPD</td>
+</tr>
+<tr>
+<td>Strengthen Accuracy</td>
+<td>S.HIT, L.HIT</td>
+</tr>
+<tr>
+<td>Strengthen Speed</td>
+<td>S.AVOID, L.AVOID, ASPD</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Each partner type has one matching guideline. Enough points in it give an extra stat bonus.</li>
+</ul>
+<h2 id="snacks">Snacks</h2>
+<ul>
+<li>A snack works only within the Partner Rank range in its name.</li>
+<li>The time in the name is how long your partner waits before it can eat the next one.</li>
+<li>While a snack lasts, your partner gains trust faster:<ul>
+<li>Trust1.3: 130% trust gain</li>
+<li>Trust1.5: 150% trust gain</li>
+<li>Trust1.8: 180% trust gain</li>
+</ul>
+</li>
+<li>Put snacks in the snack slots and tick <strong>Automatically use snacks</strong>. Your partner eats one when hungry, lowest rank first.</li>
+<li>It doesn't eat during events or while you are logged out.</li>
+</ul>
+<div class="tablewrap medium"><table class="medium">
+<thead>
+<tr>
+<th>Snack</th>
+<th>Partner Rank</th>
+<th>Rank EXP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Snack H1~D10</td>
+<td>H1–D10</td>
+<td><ul class="cellist"><li>5 minutes: 1</li><li>30 minutes: 5</li><li>1 hour: 10</li><li>4 hours: 40</li></ul></td>
+</tr>
+<tr>
+<td>Snack F1~B10</td>
+<td>F1–B10</td>
+<td><ul class="cellist"><li>5 minutes: 2</li><li>30 minutes: 10</li><li>1 hour: 22</li><li>4 hours: 70</li></ul></td>
+</tr>
+<tr>
+<td>Snack E1~A10</td>
+<td>E1–A10</td>
+<td><ul class="cellist"><li>10 minutes: 26</li><li>1 hour: 170</li><li>4 hours: 700</li></ul></td>
+</tr>
+<tr>
+<td>Snack D1~S10</td>
+<td>D1–S10</td>
+<td><ul class="cellist"><li>10 minutes: 143</li><li>1 hour: 500</li><li>4 hours: 2,300</li></ul></td>
+</tr>
+<tr>
+<td>Luxury Snack B1~SS5</td>
+<td>B1–SS5</td>
+<td><ul class="cellist"><li>20 minutes: 350</li><li>2 hours: 2,200</li><li>4 hours: 4,600</li></ul></td>
+</tr>
+<tr>
+<td>Luxury Snack A1~SSS10</td>
+<td>A1–SSS10</td>
+<td><ul class="cellist"><li>30 minutes: 620</li><li>3 hours: 3,960</li><li>6 hours: 8,020</li></ul></td>
+</tr>
+<tr>
+<td>Luxury Snack S1~SSS10</td>
+<td>S1–SSS10</td>
+<td><ul class="cellist"><li>50 minutes: 60,000</li><li>5 hours: 350,000</li></ul></td>
+</tr>
+</tbody>
+</table></div>
+
+
+<h3 id="buying-snacks">Buying snacks</h3>
+<ul>
+<li>
+<p>Buy them from <a class="ent" href="maps.html#map:10031000">Marc</a> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,53.85" href="maps.html#map:10031000">Acronia Southern Plains</a>.</p>
+<div class="npc noscene" role="group" aria-label="Marc"><div class="who"><img src="assets/npc_thumb/11003308.png" alt="" loading="lazy"><b>Marc</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m031.png" alt="Map of Acronia Southern Plains" loading="lazy"><span class="pin hl" data-name="Acronia Southern Plains" style="left:46.3%;top:40.8%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,53.85" href="maps.html#map:10031000">Acronia Southern Plains</a></figcaption></figure></div>
+</li>
+</ul>
+<h3 id="cooking-snacks">Cooking snacks</h3>
+<p>Cook them with <a class="ent" href="job-farmer.html#skill:2040"><img class="inicon skicon" src="assets/ext/nekogame-wiki/assets/images/wiki/skills/SI_2040.png" alt="">Cook</a>. Higher kinds add a fish from <a href="fishing.html">Fishing</a>; Luxury Snacks add a crop from <a href="farming.html">Farming</a>. Every recipe is on the <a href="crafting.html">Crafting</a> page.</p>
+<ul>
+<li><strong><a class="ent" href="materials.html#item:68500166"><img class="inicon" src="assets/item_icon/10007900.png" alt="">Partner Wheat</a></strong> (<a href="crafting.html#recipe:2400">Cook Lv 1</a>)<ul>
+<li><span class="amt">1 × <a class="ent" href="materials.html#item:10001100"><img class="inicon" src="assets/item_icon/10001100.png" alt="">Giant Barley Flour</a></span></li>
+<li><span class="amt">1 × <a class="ent" href="materials.html#item:10045400"><img class="inicon" src="assets/item_icon/10001104.png" alt="">Salt</a></span></li>
+<li><span class="amt">1 × <a class="ent" href="materials.html#item:10001800"><img class="inicon" src="assets/item_icon/10001800.png" alt="">Mineral Water</a></span></li>
+</ul>
+</li>
+<li><strong><a class="ent" href="materials.html#item:68500100"><img class="inicon" src="assets/item_icon/68501100.png" alt="">Snack H1~D10 (Trust1.3) 5m</a></strong> (<a href="crafting.html#recipe:2401">Cook Lv 1</a>)<ul>
+<li><span class="amt">1 × <a class="ent" href="materials.html#item:68500166"><img class="inicon" src="assets/item_icon/10007900.png" alt="">Partner Wheat</a></span></li>
+<li><span class="amt">1 × <a class="ent" href="materials.html#item:10000103"><img class="inicon" src="assets/item_icon/10000103.png" alt="">Heal Potion</a></span></li>
+</ul>
+</li>
+<li><strong><a class="ent" href="materials.html#item:68500112"><img class="inicon" src="assets/item_icon/68501112.png" alt="">Snack F1~B10 (Trust1.3) 5m</a></strong> (<a href="crafting.html#recipe:2413">Cook Lv 2</a>)<ul>
+<li><span class="amt">1 × <a class="ent" href="materials.html#item:68500100"><img class="inicon" src="assets/item_icon/68501100.png" alt="">Snack H1~D10 (Trust1.3) 5m</a></span></li>
+<li>1 fish, one of:<ul>
+<li><a class="ent" href="materials.html#item:10108600"><img class="inicon" src="assets/item_icon/10108600.png" alt="">Squid</a></li>
+<li><a class="ent" href="materials.html#item:10106400"><img class="inicon" src="assets/item_icon/10106400.png" alt="">Kokanee Salmon</a></li>
+<li><a class="ent" href="materials.html#item:10114703"><img class="inicon" src="assets/item_icon/10114700.png" alt="">Catfish</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><a class="ent" href="materials.html#item:68500124"><img class="inicon" src="assets/item_icon/68501124.png" alt="">Snack E1~A10 (Trust1.3) 10m</a></strong> (<a href="crafting.html#recipe:2427">Cook Lv 3</a>)<ul>
+<li><span class="amt">1 × <a class="ent" href="materials.html#item:68500112"><img class="inicon" src="assets/item_icon/68501112.png" alt="">Snack F1~B10 (Trust1.3) 5m</a></span></li>
+<li>1 fish, one of:<ul>
+<li><a class="ent" href="materials.html#item:10108700"><img class="inicon" src="assets/item_icon/10108700.png" alt="">Horse Mackerel</a></li>
+<li><a class="ent" href="materials.html#item:10105800"><img class="inicon" src="assets/item_icon/10105800.png" alt="">Char Fish</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><a class="ent" href="materials.html#item:68500133"><img class="inicon" src="assets/item_icon/68501133.png" alt="">Snack D1~S10 (Trust1.3) 10m</a></strong> (<a href="crafting.html#recipe:2437">Cook Lv 4</a>)<ul>
+<li><span class="amt">1 × <a class="ent" href="materials.html#item:68500124"><img class="inicon" src="assets/item_icon/68501124.png" alt="">Snack E1~A10 (Trust1.3) 10m</a></span></li>
+<li><span class="amt">1 × <a class="ent" href="materials.html#item:10115900"><img class="inicon" src="assets/item_icon/10105800.png" alt="">Bitterling</a></span></li>
+</ul>
+</li>
+<li><strong><a class="ent" href="materials.html#item:68500142"><img class="inicon" src="assets/item_icon/68501142.png" alt="">Luxury Snack B1~SS5 (Trust1.3) 20m</a></strong> (<a href="crafting.html#recipe:2446">Cook Lv 5</a>)<ul>
+<li><span class="amt">1 × <a class="ent" href="materials.html#item:68500100"><img class="inicon" src="assets/item_icon/68501100.png" alt="">Snack H1~D10 (Trust1.3) 5m</a></span></li>
+<li>1 crop, one of:<ul>
+<li><a class="ent" href="materials.html#item:10100100"><img class="inicon" src="assets/item_icon/10100100.png" alt="">Sprouts</a></li>
+<li><a class="ent" href="materials.html#item:10097200"><img class="inicon" src="assets/item_icon/10097200.png" alt="">Pineapple</a></li>
+<li><a class="ent" href="materials.html#item:10099700"><img class="inicon" src="assets/item_icon/10099700.png" alt="">Millet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><a class="ent" href="materials.html#item:68500151"><img class="inicon" src="assets/item_icon/68501151.png" alt="">Luxury Snack A1~SSS10 (Trust1.3) 30m</a></strong> (<a href="crafting.html#recipe:2457">Cook Lv 5</a>)<ul>
+<li><span class="amt">1 × <a class="ent" href="materials.html#item:68500142"><img class="inicon" src="assets/item_icon/68501142.png" alt="">Luxury Snack B1~SS5 (Trust1.3) 20m</a></span></li>
+<li>1 crop, one of:<ul>
+<li><a class="ent" href="materials.html#item:10096600"><img class="inicon" src="assets/item_icon/10096600.png" alt="">Green Apple</a></li>
+<li><a class="ent" href="materials.html#item:10096300"><img class="inicon" src="assets/item_icon/10096300.png" alt="">Daikon Sprouts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><a class="ent" href="materials.html#item:68500160"><img class="inicon" src="assets/item_icon/68501160.png" alt="">Luxury Snack S1~SSS10 (Trust1.3) 50m</a></strong> (<a href="crafting.html#recipe:2467">Cook Lv 5</a>)<ul>
+<li><span class="amt">1 × <a class="ent" href="materials.html#item:68500151"><img class="inicon" src="assets/item_icon/68501151.png" alt="">Luxury Snack A1~SSS10 (Trust1.3) 30m</a></span></li>
+<li><span class="amt">1 × <a class="ent" href="materials.html#item:10099500"><img class="inicon" src="assets/item_icon/10099500.png" alt="">Oats</a></span></li>
+</ul>
+</li>
+<li><strong>Trust1.5 and Trust1.8:</strong> the Trust1.3 snack plus one more item. For Snack H1~D10:<ul>
+<li>Trust1.5: <span class="amt">1 × <a class="ent" href="materials.html#item:10007700"><img class="inicon" src="assets/item_icon/10007700.png" alt="">Egg</a></span></li>
+<li>Trust1.8: <span class="amt">1 × <a class="ent" href="materials.html#item:10007400"><img class="inicon" src="assets/item_icon/10007400.png" alt="">Dried Fish</a></span></li>
+</ul>
+</li>
+<li><strong>Longer snacks:</strong> the shortest snack of the same kind, as many as fit the time. For example:<ul>
+<li>30 minutes: 6 × the 5-minute snack</li>
+<li>4 hours: 48 × the 5-minute snack</li>
+</ul>
+</li>
+</ul>
+<h2 id="health-and-intimacy">Health and intimacy</h2>
+<ul>
+<li>At 0 HP your partner comes off and goes back to your inventory.<ul>
+<li>It loses <strong>1 intimacy</strong> and is injured for <strong>10 minutes</strong>, with lower stats.</li>
+<li>The 10 minutes count down even while it is unequipped or you are logged out.</li>
+</ul>
+</li>
+<li>At <strong>0 intimacy</strong> you can't equip it, and it can't possess. It doesn't disappear: restore its intimacy and it works again.</li>
+<li><a class="ent" href="crafting.html#recipe:550"><img class="inicon" src="assets/item_icon/10033905.png" alt="">Partner Food</a> and <a class="ent" href="materials.html#item:10030700"><img class="inicon" src="assets/item_icon/10030700.png" alt="">Plant Nutrients</a> restore <strong>100 HP</strong>, more for a partner with high HP recovery.</li>
+</ul>
+<h3 id="restoring-intimacy">Restoring intimacy</h3>
+<ul>
+<li>
+<p><strong><b>Pet Doctor</b>: +1 per day.</strong> Needs 10 Fame. The first visit also gives a candy worth +15. The doctor stands in three places:</p>
+<ul>
+<li>
+<p><b class="enttip" tabindex="0" data-pic="assets/npc_img/11000842.png">Pet Doctor</b> in the <a class="ent" data-pic="assets/minimap/m060.png" data-tip="room" data-pin="49.8%,30.7%" data-cap="Morg City" href="maps.html#map:10060000">Morg Pet Cafe</a>, <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="11.54,79.23" href="maps.html#map:10060000">Morg City</a></p>
+<div class="npc" role="group" aria-label="Pet Doctor"><div class="who"><img src="assets/npc_thumb/11000842.png" alt="" loading="lazy"><b>Pet Doctor</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m060.png" alt="Map of Morg City" loading="lazy"><span class="pin hl below" data-name="Morg Pet Cafe entrance" style="left:49.8%;top:30.7%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="11.54,79.23" href="maps.html#map:10060000">Morg City</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11000842.webp" alt="Pet Doctor in the game" loading="lazy"></figure></div>
+</li>
+<li>
+<p><a class="ent" data-pic="assets/npc_img/11001071.png" href="maps.html#map:10062000">Pet Doctor</a> on <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="62.31,79.23" href="maps.html#map:10062000">Tonka Island</a></p>
+<div class="npc" role="group" aria-label="Pet Doctor"><div class="who"><img src="assets/npc_thumb/11001071.png" alt="" loading="lazy"><b>Pet Doctor</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m062.png" alt="Map of Tonka Island" loading="lazy"><span class="pin hl below" data-name="Tonka Island" style="left:58.8%;top:35.4%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="62.31,79.23" href="maps.html#map:10062000">Tonka Island</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11001071.webp" alt="Pet Doctor in the game" loading="lazy"></figure></div>
+</li>
+<li>
+<p><a class="ent" data-pic="assets/npc_img/11001289.png" href="maps.html#map:10059000">Pet Doctor</a> on <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="79.23,70.77" href="maps.html#map:10059000">Mai Mai Island</a></p>
+<div class="npc" role="group" aria-label="Pet Doctor"><div class="who"><img src="assets/npc_thumb/11001289.png" alt="" loading="lazy"><b>Pet Doctor</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m059.png" alt="Map of Mai Mai Island" loading="lazy"><span class="pin hl below" data-name="Mai Mai Island" style="left:37.3%;top:22.1%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="79.23,70.77" href="maps.html#map:10059000">Mai Mai Island</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11001289.webp" alt="Pet Doctor in the game" loading="lazy"></figure></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><b>Pet Hermit</b> in the <a class="ent" data-pic="assets/minimap/m056.png" data-tip="room" data-pin="70.5%,22.1%" data-cap="Momo Plains" href="maps.html#map:10056000">Pet House</a>: +3 per day.</strong> Only after he gives you a crawler, once per account. See <a href="getting-pets.html">How to Get Pets</a>.</p>
+<div class="npc" role="group" aria-label="Pet Hermit"><div class="who"><img src="assets/npc_thumb/11000669.png" alt="" loading="lazy"><b>Pet Hermit</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m056.png" alt="Map of Momo Plains" loading="lazy"><span class="pin hl below edge-r" data-name="Pet House entrance" style="left:70.5%;top:22.1%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="79.23,36.92" href="maps.html#map:10056000">Momo Plains</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11000669.webp" alt="Pet Hermit in the game" loading="lazy"></figure></div>
+</li>
+<li>
+<p><strong>Items:</strong> <img class="inicon" src="assets/item_icon/10009111.png" alt=""><b>Heartful Candy</b> and <a class="ent" href="materials.html#item:10034600"><img class="inicon" src="assets/item_icon/10034600.png" alt="">Heartful Beans</a>.</p>
+</li>
+<li><strong>Other characters:</strong> each character on your account can visit a <b class="enttip" tabindex="0" data-pic="assets/npc_img/11000842.png">Pet Doctor</b> too, up to +3 per day in total. Move the partner through your warehouse.</li>
+<li><strong>Catties:</strong> only the character who finished that Catty's quest can restore its intimacy.</li>
+</ul>
+<h2 id="act-cubes">Act cubes</h2>
+<ul>
+<li>Act cubes teach your partner conditions, actions and skills for its AI. Use one while the partner is equipped.</li>
+<li>Get them from the <a class="ent" data-pic="assets/npc_img/11003336.png" href="maps.html#map:10031000">Act Cube Machine &lt;Conditions&gt;</a> and the <a class="ent" data-pic="assets/npc_img/11003337.png" href="maps.html#map:10031000">Act Cube Machine &lt;Action&gt;</a> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,53.85" href="maps.html#map:10031000">Acronia Southern Plains</a>, or from monsters.</li>
+<li>A partner learns up to <strong>30 conditions</strong> and <strong>20 actions</strong>.</li>
+<li>Passive skills work as soon as they are learned.</li>
+<li>A forgotten cube is gone; it doesn't come back as an item.</li>
+</ul>
+<h2 id="partner-chronicle-rebirth">Partner Chronicle Rebirth</h2>
+<p><strong>Requirement:</strong> partner at <strong>Base Lv 110</strong>, and your character has reincarnated (see <a href="quest-reincarnation.html">Reincarnation Quest</a>). DEM characters need the "Lv100 Parts" quest instead.</p>
+<ul>
+<li>
+<p>Talk to <a class="ent" href="maps.html#map:10031000">Partner Old Master</a> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,53.85" href="maps.html#map:10031000">Acronia Southern Plains</a>.</p>
+<div class="npc noscene" role="group" aria-label="Partner Old Master"><div class="who"><img src="assets/npc_thumb/11004486.png" alt="" loading="lazy"><b>Partner Old Master</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m031.png" alt="Map of Acronia Southern Plains" loading="lazy"><span class="pin hl" data-name="Acronia Southern Plains" style="left:54.1%;top:42.8%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,53.85" href="maps.html#map:10031000">Acronia Southern Plains</a></figcaption></figure></div>
+</li>
+<li>
+<p>The partner goes back to <strong>Base Lv 1</strong>. Its base stats rise a lot, and it can learn skills only reborn partners get.</p>
+</li>
+</ul>
+<h2 id="good-to-know">Good to know</h2>
+<ul>
+<li><strong>Trading or dropping a partner resets it.</strong> It keeps only its Base Lv (not the EXP toward the next level), rebirth, changed look, intimacy and name.</li>
+<li><strong>Possessing partners still grow.</strong> They earn EXP and trust when you defeat monsters. See <a href="possession.html">Possession</a>.</li>
+<li><strong>Robots don't grow.</strong> The <a class="ent" href="crafting.html#recipe:351"><img class="inicon" src="assets/item_icon/10018750.png" alt="">2 Legged Walking Robot</a> has no Base Lv, Partner Rank or trust.</li>
+</ul>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="partners.html">Partners</a></li>
+<li><a href="getting-pets.html">How to Get Pets</a></li>
+<li><a href="catties.html">Catties</a></li>
+<li><a href="automata.html">Automata</a></li>
+<li><a href="possession.html">Possession</a></li>
+<li><a href="cooking.html">Cooking</a></li>
+</ul>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">On this page</h2><ul><li><a href="#how-partners-grow">How partners grow</a></li><li><a href="#base-lv">Base Lv</a></li><li><a href="#partner-rank">Partner Rank</a></li><li><a href="#snacks">Snacks</a></li><li><a href="#health-and-intimacy">Health and intimacy</a></li><li><a href="#act-cubes">Act cubes</a></li><li><a href="#partner-chronicle-rebirth">Partner Chronicle Rebirth</a></li><li><a href="#good-to-know">Good to know</a></li><li><a href="#related">Related</a></li></ul></aside>
+</div>
+<script src="search-index.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

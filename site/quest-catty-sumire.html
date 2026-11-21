@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catty (Sumire) Quest · ECO Archive</title>
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="stylesheet" href="site.css">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body class="article">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/></symbol>
+<symbol id="i-left" viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></symbol>
+<symbol id="i-right" viewBox="0 0 24 24"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></symbol>
+<symbol id="i-unfold" viewBox="0 0 24 24"><path d="M12 5.83 15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"/></symbol>
+<symbol id="i-fold" viewBox="0 0 24 24"><path d="M7.41 18.59 8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM2 13h2a1 1 0 0 0 0-2H2a1 1 0 0 0 0 2zm18 0h2a1 1 0 0 0 0-2h-2a1 1 0 0 0 0 2zM11 2v2a1 1 0 0 0 2 0V2a1 1 0 0 0-2 0zm0 18v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-2 0zM5.99 4.58a1 1 0 0 0-1.41 1.41l1.06 1.06a1 1 0 0 0 1.41-1.41L5.99 4.58zm12.37 12.37a1 1 0 0 0-1.41 1.41l1.06 1.06a1 1 0 0 0 1.41-1.41l-1.06-1.06zm1.06-10.96a1 1 0 0 0-1.41-1.41l-1.06 1.06a1 1 0 0 0 1.41 1.41l1.06-1.06zM7.05 18.36a1 1 0 0 0-1.41-1.41l-1.06 1.06a1 1 0 0 0 1.41 1.41l1.06-1.06z"/></symbol>
+<symbol id="i-auto" viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zm1-17.93a8 8 0 0 1 0 15.86V4.07z"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="iconbtn" id="menubtn" aria-label="Open navigation" aria-controls="drawer" aria-expanded="false"><svg class="i"><use href="#i-menu"/></svg></button>
+  <a class="brand" href="index.html"><img class="logo" src="assets/misc_img/logo/eco_logo_topbar.png" alt="" width="56" height="44"><span class="name">ECO Archive</span></a>
+  <div class="search" role="search">
+    <label for="q"><svg class="i"><use href="#i-search"/></svg><span class="visually-hidden">Search pages</span></label>
+    <input id="q" type="search" placeholder="Search jobs, quests, items…" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list">
+    <ul class="results" id="results" role="listbox" aria-label="Search results" hidden></ul>
+  </div>
+  <div class="thememenu">
+    <button class="iconbtn" id="themebtn" aria-haspopup="menu" aria-expanded="false" aria-controls="thememenu" aria-label="Theme"><svg class="i"><use href="#i-auto"/></svg></button>
+    <div class="menu" id="thememenu" role="menu" aria-label="Theme" hidden>
+      <button role="menuitemradio" data-mode="system" aria-checked="true"><svg class="i"><use href="#i-auto"/></svg>System<svg class="i check"><use href="#i-check"/></svg></button>
+      <button role="menuitemradio" data-mode="light" aria-checked="false"><svg class="i"><use href="#i-sun"/></svg>Light<svg class="i check"><use href="#i-check"/></svg></button>
+      <button role="menuitemradio" data-mode="dark" aria-checked="false"><svg class="i"><use href="#i-moon"/></svg>Dark<svg class="i check"><use href="#i-check"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+<div class="frame">
+  <nav class="drawer" id="drawer" aria-label="Site">
+    <div class="head"><span>ECO Archive</span><button class="iconbtn" aria-label="Close navigation"><svg class="i"><use href="#i-close"/></svg></button></div>
+    <ul><li><a href="index.html">Home</a></li><li><details><summary>Story<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="story.html">Story Overview</a></li><li><a href="story-the-path-we-walk.html">The Path We Walk</a></li><li><a href="story-the-world-begins-to-move.html">The World Begins to Move</a></li><li><a href="story-beyond-the-truth.html">Beyond the Truth</a></li><li><a href="story-final-battle.html">Final Battle</a></li><li><a href="story-saga14.html">Gate of Emerald Forest</a></li><li><a href="story-saga15.html">Everlasting Union</a></li><li><a href="story-saga16.html">Memories of the Ice Queen</a></li><li><a href="story-saga18.html">Carmine Brick</a></li></ul></details></li><li><details><summary>Getting started<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="game-basics.html">Game Basics</a></li><li><a href="races.html">Races</a></li><li><a href="stat-points.html">Status Points</a></li><li><a href="city-passes.html">City Passes</a></li><li><a href="enigma-pass.html">Enigma Group Pass</a></li></ul></details></li><li><details><summary>Game systems<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="automata.html">Automata</a></li><li><a href="bosses.html">Bosses</a></li><li><a href="catties.html">Catties</a></li><li><a href="demic-chips.html">DEMIC Chips</a></li><li><a href="dragon-mount.html">Dragon Mount</a></li><li><a href="dual-job.html">Dual Job</a></li><li><a href="dungeons.html">Dungeons</a></li><li><a href="element-fairies.html">Element Fairies</a></li><li><a href="equipment-upgrades.html">Equipment Upgrades</a></li><li><a href="fame.html">Fame</a></li><li><a href="farming.html">Farming</a></li><li><a href="fishing.html">Fishing</a></li><li><a href="flying-garden.html">Flying Garden</a></li><li><a href="flying-garden-parts.html">Flying Garden Parts</a></li><li><a href="furniture.html">Furniture</a></li><li><a href="hair-dye.html">Hair Dye</a></li><li><a href="hairstyles.html">Hairstyles</a></li><li><a href="getting-pets.html">How to Get Pets</a></li><li><a href="iris-cards.html">Iris Cards</a></li><li><a href="ability-vectors.html">Iris Cards – Ability Vectors</a></li><li><a href="item-repair.html">Item Repair</a></li><li><a href="job-switching.html">Job Switching</a></li><li><a href="marionettes.html">Marionettes &amp; Golems</a></li><li><a href="medal-machines.html">Medal Machines</a></li><li><a href="partners.html">Partners</a></li><li><a href="pet-raising.html">Pet Raising</a></li><li><a href="possession.html">Possession</a></li><li><a href="ring.html">Ring</a></li><li><a href="shops.html">Shops &amp; Merchants</a></li><li><a href="stamps.html">Stamps</a></li><li><a href="tiny-island.html">Tiny Island</a></li></ul></details></li><li><details><summary>Jobs<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="jobs.html">All jobs</a></li><li><details><summary>Fighter<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-scout.html">Scout</a></li><li><a href="job-assassin.html">Assassin</a></li><li><a href="job-commando.html">Commando</a></li><li><a href="job-eraser.html">Eraser</a></li><li><a href="job-swordsman.html">Swordsman</a></li><li><a href="job-blade-master.html">Blade Master</a></li><li><a href="job-bounty-hunter.html">Bounty Hunter</a></li><li><a href="job-gladiator.html">Gladiator</a></li><li><a href="job-fencer.html">Fencer</a></li><li><a href="job-knight.html">Knight</a></li><li><a href="job-dark-stalker.html">Dark Stalker</a></li><li><a href="job-guardian.html">Guardian</a></li><li><a href="job-archer.html">Archer</a></li><li><a href="job-striker.html">Striker</a></li><li><a href="job-gunner.html">Gunner</a></li><li><a href="job-hawkeye.html">Hawkeye</a></li></ul></details></li><li><details><summary>Spell User<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-warlock.html">Warlock</a></li><li><a href="job-cabalist.html">Cabalist</a></li><li><a href="job-necromancer.html">Necromancer</a></li><li><a href="job-soultaker.html">Soul Taker</a></li><li><a href="job-vates.html">Vates</a></li><li><a href="job-druid.html">Druid</a></li><li><a href="job-bard.html">Bard</a></li><li><a href="job-cardinal.html">Cardinal</a></li><li><a href="job-shaman.html">Shaman</a></li><li><a href="job-elementalist.html">Elementalist</a></li><li><a href="job-enchanter.html">Enchanter</a></li><li><a href="job-astralist.html">Astralist</a></li><li><a href="job-wizard.html">Wizard</a></li><li><a href="job-sorcerer.html">Sorcerer</a></li><li><a href="job-sage.html">Sage</a></li><li><a href="job-force-master.html">Force Master</a></li></ul></details></li><li><details><summary>Backpacker<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-farmer.html">Farmer</a></li><li><a href="job-alchemist.html">Alchemist</a></li><li><a href="job-marionettist.html">Marionettist</a></li><li><a href="job-harvester.html">Harvester</a></li><li><a href="job-miner.html">Miner (Tatarabe)</a></li><li><a href="job-blacksmith.html">Blacksmith</a></li><li><a href="job-engineer.html">Engineer (Machinery)</a></li><li><a href="job-maestro.html">Maestro</a></li><li><a href="job-ranger.html">Ranger</a></li><li><a href="job-explorer.html">Explorer</a></li><li><a href="job-treasure-hunter.html">Treasure Hunter</a></li><li><a href="job-strider.html">Strider</a></li><li><a href="job-merchant.html">Merchant</a></li><li><a href="job-trader.html">Trader</a></li><li><a href="job-gambler.html">Gambler</a></li><li><a href="job-royal-dealer.html">Royal Dealer</a></li></ul></details></li><li><details><summary>Other jobs<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-breeder.html">Breeder</a></li><li><a href="job-gardener.html">Gardener</a></li><li><a href="job-joker.html">Joker</a></li><li><a href="job-novice.html">Novice</a></li></ul></details></li></ul></details></li><li><details open><summary>Quests<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="quest-catty-ai.html">Catty (Ai) Quest</a></li><li><a href="quest-catty-akane.html">Catty (Akane) Quest</a></li><li><a href="quest-catty-anzu.html">Catty (Anzu) Quest</a></li><li><a href="quest-catty-kurumi.html">Catty (Kurumi Wakana) Quest</a></li><li><a href="quest-catty-momo.html">Catty (Momo) Quest</a></li><li><a href="quest-catty-sora.html">Catty (Sora) Quest</a></li><li><a href="quest-catty-sumire.html" aria-current="page">Catty (Sumire) Quest</a></li><li><a href="quest-catty-yamabuki.html">Catty (Yamabuki) Quest</a></li><li><a href="quest-cleaning.html">Cleaning Quests</a></li><li><a href="quest-endless-corridor.html">Endless Corridor Quests</a></li><li><a href="free-skill-points.html">Free Skill Points</a></li><li><a href="quest-heart-of-the-machine.html">Heart of the Machine</a></li><li><a href="quest-lv35-armor.html">Lv 35 Armor Quest</a></li><li><a href="quest-lv45-armor.html">Lv 45 Armor Quest</a></li><li><a href="quest-lv55-armor.html">Lv 55 Armor Quest</a></li><li><a href="quest-lv55-hat-shoes.html">Lv 55 Backpacker Hat &amp; Shoes Quest</a></li><li><a href="quest-lv60-weapon.html">Lv 60 Weapon Quest</a></li><li><a href="quest-lv65-armor.html">Lv 65 Armor Quest</a></li><li><a href="quest-lv75-armor.html">Lv 75 Armor Quest</a></li><li><a href="quest-lv85-armor.html">Lv 85 Armor Quest</a></li><li><a href="quest-lv90-weapon.html">Lv 90 Weapon Quest</a></li><li><a href="quest-lv99-armor.html">Lv 99 Armor Quest</a></li><li><a href="quest-lv99-weapon.html">Lv 99 Weapon Quest</a></li><li><a href="quest-counter.html">Quest Counter</a></li><li><a href="quest-reincarnation.html">Reincarnation Quest</a></li><li><a href="quest-ride-crawler.html">Ride Crawler Quest</a></li><li><a href="quest-tutorial.html">Tutorial Quests</a></li></ul></details></li><li><details><summary>Items<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="boxes.html">Boxes</a></li><li><a href="petals.html">Flower Petals</a></li><li><a href="food-items.html">Food and Healing Items</a></li><li><a href="upgrade-crystals.html">Upgrade Crystals</a></li><li><a href="equipment.html">Weapons &amp; Armor</a></li></ul></details></li><li><details><summary>Crafting<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="accessory-crafting.html">Accessory Crafting</a></li><li><a href="armor-crafting.html">Armor Crafting</a></li><li><a href="chemical-preparation.html">Chemical Preparation</a></li><li><a href="cooking.html">Cooking</a></li><li><details><summary>Recipes &amp; Materials<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="crafting.html">Craftable Items</a></li><li><a href="materials.html">Crafting Materials</a></li></ul></details></li><li><a href="fairy-scrolls.html">Fairy Scrolls</a></li><li><a href="machinery-crafting.html">Machinery Crafting</a></li><li><a href="metal-refining.html">Metal Refining</a></li><li><a href="refining.html">Refining</a></li><li><a href="tailoring.html">Tailoring</a></li><li><a href="weapon-crafting.html">Weapon Crafting</a></li><li><a href="woodcraft.html">Woodcraft</a></li></ul></details></li><li><a href="monsters.html">Monsters</a></li><li><a href="maps.html">Maps</a></li><li><details><summary>Miscellaneous<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="misc-logo.html">Logo</a></li><li><a href="misc-videos.html">Trailer</a></li><li><details><summary>Artwork<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="misc-catty-art.html">Catty &amp; Pet Art</a></li><li><a href="art-partners.html">Partner Art</a></li><li><a href="art-races.html">Character Art</a></li><li><a href="art-jobs.html">Job Art</a></li><li><a href="misc-monster-artwork.html">Marionette &amp; Monster Artwork</a></li><li><a href="art-seasonal.html">Seasonal Art</a></li><li><a href="art-sketches.html">Concept Sketches</a></li></ul></details></li><li><a href="misc-servers.html">Official Servers</a></li></ul></details></li><li><a href="references.html">Sources &amp; Credits</a></li></ul>
+  </nav>
+  <main class="content" id="main" tabindex="-1">
+<nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li>Quests</li></ol></nav><header class="hero"><div><h1>Catty (Sumire) Quest</h1><p class="lead">Bring a runaway boy safely home.</p></div><dl class="facts"><div><dt>Level</dt><dd>30 or higher, with 20 Fame</dd></div><div><dt>Items needed</dt><dd><img class="inicon" src="assets/item_icon/10042000.png" alt=""><b>United Iron South Pass</b> to get past the guard to <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="36.92,79.23" href="maps.html#map:10061000">Ghost Shelter</a></dd></div><div><dt>Reward</dt><dd><img class="inicon" src="assets/item_icon/10017906.png" alt=""><b>Catty (Sumire)</b></dd></div></dl></header><details class="toc-inline"><summary>On this page</summary><ul><li><a href="#before-you-start">Before you start</a></li><li><a href="#walkthrough">Walkthrough</a></li><li><a href="#rewards">Rewards</a></li><li><a href="#good-to-know">Good to know</a></li><li><a href="#related">Related</a></li></ul></details>
+<h2 id="before-you-start">Before you start</h2>
+<ul>
+<li>Finish the <a href="quest-catty-momo.html">Catty (Momo) Quest</a> and <strong>equip a Catty</strong> for the whole quest.</li>
+</ul>
+<h2 id="walkthrough">Walkthrough</h2>
+<h3 id="1-hear-about-the-missing-boy">1. Hear about the missing boy</h3>
+<ul>
+<li>
+<p>Go to <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10024000">Downtown</a> and talk to the <a class="ent" href="maps.html#map:10024000">Elegant Lady</a>. She tells you about a child hiding in the east.</p>
+<div class="npc" role="group" aria-label="Elegant Lady"><div class="who"><img src="assets/npc_thumb/11000001.png" alt="" loading="lazy"><b>Elegant Lady</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m024.png" alt="Map of Downtown" loading="lazy"><span class="pin hl" data-name="Downtown" style="left:51.4%;top:59.2%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10024000">Downtown</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11000001.webp" alt="Elegant Lady in the game" loading="lazy"></figure></div>
+</li>
+<li>
+<p>Go to <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,45.38" href="maps.html#map:10025000">Acronia Eastern Plains</a> and enter the <a class="ent" data-pic="assets/minimap/m025.png" data-tip="room" data-pin="42.4%,48.2%" data-cap="Acronia Eastern Plains" href="maps.html#map:10025000">East Beginner&#x27;s School</a>. You can enter it for this quest. Talk to the <b>Teacher</b>.</p>
+<div class="npc" role="group" aria-label="Teacher"><div class="who"><img src="assets/npc_thumb/11000978.png" alt="" loading="lazy"><b>Teacher</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m025.png" alt="Map of Acronia Eastern Plains" loading="lazy"><span class="pin hl" data-name="East Beginner&#x27;s School entrance" style="left:42.4%;top:48.2%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,45.38" href="maps.html#map:10025000">Acronia Eastern Plains</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11000978.webp" alt="Teacher in the game" loading="lazy"></figure></div>
+</li>
+</ul>
+<h3 id="2-visit-marcia">2. Visit Marcia</h3>
+<ul>
+<li>
+<p>Go to <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="70.77,36.92" href="maps.html#map:10018000">East Cape</a> and enter the <a class="ent" data-pic="assets/minimap/m018.png" data-tip="room" data-pin="86.1%,26.0%" data-cap="East Cape" href="maps.html#map:10018000">Merchant Shop</a>. Talk to the <b class="enttip" tabindex="0" data-pic="assets/npc_img/11001086.png">Guild Merchant</b> and to <b class="enttip" tabindex="0" data-pic="assets/npc_img/11001088.png">Marcia</b>. She invites you to her airship.</p>
+</li>
+<li>
+<p>In the <b class="enttip" tabindex="0" data-pic="assets/minimap/m018.png" data-tip="room" data-pin="86.9%,26.0%" data-cap="East Cape">Airship Garden</b>, talk to <b class="enttip" tabindex="0" data-pic="assets/npc_img/11001089.png">Marcia</b>, then to her pet <b class="enttip" tabindex="0" data-pic="assets/npc_img/11001091.png">Plum</b>. You get a knife. <b class="enttip" tabindex="0" data-pic="assets/npc_img/11001089.png">Marcia</b> sends you to <a class="ent" data-pic="assets/npc_img/11000382.png" href="maps.html#map:10061000">Ghost Buster Gadoo</a>.</p>
+</li>
+</ul>
+<h3 id="3-ask-gadoo-for-help">3. Ask Gadoo for help</h3>
+<ul>
+<li>
+<p>Go south past <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="36.92,70.77" href="maps.html#map:10046000">Cape Southerin</a> to <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="36.92,79.23" href="maps.html#map:10061000">Ghost Shelter</a> and talk to <a class="ent" href="maps.html#map:10061000">Ghost Buster Gadoo</a>. He tells you about a specialist in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10024000">Downtown</a> who can open a secret path.</p>
+<div class="npc" role="group" aria-label="Ghost Buster Gadoo"><div class="who"><img src="assets/npc_thumb/11000382.png" alt="" loading="lazy"><b>Ghost Buster Gadoo</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m061.png" alt="Map of Ghost Shelter" loading="lazy"><span class="pin hl below" data-name="Ghost Shelter" style="left:54.1%;top:12.7%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="36.92,79.23" href="maps.html#map:10061000">Ghost Shelter</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11000382.webp" alt="Ghost Buster Gadoo in the game" loading="lazy"></figure></div>
+</li>
+</ul>
+<h3 id="4-into-the-underground-room">4. Into the underground room</h3>
+<ul>
+<li>
+<p>Go to the <strong>northwest house</strong> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10024000">Downtown</a> and talk to <b>Mr. Specialist</b>. Choose the <strong>first answer</strong>. He sends you to an underground room full of robots.</p>
+<div class="npc" role="group" aria-label="Mr. Specialist"><div class="who"><img src="assets/npc_thumb/11000010.png" alt="" loading="lazy"><b>Mr. Specialist</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m024.png" alt="Map of Downtown" loading="lazy"><span class="pin hl below edge-l" data-name="Specialist entrance" style="left:22.9%;top:34.2%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10024000">Downtown</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11000010.webp" alt="Mr. Specialist in the game" loading="lazy"></figure></div>
+</li>
+<li>
+<p>Walk to the end and talk to the boy, <b class="enttip" tabindex="0" data-pic="assets/npc_img/11001083.png">Relo</b>. A giant robot, <strong>Giganto</strong>, attacks. Defeat it.</p>
+<ul>
+<li>The room heals you over time, like a town.</li>
+<li>If you lose, talk to <b class="enttip" tabindex="0" data-pic="assets/npc_img/11000010.png">Mr. Specialist</b> again and retry.</li>
+</ul>
+</li>
+<li>Pick up what it drops, break the barrier at the door with it, and talk to <b class="enttip" tabindex="0" data-pic="assets/npc_img/11001083.png">Relo</b> again.</li>
+</ul>
+<h3 id="5-back-to-gadoo">5. Back to Gadoo</h3>
+<ul>
+<li>You arrive in the <a class="ent" data-pic="assets/minimap/m023.png" data-tip="room" data-pin="46.3%,90.8%" data-cap="Acropolis South Bridge" href="maps.html#map:10023300">South Faction Commander&#x27;s Office</a>. Talk to the soldier at the desk, then to <b class="enttip" tabindex="0" data-pic="assets/npc_img/11001092.png">Ghost Buster Gadoo</b>. He gives you <img class="inicon" src="assets/item_icon/10017906.png" alt=""><b>Catty (Sumire)</b>.</li>
+</ul>
+<h2 id="rewards">Rewards</h2>
+<figure class="scene"><img src="assets/scene_img/catty-reward_sumire.webp" alt="Catty (Sumire)"></figure>
+
+<ul>
+<li><img class="inicon" src="assets/item_icon/10017906.png" alt=""><b>Catty (Sumire)</b>: the most motherly of the cat spirits. Skills and details on <a href="catties.html#sumire">Catties</a></li>
+</ul>
+<h2 id="good-to-know">Good to know</h2>
+<ul>
+<li><strong>Carry all your Catties.</strong> Wear one and keep the others in your bag: they add extra lines to the story.</li>
+</ul>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="catties.html#sumire">Catties</a></li>
+<li><a href="quest-catty-momo.html">Catty (Momo) Quest</a></li>
+<li><a href="fame.html">Fame</a></li>
+<li><a href="quest-catty-akane.html">Catty (Akane) Quest</a></li>
+<li><a href="city-passes.html">City Passes</a></li>
+<li><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="36.92,79.23" href="maps.html#map:10061000">Ghost Shelter</a></li>
+</ul>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">On this page</h2><ul><li><a href="#before-you-start">Before you start</a></li><li><a href="#walkthrough">Walkthrough</a></li><li><a href="#rewards">Rewards</a></li><li><a href="#good-to-know">Good to know</a></li><li><a href="#related">Related</a></li></ul></aside>
+</div>
+<script src="search-index.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

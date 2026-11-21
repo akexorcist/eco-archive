@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ring · ECO Archive</title>
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="stylesheet" href="site.css">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body class="article">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/></symbol>
+<symbol id="i-left" viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></symbol>
+<symbol id="i-right" viewBox="0 0 24 24"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></symbol>
+<symbol id="i-unfold" viewBox="0 0 24 24"><path d="M12 5.83 15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"/></symbol>
+<symbol id="i-fold" viewBox="0 0 24 24"><path d="M7.41 18.59 8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM2 13h2a1 1 0 0 0 0-2H2a1 1 0 0 0 0 2zm18 0h2a1 1 0 0 0 0-2h-2a1 1 0 0 0 0 2zM11 2v2a1 1 0 0 0 2 0V2a1 1 0 0 0-2 0zm0 18v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-2 0zM5.99 4.58a1 1 0 0 0-1.41 1.41l1.06 1.06a1 1 0 0 0 1.41-1.41L5.99 4.58zm12.37 12.37a1 1 0 0 0-1.41 1.41l1.06 1.06a1 1 0 0 0 1.41-1.41l-1.06-1.06zm1.06-10.96a1 1 0 0 0-1.41-1.41l-1.06 1.06a1 1 0 0 0 1.41 1.41l1.06-1.06zM7.05 18.36a1 1 0 0 0-1.41-1.41l-1.06 1.06a1 1 0 0 0 1.41 1.41l1.06-1.06z"/></symbol>
+<symbol id="i-auto" viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zm1-17.93a8 8 0 0 1 0 15.86V4.07z"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="iconbtn" id="menubtn" aria-label="Open navigation" aria-controls="drawer" aria-expanded="false"><svg class="i"><use href="#i-menu"/></svg></button>
+  <a class="brand" href="index.html"><img class="logo" src="assets/misc_img/logo/eco_logo_topbar.png" alt="" width="56" height="44"><span class="name">ECO Archive</span></a>
+  <div class="search" role="search">
+    <label for="q"><svg class="i"><use href="#i-search"/></svg><span class="visually-hidden">Search pages</span></label>
+    <input id="q" type="search" placeholder="Search jobs, quests, items…" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list">
+    <ul class="results" id="results" role="listbox" aria-label="Search results" hidden></ul>
+  </div>
+  <div class="thememenu">
+    <button class="iconbtn" id="themebtn" aria-haspopup="menu" aria-expanded="false" aria-controls="thememenu" aria-label="Theme"><svg class="i"><use href="#i-auto"/></svg></button>
+    <div class="menu" id="thememenu" role="menu" aria-label="Theme" hidden>
+      <button role="menuitemradio" data-mode="system" aria-checked="true"><svg class="i"><use href="#i-auto"/></svg>System<svg class="i check"><use href="#i-check"/></svg></button>
+      <button role="menuitemradio" data-mode="light" aria-checked="false"><svg class="i"><use href="#i-sun"/></svg>Light<svg class="i check"><use href="#i-check"/></svg></button>
+      <button role="menuitemradio" data-mode="dark" aria-checked="false"><svg class="i"><use href="#i-moon"/></svg>Dark<svg class="i check"><use href="#i-check"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+<div class="frame">
+  <nav class="drawer" id="drawer" aria-label="Site">
+    <div class="head"><span>ECO Archive</span><button class="iconbtn" aria-label="Close navigation"><svg class="i"><use href="#i-close"/></svg></button></div>
+    <ul><li><a href="index.html">Home</a></li><li><details><summary>Story<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="story.html">Story Overview</a></li><li><a href="story-the-path-we-walk.html">The Path We Walk</a></li><li><a href="story-the-world-begins-to-move.html">The World Begins to Move</a></li><li><a href="story-beyond-the-truth.html">Beyond the Truth</a></li><li><a href="story-final-battle.html">Final Battle</a></li><li><a href="story-saga14.html">Gate of Emerald Forest</a></li><li><a href="story-saga15.html">Everlasting Union</a></li><li><a href="story-saga16.html">Memories of the Ice Queen</a></li><li><a href="story-saga18.html">Carmine Brick</a></li></ul></details></li><li><details><summary>Getting started<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="game-basics.html">Game Basics</a></li><li><a href="races.html">Races</a></li><li><a href="stat-points.html">Status Points</a></li><li><a href="city-passes.html">City Passes</a></li><li><a href="enigma-pass.html">Enigma Group Pass</a></li></ul></details></li><li><details open><summary>Game systems<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="automata.html">Automata</a></li><li><a href="bosses.html">Bosses</a></li><li><a href="catties.html">Catties</a></li><li><a href="demic-chips.html">DEMIC Chips</a></li><li><a href="dragon-mount.html">Dragon Mount</a></li><li><a href="dual-job.html">Dual Job</a></li><li><a href="dungeons.html">Dungeons</a></li><li><a href="element-fairies.html">Element Fairies</a></li><li><a href="equipment-upgrades.html">Equipment Upgrades</a></li><li><a href="fame.html">Fame</a></li><li><a href="farming.html">Farming</a></li><li><a href="fishing.html">Fishing</a></li><li><a href="flying-garden.html">Flying Garden</a></li><li><a href="flying-garden-parts.html">Flying Garden Parts</a></li><li><a href="furniture.html">Furniture</a></li><li><a href="hair-dye.html">Hair Dye</a></li><li><a href="hairstyles.html">Hairstyles</a></li><li><a href="getting-pets.html">How to Get Pets</a></li><li><a href="iris-cards.html">Iris Cards</a></li><li><a href="ability-vectors.html">Iris Cards – Ability Vectors</a></li><li><a href="item-repair.html">Item Repair</a></li><li><a href="job-switching.html">Job Switching</a></li><li><a href="marionettes.html">Marionettes &amp; Golems</a></li><li><a href="medal-machines.html">Medal Machines</a></li><li><a href="partners.html">Partners</a></li><li><a href="pet-raising.html">Pet Raising</a></li><li><a href="possession.html">Possession</a></li><li><a href="ring.html" aria-current="page">Ring</a></li><li><a href="shops.html">Shops &amp; Merchants</a></li><li><a href="stamps.html">Stamps</a></li><li><a href="tiny-island.html">Tiny Island</a></li></ul></details></li><li><details><summary>Jobs<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="jobs.html">All jobs</a></li><li><details><summary>Fighter<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-scout.html">Scout</a></li><li><a href="job-assassin.html">Assassin</a></li><li><a href="job-commando.html">Commando</a></li><li><a href="job-eraser.html">Eraser</a></li><li><a href="job-swordsman.html">Swordsman</a></li><li><a href="job-blade-master.html">Blade Master</a></li><li><a href="job-bounty-hunter.html">Bounty Hunter</a></li><li><a href="job-gladiator.html">Gladiator</a></li><li><a href="job-fencer.html">Fencer</a></li><li><a href="job-knight.html">Knight</a></li><li><a href="job-dark-stalker.html">Dark Stalker</a></li><li><a href="job-guardian.html">Guardian</a></li><li><a href="job-archer.html">Archer</a></li><li><a href="job-striker.html">Striker</a></li><li><a href="job-gunner.html">Gunner</a></li><li><a href="job-hawkeye.html">Hawkeye</a></li></ul></details></li><li><details><summary>Spell User<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-warlock.html">Warlock</a></li><li><a href="job-cabalist.html">Cabalist</a></li><li><a href="job-necromancer.html">Necromancer</a></li><li><a href="job-soultaker.html">Soul Taker</a></li><li><a href="job-vates.html">Vates</a></li><li><a href="job-druid.html">Druid</a></li><li><a href="job-bard.html">Bard</a></li><li><a href="job-cardinal.html">Cardinal</a></li><li><a href="job-shaman.html">Shaman</a></li><li><a href="job-elementalist.html">Elementalist</a></li><li><a href="job-enchanter.html">Enchanter</a></li><li><a href="job-astralist.html">Astralist</a></li><li><a href="job-wizard.html">Wizard</a></li><li><a href="job-sorcerer.html">Sorcerer</a></li><li><a href="job-sage.html">Sage</a></li><li><a href="job-force-master.html">Force Master</a></li></ul></details></li><li><details><summary>Backpacker<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-farmer.html">Farmer</a></li><li><a href="job-alchemist.html">Alchemist</a></li><li><a href="job-marionettist.html">Marionettist</a></li><li><a href="job-harvester.html">Harvester</a></li><li><a href="job-miner.html">Miner (Tatarabe)</a></li><li><a href="job-blacksmith.html">Blacksmith</a></li><li><a href="job-engineer.html">Engineer (Machinery)</a></li><li><a href="job-maestro.html">Maestro</a></li><li><a href="job-ranger.html">Ranger</a></li><li><a href="job-explorer.html">Explorer</a></li><li><a href="job-treasure-hunter.html">Treasure Hunter</a></li><li><a href="job-strider.html">Strider</a></li><li><a href="job-merchant.html">Merchant</a></li><li><a href="job-trader.html">Trader</a></li><li><a href="job-gambler.html">Gambler</a></li><li><a href="job-royal-dealer.html">Royal Dealer</a></li></ul></details></li><li><details><summary>Other jobs<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-breeder.html">Breeder</a></li><li><a href="job-gardener.html">Gardener</a></li><li><a href="job-joker.html">Joker</a></li><li><a href="job-novice.html">Novice</a></li></ul></details></li></ul></details></li><li><details><summary>Quests<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="quest-catty-ai.html">Catty (Ai) Quest</a></li><li><a href="quest-catty-akane.html">Catty (Akane) Quest</a></li><li><a href="quest-catty-anzu.html">Catty (Anzu) Quest</a></li><li><a href="quest-catty-kurumi.html">Catty (Kurumi Wakana) Quest</a></li><li><a href="quest-catty-momo.html">Catty (Momo) Quest</a></li><li><a href="quest-catty-sora.html">Catty (Sora) Quest</a></li><li><a href="quest-catty-sumire.html">Catty (Sumire) Quest</a></li><li><a href="quest-catty-yamabuki.html">Catty (Yamabuki) Quest</a></li><li><a href="quest-cleaning.html">Cleaning Quests</a></li><li><a href="quest-endless-corridor.html">Endless Corridor Quests</a></li><li><a href="free-skill-points.html">Free Skill Points</a></li><li><a href="quest-heart-of-the-machine.html">Heart of the Machine</a></li><li><a href="quest-lv35-armor.html">Lv 35 Armor Quest</a></li><li><a href="quest-lv45-armor.html">Lv 45 Armor Quest</a></li><li><a href="quest-lv55-armor.html">Lv 55 Armor Quest</a></li><li><a href="quest-lv55-hat-shoes.html">Lv 55 Backpacker Hat &amp; Shoes Quest</a></li><li><a href="quest-lv60-weapon.html">Lv 60 Weapon Quest</a></li><li><a href="quest-lv65-armor.html">Lv 65 Armor Quest</a></li><li><a href="quest-lv75-armor.html">Lv 75 Armor Quest</a></li><li><a href="quest-lv85-armor.html">Lv 85 Armor Quest</a></li><li><a href="quest-lv90-weapon.html">Lv 90 Weapon Quest</a></li><li><a href="quest-lv99-armor.html">Lv 99 Armor Quest</a></li><li><a href="quest-lv99-weapon.html">Lv 99 Weapon Quest</a></li><li><a href="quest-counter.html">Quest Counter</a></li><li><a href="quest-reincarnation.html">Reincarnation Quest</a></li><li><a href="quest-ride-crawler.html">Ride Crawler Quest</a></li><li><a href="quest-tutorial.html">Tutorial Quests</a></li></ul></details></li><li><details><summary>Items<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="boxes.html">Boxes</a></li><li><a href="petals.html">Flower Petals</a></li><li><a href="food-items.html">Food and Healing Items</a></li><li><a href="upgrade-crystals.html">Upgrade Crystals</a></li><li><a href="equipment.html">Weapons &amp; Armor</a></li></ul></details></li><li><details><summary>Crafting<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="accessory-crafting.html">Accessory Crafting</a></li><li><a href="armor-crafting.html">Armor Crafting</a></li><li><a href="chemical-preparation.html">Chemical Preparation</a></li><li><a href="cooking.html">Cooking</a></li><li><details><summary>Recipes &amp; Materials<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="crafting.html">Craftable Items</a></li><li><a href="materials.html">Crafting Materials</a></li></ul></details></li><li><a href="fairy-scrolls.html">Fairy Scrolls</a></li><li><a href="machinery-crafting.html">Machinery Crafting</a></li><li><a href="metal-refining.html">Metal Refining</a></li><li><a href="refining.html">Refining</a></li><li><a href="tailoring.html">Tailoring</a></li><li><a href="weapon-crafting.html">Weapon Crafting</a></li><li><a href="woodcraft.html">Woodcraft</a></li></ul></details></li><li><a href="monsters.html">Monsters</a></li><li><a href="maps.html">Maps</a></li><li><details><summary>Miscellaneous<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="misc-logo.html">Logo</a></li><li><a href="misc-videos.html">Trailer</a></li><li><details><summary>Artwork<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="misc-catty-art.html">Catty &amp; Pet Art</a></li><li><a href="art-partners.html">Partner Art</a></li><li><a href="art-races.html">Character Art</a></li><li><a href="art-jobs.html">Job Art</a></li><li><a href="misc-monster-artwork.html">Marionette &amp; Monster Artwork</a></li><li><a href="art-seasonal.html">Seasonal Art</a></li><li><a href="art-sketches.html">Concept Sketches</a></li></ul></details></li><li><a href="misc-servers.html">Official Servers</a></li></ul></details></li><li><a href="references.html">Sources &amp; Credits</a></li></ul>
+  </nav>
+  <main class="content" id="main" tabindex="-1">
+<nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li>Game systems</li></ol></nav><header class="hero plain"><div><h1>Ring</h1><p class="lead">A <strong>Ring</strong> is a group of players, like a guild.</p></div></header><details class="toc-inline"><summary>On this page</summary><ul><li><a href="#creating-a-ring">Creating a Ring</a></li><li><a href="#ring-reputation">Ring reputation</a></li><li><a href="#ring-emblem">Ring emblem</a></li><li><a href="#ring-castle">Ring Castle</a></li></ul></details>
+
+
+
+<h2 id="creating-a-ring">Creating a Ring</h2>
+<p>Talk to the <a class="ent" data-pic="assets/npc_img/11000250.png" href="maps.html#map:10023000">Ring Manager</a> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10023000">Uptown</a>. It costs <strong>10,000 G</strong>, and the name must be unique.</p>
+<div class="npc" role="group" aria-label="Ring Manager"><div class="who"><img src="assets/npc_thumb/11000250.png" alt="" loading="lazy"><b>Ring Manager</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m023.png" alt="Map of Uptown" loading="lazy"><span class="pin hl edge-l" data-name="Uptown" style="left:28.7%;top:66.6%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10023000">Uptown</a></figcaption></figure>
+<figure class="scene"><img src="assets/scene_img/npc_11000250.webp" alt="Ring Manager in the game" loading="lazy"></figure></div>
+
+<ul>
+<li>
+<p>A Ring starts small. It takes more members as its reputation rises, up to <strong>40</strong>.</p>
+</li>
+<li>
+<p>Players of any race can be in the same Ring.</p>
+</li>
+<li>
+<p><b>Ring Recruitment Board 1</b> and <b>Ring Recruitment Board 2</b>, next to the <a class="ent" data-pic="assets/npc_img/11000250.png" href="maps.html#map:10023000">Ring Manager</a> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10023000">Uptown</a>, list Rings that are looking for members.</p>
+<div class="npc" role="group" aria-label="Ring Recruitment Board 1"><div class="who"><img src="assets/npc_thumb/12001053.png" alt="" loading="lazy"><b>Ring Recruitment Board 1</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m023.png" alt="Map of Uptown" loading="lazy"><span class="pin hl edge-l" data-name="Uptown" style="left:27.5%;top:66.2%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10023000">Uptown</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_12001053.webp" alt="Ring Recruitment Board 1 in the game" loading="lazy"></figure></div>
+<div class="npc" role="group" aria-label="Ring Recruitment Board 2"><div class="who"><img src="assets/npc_thumb/12001054.png" alt="" loading="lazy"><b>Ring Recruitment Board 2</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m023.png" alt="Map of Uptown" loading="lazy"><span class="pin hl edge-l" data-name="Uptown" style="left:29.9%;top:66.2%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10023000">Uptown</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_12001054.webp" alt="Ring Recruitment Board 2 in the game" loading="lazy"></figure></div>
+</li>
+<li>
+<p>The leader is the <strong>ring master</strong>. The ring master can choose one <strong>submaster</strong> and give members permissions: invite, kick, manage the Ring Castle and take items from the Ring warehouse.</p>
+</li>
+<li>The ring master and submaster can't be kicked.</li>
+<li>To change the ring master, the master hands it over at the <a class="ent" data-pic="assets/npc_img/11000250.png" href="maps.html#map:10023000">Ring Manager</a>, or a member runs for master and wins a <strong>3-day</strong> vote.</li>
+<li>If the ring master leaves, the longest member becomes master.</li>
+<li>Ring chat text is green.</li>
+</ul>
+<h2 id="ring-reputation">Ring reputation</h2>
+<p>Ring reputation goes up when members finish quests, such as the Quest Counter quests from the <b class="enttip" tabindex="0" data-pic="assets/npc_img/11000002.png">Cafe Master</b> in any town's Cafe, for example the <a class="ent" data-pic="assets/minimap/m024.png" data-tip="room" data-pin="81.1%,49.8%" data-cap="Downtown" href="maps.html#map:10024000">Cafe</a> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10024000">Downtown</a>.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Reputation</th>
+<th>Unlocks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>300</td>
+<td>Ring emblem</td>
+</tr>
+<tr>
+<td>5,225</td>
+<td>Ring Castle (the ring master must also have finished the Saga 12 story)</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="ring-emblem">Ring emblem</h2>
+<p>At 300 reputation your Ring can show an emblem next to members' names.</p>
+<ul>
+<li>The picture must be <strong>24 × 24 pixels</strong>, saved as <strong>PNG</strong>.</li>
+<li>Use pure magenta (red 255, green 0, blue 255) for transparent parts.</li>
+<li>Put the file in the game folder <code>data\sprite\emblem</code>, then open the Ring window (<strong>Ctrl+R</strong>), press the Ring info button and pick the picture.</li>
+</ul>
+<h2 id="ring-castle">Ring Castle</h2>
+<p>The <strong>Ring Castle</strong> is a flying castle that belongs to the whole Ring. It holds up to <strong>27 members</strong>.</p>
+<div class="mapfigs"><figure class="scene"><img src="assets/scene_img/ring_castle.webp" alt="Ring Castle in the game" style="width:520px"><figcaption>Default Base</figcaption></figure><figure class="scene"><img src="assets/scene_img/ring_castle_ancient_palace.webp" alt="Ring Castle, Ancient Palace Base, in the game" style="width:520px"><figcaption>Ancient Palace Base</figcaption></figure></div>
+
+<ul>
+<li>
+<p>After unlocking it, talk to <a class="ent" href="maps.html#map:10057000">Dan</a> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="87.69,36.92" href="maps.html#map:10057000">Fareast City</a> to collect the castle parts.</p>
+<div class="npc" role="group" aria-label="Dan"><div class="who"><img src="assets/npc_thumb/11002802.png" alt="" loading="lazy"><b>Dan</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m057.png" alt="Map of Fareast City" loading="lazy"><span class="pin hl edge-r" data-name="Fareast City" style="left:70.5%;top:62.7%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="87.69,36.92" href="maps.html#map:10057000">Fareast City</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11002802.webp" alt="Dan in the game" loading="lazy"></figure></div>
+</li>
+</ul>
+<h3 id="expansion-points">Expansion Points</h3>
+<p>Expansion Points level up the castle, add booths and unlock upgrades. Check them in the Friend List under <strong>Ring</strong>.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>How</th>
+<th>Points</th>
+<th>Daily limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A member visits another Ring's castle</td>
+<td>+1 per visitor</td>
+<td>40</td>
+</tr>
+<tr>
+<td>An outsider visits your castle</td>
+<td>+1 per visitor</td>
+<td>50</td>
+</tr>
+<tr>
+<td>A member talks to another Ring's crops</td>
+<td>+2 per crop</td>
+<td>80</td>
+</tr>
+<tr>
+<td>An outsider talks to your crops</td>
+<td>+2 per crop</td>
+<td>100</td>
+</tr>
+<tr>
+<td>An outsider buys from your members' booths</td>
+<td>price ÷ 1,000 gold</td>
+<td>100</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="booths">Booths</h3>
+<ul>
+<li>Members can set up <strong>shop booths</strong> outside on the castle deck, not inside the house.</li>
+<li>Changing a booth's shop settings costs <strong>5 Expansion Points</strong> each time.</li>
+<li>After setting up a shop, <strong>line up</strong> the goods at least once. Goods appear 60 minutes later. Until then, outsiders' purchases give no points.</li>
+</ul>
+<p>The castle also has a farm. See <a href="farming.html">Farming</a>.</p>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">On this page</h2><ul><li><a href="#creating-a-ring">Creating a Ring</a></li><li><a href="#ring-reputation">Ring reputation</a></li><li><a href="#ring-emblem">Ring emblem</a></li><li><a href="#ring-castle">Ring Castle</a></li></ul></aside>
+</div>
+<script src="search-index.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
