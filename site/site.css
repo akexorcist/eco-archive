@@ -1533,7 +1533,7 @@ td .wdot { display: inline-block; width: 10px; height: 10px; border-radius: 50%;
 .sagacards, .sagacard { min-width: 0; box-sizing: border-box; width: 100%; }
 .sagatext h3, .sagatext p { overflow-wrap: anywhere; }
 /* SAGA stories, option B (approved): stacked; title first, then picture(s), then the story text */
-.sagacard { display: flex !important; flex-direction: column; gap: 16px; max-width: 760px; }
+.sagacard { display: flex !important; flex-direction: column; gap: 16px; max-width: 1100px; }
 .sagacard .sagatext { display: contents; }
 .sagacard .sagatext h3 { order: -1; margin: 0; }
 .sagacard .sagamedia figure.art { margin: 0; }
@@ -1848,6 +1848,10 @@ details.sagacard .sagajp > summary:hover { background: color-mix(in srgb, var(--
 /* a single recipe keeps the empty second column (auto-fill), so it is exactly one recipe column wide */
 .lf-secs.lf-recs.lf-recs1 { grid-template-columns: repeat(auto-fill, minmax(min(100%, 28rem), 1fr)); }
 .lf-rec1 { display: grid; gap: 20px; min-width: 0; }
+/* Crafting (trial, 2026-11-21): the list fills the content column; recipes stay at most 3 columns */
+.lf.lf-craft { max-width: none; }
+.lf-craft .lf-secs.lf-recs { grid-template-columns: repeat(auto-fit, minmax(min(100%, max(28rem, calc((100% - 96px) / 3))), 1fr)); }
+.lf-craft .lf-secs.lf-recs.lf-recs1 { grid-template-columns: repeat(auto-fill, minmax(min(100%, max(28rem, calc((100% - 96px) / 3))), 1fr)); }
 .lf-recs .lf-sec > ul.cellist:not(.lf-cols) { margin: 0; padding-left: 20px; }
 .lf-body .cdot { display: inline-block; width: 12px; height: 12px; margin-right: 8px; border-radius: 50%; vertical-align: -1px; box-shadow: 0 0 0 1px var(--outline); }
 /* Show all: a long list shows its first 12 */
@@ -1860,6 +1864,8 @@ details.sagacard .sagajp > summary:hover { background: color-mix(in srgb, var(--
 .lf-showall:hover { background: color-mix(in srgb, var(--secondary) 12%, transparent); }
 /* a .lf page with no "On this page" column: the list takes that width too, like .cgal (wide screens only); a .lf page with a TOC keeps the normal 3 columns */
 @media (min-width: 1200px) { .frame:has(.lf):not(:has(> .toc)) { grid-template-columns: 300px minmax(0, 1fr); } }
+/* Maps (trial, 2026-11-21): the list fills the content column instead of the 1100px cap */
+.lf.lf-maps { max-width: none; }
 /* Maps: World tabs above the filter bar; the map pictures (minimap with pins + world crop, one 256px box each) full width above the sections */
 .lf-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
 .lf-tabs button { height: 40px; padding: 0 16px; border: 1px solid var(--outline); border-radius: 20px; background: transparent; color: var(--on-surface); font: inherit; font-size: 16px; cursor: pointer; }
