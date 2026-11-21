@@ -1,5 +1,4 @@
-# Repo settings: Settings > Pages > Build and deployment > Source must be "GitHub Actions".
-name: Deploy site
+name: Publish gh-pages branch
 
 on:
   push:
@@ -11,24 +10,6 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  pages:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - uses: actions/checkout@v7
-      - uses: actions/configure-pages@v6
-      - uses: actions/upload-pages-artifact@v5
-        with:
-          path: site
-      - id: deployment
-        uses: actions/deploy-pages@v5
-
   gh-pages-branch:
     runs-on: ubuntu-latest
     permissions:
