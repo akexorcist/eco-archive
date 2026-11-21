@@ -389,11 +389,11 @@ Increases physical damage while the character is in a party.
 
 ### Weapons
 
-**Shield** 35 items **Hammer** 31 items **Bow** 22 items **Short Sword** 14 items
+**Shield** 35 items **Hammer** 32 items **Bow** 22 items **Short Sword** 14 items
 
 ### Armor
 
-**All armor for Striker** 873 items
+**All armor for Striker** 945 items
 
 ### Job outfits
 

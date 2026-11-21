@@ -311,11 +311,11 @@ Opens treasure boxes and timber boxes in the character's inventory, then rolls t
 
 ### Weapons
 
-**Hammer** 31 items **Shield** 17 items **Short Sword** 16 items **Throwing** 9 items
+**Hammer** 32 items **Shield** 17 items **Short Sword** 16 items **Throwing** 9 items
 
 ### Armor
 
-**All armor for Ranger** 837 items
+**All armor for Ranger** 909 items
 
 ### Job outfits
 

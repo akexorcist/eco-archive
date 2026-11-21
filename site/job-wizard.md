@@ -280,7 +280,7 @@ Raises percentage M.DEF and additive M.DEF for 15 minutes.
 
 ### Armor
 
-**All armor for Wizard** 858 items
+**All armor for Wizard** 930 items
 
 ### Job outfits
 

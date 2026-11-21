@@ -22,12 +22,12 @@ A Joint Job for raising and commanding pets, which any character can take on and
    - If you fail, you are sent back to the guild. Talk to the receptionist and choose the **third option** to take the interview again.
 6. You return to the [Breeder Guild](maps.html#map:10057000). Talk to the **Breeder Guild Receptionist** behind the counter. Choose the **first option**, then the **second option**. This sets your save point to the [Breeder Guild](maps.html#map:10057000).
    **Breeder Guild Receptionist**
-7. Talk to her again. She gives you a **Dark Dragon (Event)** to ride.
+7. Talk to her again. She gives you a [Dark Dragon (Event)](partners.html#item:10052310) to ride.
 8. Ride the dragon and enter the room at the back left. You have **3 minutes** to ride through the maze ([2nd Examination Grounds](maps.html#map:10057000)) to **Plum**. Talk to her while still riding.
    **Plum**
    - Don't talk to the other NPCs in the maze.
    - If you are too late, you fail and return to the guild. Talk to the receptionist for a new try.
-9. Return to the **Breeder Guild Receptionist** behind the counter. She explains the final test and gives you the **Dark Dragon (Event)** again.
+9. Return to the **Breeder Guild Receptionist** behind the counter. She explains the final test and gives you the [Dark Dragon (Event)](partners.html#item:10052310) again.
 10. Ride the dragon into the room at the back left again. Ride through the second maze ([2nd Examination Grounds](maps.html#map:10057000)) to the **Breeder Guild Master** within the time limit and talk to him while riding.
    **Breeder Guild Master**
 11. The master takes the dragon back and gives you the **Breeder Brooch**. Wear it to become a Breeder.
@@ -141,11 +141,11 @@ Applies Delay Cancel to the active partner for 20 seconds, increasing partner at
 
 ### Weapons
 
-**Hammer** 32 items **Axe** 30 items **Shield** 17 items **Short Sword** 16 items **Rope** 9 items **Throwing** 9 items
+**Hammer** 33 items **Axe** 30 items **Shield** 17 items **Short Sword** 16 items **Rope** 9 items **Throwing** 9 items
 
 ### Armor
 
-**All armor for Breeder** 782 items
+**All armor for Breeder** 854 items
 
 ### Job outfits
 

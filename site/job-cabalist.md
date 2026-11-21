@@ -330,11 +330,11 @@ Deals Dark magical damage to enemies around the caster.
 
 ### Weapons
 
-**Staff** 26 items **Hammer** 25 items **Shield** 23 items **Short Sword** 16 items
+**Hammer** 26 items **Staff** 26 items **Shield** 23 items **Short Sword** 16 items
 
 ### Armor
 
-**All armor for Cabalist** 879 items
+**All armor for Cabalist** 951 items
 
 ### Job outfits
 

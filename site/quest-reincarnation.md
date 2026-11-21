@@ -97,11 +97,11 @@ You get the bonus for **every level from 100 up to the level you reincarnate at*
 | 103 | **Catty Medamar Keeper** | Wing color | Wing color |
 | 104 | **Catty Medamar Assault** | Wing color | Wing color |
 | 105 | **Catty Medamar General** | Wheel (Powers) | Tail (Trident) |
-| 106 | **Marionette Nekogurumi (Purple)** | Ring (Seraphim) | Tail (Slim) |
-| 107 | **Marionette Nekogurumi (Blue)** | Wing color | Wing color |
-| 108 | **Marionette Nekogurumi (Orange)** | Ex Feather | Ex Feather |
-| 109 | **Black Cat** | Ex 2 Feathers | Ex 2 Feathers |
-| 110 | **Cat Sith** | Ex 3 Feathers | Ex 3 Feathers |
+| 106 | [Marionette Nekogurumi (Purple)](marionettes.html#marionette:10084300) | Ring (Seraphim) | Tail (Slim) |
+| 107 | [Marionette Nekogurumi (Blue)](marionettes.html#marionette:10084301) | Wing color | Wing color |
+| 108 | [Marionette Nekogurumi (Orange)](marionettes.html#marionette:10084302) | Ex Feather | Ex Feather |
+| 109 | [Black Cat](partners.html#item:10084400) | Ex 2 Feathers | Ex 2 Feathers |
+| 110 | [Cat Sith](partners.html#item:10084500) | Ex 3 Feathers | Ex 3 Feathers |
 
 - From Lv 103, the High Emil bonuses are **items**.
 - Switch **effects, wings, halos and tails** in the **Rebirth window**, opened from the equipment window. Default is your old look.

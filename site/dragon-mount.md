@@ -8,8 +8,8 @@ A **dragon mount** is a dragon you can ride, hatched from a dragon egg.
 
 | Egg | Hatches into | How to get it |
 |---|---|---|
-| **Fire Dragon Egg** | **Fire Dragon** | Very rare drop from:[Pefang](monsters.html#monster:10440000) in [North Plateau](maps.html#map:10049000) and [North Mountain](maps.html#map:10050000) [Proon](monsters.html#monster:10440200) in [North Mountain](maps.html#map:10050000) |
-| **Blue Dragon Egg** | **Blue Dragon** | Very rare drop from:[Cyclops](monsters.html#monster:10340000) in [North Plateau](maps.html#map:10049000) and [North Mountain](maps.html#map:10050000) [Ogre](monsters.html#monster:10340300) in the [Northern Dungeon](maps.html#map:20014000) |
+| **Fire Dragon Egg** | [Fire Dragon](partners.html#item:10052301) | Very rare drop from:[Pefang](monsters.html#monster:10440000) in [North Plateau](maps.html#map:10049000) and [North Mountain](maps.html#map:10050000) [Proon](monsters.html#monster:10440200) in [North Mountain](maps.html#map:10050000) |
+| **Blue Dragon Egg** | [Blue Dragon](partners.html#item:10052303) | Very rare drop from:[Cyclops](monsters.html#monster:10340000) in [North Plateau](maps.html#map:10049000) and [North Mountain](maps.html#map:10050000) [Ogre](monsters.html#monster:10340300) in the [Northern Dungeon](maps.html#map:20014000) |
 
 - You can also trade **3** × **Tiny Medal** with the [Resting Tiny](maps.html#map:10071000) on [Tiny Island](maps.html#map:10071000) for either egg.
 - Get **Tiny Medal** from bosses.

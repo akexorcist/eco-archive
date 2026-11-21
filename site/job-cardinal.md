@@ -210,11 +210,11 @@ Applies Actor Skill, Max HPUp, Max MPUp, Max SPUp, Min Atk Up; area: 5x5.
 
 ### Weapons
 
-**Staff** 26 items **Hammer** 25 items **Strings** 9 items
+**Staff** 26 items **Strings** 9 items
 
 ### Armor
 
-**All armor for Cardinal** 881 items
+**All armor for Cardinal** 953 items
 
 ### Job outfits
 

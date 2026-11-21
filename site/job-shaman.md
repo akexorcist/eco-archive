@@ -344,7 +344,7 @@ Checks the target's elemental property.
 
 ### Armor
 
-**All armor for Shaman** 860 items
+**All armor for Shaman** 932 items
 
 ### Job outfits
 

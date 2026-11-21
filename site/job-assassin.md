@@ -352,11 +352,11 @@ Deals physical damage; can knock the target back; applies Stun.
 
 ### Weapons
 
-**Shield** 35 items **Hammer** 31 items **Claw** 17 items **Short Sword** 17 items **Throwing** 9 items
+**Shield** 35 items **Hammer** 32 items **Claw** 17 items **Short Sword** 17 items **Throwing** 9 items
 
 ### Armor
 
-**All armor for Assassin** 861 items
+**All armor for Assassin** 933 items
 
 ### Job outfits
 

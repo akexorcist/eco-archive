@@ -8,7 +8,7 @@ Source page: [index.html](index.html)
 
 ## Browse
 
-[**Story** 9 pages](story.md) [**Getting started** 5 pages](game-basics.md) [**Game systems** 31 pages](marionettes.md) [**Quests** 27 pages](quest-tutorial.md) [**Items** 5 pages](equipment.md) [**Crafting** 13 pages](cooking.md) [**Monsters**](monsters.md) [**Maps**](maps.md)
+[**Story** 9 pages](story.md) [**Getting started** 5 pages](game-basics.md) [**Game systems** 32 pages](marionettes.md) [**Quests** 27 pages](quest-tutorial.md) [**Items** 5 pages](equipment.md) [**Crafting** 13 pages](cooking.md) [**Monsters**](monsters.md) [**Maps**](maps.md)
 
 ## Jobs
 

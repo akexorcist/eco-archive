@@ -9,6 +9,7 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 - [Home](index.md): [HTML](index.html)
 - [Monsters](monsters.md): [HTML](monsters.html)
 - [Maps](maps.md): [HTML](maps.html)
+- [Privacy Policy](privacy.md): [HTML](privacy.html)
 - [Sources & Credits](references.md): [HTML](references.html)
 
 ## Story
@@ -36,6 +37,7 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 - [Automata](automata.md): [HTML](automata.html)
 - [Bosses](bosses.md): [HTML](bosses.html)
 - [Catties](catties.md): [HTML](catties.html)
+- [City Defense Battle](city-defense-battle.md): [HTML](city-defense-battle.html)
 - [DEMIC Chips](demic-chips.md): [HTML](demic-chips.html)
 - [Dragon Mount](dragon-mount.md): [HTML](dragon-mount.html)
 - [Dual Job](dual-job.md): [HTML](dual-job.html)
@@ -196,7 +198,7 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 - [data/crafting-recipes.json](data/crafting-recipes.json): Craftable items and their recipes from Craftable Items (1448 entries)
 - [data/demic-chips.json](data/demic-chips.json): DEMIC chips (940 entries)
 - [data/dual-jobs.json](data/dual-jobs.json): Dual job systems (12 entries)
-- [data/equipment.json](data/equipment.json): Weapons and armor from the Weapons & Armor page (1774 entries)
+- [data/equipment.json](data/equipment.json): Weapons and armor from the Weapons & Armor page (1852 entries)
 - [data/fishing.json](data/fishing.json): Fishing catches (192 entries)
 - [data/iris-cards.json](data/iris-cards.json): Iris cards (1039 entries)
 - [data/items.json](data/items.json): Every item in the game data (28722 entries)

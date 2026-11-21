@@ -218,11 +218,11 @@ Deals physical damage; area: 5x5; PvP: effect is reduced to 50%.
 
 ### Weapons
 
-**Hammer** 31 items **Axe** 30 items **Other Weapon** 14 items **Throwing** 8 items **Book** 2 items
+**Hammer** 32 items **Axe** 30 items **Other Weapon** 17 items **Throwing** 8 items **Book** 2 items
 
 ### Armor
 
-**All armor for Royal Dealer** 868 items
+**All armor for Royal Dealer** 940 items
 
 ### Job outfits
 

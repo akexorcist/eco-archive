@@ -310,7 +310,7 @@ Increases S.AVOID, magic avoid, CSPD, and physical skill delay reduction for 60 
 
 ### Armor
 
-**All armor for Enchanter** 893 items
+**All armor for Enchanter** 965 items
 
 ### Job outfits
 

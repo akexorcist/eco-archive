@@ -269,7 +269,7 @@ Reduces the chance that the character is chosen as the possession target when an
 
 ### Armor
 
-**All armor for Sage** 890 items
+**All armor for Sage** 962 items
 
 ### Job outfits
 

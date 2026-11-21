@@ -42,7 +42,7 @@ Search the ruins under Acropolis for the past of the **DEM Girl** at [Emil's Hou
 
 ## Good to know
 
-- **Keep the **Heart Machine**.** The **Automata (Amethyst)** quest needs it, together with Lv 20 and 21 Fame.
+- **Keep the **Heart Machine**.** The [Automata (Amethyst)](partners.html#item:10080100) quest needs it, together with Lv 20 and 21 Fame.
 - **Emil, Titania and Dominion characters get a different story.** They use a **Container Key (Event)** to find a **Wounded Core (Event)** for the **DEM Girl** and get 1 skill point.
 
 ## Related

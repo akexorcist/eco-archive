@@ -361,11 +361,11 @@ Increases the caster's final physical damage while active.
 
 ### Weapons
 
-**Hammer** 35 items **Axe** 30 items
+**Hammer** 36 items **Axe** 30 items
 
 ### Armor
 
-**All armor for Blacksmith** 868 items
+**All armor for Blacksmith** 940 items
 
 ### Job outfits
 

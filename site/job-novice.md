@@ -41,8 +41,8 @@ A Novice who never changes jobs can become a [Joker](job-joker.md) at Lv 100 and
 
 ### Weapons
 
-**Hammer** 26 items **Shield** 18 items **Short Sword** 3 items **Sword** 2 items **Throwing** 1 item
+**Hammer** 27 items **Shield** 18 items **Short Sword** 3 items **Sword** 2 items **Throwing** 1 item
 
 ### Armor
 
-**All armor for Novice** 817 items
+**All armor for Novice** 889 items

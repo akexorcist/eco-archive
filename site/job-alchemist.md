@@ -387,11 +387,11 @@ Increases the success rate of equipment reinforcement when using Magic Crystal m
 
 ### Weapons
 
-**Hammer** 32 items **Axe** 30 items **Spear** 4 items
+**Hammer** 33 items **Axe** 30 items **Spear** 4 items
 
 ### Armor
 
-**All armor for Alchemist** 867 items
+**All armor for Alchemist** 939 items
 
 ### Job outfits
 

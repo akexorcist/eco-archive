@@ -227,7 +227,7 @@ Applies Time Span.
 
 ### Armor
 
-**All armor for Astralist** 893 items
+**All armor for Astralist** 965 items
 
 ### Job outfits
 

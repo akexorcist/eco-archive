@@ -175,11 +175,11 @@ The cast is accepted, but the skill handler action is empty, so it does not curr
 
 ### Weapons
 
-**Hammer** 33 items **Axe** 30 items **Spear** 5 items
+**Hammer** 34 items **Axe** 30 items **Spear** 5 items
 
 ### Armor
 
-**All armor for Gardener** 782 items
+**All armor for Gardener** 853 items
 
 ### Job outfits
 

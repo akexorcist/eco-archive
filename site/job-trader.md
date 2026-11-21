@@ -339,11 +339,11 @@ Increases the success rate of equipment reinforcement when using Critical Crysta
 
 ### Weapons
 
-**Hammer** 31 items **Axe** 30 items **Other Weapon** 14 items **Book** 2 items
+**Hammer** 32 items **Axe** 30 items **Other Weapon** 17 items **Book** 2 items
 
 ### Armor
 
-**All armor for Trader** 868 items
+**All armor for Trader** 940 items
 
 ### Job outfits
 

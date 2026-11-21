@@ -344,11 +344,11 @@ Deals physical damage and may reduce the target's S.HIT and L.HIT if the hit dea
 
 ### Weapons
 
-**Hammer** 31 items **Axe** 30 items **Shield** 17 items **Short Sword** 16 items **Rope** 9 items **Throwing** 9 items
+**Hammer** 32 items **Axe** 30 items **Shield** 17 items **Short Sword** 16 items **Rope** 9 items **Throwing** 9 items
 
 ### Armor
 
-**All armor for Explorer** 872 items
+**All armor for Explorer** 944 items
 
 ### Job outfits
 

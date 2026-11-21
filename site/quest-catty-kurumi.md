@@ -51,20 +51,20 @@ Save your lost body from a cave of souls.
 ### 6. Back to your body
 
 - After the fight, go back out through the same orb. Talk to your body and give it the three Pieces.
-- You are taken to **Masha's Airship**. Talk to **Marsha**, **Emil** and your body. You go back into your body and receive **Catty (Kurumi Wakana)**.
+- You are taken to **Masha's Airship**. Talk to **Marsha**, **Emil** and your body. You go back into your body and receive [Catty (Kurumi Wakana)](partners.html#item:10017912).
 - Talk to the **Seamstress** and choose **Kurumi** or **Wakana**. You get that twin's Catty Hat and Catty Bell.
 
 ## Rewards
 
 | Reward | Notes |
 |---|---|
-| **Catty (Kurumi Wakana)** | Two Catties in one |
+| [Catty (Kurumi Wakana)](partners.html#item:10017912) | Two Catties in one |
 | [Catty Hat (Kurumi)](equipment.html#item:50102500) and [Catty Bell (Kurumi)](equipment.html#item:50057800) | If you choose Kurumi |
 | [Catty Hat (Wakana)](equipment.html#item:50102501) and [Catty Bell (Wakana)](equipment.html#item:50057801) | If you choose Wakana |
 
 ## Good to know
 
-- **Two Catties for one slot.** Equip **Catty (Kurumi Wakana)** once and both twins come out.
+- **Two Catties for one slot.** Equip [Catty (Kurumi Wakana)](partners.html#item:10017912) once and both twins come out.
 - **Look for "Catty Kurumi Wa…" in the Event Navigation.** The name is cut off in the list.
 
 ## Related

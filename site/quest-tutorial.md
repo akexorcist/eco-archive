@@ -31,7 +31,7 @@ Lessons from **Amis** on her airship, which show new characters around the game.
 - Collect the [Milk](materials.html#item:10002200) that **Bawoo Alma** asks for and give it to **Momo Alma**.
 - Talk to **Bawoo Alma** on [Fareast Main Street](maps.html#map:10017000).
    **Bawoo Alma**
-- Go to the [Airship Engineer](maps.html#map:10017000) on the same street and talk to **Bawoo Alma**. Use the **Bawoo Stamp** there.
+- Go to the [Airship Engineer](maps.html#map:10017000) on the same street and talk to **Bawoo Alma**. Use the [Bawoo Stamp](stamps.html#item:10050914) there.
    **Bawoo Alma**
 - Go to the [Cafe Stamp Manager](maps.html#map:10023000) in [Uptown](maps.html#map:10023000) and listen to **Bawoo Alma** about stamps.
    **Bawoo Alma**
@@ -131,7 +131,7 @@ Lessons from **Amis** on her airship, which show new characters around the game.
 ### 12. Time of Departure
 
 - Ask **Amis** about Alma.
-- Raise your **Tiny Zero** to **Lv 50** or higher, then talk to **Amis** with it.
+- Raise your [Tiny Zero](partners.html#item:10156400) to **Lv 50** or higher, then talk to **Amis** with it.
 
 ## Related
 

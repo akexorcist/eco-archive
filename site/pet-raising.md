@@ -183,7 +183,7 @@ Cook them with [Cook](job-farmer.md#skill:2040). Higher kinds add a fish from [F
 
 - **Trading or dropping a partner resets it.** It keeps only its Base Lv (not the EXP toward the next level), rebirth, changed look, intimacy and name.
 - **Possessing partners still grow.** They earn EXP and trust when you defeat monsters. See [Possession](possession.md).
-- **Robots don't grow.** The [2 Legged Walking Robot](crafting.html#recipe:351) has no Base Lv, Partner Rank or trust.
+- **Robots don't grow.** The [2 Legged Walking Robot](partners.html#item:10018750) has no Base Lv, Partner Rank or trust.
 
 ## Related
 

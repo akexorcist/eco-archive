@@ -38,11 +38,11 @@ Bring a runaway boy safely home.
 
 ### 5. Back to Gadoo
 
-- You arrive in the [South Faction Commander's Office](maps.html#map:10023300). Talk to the soldier at the desk, then to **Ghost Buster Gadoo**. He gives you **Catty (Sumire)**.
+- You arrive in the [South Faction Commander's Office](maps.html#map:10023300). Talk to the soldier at the desk, then to **Ghost Buster Gadoo**. He gives you [Catty (Sumire)](partners.html#item:10017906).
 
 ## Rewards
 
-- **Catty (Sumire)**: the most motherly of the cat spirits. Skills and details on [Catties](catties.md#sumire)
+- [Catty (Sumire)](partners.html#item:10017906): the most motherly of the cat spirits. Skills and details on [Catties](catties.md#sumire)
 
 ## Good to know
 

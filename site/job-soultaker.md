@@ -228,11 +228,11 @@ A job with very strong dark area spells that also raises the party's MATK and ca
 
 ### Weapons
 
-**Axe** 30 items **Staff** 26 items **Hammer** 25 items **Shield** 23 items **Short Sword** 16 items
+**Axe** 30 items **Hammer** 26 items **Staff** 26 items **Shield** 23 items **Short Sword** 16 items
 
 ### Armor
 
-**All armor for Soul Taker** 879 items
+**All armor for Soul Taker** 951 items
 
 ### Job outfits
 

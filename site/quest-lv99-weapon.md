@@ -12,7 +12,7 @@ Turn an **Ancient Weapon** from the Whale Dungeon into a **Lv 99 weapon**.
    - 10,000 to turn it into **Rainbow Thread**
    - 20,000 for the forging
    - 10,000 to free the weapon
-- The **Dragon Scale** costs **3,000 CP**. CP comes from the Dominion war.
+- The **Dragon Scale** costs **3,000 CP**. CP comes from the [City Defense Battle](city-defense-battle.md).
 - Bring a **party** for the dragon. Both dragon fights count for the whole party.
 
 ## Walkthrough

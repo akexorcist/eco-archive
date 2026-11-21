@@ -301,7 +301,7 @@ Deals Neutral magical damage to one target, but calculates the target's defense 
 
 ### Armor
 
-**All armor for Sorcerer** 890 items
+**All armor for Sorcerer** 962 items
 
 ### Job outfits
 

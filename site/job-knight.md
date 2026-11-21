@@ -348,11 +348,11 @@ Performs three delayed physical hits against enemies in a straight line up to 4 
 
 ### Weapons
 
-**Shield** 35 items **Hammer** 31 items **Spear** 23 items **Short Sword** 16 items **Sword** 13 items **Rapier** 9 items
+**Shield** 35 items **Hammer** 32 items **Spear** 23 items **Short Sword** 16 items **Sword** 13 items **Rapier** 9 items
 
 ### Armor
 
-**All armor for Knight** 857 items
+**All armor for Knight** 931 items
 
 ### Job outfits
 

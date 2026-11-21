@@ -341,11 +341,11 @@ Removes Frozen from the target if that status is currently active.
 
 ### Weapons
 
-**Staff** 26 items **Hammer** 25 items
+**Staff** 26 items
 
 ### Armor
 
-**All armor for Vates** 852 items
+**All armor for Vates** 924 items
 
 ### Job outfits
 

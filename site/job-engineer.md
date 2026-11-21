@@ -304,11 +304,11 @@ Changes monster aggro; applies Confusion; area: 5x5.
 
 ### Weapons
 
-**Hammer** 35 items **Axe** 30 items
+**Hammer** 36 items **Axe** 30 items
 
 ### Armor
 
-**All armor for Engineer (Machinery)** 868 items
+**All armor for Engineer (Machinery)** 940 items
 
 ### Job outfits
 

@@ -26,7 +26,7 @@ Talk to an Item Refiner with the items in your inventory. The Item Refiner also 
 | Lv 2 | 100 G |
 | Lv 3 | 1,000 G |
 
-A few special Lv 3 recipes cost 5,000 G, such as the Potential Stones (like [Red Potential Stone](crafting.html#recipe:80)), [Engraved Jewel](crafting.html#recipe:2267) and [Liquid Fuel](materials.html#item:10032700).
+A few special Lv 3 recipes cost 5,000 G, such as the Potential Stones (like [Red Potential Stone](crafting.html#recipe:80)), [Engraved Jewel](partners.html#item:10149600) and [Liquid Fuel](materials.html#item:10032700).
 
 An Item Refiner stands in each of these places:
 

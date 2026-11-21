@@ -221,11 +221,11 @@ Reduces monster aggro generated from the character's damage.
 
 ### Weapons
 
-**Dual Guns** 49 items **Shield** 35 items **Hammer** 31 items **Bow** 22 items **Gun** 15 items **Short Sword** 14 items **Rifle** 8 items
+**Dual Guns** 49 items **Shield** 35 items **Hammer** 32 items **Bow** 22 items **Gun** 15 items **Short Sword** 14 items **Rifle** 8 items
 
 ### Armor
 
-**All armor for Hawkeye** 873 items
+**All armor for Hawkeye** 945 items
 
 ### Job outfits
 

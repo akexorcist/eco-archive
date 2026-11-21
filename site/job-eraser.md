@@ -225,11 +225,11 @@ When damaging a player character, also deals Neutral fixed damage to that target
 
 ### Weapons
 
-**Shield** 35 items **Hammer** 31 items **Claw** 17 items **Short Sword** 17 items **Gun** 15 items **Throwing** 9 items
+**Shield** 35 items **Hammer** 32 items **Claw** 17 items **Short Sword** 17 items **Gun** 15 items **Throwing** 9 items
 
 ### Armor
 
-**All armor for Eraser** 861 items
+**All armor for Eraser** 933 items
 
 ### Job outfits
 

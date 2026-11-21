@@ -334,11 +334,11 @@ Opens synthesis for bow construction recipes.
 
 ### Weapons
 
-**Hammer** 32 items **Axe** 30 items **Spear** 4 items
+**Hammer** 33 items **Axe** 30 items **Spear** 4 items
 
 ### Armor
 
-**All armor for Farmer** 831 items
+**All armor for Farmer** 903 items
 
 ### Job outfits
 

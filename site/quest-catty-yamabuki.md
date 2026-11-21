@@ -6,7 +6,7 @@ Help a merchant recover a stolen bag.
 
 ## Before you start
 
-- Finish the [Catty (Momo) Quest](quest-catty-momo.md) and equip **Catty (Momo)** for the whole quest.
+- Finish the [Catty (Momo) Quest](quest-catty-momo.md) and equip [Catty (Momo)](partners.html#item:10017900) for the whole quest.
 - If you are an **Emil**, find a Titania or Dominion friend to possess for the 5th floor of the Guild Palace.
 
 ## Walkthrough
@@ -47,11 +47,11 @@ Help a merchant recover a stolen bag.
 ### 6. Return the bag
 
 - Bring the robot arm to the **Merchant Master** in the [Merchant Guild](maps.html#map:10023000).
-- Report to the [Senior Merchant](maps.html#map:10035000) on [Battleship Island](maps.html#map:10035000). He gives you **Catty (Yamabuki)**, the most energetic of the cat spirits. Your **Catty (Momo)** stays with you.
+- Report to the [Senior Merchant](maps.html#map:10035000) on [Battleship Island](maps.html#map:10035000). He gives you [Catty (Yamabuki)](partners.html#item:10017905), the most energetic of the cat spirits. Your [Catty (Momo)](partners.html#item:10017900) stays with you.
 
 ## Rewards
 
-- **Catty (Yamabuki)**: skills and details on [Catties](catties.md#yamabuki)
+- [Catty (Yamabuki)](partners.html#item:10017905): skills and details on [Catties](catties.md#yamabuki)
 
 ## Good to know
 

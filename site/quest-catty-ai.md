@@ -6,7 +6,7 @@ A cat spirit is trapped in a broken robot. Rebuild the robot to set her free.
 
 ## Before you start
 
-- Finish the [Catty (Momo) Quest](quest-catty-momo.md) and equip **Catty (Momo)** for the whole quest.
+- Finish the [Catty (Momo) Quest](quest-catty-momo.md) and equip [Catty (Momo)](partners.html#item:10017900) for the whole quest.
 - Collect all of these:
    | Item | How to get it |
    |---|---|
@@ -44,11 +44,11 @@ A cat spirit is trapped in a broken robot. Rebuild the robot to set her free.
 - With all the parts, talk to the [Broken Electell](maps.html#map:10030000) again. It takes everything except the bandage materials.
 - Talk to [Niccolo](maps.html#map:10031000) again.
 - Talk to the **Seamstress** again and have her make a new **Seamstress Triangle Bandage** from your [Cotton Ribbon](materials.html#item:10043700), [Cloth](materials.html#item:10021300) and [Thread](materials.html#item:10019800).
-- With the bandage in your bag, talk to the [Broken Electell](maps.html#map:10030000) once more and choose **yes** to pull the plug (the first answer). You receive **Catty (Ai)**.
+- With the bandage in your bag, talk to the [Broken Electell](maps.html#map:10030000) once more and choose **yes** to pull the plug (the first answer). You receive [Catty (Ai)](partners.html#item:10017903).
 
 ## Rewards
 
-- **Catty (Ai)**: skills and details on [Catties](catties.md#ai)
+- [Catty (Ai)](partners.html#item:10017903): skills and details on [Catties](catties.md#ai)
 
 ## Good to know
 

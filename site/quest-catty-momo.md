@@ -56,11 +56,11 @@ Get Momo, your first Catty. You need her for every other Catty quest.
 - Talk to **Titus**. At the end, choose **Live Together**.
    **Titus**
    - If you choose **Drive Away**, you can't get the Catty.
-- You receive **Catty (Momo)**.
+- You receive [Catty (Momo)](partners.html#item:10017900).
 
 ## Rewards
 
-- **Catty (Momo)**: skills and details on [Catties](catties.md#momo)
+- [Catty (Momo)](partners.html#item:10017900): skills and details on [Catties](catties.md#momo)
 
 ## Good to know
 

@@ -335,11 +335,11 @@ Grants resistance flags against Confusion, Frozen, Stun, Poison, Silence, Sleep,
 
 ### Weapons
 
-**Staff** 26 items **Hammer** 25 items **Strings** 9 items
+**Staff** 26 items **Strings** 9 items
 
 ### Armor
 
-**All armor for Druid** 881 items
+**All armor for Druid** 953 items
 
 ### Job outfits
 

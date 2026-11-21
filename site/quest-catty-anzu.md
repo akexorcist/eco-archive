@@ -41,22 +41,22 @@ A strange pot turns you into a cat spirit, and you must get your body back.
 - Collect a heart for each Catty you carry. Carry that Catty and talk to:
    | Catty you carry | Talk to |
    |---|---|
-   | **Catty (Momo)** | Any **Trash Can** |
-   | **Catty (Ai)** | The [Broken Electell](maps.html#map:10030000) in [Fruit Forest](maps.html#map:10030000) |
-   | **Catty (Yamabuki)** | The [Senior Merchant](maps.html#map:10035000) on [Battleship Island](maps.html#map:10035000) |
-   | **Catty (Sumire)** | [Ghost Buster Gadoo](maps.html#map:10061000) at [Ghost Shelter](maps.html#map:10061000) |
-   | **Catty (Akane)** | **Rita** in the [Rita's Marionette Craftshop](maps.html#map:10062000) on [Tonka Island](maps.html#map:10062000) |
-- If you wear **Catty (Midori)**, you don't need any hearts.
+   | [Catty (Momo)](partners.html#item:10017900) | Any **Trash Can** |
+   | [Catty (Ai)](partners.html#item:10017903) | The [Broken Electell](maps.html#map:10030000) in [Fruit Forest](maps.html#map:10030000) |
+   | [Catty (Yamabuki)](partners.html#item:10017905) | The [Senior Merchant](maps.html#map:10035000) on [Battleship Island](maps.html#map:10035000) |
+   | [Catty (Sumire)](partners.html#item:10017906) | [Ghost Buster Gadoo](maps.html#map:10061000) at [Ghost Shelter](maps.html#map:10061000) |
+   | [Catty (Akane)](partners.html#item:10017907) | **Rita** in the [Rita's Marionette Craftshop](maps.html#map:10062000) on [Tonka Island](maps.html#map:10062000) |
+- If you wear [Catty (Midori)](partners.html#item:10017902), you don't need any hearts.
 - **Rita** is also on [Tonka Island](maps.html#map:10062000), so collect her heart last.
 
 ### 5. Back to your body
 
 - Go back to Miranda's house on [Tonka Island](maps.html#map:10062000). Talk to **your own body** and enter it.
-- Talk to the pot again. The hearts gather around it, and you receive **Catty (Anzu)**.
+- Talk to the pot again. The hearts gather around it, and you receive [Catty (Anzu)](partners.html#item:10017908).
 
 ## Rewards
 
-- **Catty (Anzu)**: the first boy Catty. Skills and details on [Catties](catties.md#anzu)
+- [Catty (Anzu)](partners.html#item:10017908): the first boy Catty. Skills and details on [Catties](catties.md#anzu)
 
 ## Good to know
 

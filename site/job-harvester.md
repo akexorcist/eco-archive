@@ -220,11 +220,11 @@ Summons Neko-Gurumi.
 
 ### Weapons
 
-**Hammer** 32 items **Axe** 30 items **Spear** 4 items
+**Hammer** 33 items **Axe** 30 items **Spear** 4 items
 
 ### Armor
 
-**All armor for Harvester** 867 items
+**All armor for Harvester** 939 items
 
 ### Job outfits
 

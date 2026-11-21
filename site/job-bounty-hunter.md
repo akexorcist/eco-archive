@@ -291,11 +291,11 @@ Always critically hits and deals Neutral physical damage while ignoring the targ
 
 ### Weapons
 
-**Shield** 35 items **Hammer** 31 items **Axe** 30 items **Sword** 26 items **Short Sword** 14 items
+**Shield** 35 items **Hammer** 32 items **Axe** 30 items **Sword** 26 items **Short Sword** 14 items
 
 ### Armor
 
-**All armor for Bounty Hunter** 862 items
+**All armor for Bounty Hunter** 936 items
 
 ### Job outfits
 

@@ -61,19 +61,19 @@ A book pulls you into the World of Books, where you save a princess from a demon
 - Go back to the [Rental Library](maps.html#map:10032000) and enter the book again. Bring the Catty **whose colour you want for your coat**.
 - Talk to the **Queen**. Equip that Catty and talk to the **Maid**. You get the **Acronia Coat** in that Catty's colour, from [Acronia Coat (Momo)](equipment.html#item:60108800) to [Acronia Coat (Sora)](equipment.html#item:60108807). See [Acronia Coat colours](#acronia-coat-colours).
 - Cross [Acronia Kingdom Territory](maps.html#map:10030002) and climb [Holy Volcano](maps.html#map:10064002) again. In the kingdom, go around behind the [Sinister-looking Adventurer](maps.html#map:10030002) and the [Sinister-looking Merchant](maps.html#map:10030002); you don't pay a second time.
-- Talk to the **Princess**. Defeat the demon again and pick up its drop. This time the demon is **Catty (Sora)** in human form.
+- Talk to the **Princess**. Defeat the demon again and pick up its drop. This time the demon is [Catty (Sora)](partners.html#item:10017910) in human form.
 
 ### 9. Back to the bookstore
 
-- When the book sends you out, talk to the **Rental Bookstore Owner**. You receive **Catty (Sora)**.
+- When the book sends you out, talk to the **Rental Bookstore Owner**. You receive [Catty (Sora)](partners.html#item:10017910).
 
 ## Rewards
 
 | Reward | Notes |
 |---|---|
-| **Catty (Sora)** | Skills and details on [Catties](catties.md#sora) |
+| [Catty (Sora)](partners.html#item:10017910) | Skills and details on [Catties](catties.md#sora) |
 | [Pururu Staff](equipment.html#item:60072500) or 100 G | From the Queen's chest. Pick one |
-| One Acronia Coat:[Acronia Coat (Momo)](equipment.html#item:60108800) [Acronia Coat (Midori)](equipment.html#item:60108801) [Acronia Coat (Ai)](equipment.html#item:60108802) [Acronia Coat (Yamabuki)](equipment.html#item:60108803) [Acronia Coat (Sumire)](equipment.html#item:60108804) [Acronia Coat (Akane)](equipment.html#item:60108805) [Acronia Coat (Anzu)](equipment.html#item:60108806) [Acronia Coat (Sora)](equipment.html#item:60108807) | The colour of the Catty you wear. **Catty (Sora)** counts as blue |
+| One Acronia Coat:[Acronia Coat (Momo)](equipment.html#item:60108800) [Acronia Coat (Midori)](equipment.html#item:60108801) [Acronia Coat (Ai)](equipment.html#item:60108802) [Acronia Coat (Yamabuki)](equipment.html#item:60108803) [Acronia Coat (Sumire)](equipment.html#item:60108804) [Acronia Coat (Akane)](equipment.html#item:60108805) [Acronia Coat (Anzu)](equipment.html#item:60108806) [Acronia Coat (Sora)](equipment.html#item:60108807) | The colour of the Catty you wear. [Catty (Sora)](partners.html#item:10017910) counts as blue |
 
 ## Acronia Coat colours
 
@@ -95,8 +95,8 @@ Dark blue Catty (Sora)
 
 ## Good to know
 
-- ****Catty (Sora)** is one per account.**
-- **Use the old **Catty (Midori)** for the green coat.** The new Midori can't get a coat.
+- **[Catty (Sora)](partners.html#item:10017910) is one per account.**
+- **Use the old [Catty (Midori)](partners.html#item:10017902) for the green coat.** The new Midori can't get a coat.
 - **Sketch the demon.** Catty (Sora) in human form can be drawn with [Monster Sketch](job-sage.md#skill:2294) for your [Flying Garden](flying-garden.md). Draw it before you kill it, or leave the quest open to draw again.
 - **The [Pururu Staff](equipment.html#item:60072500) fits any job.** It needs level 30 and has 35 magic attack.
 

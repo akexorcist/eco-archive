@@ -284,11 +284,11 @@ Triggers an unpredictable effect.
 
 ### Weapons
 
-**Hammer** 31 items **Axe** 30 items **Other Weapon** 14 items **Throwing** 8 items **Book** 2 items
+**Hammer** 32 items **Axe** 30 items **Other Weapon** 17 items **Throwing** 8 items **Book** 2 items
 
 ### Armor
 
-**All armor for Gambler** 868 items
+**All armor for Gambler** 940 items
 
 ### Job outfits
 

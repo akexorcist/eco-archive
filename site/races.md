@@ -103,7 +103,7 @@ Emil, Titania and Dominion characters can reincarnate into a high race and get a
 
 - Backpack 1–3: Catty Medama Keeper, Assault, General
 - Marionette 1–3: Cat Doll in purple, blue, orange
-- Partner 1: **Black Cat**
+- Partner 1: [Black Cat](partners.html#item:10084400)
 - Partner 2: Cait Sith, also as a ride
 - Not shown: Grace, Aureola, Ankle Feather (particle effects)
 

@@ -239,7 +239,7 @@ Temporarily prevents the target's elemental defense buffs and innate elemental d
 
 ### Armor
 
-**All armor for Force Master** 890 items
+**All armor for Force Master** 962 items
 
 ### Job outfits
 

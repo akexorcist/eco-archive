@@ -355,7 +355,7 @@ Allows currently casting magic skills to be cancelled.
 
 ### Armor
 
-**All armor for Elementalist** 893 items
+**All armor for Elementalist** 965 items
 
 ### Job outfits
 

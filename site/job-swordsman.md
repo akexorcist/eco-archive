@@ -372,11 +372,11 @@ Removes existing delay cancel effects, then applies Sword Delay Cancel.
 
 ### Weapons
 
-**Shield** 35 items **Hammer** 31 items **Axe** 30 items **Sword** 26 items **Short Sword** 14 items
+**Shield** 35 items **Hammer** 32 items **Axe** 30 items **Sword** 26 items **Short Sword** 14 items
 
 ### Armor
 
-**All armor for Swordsman** 836 items
+**All armor for Swordsman** 910 items
 
 ### Job outfits
 

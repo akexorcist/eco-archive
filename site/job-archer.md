@@ -339,11 +339,11 @@ A long-range attack with fixed 150% damage.
 
 ### Weapons
 
-**Shield** 35 items **Hammer** 31 items **Bow** 22 items **Short Sword** 14 items
+**Shield** 35 items **Hammer** 32 items **Bow** 22 items **Short Sword** 14 items
 
 ### Armor
 
-**All armor for Archer** 838 items
+**All armor for Archer** 910 items
 
 ### Job outfits
 

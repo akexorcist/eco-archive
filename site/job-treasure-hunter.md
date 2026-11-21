@@ -259,11 +259,11 @@ Escapes from inside a dungeon to the outside.
 
 ### Weapons
 
-**Hammer** 31 items **Axe** 30 items **Shield** 17 items **Short Sword** 16 items **Rope** 9 items **Throwing** 9 items
+**Hammer** 32 items **Axe** 30 items **Shield** 17 items **Short Sword** 16 items **Rope** 9 items **Throwing** 9 items
 
 ### Armor
 
-**All armor for Treasure Hunter** 872 items
+**All armor for Treasure Hunter** 944 items
 
 ### Job outfits
 

@@ -372,11 +372,11 @@ Increases critical chance for a short duration.
 
 ### Weapons
 
-**Shield** 35 items **Hammer** 31 items **Claw** 17 items **Short Sword** 17 items **Throwing** 9 items
+**Shield** 35 items **Hammer** 32 items **Claw** 17 items **Short Sword** 17 items **Throwing** 9 items
 
 ### Armor
 
-**All armor for Scout** 839 items
+**All armor for Scout** 911 items
 
 ### Job outfits
 

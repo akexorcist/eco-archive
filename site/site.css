@@ -563,6 +563,31 @@ a.questlink::after { content: " →"; }
 
 .foot { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--outline-variant); color: var(--on-surface-variant); font-size: 16px; display: flex; flex-wrap: wrap; gap: 8px 24px; }
 .foot a { color: var(--on-surface-variant); }
+.linkbtn { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; cursor: pointer; }
+.linkbtn:hover { text-decoration-thickness: 2px; }
+.linkbtn[hidden] { display: none; }
+/* privacy page: the Cookie settings sentence hides with its button when no GA ID is configured */
+li:has(> [data-cookiebtn][hidden]) { display: none; }
+
+/* cookie consent bar (built by site.js only when window.ECO_GA_ID is set) */
+.consent {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 32;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px;
+  padding: 16px clamp(16px, 3vw, 48px);
+  background: var(--surface-container-highest); color: var(--on-surface); box-shadow: var(--shadow-2);
+  font-size: 16px;
+}
+.consent[hidden] { display: none; }
+.consent p { margin: 0; max-width: 80ch; }
+.consent .btns { display: flex; gap: 12px; }
+.consent .btn { justify-content: center; min-width: 112px; height: 44px; background: var(--secondary-container); color: var(--on-secondary-container); }
+.consent .btn:hover { background: color-mix(in srgb, var(--on-secondary-container) 12%, var(--secondary-container)); }
+body.has-consent { padding-bottom: var(--consent-h, 0px); }
+@media (max-width: 599px) {
+  .consent { padding: 12px 16px; }
+  .consent .btns { width: 100%; }
+  .consent .btn { flex: 1 1 0; }
+}
 
 /* ---------- responsive (M3 window classes) ---------- */
 

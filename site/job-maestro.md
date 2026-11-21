@@ -212,11 +212,11 @@ Deals physical damage; applies Actor Skill, Activator, Stiffness, Slow, Confusio
 
 ### Weapons
 
-**Hammer** 35 items **Axe** 30 items
+**Hammer** 36 items **Axe** 30 items
 
 ### Armor
 
-**All armor for Maestro** 868 items
+**All armor for Maestro** 940 items
 
 ### Job outfits
 

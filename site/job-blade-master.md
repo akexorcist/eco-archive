@@ -334,11 +334,11 @@ Increases physical damage while the character is in a party.
 
 ### Weapons
 
-**Shield** 35 items **Hammer** 31 items **Axe** 30 items **Sword** 26 items **Short Sword** 14 items
+**Shield** 35 items **Hammer** 32 items **Axe** 30 items **Sword** 26 items **Short Sword** 14 items
 
 ### Armor
 
-**All armor for Blade Master** 862 items
+**All armor for Blade Master** 936 items
 
 ### Job outfits
 

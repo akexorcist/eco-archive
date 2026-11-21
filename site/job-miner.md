@@ -328,11 +328,11 @@ Throws a stone at a target, dealing physical damage and having a fixed chance to
 
 ### Weapons
 
-**Hammer** 35 items
+**Hammer** 36 items
 
 ### Armor
 
-**All armor for Miner (Tatarabe)** 836 items
+**All armor for Miner (Tatarabe)** 908 items
 
 ### Job outfits
 

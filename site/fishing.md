@@ -30,7 +30,7 @@ Catching fish with a fishing rod and bait.
 
 Each fish lives in one kind of water: 64 in fresh water, 64 in sea water, 64 in muddy water (see Fish below).
 
-- **Fishing Pond**: a Ring Castle attraction, given by a quest from a fishing shop NPC.
+- [Fishing Pond](iris-cards.html#iris:70211030): a Ring Castle attraction, given by a quest from a fishing shop NPC.
    - Its water can be fresh, sea or muddy. After a change, it stays for 60 minutes.
    - Placing it costs Expansion Points.
 

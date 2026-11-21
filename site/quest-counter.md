@@ -4578,7 +4578,7 @@ Most hunt quests pay **EXP, Job EXP and gold**. Some also give a reward item.
 - **Where**: [Ghost Shelter](maps.html#map:10061000)
 - **Time**: None
 - **Quest points**: 1
-- **Reward**: 3 EP **Gatling Cannon**
+- **Reward**: 3 EP [Gatling Cannon](partners.html#item:10018900)
 
 **Giant Scout (Party) Any level**
 
@@ -4623,7 +4623,7 @@ Most hunt quests pay **EXP, Job EXP and gold**. Some also give a reward item.
 - **Where**: [Iron South Street](maps.html#map:10063000)
 - **Time**: None
 - **Quest points**: 1
-- **Reward**: 3 EP **Gatling Cannon**
+- **Reward**: 3 EP [Gatling Cannon](partners.html#item:10018900)
 
 **Iron Volcano Guardian Any level**
 
@@ -4631,7 +4631,7 @@ Most hunt quests pay **EXP, Job EXP and gold**. Some also give a reward item.
 - **Where**: [Iron Volcano](maps.html#map:10064000)
 - **Time**: None
 - **Quest points**: 1
-- **Reward**: 3 EP **Gatling Cannon**
+- **Reward**: 3 EP [Gatling Cannon](partners.html#item:10018900)
 
 **Ivankov Subjugation! Any level**
 
@@ -8911,28 +8911,28 @@ Most collect quests pay **EXP, Job EXP and gold**. Some also give a reward item.
 - **Bring**: 10 × [Flame Iron](materials.html#item:10015701)
 - **Time**: None
 - **Quest points**: 1
-- **Reward**: 3 EP **Gatling Cannon**
+- **Reward**: 3 EP [Gatling Cannon](partners.html#item:10018900)
 
 **Collect 10 Ghost Iron! Any level**
 
 - **Bring**: 10 × [Ghost Iron](materials.html#item:10015702)
 - **Time**: None
 - **Quest points**: 1
-- **Reward**: 3 EP **Gatling Cannon**
+- **Reward**: 3 EP [Gatling Cannon](partners.html#item:10018900)
 
 **Collect 10 Ice Iron! Any level**
 
 - **Bring**: 10 × [Ice Iron](materials.html#item:10015703)
 - **Time**: None
 - **Quest points**: 1
-- **Reward**: 3 EP **Gatling Cannon**
+- **Reward**: 3 EP [Gatling Cannon](partners.html#item:10018900)
 
 **Collect 10 Spiegel Iron! Any level**
 
 - **Bring**: 10 × [Spiegel Iron](materials.html#item:10015800)
 - **Time**: None
 - **Quest points**: 1
-- **Reward**: 3 EP **Gatling Cannon**
+- **Reward**: 3 EP [Gatling Cannon](partners.html#item:10018900)
 
 **Collect Marble! Any level**
 
@@ -9376,7 +9376,7 @@ Most collect quests pay **EXP, Job EXP and gold**. Some also give a reward item.
 - **Bring**: 1 × **Giant Pepper Salamander** 1 × **Giant Oarfish** 1 × [Whale Shark](materials.html#item:10113900)
 - **Time**: 900 min
 - **Quest points**: 3
-- **Reward**: 300 EXP 300 Job EXP 240 G 3 EP **Fishing Pond**
+- **Reward**: 300 EXP 300 Job EXP 240 G 3 EP [Fishing Pond](iris-cards.html#iris:70211030)
 
 **Romance of Robo enhancement! Any level**
 

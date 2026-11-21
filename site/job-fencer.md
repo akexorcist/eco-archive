@@ -369,11 +369,11 @@ Reduces incoming stab-type attack damage for a short duration.
 
 ### Weapons
 
-**Shield** 35 items **Hammer** 31 items **Spear** 23 items **Short Sword** 16 items **Sword** 13 items **Rapier** 9 items
+**Shield** 35 items **Hammer** 32 items **Spear** 23 items **Short Sword** 16 items **Sword** 13 items **Rapier** 9 items
 
 ### Armor
 
-**All armor for Fencer** 834 items
+**All armor for Fencer** 908 items
 
 ### Job outfits
 

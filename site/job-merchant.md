@@ -282,11 +282,11 @@ Increases maximum weight by a percentage.
 
 ### Weapons
 
-**Hammer** 31 items **Other Weapon** 14 items **Book** 2 items
+**Hammer** 32 items **Other Weapon** 17 items **Book** 2 items
 
 ### Armor
 
-**All armor for Merchant** 836 items
+**All armor for Merchant** 908 items
 
 ### Job outfits
 

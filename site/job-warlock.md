@@ -339,11 +339,11 @@ Deals Dark magical damage to one target.
 
 ### Weapons
 
-**Staff** 26 items **Hammer** 25 items **Shield** 23 items **Short Sword** 16 items
+**Hammer** 26 items **Staff** 26 items **Shield** 23 items **Short Sword** 16 items
 
 ### Armor
 
-**All armor for Warlock** 854 items
+**All armor for Warlock** 926 items
 
 ### Job outfits
 

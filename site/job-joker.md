@@ -202,11 +202,11 @@ A job that can use every weapon and wear any job's armor, within its level, race
 
 ### Weapons
 
-**Hammer** 26 items **Shield** 18 items **Short Sword** 3 items **Sword** 2 items **Throwing** 1 item
+**Hammer** 27 items **Shield** 18 items **Short Sword** 3 items **Sword** 2 items **Throwing** 1 item
 
 ### Armor
 
-**All armor for Joker** 817 items
+**All armor for Joker** 889 items
 
 ### Job outfits
 

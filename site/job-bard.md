@@ -268,11 +268,11 @@ Reduces cast time and cooldown for skills that require an instrument.
 
 ### Weapons
 
-**Staff** 26 items **Hammer** 25 items **Strings** 9 items
+**Staff** 26 items **Strings** 9 items
 
 ### Armor
 
-**All armor for Bard** 881 items
+**All armor for Bard** 953 items
 
 ### Job outfits
 

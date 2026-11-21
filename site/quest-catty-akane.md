@@ -40,11 +40,11 @@ Help [Rita's Marionette Craftshop](maps.html#map:10062000) find a computer part 
 ### 5. Back to Rita
 
 - Go back to the [Rita's Marionette Craftshop](maps.html#map:10062000) and give the **Computer ROM(Event)** to the [Hallely](maps.html#map:10062000) helper.
-- Talk to **Rita** and choose to board the airship. Talk to **Rita** there, then talk to her again back in the shop. You receive **Catty (Akane)**.
+- Talk to **Rita** and choose to board the airship. Talk to **Rita** there, then talk to her again back in the shop. You receive [Catty (Akane)](partners.html#item:10017907).
 
 ## Rewards
 
-- **Catty (Akane)**: a hasty, sharp-tongued cat spirit. She can Heal, Revive herself and cast Solid Aura
+- [Catty (Akane)](partners.html#item:10017907): a hasty, sharp-tongued cat spirit. She can Heal, Revive herself and cast Solid Aura
 
 ## Related
 
