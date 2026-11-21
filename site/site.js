@@ -157,6 +157,19 @@
   var list = document.getElementById('results');
   var index = window.SEARCH_INDEX || [];
   var active = -1;
+  // short placeholder when the full one would be cut off
+  if (input && window.ResizeObserver) {
+    var fullPh = input.placeholder, ctx = document.createElement('canvas').getContext('2d');
+    var fitPh = function () {
+      var cs = getComputedStyle(input);
+      ctx.font = cs.fontWeight + ' ' + cs.fontSize + ' ' + cs.fontFamily;
+      var room = input.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+      var ph = ctx.measureText(fullPh).width <= room ? fullPh : 'Search…';
+      if (input.placeholder !== ph) input.placeholder = ph;
+    };
+    new ResizeObserver(fitPh).observe(input);
+    if (document.fonts) document.fonts.ready.then(fitPh);
+  }
   function norm(s) { return s.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, ''); }
   function render() {
     var q = norm(input.value.trim());
