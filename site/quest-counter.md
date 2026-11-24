@@ -12,7 +12,7 @@ Short jobs from the **Quest Counter** in each town's cafe.
 - Quests pay EXP, Job EXP and gold, and some also give an item.
 - EP only counts for [DEM](races.md#dem) characters, who use it to raise their Cost Limit and level.
 - Some quests have a **time limit**. If you fail a quest or run out of time, you lose the quest points you paid.
-- Every quest you finish counts toward your **quest total**. Some places only let you in after you have finished enough quests, for example the [Ancient Ruins](dungeons.md) need **10**.
+- Every quest you finish counts toward your **quest total**. Some places only let you in after you have finished enough quests, for example the [Ancient Ruins](ancient-ruins.md) need **10**.
 
 ## Hunt Quests
 
@@ -2440,9 +2440,10 @@ Most hunt quests pay **EXP, Job EXP and gold**. Some also give a reward item.
 
 **Eliminate Monster (Party) Lv 60**
 
+- **Hunt**: 65 × any monster
 - **Time**: 180 min
 - **Quest points**: 1
-- **Reward**: 6,000 EXP 4,000 Job EXP 3,500 G 3 EP
+- **Reward**: 6,000 EXP 4,000 Job EXP 3,500 G 3 EP [Container 4](boxes.html#box:10022204)
 
 **Escaped Rabbit (Party) Lv 60**
 
@@ -2836,9 +2837,10 @@ Most hunt quests pay **EXP, Job EXP and gold**. Some also give a reward item.
 
 **Ruins Thief (Party) Lv 70**
 
+- **Hunt**: 85 × any monster
 - **Time**: 180 min
 - **Quest points**: 1
-- **Reward**: 7,000 EXP 4,500 Job EXP 4,000 G 3 EP
+- **Reward**: 7,000 EXP 4,500 Job EXP 4,000 G 3 EP [Container 5](boxes.html#box:10022205)
 
 **Avenge the Attack Key (Party) Lv 74**
 
@@ -3254,7 +3256,7 @@ Most hunt quests pay **EXP, Job EXP and gold**. Some also give a reward item.
 - **Hunt**: 3 × [Guttinger Σ](monsters.html#monster:10850000) 2 × [Guttinger Λ](monsters.html#monster:10850001) 2 × [Guttinger 7](monsters.html#monster:10850002)
 - **Time**: 180 min
 - **Quest points**: 1
-- **Reward**: 8,000 EXP 5,000 Job EXP 5,000 G 3 EP
+- **Reward**: 8,000 EXP 5,000 Job EXP 5,000 G 3 EP [Container 6](boxes.html#box:10022206)
 
 **Perimeter Security 1 (Party) Lv 81–90**
 
@@ -3721,30 +3723,35 @@ Most hunt quests pay **EXP, Job EXP and gold**. Some also give a reward item.
 
 **Request from Alfonso (Party) Lv 95**
 
+- **Hunt**: 300 × any monster
 - **Where**: [Abyss of the Depth](maps.html#map:11027000)
 - **Time**: None
 - **Quest points**: 0
 
 **Request from Grail (Party) Lv 95**
 
+- **Hunt**: 300 × any monster
 - **Where**: [D-Carmine Brick Ruins 1F Center](maps.html#map:20220001) **PD-Carmine Brick Ruins 1F Center**
 - **Time**: None
 - **Quest points**: 0
 
 **Request from Osser (Party) Lv 95**
 
+- **Hunt**: 300 × any monster
 - **Where**: [D-Virgin Forest](maps.html#map:20092002) **PD-Virgin Forest**
 - **Time**: None
 - **Quest points**: 0
 
 **Request from Stacy (Party) Lv 95**
 
+- **Hunt**: 300 × any monster
 - **Where**: [D-Southern Dungeon B1F](maps.html#map:20022001) **PD-Southern Dungeon B1F**
 - **Time**: None
 - **Quest points**: 0
 
 **Request from Talhobi (Party) Lv 95**
 
+- **Hunt**: 300 × any monster
 - **Where**: [D-Northern Dungeon](maps.html#map:20014001) **PD-Northern Dungeon**
 - **Time**: None
 - **Quest points**: 0
@@ -4614,6 +4621,7 @@ Most hunt quests pay **EXP, Job EXP and gold**. Some also give a reward item.
 
 **I'm and AI Any level**
 
+- **Hunt**: 100 × any monster
 - **Time**: None
 - **Quest points**: 0
 
@@ -4738,6 +4746,7 @@ Most hunt quests pay **EXP, Job EXP and gold**. Some also give a reward item.
 
 **Princess Chunson Challenge! (Party) Any level**
 
+- **Hunt**: 999 × any monster
 - **Time**: None
 - **Quest points**: 1
 - **Reward**: 3 EP **Princess Chunsoon Airship Key**
@@ -4921,9 +4930,10 @@ Most hunt quests pay **EXP, Job EXP and gold**. Some also give a reward item.
 
 **Treasure Hunt (Party) Any level**
 
+- **Hunt**: 35 × any monster
 - **Time**: 60 min
 - **Quest points**: 1
-- **Reward**: 3,000 EXP 3,000 Job EXP 3,000 G 3 EP
+- **Reward**: 3,000 EXP 3,000 Job EXP 3,000 G 3 EP [Treasure Chest 11](boxes.html#box:10022111)
 
 **Trial of Soul Any level**
 
@@ -8106,7 +8116,7 @@ Most collect quests pay **EXP, Job EXP and gold**. Some also give a reward item.
 
 **Wing's Saute 2 Lv 74–84**
 
-- **Bring**: 3 × **Sky Blue Magic Feather Pen(Unu** 1 × **Precious Jelly**
+- **Bring**: 3 × **Sky Blue Magic Feather Pen(Unused)** 1 × **Precious Jelly**
 - **Time**: 900 min
 - **Quest points**: 1
 - **Reward**: 89,911 EXP 89,911 Job EXP 23,400 G 3 EP
@@ -10845,6 +10855,6 @@ What each quest pays.
 
 ## Related
 
-- [Dungeons](dungeons.md)
+- [Ancient Ruins](ancient-ruins.md)
 - [DEMIC Chips](demic-chips.md)
 - [Races](races.md)

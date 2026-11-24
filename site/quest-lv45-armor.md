@@ -33,7 +33,7 @@ Short quests that unlock the **Lv 45 armor** shops for each job line.
 ### 2. Spell Users: the Fallen Titania
 
 - Get 1 × [Flower](materials.html#item:10005300).
-- Go to [Northern Promenade](maps.html#map:10065000) and enter the [Spell User Guild Headquarters'](maps.html#map:10065000). Step into the portal inside and choose to **jump in**. It takes you to the [Secret Headquarter Room](maps.html#map:10065000), where the **Fallen Titania** lives. You need to be a Spell User job at level 40 or higher.
+- Go to [Northern Promenade](maps.html#map:10065000) and enter the [Spell User Guild Headquarters' Lobby](maps.html#map:10065000). Step into the portal inside and choose to **jump in**. It takes you to the [Secret Headquarter Room](maps.html#map:10065000), where the **Fallen Titania** lives. You need to be a Spell User job at level 40 or higher.
    **Fallen Titania**
 - Talk to her. She asks you to stay away and sends you back to the lobby.
 - Enter the portal again and choose the [Sorcerer Master Room](maps.html#map:10065000). Talk to the **Sorcerer**. He tells you she would feel better with a flower.

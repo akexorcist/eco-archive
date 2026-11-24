@@ -23,7 +23,7 @@ AGI **4**
 MAG **3**
 
 - The highest **VIT** and **HP** at the start, which makes Emil the easiest race for beginners.
-- The only race that can wear **[backpacks](equipment.html#backpack)**. Other races use waist bags, which hold less.
+- The only race that can wear **backpacks**. Other races use waist bags, which hold less.
 
 ### Titania
 
@@ -136,9 +136,21 @@ Partner 2 (riding)
 
 **In game**
 
-- Halos: Powers (Lv 105), Seraphim (Lv 106)
-- Wing shapes: Default · 2 Feathers (Lv 100) · 3 Feathers (Lv 101) · Ex Feather (Lv 108) · Ex 2 Feathers (Lv 109) · Ex 3 Feathers (Lv 110)
-- Wing colors: Lv 102 red, purple, blue · Lv 103 light blue, green, yellow green · Lv 104 yellow, orange, black · Lv 107 grey, white
+- Halos:
+   - Powers (Lv 105)
+   - Seraphim (Lv 106)
+- Wing shapes:
+   - Default
+   - 2 Feathers (Lv 100)
+   - 3 Feathers (Lv 101)
+   - Ex Feather (Lv 108)
+   - Ex 2 Feathers (Lv 109)
+   - Ex 3 Feathers (Lv 110)
+- Wing colors:
+   - Lv 102: red, purple, blue
+   - Lv 103: light blue, green, yellow green
+   - Lv 104: yellow, orange, black
+   - Lv 107: grey, white
 - Any color works on any shape.
 
 Halo (Powers)
@@ -174,9 +186,21 @@ Black · Ex 3 Feathers
 
 **In game**
 
-- Tails: trident (Lv 105), slim (Lv 106)
-- Wing shapes: Default · 2 Feathers (Lv 100) · 3 Feathers (Lv 101) · Ex Feather (Lv 108) · Ex 2 Feathers (Lv 109) · Ex 3 Feathers (Lv 110)
-- Wing colors: Lv 102 red, purple, blue · Lv 103 light blue, green, yellow green · Lv 104 yellow, orange, black · Lv 107 grey, white
+- Tails:
+   - Trident (Lv 105)
+   - Slim (Lv 106)
+- Wing shapes:
+   - Default
+   - 2 Feathers (Lv 100)
+   - 3 Feathers (Lv 101)
+   - Ex Feather (Lv 108)
+   - Ex 2 Feathers (Lv 109)
+   - Ex 3 Feathers (Lv 110)
+- Wing colors:
+   - Lv 102: red, purple, blue
+   - Lv 103: light blue, green, yellow green
+   - Lv 104: yellow, orange, black
+   - Lv 107: grey, white
 - Any color works on any shape.
 
 Tail (Trident)

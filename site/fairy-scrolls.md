@@ -37,10 +37,10 @@ Any of the four skills can also make one at Lv 1 ([recipe](crafting.html#recipe:
 
 | Item | Materials | Tool | Recipe |
 |---|---|---|---|
-| **Fire Spell Scroll** | 1 × [Scroll](crafting.html#recipe:1406) 1 × [Flame Summonstone](materials.html#item:10011201) | - | [Lv 1](crafting.html#recipe:1401) |
-| **Water Spell Scroll** | 1 × [Scroll](crafting.html#recipe:1406) 1 × [Water Summonstone](materials.html#item:10011203) | - | [Lv 1](crafting.html#recipe:1411) |
-| **Wind Spell Scroll** | 1 × [Scroll](crafting.html#recipe:1406) 1 × [Wind Summonstone](materials.html#item:10011207) | - | [Lv 1](crafting.html#recipe:1421) |
-| **Earth Spell Scroll** | 1 × [Scroll](crafting.html#recipe:1406) 1 × [Earth Summonstone](materials.html#item:10011205) | - | [Lv 1](crafting.html#recipe:1431) |
+| [Fire Spell Scroll](crafting.html#recipe:1401) | 1 × [Scroll](crafting.html#recipe:1406) 1 × [Flame Summonstone](materials.html#item:10011201) | - | [Lv 1](crafting.html#recipe:1401) |
+| [Water Spell Scroll](crafting.html#recipe:1411) | 1 × [Scroll](crafting.html#recipe:1406) 1 × [Water Summonstone](materials.html#item:10011203) | - | [Lv 1](crafting.html#recipe:1411) |
+| [Wind Spell Scroll](crafting.html#recipe:1421) | 1 × [Scroll](crafting.html#recipe:1406) 1 × [Wind Summonstone](materials.html#item:10011207) | - | [Lv 1](crafting.html#recipe:1421) |
+| [Earth Spell Scroll](crafting.html#recipe:1431) | 1 × [Scroll](crafting.html#recipe:1406) 1 × [Earth Summonstone](materials.html#item:10011205) | - | [Lv 1](crafting.html#recipe:1431) |
 
 ## Spells by skill level
 

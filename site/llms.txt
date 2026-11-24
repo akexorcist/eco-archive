@@ -8,7 +8,6 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 
 - [Home](index.md): [HTML](index.html)
 - [Monsters](monsters.md): [HTML](monsters.html)
-- [Maps](maps.md): [HTML](maps.html)
 - [Privacy Policy](privacy.md): [HTML](privacy.html)
 - [Sources & Credits](references.md): [HTML](references.html)
 
@@ -29,21 +28,21 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 - [Game Basics](game-basics.md): [HTML](game-basics.html)
 - [Races](races.md): [HTML](races.html)
 - [Status Points](stat-points.md): [HTML](stat-points.html)
-- [City Passes](city-passes.md): [HTML](city-passes.html)
-- [Enigma Group Pass](enigma-pass.md): [HTML](enigma-pass.html)
 
 ## Game systems
 
+- [Arena PvP](arena-pvp.md): [HTML](arena-pvp.html)
 - [Automata](automata.md): [HTML](automata.html)
 - [Bosses](bosses.md): [HTML](bosses.html)
 - [Catties](catties.md): [HTML](catties.html)
+- [Champion Battle](champion-battle.md): [HTML](champion-battle.html)
 - [City Defense Battle](city-defense-battle.md): [HTML](city-defense-battle.html)
 - [DEMIC Chips](demic-chips.md): [HTML](demic-chips.html)
 - [Dragon Mount](dragon-mount.md): [HTML](dragon-mount.html)
 - [Dual Job](dual-job.md): [HTML](dual-job.html)
-- [Dungeons](dungeons.md): [HTML](dungeons.html)
 - [Element Fairies](element-fairies.md): [HTML](element-fairies.html)
 - [Equipment Upgrades](equipment-upgrades.md): [HTML](equipment-upgrades.html)
+- [Factions](factions.md): [HTML](factions.html)
 - [Fame](fame.md): [HTML](fame.html)
 - [Farming](farming.md): [HTML](farming.html)
 - [Fishing](fishing.md): [HTML](fishing.html)
@@ -57,15 +56,19 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 - [Iris Cards – Ability Vectors](ability-vectors.md): [HTML](ability-vectors.html)
 - [Item Repair](item-repair.md): [HTML](item-repair.html)
 - [Job Switching](job-switching.md): [HTML](job-switching.html)
+- [Knight Training](knight-training.md): [HTML](knight-training.html)
 - [Marionettes & Golems](marionettes.md): [HTML](marionettes.html)
 - [Medal Machines](medal-machines.md): [HTML](medal-machines.html)
 - [Partners](partners.md): [HTML](partners.html)
 - [Pet Raising](pet-raising.md): [HTML](pet-raising.html)
 - [Possession](possession.md): [HTML](possession.html)
+- [PvP Skill Changes](pvp-skill-changes.md): [HTML](pvp-skill-changes.html)
 - [Ring](ring.md): [HTML](ring.html)
 - [Shops & Merchants](shops.md): [HTML](shops.html)
 - [Stamps](stamps.md): [HTML](stamps.html)
 - [Tiny Island](tiny-island.md): [HTML](tiny-island.html)
+- [Titles](titles.md): [HTML](titles.html)
+- [Wedding](wedding.md): [HTML](wedding.html)
 
 ## Jobs
 
@@ -177,6 +180,33 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 - [Weapon Crafting](weapon-crafting.md): [HTML](weapon-crafting.html)
 - [Woodcraft](woodcraft.md): [HTML](woodcraft.html)
 
+## Maps
+
+- [All Maps](maps.md): [HTML](maps.html)
+- [Airships & Rides](airships-and-rides.md): [HTML](airships-and-rides.html)
+- [Between the Worlds](between-the-worlds.md): [HTML](between-the-worlds.html)
+- [City Passes](city-passes.md): [HTML](city-passes.html)
+- [Dominion World](dominion-world.md): [HTML](dominion-world.html)
+- [Emil World Cities](emil-world-cities.md): [HTML](emil-world-cities.html)
+- [Enigma Group Fortress](enigma-group-fortress.md): [HTML](enigma-group-fortress.html)
+- [Sky Tower Pass](sky-tower-pass.md): [HTML](sky-tower-pass.html)
+- [Titania World](titania-world.md): [HTML](titania-world.html)
+- [Tonka Pass](tonka-pass.md): [HTML](tonka-pass.html)
+- [Ancient Ruins](ancient-ruins.md): [HTML](ancient-ruins.html)
+- [Carmine Brick Ruins](carmine-brick-ruins.md): [HTML](carmine-brick-ruins.html)
+- [Dimension Dungeons](dimension-dungeons.md): [HTML](dimension-dungeons.html)
+- [Eastern Dungeon](eastern-dungeon.md): [HTML](eastern-dungeon.html)
+- [Endless Corridor](endless-corridor.md): [HTML](endless-corridor.html)
+- [Light Tower](light-tower.md): [HTML](light-tower.html)
+- [Mai Mai Ruins](mai-mai-ruins.md): [HTML](mai-mai-ruins.html)
+- [Northern Underground](northern-underground.md): [HTML](northern-underground.html)
+- [Old Acropolis](old-acropolis.md): [HTML](old-acropolis.html)
+- [Oracle Wind Cave](oracle-wind-cave.md): [HTML](oracle-wind-cave.html)
+- [Sky Tower](sky-tower.md): [HTML](sky-tower.html)
+- [Submarine Cave](submarine-cave.md): [HTML](submarine-cave.html)
+- [Undead Castle](undead-castle.md): [HTML](undead-castle.html)
+- [Underground Water Facility](underground-water-facility.md): [HTML](underground-water-facility.html)
+
 ## Miscellaneous
 
 - [Logo](misc-logo.md): [HTML](misc-logo.html)
@@ -195,7 +225,7 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 - [Data file guide](data/README.md): fields of every file
 - [data/ability-vectors.json](data/ability-vectors.json): Iris card ability vectors (215 entries)
 - [data/boxes.json](data/boxes.json): Boxes and their contents (40 entries)
-- [data/crafting-recipes.json](data/crafting-recipes.json): Craftable items and their recipes from Craftable Items (1448 entries)
+- [data/crafting-recipes.json](data/crafting-recipes.json): Craftable items and their recipes from Craftable Items (1452 entries)
 - [data/demic-chips.json](data/demic-chips.json): DEMIC chips (940 entries)
 - [data/dual-jobs.json](data/dual-jobs.json): Dual job systems (12 entries)
 - [data/equipment.json](data/equipment.json): Weapons and armor from the Weapons & Armor page (1852 entries)
@@ -205,7 +235,7 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 - [data/jobs.json](data/jobs.json): Every job (52 entries)
 - [data/maps.json](data/maps.json): Every map (190 entries)
 - [data/marionettes.json](data/marionettes.json): Marionettes and golems (56 entries)
-- [data/materials.json](data/materials.json): Crafting materials from Crafting Materials (1026 entries)
+- [data/materials.json](data/materials.json): Crafting materials from Crafting Materials (1027 entries)
 - [data/monsters.json](data/monsters.json): Every monster (1316 entries)
 - [data/npcs.json](data/npcs.json): Every NPC in the client data (5797 entries)
 - [data/partners.json](data/partners.json): Partners (674 entries)

@@ -57,7 +57,7 @@ A **Dual Job** lets you use skills from a second job line while you keep your ow
 You can unlock more systems and then switch between them with **Orthos** or the **Book of Conversion**. The current one is marked with a ☆.
 
 - To start the event, you need all of these:
-   - You can enter the Abyss floors of the [Endless Corridor](dungeons.md).
+   - You can enter the Abyss floors of the [Endless Corridor](endless-corridor.md).
    - A **Book of Conversion** from the NPC in [Uptown](maps.html#map:10023000).
    - A Dual Job.
 - Start it at the NPC who gives the **Book of Conversion**.

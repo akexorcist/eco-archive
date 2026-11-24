@@ -417,7 +417,7 @@ Lv 55
 ##### Female
 
 - [Geologist Bandana](equipment.html#item:50021051)
-- [Geologist Arm Guard(F)(Drapery](equipment.html#item:50007450)
+- [Geologist Arm Guard(F)(Drapery)](equipment.html#item:50007450)
 - [Geologist Pants(M)](equipment.html#item:50014350)
 - **Geologist Sandals(F)**
 
@@ -426,15 +426,15 @@ Lv 55
 - Alt head piece
    - [Miner Ribbon Bandana](equipment.html#item:50025250)
 - Alt top
-   - **Geologist Arm Guard(F)(Bear To**
+   - **Geologist Arm Guard(F)(Bear Top)**
 
 ##### How to get
 
-- [Geologist Arm Guard(M)](equipment.html#item:50004250), [Miner Pants(M)](equipment.html#item:50012850), [Geologist Arm Guard(F)(Drapery](equipment.html#item:50007450) and [Geologist Pants(M)](equipment.html#item:50014350)
+- [Geologist Arm Guard(M)](equipment.html#item:50004250), [Miner Pants(M)](equipment.html#item:50012850), [Geologist Arm Guard(F)(Drapery)](equipment.html#item:50007450) and [Geologist Pants(M)](equipment.html#item:50014350)
    - From [Novice Adventurer Porol](shops.html#npc:11000384), a reward of the [Lv 55 Armor Quest](quest-lv55-armor.md) twice
 - [Geologist Bandana](equipment.html#item:50021051) and [Miner Ribbon Bandana](equipment.html#item:50025250)
    - Sold by [Miriaria](shops.html#npc:11000385)
-- **Geologist Sandals(M)**, **Geologist Sandals(F)** and **Geologist Arm Guard(F)(Bear To**
+- **Geologist Sandals(M)**, **Geologist Sandals(F)** and **Geologist Arm Guard(F)(Bear Top)**
    - From [Container 2](boxes.html#box:10022202)
    - From [Container 3](boxes.html#box:10022203)
 

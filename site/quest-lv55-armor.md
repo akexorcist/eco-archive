@@ -60,7 +60,7 @@ Errands that unlock each job group's **Lv 55 armor shop**.
    **Novice Adventurer Porol**
    Names with (M) are for men and (F) for women, but [Geologist Pants(M)](equipment.html#item:50014350) is for women.
    **Miner (Tatarabe), Blacksmith, Engineer (Machinery)**
-   [**Geologist Pants(M)** 5,200 G](equipment.html#item:50014350) [**Miner Pants(M)** 5,200 G](equipment.html#item:50012850) [**Geologist Arm Guard(F)(Drapery** 58,000 G](equipment.html#item:50007450) [**Geologist Arm Guard(M)** 58,000 G](equipment.html#item:50004250)
+   [**Geologist Pants(M)** 5,200 G](equipment.html#item:50014350) [**Miner Pants(M)** 5,200 G](equipment.html#item:50012850) [**Geologist Arm Guard(F)(Drapery)** 58,000 G](equipment.html#item:50007450) [**Geologist Arm Guard(M)** 58,000 G](equipment.html#item:50004250)
    **Farmer, Alchemist, Marionettist**
    [**Lumberjack Pants(M)** 7,000 G](equipment.html#item:50014450) [**Garden Dress(F)** 49,000 G](equipment.html#item:50004650) [**Lumberjack T-Shirt(M)** 55,500 G](equipment.html#item:50007550)
    **Ranger, Explorer, Treasure Hunter**

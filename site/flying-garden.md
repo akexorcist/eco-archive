@@ -22,10 +22,10 @@ You get the **Airship Key** in the last part of the beginner tutorial.
 
 - Use the **Airship Key** at a **landing spot**: a fenced area with a wooden ladder. It only works on maps that have one.
 - Click the rope to:
-   - go aboard your Flying Garden,
-   - pack the garden up again,
-   - choose who may come aboard,
-   - show a sign with a name on the rope.
+   - Go aboard your Flying Garden
+   - Pack the garden up again
+   - Choose who may come aboard
+   - Show a sign with a name on the rope
 - You can fly between towns that have landing spots, and take **4–5 friends** with you.
 - Friends can come along even if their level is more than 30 apart from yours.
 

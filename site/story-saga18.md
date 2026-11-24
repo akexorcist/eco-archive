@@ -31,5 +31,5 @@ Questioned on [Carmine Coast](maps.html#map:10080000) and at [Carmine Desert Oas
 ## Related
 
 - [Memories of the Ice Queen](story-saga16.md): the SAGA 16 bonus story.
-- [Enigma Group Pass](enigma-pass.md): the pass that gets you into the [Enigma Group Fortress](maps.html#map:10054001).
+- [Enigma Group Fortress](enigma-group-fortress.md): the pass that gets you into the [Enigma Group Fortress](maps.html#map:10054001).
 - [Story Overview](story.md): every chapter and the SAGA timeline.

@@ -788,8 +788,14 @@ ul.rskills .jlv { white-space: nowrap; }
 .mapfigs { display: grid; grid-template-columns: repeat(auto-fill, minmax(196px, 1fr)); gap: 24px 16px; max-width: 1100px; }
 .mapfigs .mm { display: flex; flex-direction: column; align-items: center; }
 .mapfigs .mmbox { --ar: 1; width: calc(180px * min(1, var(--ar))) !important; height: calc(180px * min(1, 1 / var(--ar))) !important; }
-.pin.hl.edge-l::after { left: -8px; transform: none; text-align: left; }
-.pin.hl.edge-r::after { left: auto; right: -8px; transform: none; text-align: right; }
+.pin.hl.edge-l::after { left: -8px; transform: none; text-align: center; }
+.pin.hl.edge-r::after { left: auto; right: -8px; transform: none; text-align: center; }
+/* Knight Training faction pins: each Faction Commander's uniform colour, lightened for label contrast */
+.pin[data-faction="east"] { --pin: #299050; }
+.pin[data-faction="west"] { --pin: #a17812; }
+.pin[data-faction="south"] { --pin: #cc5a5a; }
+.pin[data-faction="north"] { --pin: #5b7bd0; }
+.pin[data-faction]::after { background: var(--pin); color: #fff; }
 
 /* place cards: number + map + place name + landmark (e.g. Joker book spots) */
 .spots { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 16px; margin: 16px 0; max-width: 1100px; }
@@ -1113,7 +1119,7 @@ figure.scene.solo img { width: 560px; max-width: 100%; }
 /* standalone [[spot:]] figure hugs its map so the caption sits under it, not centred across the column (user, 2026-11-16).
    NPC blocks, spot cards and map pages already centre their .mm in flex columns, so they are left out */
 figure.mm:not(.npc .mm, .spotcard .mm, .mapfigs .mm, .mapbody .mm) { width: fit-content; max-width: 100%; }
-figure.mm:not(.npc .mm, .spotcard .mm, .mapfigs .mm, .mapbody .mm) .mmbox { margin-inline: auto; }
+figure.mm:not(.npc .mm, .spotcard .mm, .mapfigs .mm, .mapbody .mm, .where .mm, .ride .mm) .mmbox { margin-inline: auto; }
 /* content-level collapsible card groups (Farming > Crops): separate groups like the h3 + .mcards groups in Seeds
    (32px between groups, 16px heading to cards); .mapbody groups keep their tighter spacing */
 .content > details.msec + details.msec { margin-top: 32px; }
@@ -1320,8 +1326,9 @@ td.fishmap .pin { width: 10px; height: 10px; }
 .where .mcard { flex-direction: column; gap: 4px; width: 104px; min-height: 0; padding: 8px; text-align: center; }
 .where .mcard img { width: 64px; height: 64px; }
 .where .mcard > span { align-items: center; overflow-wrap: normal; }
+/* minimap sits at the start edge like its name, so every minimap in a Map column lines up (2026-11-22) */
 .where figure.mm { margin: 0; flex: none; width: 140px; }
-.where .mmbox { --ar: 1; width: calc(140px * min(1, var(--ar))) !important; height: calc(140px * min(1, 1 / var(--ar))) !important; margin-inline: auto; }
+.where .mmbox { --ar: 1; width: calc(140px * min(1, var(--ar))) !important; height: calc(140px * min(1, 1 / var(--ar))) !important; margin-inline: 0; }
 .where .mmbox img { border-radius: 8px; }
 .where .pin { width: 10px; height: 10px; }
 .where figcaption { margin-top: 4px; }
@@ -1927,6 +1934,9 @@ details.sagacard .sagajp > summary:hover { background: color-mix(in srgb, var(--
 /* near the left / right edge the label starts at the pin centre, so a portal on the very edge of the map is not cut off by the rounded list on phones */
 .lf-mapfigs .pin.hl.edge-l::after { left: 50%; }
 .lf-mapfigs .pin.hl.edge-r::after { right: 50%; }
+/* Maps minimap: a portal pin with a known destination is a link to that map's entry (2026-11-24); same look, pointer cursor, focus ring */
+.lf-mapfigs a.pin.go { cursor: pointer; text-decoration: none; border: 0; }
+.lf-mapfigs a.pin.go:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; border-radius: 3px; z-index: 10; }
 /* tables inside the opened detail (Ability Vectors levels) */
 .lf-table { margin: 4px 0 0; overflow-x: auto; }
 .lf-table > .tablewrap { margin: 0; }
@@ -2002,3 +2012,182 @@ details.sagacard .sagajp > summary:hover { background: color-mix(in srgb, var(--
 .lf-skill > .lf-skicon { flex: none; width: 32px; height: 32px; image-rendering: pixelated; }
 .lf-skill > span { align-self: baseline; padding-top: 4px; }
 .lf-dl dd .cellist li:has(> .lf-skill) + li { margin-top: 8px; }
+
+/* titles: Title | Rarity | How to get | Bonus (Titles page): Bonus gets the width so stat lines don't wrap word-by-word.
+   Phone: normal auto layout, scrolls in its box */
+.tablewrap.titles table { table-layout: fixed; }
+.tablewrap.titles th:nth-child(1) { width: 22.5%; }
+.tablewrap.titles th:nth-child(2) { width: 11.5%; }
+.tablewrap.titles th:nth-child(3) { width: 29%; }
+.tablewrap.titles th:nth-child(4) { width: 37%; }
+@media (max-width: 599px) {
+  .tablewrap.titles table { table-layout: auto; }
+  .tablewrap.titles th:nth-child(n) { width: auto; }
+}
+/* phones (2026-11-22): nothing runs past the screen edge. Pin labels get .fit from site.js (width and shift that keep the label inside its minimap box, wrapping as needed);
+   "N × item", the Lv 85/99 quest "cursed → true" rows and the free-skill-point cards wrap or shrink instead of keeping one line */
+/* .fit is on every pin label on phones, and on desktop only on a label that would run past its minimap box (2026-11-22) */
+:root .pin.hl.fit::after { left: var(--lbl-x); right: auto; width: var(--lbl-w); max-width: none; box-sizing: border-box; transform: none; text-align: center; overflow-wrap: anywhere; }
+@media (max-width: 599px) {
+  .amt, .amt a.ent { white-space: normal; }
+  .fspcards { grid-template-columns: minmax(0, 1fr); }
+  .fspcards > * { min-width: 0; }
+  .slotcard.pairs .pairgrid { grid-template-columns: auto minmax(0, 1fr); }
+  .slotcard.pairs .pairgrid.nolbl { grid-template-columns: minmax(0, 1fr); }
+  .pairgrid .pairrow li, .pairgrid .pairrow li :is(a.ent, .nm, .amt, b) { white-space: normal; min-width: 0; }
+}
+
+/* dungeon-mobs: Map | Monsters on dungeon pages (2026-11-22). Map column shrinks to a bigger minimap (184px, was 140px);
+   the monster list fills the rest in up to 3 columns (one monster per line). Phones: one column, 140px minimap */
+.tablewrap.dungeon-mobs th:first-child { width: 1%; }
+.tablewrap.dungeon-mobs .where figure.mm { width: 184px; }
+.tablewrap.dungeon-mobs .where .mmbox { width: calc(184px * min(1, var(--ar))) !important; height: calc(184px * min(1, 1 / var(--ar))) !important; }
+.tablewrap.dungeon-mobs td ul.cellist { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, max(9rem, calc((100% - 32px) / 3))), 1fr)); column-gap: 16px; padding-left: 0; list-style: disc outside; }
+.tablewrap.dungeon-mobs td ul.cellist > li { margin: 2px 0 2px 20px; min-width: 0; }
+@media (max-width: 599px) {
+  .tablewrap.dungeon-mobs td ul.cellist { grid-template-columns: minmax(0, 1fr); }
+  .tablewrap.dungeon-mobs .where figure.mm { width: 140px; }
+  .tablewrap.dungeon-mobs .where .mmbox { width: calc(140px * min(1, var(--ar))) !important; height: calc(140px * min(1, 1 / var(--ar))) !important; }
+}
+
+/* quests: Quest | Defeat | Reward on Ancient Ruins (2026-11-24, option C). Roomy 20/24px cells; the name over muted level and
+   time lines; one target per line with its 40px monster picture (.qmob; empty slot for "any monster"), "(boss)" muted */
+.tablewrap.quests table { width: 100%; }
+.tablewrap.quests th { padding: 14px 24px; }
+.tablewrap.quests td { padding: 20px 24px; line-height: 1.5; }
+.tablewrap.quests td:first-child { width: 28%; }
+.tablewrap.quests td:nth-child(2) { width: 40%; }
+.tablewrap.quests td:nth-child(3) a.ent { white-space: nowrap; }
+.tablewrap.quests .qname { display: block; font-weight: 600; margin-bottom: 6px; }
+.tablewrap.quests .qmeta { display: block; color: var(--on-surface-variant); }
+.tablewrap.quests .cellist.stack li { margin: 0 0 8px; }
+.tablewrap.quests .cellist:not(.stack) li { margin: 0 0 4px; }
+.tablewrap.quests .qmob { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.tablewrap.quests .qmob img, .tablewrap.quests .qmob .qnopic { width: 40px; height: 40px; flex: none; object-fit: contain; }
+.tablewrap.quests .qmob > span:last-child { min-width: 0; }
+.tablewrap.quests .qmob .amt { white-space: normal; }
+.tablewrap.quests .qboss { color: var(--on-surface-variant); }
+@media (max-width: 599px) {
+  .tablewrap.quests th, .tablewrap.quests td { padding: 16px; }
+  .tablewrap.quests td { min-width: 200px; }
+  .tablewrap.quests td:first-child { min-width: 150px; }
+}
+
+/* ride: one route section on Airships & Rides (2026-11-24): the From map's 184px minimap with a pin on the ride NPC or dock,
+   How:/Cost: lines beside it (dl.skmeta, muted label per user 2026-11-24, value beside it); stacked on phones */
+.ride { display: flex; align-items: flex-start; gap: 24px; margin: 16px 0; }
+.ride figure.mm { margin: 0; flex: none; width: 184px; }
+.ride figure.mm .mmbox { --ar: 1; width: calc(184px * min(1, var(--ar))) !important; height: calc(184px * min(1, 1 / var(--ar))) !important; }
+.ride figure.mm .mmbox img { border-radius: 8px; }
+.ride dl.skmeta { margin: 0; flex: 1; min-width: 0; }
+.ride dl.skmeta dt { flex: none; min-width: 0; white-space: nowrap; color: var(--on-surface-variant); font-weight: 500; }
+.ride dl.skmeta dd { min-width: 0; }
+.ride dl.skmeta div + div { margin-top: 4px; }
+@media (max-width: 599px) { .ride { flex-direction: column; gap: 12px; } }
+.ride.ride-next { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--outline-variant); }
+/* dungeon Monsters section: one bigger minimap per map under its own map-name heading, no caption (2026-11-24) */
+.dmap .where figure.mm { width: auto; }
+.dmap .where .mmbox { width: calc(300px * min(1, var(--ar))) !important; height: calc(300px * min(1, 1 / var(--ar))) !important; }
+.dmap .where figcaption { display: none; }
+.bosscard h3 .btag { color: var(--on-surface-variant); font-weight: 400; }
+/* ride block with an NPC render: minimap and render side by side on top, the From/How lines below at full width (2026-11-24) */
+.ride:has(figure.scene) { flex-wrap: wrap; row-gap: 16px; }
+.ride figure.scene { margin: 0; flex: none; }
+.ride figure.scene img, .ride figure.scene.solo img { width: 276px; height: 184px; object-fit: cover; border-radius: 8px; display: block; }
+.ride:has(figure.scene) dl.skmeta { flex: 1 0 100%; }
+@media (max-width: 599px) { .ride figure.scene img, .ride figure.scene.solo img { width: 100%; max-width: 360px; height: auto; aspect-ratio: 3 / 2; } }
+/* ride block: every minimap takes the same 184 x 184 frame; a tall or wide map keeps its own shape, centred in it (2026-11-24) */
+.ride > figure.mm { width: 184px !important; height: 184px; display: flex; align-items: center; justify-content: center; }
+/* Knight Training crystals: the client crystal models (rendered like monster pictures) shown bigger than the 48px card icons (2026-11-24) */
+.mcards.crystals { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.mcards.crystals .mcard img { width: 88px; height: 88px; }
+/* Champion Battle maps: a minimap per PvP field with its name(s) below, Night versions under their day map (2026-11-24) */
+.mapfigs.bmaps .bmap { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.mapfigs.bmaps .bmap figure.mm { margin: 0; }
+.mapfigs.bmaps .bmap .mmbox { width: 184px !important; height: 184px !important; }
+.mapfigs.bmaps .bmap p { margin: 0; text-align: center; }
+/* a place minimap with an in-game render to its right, both the same height (Sky Tower Pass: Miner's Room door + the Pot) (2026-11-25) */
+.spotscene { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 16px; margin: 16px 0; }
+.spotscene figure.mm, .spotscene figure.scene { margin: 0; flex: none; }
+.spotscene figure.mm .mmbox { width: 184px !important; height: 184px !important; }
+.spotscene figure.mm figcaption { display: none; }
+.spotscene figure.scene img, .spotscene figure.scene.solo img { width: 276px; max-width: 100%; height: 184px; object-fit: cover; border-radius: 8px; display: block; }
+@media (max-width: 599px) { .spotscene figure.scene img, .spotscene figure.scene.solo img { width: 100%; height: auto; aspect-ratio: 3 / 2; } }
+/* Light Tower floor map: collapsible diagram of all 29 floors, one line per connected floor pair, numbered portal dots, hover/tap fades the unconnected (2026-11-25) */
+details.ltmap-wrap { margin: 16px 0; }
+details.ltmap-wrap > summary { cursor: pointer; font-size: inherit; color: var(--secondary); font-weight: 400; width: max-content; max-width: 100%; }
+details.ltmap-wrap > summary:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+.ltmap { margin-top: 12px; }
+.ltmap .ltm-note { font-size: 16px; color: var(--on-surface-variant); margin: 0 0 8px; }
+.ltmap .ltm-hint { font-size: 16px; color: var(--on-surface-variant); margin: 0 0 8px; }
+.ltmap .ltm-hint.fits { display: none; }
+.ltmap .ltm-sw { position: relative; }
+.ltmap .ltm-sw::after { content: ""; position: absolute; top: 0; right: 0; bottom: 8px; width: 56px; pointer-events: none; background: linear-gradient(to right, transparent, var(--surface)); transition: opacity .2s; }
+.ltmap .ltm-sw.end::after { opacity: 0; }
+.ltmap .ltm-scroll { overflow-x: auto; overflow-y: hidden; padding-bottom: 8px; }
+.ltmap .ltm-flow { display: block; max-width: none; }
+.ltmap .ltm-t { font: 500 16px Roboto, system-ui, sans-serif; }
+.ltmap .ltm-lb { paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; pointer-events: none; }
+.ltmap .ltm-exit { fill: var(--portal); }
+.ltmap .ltm-ed { fill: none; stroke-width: 2.5; opacity: .9; }
+.ltmap .ltm-f, .ltmap .ltm-zone { transition: opacity .15s; }
+.ltmap .fx .ltm-f:not(.keep) { opacity: .1; }
+.ltmap .fx .ltm-zone { opacity: .35; }
+.ltmap .fx .ltm-ed.keep { opacity: 1; }
+.ltmap .ltm-node { cursor: pointer; outline: none; }
+.ltmap .ltm-lb.kf { text-decoration: underline; text-decoration-thickness: 2px; }
+.ltmap .ltm-pp { cursor: pointer; outline: none; }
+.ltmap .ltm-hit { fill: transparent; }
+.ltmap .ltm-dot { stroke: #000; stroke-width: 1.5; }
+.ltmap .ltm-pp:focus-visible .ltm-dot { stroke: #fff; stroke-width: 2.5; }
+.ltmap .ltm-bn { font: 700 16px Roboto, system-ui, sans-serif; fill: #000; pointer-events: none; }
+
+/* All Maps viewer (.mview, 2026-11-25): current map in the middle, the maps its portals lead to around it on the portal's side;
+   hover/tap a portal or a map to fade everything else, click (or tap again) to move there. Narrow screens list neighbours under the map. */
+details.mview-wrap { margin: 16px 0; }
+details.mview-wrap > summary { cursor: pointer; font-size: inherit; color: var(--secondary); font-weight: 400; width: max-content; max-width: 100%; }
+details.mview-wrap > summary:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+.mview { margin-top: 12px; --mv-t: 102px; --mv-c: 106px; }
+.mview .mv-wrap { display: flex; flex-direction: column-reverse; align-items: stretch; gap: 28px; width: max-content; max-width: 100%; }
+.mview .mv-stage { position: relative; flex: none; min-width: 0; }
+.mview .mv-layer { position: relative; display: grid; grid-template-columns: var(--mv-t) repeat(3, var(--mv-c)) var(--mv-t); grid-template-rows: var(--mv-t) repeat(3, var(--mv-c)) var(--mv-t); gap: 4px; transition: opacity .2s ease; }
+.mview .mv-layer.hide { opacity: 0; }
+.mview .mv-center { grid-area: 2 / 2 / 5 / 5; display: flex; align-items: center; justify-content: center; min-width: 0; }
+.mview .mv-mm { position: relative; flex: none; }
+.mview .mv-mm img { display: block; width: 100%; height: 100%; image-rendering: pixelated; border-radius: 10px; }
+.mview .mv-lines { position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.mview .mv-lines line { stroke: var(--portal); stroke-width: 2; stroke-dasharray: 5 4; opacity: .7; }
+.mview .mv-pin { position: absolute; width: 12px; height: 12px; margin: 0; padding: 0; border: 0; border-radius: 3px; transform: translate(-50%, -50%); background: var(--portal); box-shadow: 0 0 0 1.5px #000; cursor: pointer; z-index: 2; }
+.mview .mv-pin::before { content: ""; position: absolute; inset: -7px; }
+.mview .mv-pin.dead { background: var(--outline); cursor: default; z-index: 1; }
+.mview .mv-nb { display: flex; flex-direction: column; align-items: center; gap: 2px; min-width: 0; min-height: 0; padding: 3px 2px; margin: 0; border: 0; border-radius: 10px; background: var(--surface-container-low); color: var(--secondary); font: inherit; cursor: pointer; overflow: hidden; }
+.mview .mv-nb .im { flex: none; height: 40px; width: 100%; display: flex; align-items: center; justify-content: center; }
+.mview .mv-nb img { max-width: 100%; max-height: 100%; image-rendering: pixelated; border-radius: 4px; display: block; }
+.mview .mv-nb .nm { font-size: 16px; line-height: 17px; text-align: center; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; width: 100%; }
+.mview .mv-f { transition: opacity .15s; }
+.mview .fx .mv-f:not(.keep) { opacity: .12; }
+.mview .mv-pin:focus, .mview .mv-nb:focus { outline: none; }
+.mview .mv-pin:focus-visible { outline: 3px solid var(--tertiary); outline-offset: 2px; }
+.mview .mv-nb:focus-visible { outline: 3px solid var(--tertiary); outline-offset: -3px; }
+.mview .mv-ghost { position: absolute; image-rendering: pixelated; border-radius: 8px; z-index: 6; pointer-events: none; transition: left .35s ease, top .35s ease, width .35s ease, height .35s ease; }
+.mview .mv-none { grid-area: 5 / 1 / 6 / 6; align-self: center; margin: 0; text-align: center; font-size: 16px; color: var(--on-surface-variant); }
+.mview .mv-side { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: flex-end; gap: 8px 12px; min-width: 0; }
+.mview .mv-jump { flex: 0 1 240px; }
+.mview .mv-jump .lf-select select { min-width: 0; }
+.mview.narrow .mv-wrap { width: auto; }
+.mview.narrow .mv-jump { flex: 0 1 220px; }
+.mview.narrow .mv-stage { width: 100%; display: flex; flex-direction: column; }
+.mview.narrow .mv-layer { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); grid-template-rows: none; grid-auto-rows: auto; gap: 6px; }
+.mview.narrow .mv-nb { height: 100px; }
+.mview.narrow .mv-center { grid-column: 1 / -1; grid-row: auto; }
+.mview.narrow .mv-nb, .mview.narrow .mv-none { grid-area: auto; }
+.mview.narrow .mv-none { grid-column: 1 / -1; }
+.mview.narrow .mv-lines { display: none; }
+@media (prefers-reduced-motion: reduce) { .mview .mv-layer, .mview .mv-ghost, .mview .mv-f { transition: none; } }
+/* All Maps viewer: the "Map Viewer" title and the "Jump to" menu share one row, the menu at the right end (2026-11-25) */
+.mv-headrow { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 12px 24px; margin: 56px 0 24px; }
+.mv-headrow > h2 { margin: 0; }
+.mv-headrow > .mv-side { flex: 0 1 260px; }
+.mv-headrow .mv-jump { flex: 1 1 auto; }
+.mv-headrow > .mv-side { align-items: flex-start; }
+.mv-headrow > h2 { line-height: 1.1; }

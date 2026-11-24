@@ -109,7 +109,7 @@ These monsters drop [Resurrection Potion](materials.html#item:10000604):
 | [Doom Night](monsters.html#monster:14570100) | 148 | [Old Acropolis B2F](maps.html#map:11027000) [Abyss of the Depth](maps.html#map:11027000) |
 | [Phantom](monsters.html#monster:14550900) | 160 | [Abyss of the Depth](maps.html#map:11027000) |
 
-Many D-Dungeon monsters of Lv 89 and above also drop it.
+Many [D-Dungeon](dimension-dungeons.md) monsters of Lv 89 and above also drop it.
 
 ## Related
 

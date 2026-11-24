@@ -29,11 +29,11 @@ A partner grows in three separate ways:
 ## Base Lv
 
 - Your partner gets EXP whenever you do:
-   - monsters you or your party defeat
-   - quests and events
-   - using items
+   - Monsters you or your party defeat
+   - Quests and events
+   - Using items
    - Knight drills and sieges
-   - crafting, only if your main job is a Backpacker job
+   - Crafting, only if your main job is a Backpacker job
 - It still gets EXP when you are at the max level. Your EXP-boost items don't raise it.
 - **Hit every monster at least once yourself.** If your partner defeats it alone, you get no EXP and no drops.
    - Ride partners are the exception: you get EXP normally while riding.

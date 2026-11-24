@@ -1,36 +1,8 @@
-# Dungeons
+# Dimension Dungeons
 
-Source page: [dungeons.html](dungeons.html)
+Source page: [dimension-dungeons.html](dimension-dungeons.html)
 
-The special kinds of dungeons. For every dungeon and its monsters, see [Maps](maps.md).
-
-## Ancient Ruins
-
-The Ancient Ruins are **private quest dungeons**: each party gets its own copy, and the map is random every time.
-
-### How to enter
-
-1. Go to the north side of [Downtown](maps.html#map:10024000), next to the fortune teller's shop.
-2. Talk to the [West Faction Member](maps.html#map:10024000) in [Downtown](maps.html#map:10024000) about the ruins. He sends you to [Ruins Square](maps.html#map:10024000).
-   **West Faction Member**
-3. Talk to the **East Faction Member** in the middle of [Ruins Square](maps.html#map:10024000) and choose a quest. Each quest costs **3 quest points**.
-   **East Faction Member**
-
-- Everyone in the party takes the quest, then one run clears it for the whole party.
-- Each quest has a time limit, 2 to 3 hours depending on the quest.
-- Quests come in levels from 10 to 80. The level 10 quest gives 1,500 EXP, 1,000 Job EXP, 1,000 gold and a treasure chest.
-- Many treasure chests on the [Boxes](boxes.md) page are found only in these quests, for example "Labyrinth Search" and "Demon Horde".
-
-## Endless Corridor
-
-The **Endless Corridor** is a deep dungeon from [Endless Corridor B1F](maps.html#map:10042000) down to [Endless Corridor B99F](maps.html#map:10042000).
-
-- Talk to the [D Master](maps.html#map:10042000) in [Staff Desert](maps.html#map:10042000), at the entrance.
-   **D Master**
-
-## Dimension dungeons
-
-Dimension dungeons (their names start with **D-**, for example [D-Continental Cave B1F](maps.html#map:20004003)) are harder versions of normal dungeons, with high-level monsters and their own bosses.
+Dimension dungeons (their names start with **D-**, for example [D-Continental Cave B1F](maps.html#map:20004003)) are harder versions of normal dungeons.
 
 | Dungeon | Level |
 |---|---|
@@ -52,7 +24,7 @@ Dimension dungeons (their names start with **D-**, for example [D-Continental Ca
 | [Pendragon](monsters.html#monster:14570101) | 120 | [D-Northern Dungeon](maps.html#map:20014001) |
 | [Hresvelg](monsters.html#monster:10140701) | 120 | [D-Eastern Dungeon](maps.html#map:20090002) |
 
-### How to enter
+## How to enter
 
 Each player needs one [Dimensional Stone](crafting.html#recipe:16) per entry, so a party needs one for every member.
 
@@ -69,7 +41,7 @@ Each player needs one [Dimensional Stone](crafting.html#recipe:16) per entry, so
 3. Carry the stone and walk into the normal dungeon's entrance. The game asks if you want to use it.
 4. Choose **Use** to spend one stone and go to the dimension version. Choose **Don't use** to enter the normal dungeon and keep the stone.
 
-### Private dungeons
+## Private dungeons
 
 A **PD-** dungeon (Private Dungeon) is a private copy of a dimension dungeon.
 
@@ -79,7 +51,11 @@ A **PD-** dungeon (Private Dungeon) is a private copy of a dimension dungeon.
 - No bosses or treasure chests appear.
 - It closes when the party breaks up, or when the last member leaves or logs out.
 
-## Recommendations
+## Related
 
-- **Ancient Ruins, level 10 quest:** the boss [Jumbo Pururu](monsters.html#monster:10000006) has a lot of HP. Go with at least 2 players, or you may run out of time.
-- **Demon Horde quest:** recommended from level 60. It always has bosses that drop the same rare items as dungeon bosses.
+- [Ancient Ruins](ancient-ruins.md)
+- [Endless Corridor](endless-corridor.md)
+- [Bosses](bosses.md#dimension-dungeon-bosses)
+- [Dual Job](dual-job.md)
+- [Titles](titles.md)
+- [All Maps](maps.md)

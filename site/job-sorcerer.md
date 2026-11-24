@@ -23,7 +23,7 @@ A job with strong support spells and neutral magic stronger than the Wizard's, a
    **Spell User Master**
    - You need a **Northern Kingdom Pass** to enter [Northern Promenade](maps.html#map:10065000). The **Spell User Master** sells it.
 5. Travel to [Northern Promenade](maps.html#map:10065000).
-6. Enter the [Spell User Guild Headquarters'](maps.html#map:10065000), then go to the [Sorcerer Master Room](maps.html#map:10065000).
+6. Enter the [Spell User Guild Headquarters' Lobby](maps.html#map:10065000), then go to the [Sorcerer Master Room](maps.html#map:10065000).
 7. Talk to the **Sorcerer**. He asks you to bring five items.
    **Sorcerer**
 8. Collect **1** of each item. All five drop from monsters.
@@ -32,7 +32,7 @@ A job with strong support spells and neutral magic stronger than the Wizard's, a
    - [Willydoo Ball](materials.html#item:10025300) from [Willydoo](monsters.html#monster:10110000)
    - [Lapis Lazuli Piece](materials.html#item:10013350) from [Mini Demon](monsters.html#monster:10240000)
    - [Crest Paper](materials.html#item:10024900) from [Skeleton Archer](monsters.html#monster:10350000)
-9. Return to the **Sorcerer** in the [Sorcerer Master Room](maps.html#map:10065000) ([Spell User Guild Headquarters'](maps.html#map:10065000), [Northern Promenade](maps.html#map:10065000)) and hand over the items.
+9. Return to the **Sorcerer** in the [Sorcerer Master Room](maps.html#map:10065000) ([Spell User Guild Headquarters' Lobby](maps.html#map:10065000), [Northern Promenade](maps.html#map:10065000)) and hand over the items.
 10. When asked, **take off your armor**. The Sorcerer gives you the Sorcerer mark, and you are now a Sorcerer.
 
 ## Skills

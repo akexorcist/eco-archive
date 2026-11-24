@@ -1,6 +1,6 @@
-# Enigma Group Pass
+# Enigma Group Fortress
 
-Source page: [enigma-pass.html](enigma-pass.html)
+Source page: [enigma-group-fortress.html](enigma-group-fortress.html)
 
 The pass that gets you into the [Enigma Group Fortress](maps.html#map:10054001).
 
@@ -22,8 +22,20 @@ The pass that gets you into the [Enigma Group Fortress](maps.html#map:10054001).
 - Go to the [Enigma Group Fortress](maps.html#map:10054001) and talk to an [Enigma Group Member](maps.html#map:10054001) at the gate. He takes the pass and lets you in.
    **Enigma Group Member**
 
+## Monsters
+
+### [Enigma Group Fortress](maps.html#map:10054001)
+
+### [Fire Rooster](monsters.html#monster:10015000)
+
+### [Morri](monsters.html#monster:26070900)
+
+### [Solar Jerev](monsters.html#monster:10155000)
+
+### [Fury](monsters.html#monster:26010900)
+
 ## Related
 
-- [City Passes](city-passes.md)
-- [Fareast City](maps.html#map:10057000)
+- [Emil World Cities](emil-world-cities.md)
+- [All Maps](maps.md)
 - [Enigma Group Fortress](maps.html#map:10054001)

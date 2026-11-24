@@ -2,7 +2,7 @@
 
 Source page: [quest-endless-corridor.html](quest-endless-corridor.html)
 
-Party quests in the Endless Corridor that reward skill points.
+Party quests in the [Endless Corridor](endless-corridor.md) that reward skill points.
 
 ## How the corridor works
 
@@ -42,6 +42,6 @@ Party quests in the Endless Corridor that reward skill points.
 
 ## Related
 
-- [Dungeons](dungeons.md)
+- [Endless Corridor](endless-corridor.md)
 - [Free Skill Points](free-skill-points.md)
 - [Quest Counter](quest-counter.md)

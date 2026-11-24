@@ -49,6 +49,10 @@ Passes that get you past the guards at the borders and at the gates of [Uptown](
 
 ## Related
 
-- [Game Basics](game-basics.md)
+- [Emil World Cities](emil-world-cities.md)
+- [Airships & Rides](airships-and-rides.md)
+- [Sky Tower Pass](sky-tower-pass.md)
+- [Tonka Pass](tonka-pass.md)
 - [Quest Counter](quest-counter.md)
 - [Shops & Merchants](shops.md)
+- [All Maps](maps.md)

@@ -78,7 +78,7 @@ Three people in [Abyss of the Depth](maps.html#map:11027000) each trade one mate
    - **Dragon Jewel**
    - **Rainbow Thread**
    - **Dragon Scale**
-   - two season items
+   - Two season items
    - **20,000 eCoin**
 - Choose **the group** you want. He forges one Ancient Weapon from that group at random.
    - If you don't have the season items for that group, nothing happens and you keep everything.

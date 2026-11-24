@@ -66,7 +66,7 @@ Each boss has one spawn point on its map.
 
 ## Dimension Dungeon bosses
 
-D-Dungeons ([dimension dungeons](dungeons.md#dimension-dungeons)) are harder versions of normal dungeons. Their map names start with **D-**.
+D-Dungeons ([dimension dungeons](dimension-dungeons.md)) are harder versions of normal dungeons. Their map names start with **D-**.
 
 ### [Titan](monsters.html#monster:10340304)
 
@@ -96,19 +96,39 @@ D-Dungeons ([dimension dungeons](dungeons.md#dimension-dungeons)) are harder ver
 
 ### [Kanna Kamui](monsters.html#monster:20480101)
 
-## Elsewhere
+## Ancient Ruins bosses
 
-- Bosses of the private Ancient Ruins quests are on the [Dungeons](dungeons.md#ancient-ruins) page:
-   - [Jumbo Pururu](monsters.html#monster:10000006)
-- Endless Corridor bosses are on the [Endless Corridor Quests](quest-endless-corridor.md) page:
-   - [Endless Corridor Sand Crawler](monsters.html#monster:10050801)
-   - [Endless Corridor Killer Bee](monsters.html#monster:10040002)
-   - [Endless Corridor Dentacle](monsters.html#monster:10080101)
-   - [Endless Corridor Ghuz](monsters.html#monster:10250002)
-   - [Endless Corridor Living Armor](monsters.html#monster:10420001)
-   - [Endless Corridor Skeleton Arc](monsters.html#monster:10350001)
-   - [Endless Corridor Cyclops](monsters.html#monster:10340001)
-   - [Endless Corridor Phoenix](monsters.html#monster:26050001)
+These bosses appear only in the private [Ancient Ruins](ancient-ruins.md) quests.
+
+### [Jumbo Pururu](monsters.html#monster:10000006)
+
+### [Yaksa Spider](monsters.html#monster:10211400)
+
+### [Nightmare](monsters.html#monster:10251000)
+
+### [Albino Chimera](monsters.html#monster:10431400)
+
+Other ruins quest bosses come from their normal maps: [Jumbo ChockKo](#jumbo-chockko), [BrikingMkII](#brikingmkii), [Most Powerful Evil](#most-powerful-evil), [Arcana King](#arcana-king), [Thunder King](#thunder-king) and [Hell King](#hell-king).
+
+## Endless Corridor bosses
+
+[Endless Corridor](endless-corridor.md) bosses are also on the [Endless Corridor Quests](quest-endless-corridor.md) page.
+
+### [Endless Corridor Sand Crawler](monsters.html#monster:10050801)
+
+### [Endless Corridor Killer Bee](monsters.html#monster:10040002)
+
+### [Endless Corridor Dentacle](monsters.html#monster:10080101)
+
+### [Endless Corridor Ghuz](monsters.html#monster:10250002)
+
+### [Endless Corridor Living Armor](monsters.html#monster:10420001)
+
+### [Endless Corridor Skeleton Arc](monsters.html#monster:10350001)
+
+### [Endless Corridor Cyclops](monsters.html#monster:10340001)
+
+### [Endless Corridor Phoenix](monsters.html#monster:26050001)
 
 ## Good to know
 
@@ -118,8 +138,9 @@ D-Dungeons ([dimension dungeons](dungeons.md#dimension-dungeons)) are harder ver
 
 ## Related
 
-- [Dungeons](dungeons.md)
+- [Ancient Ruins](ancient-ruins.md)
+- [Dimension Dungeons](dimension-dungeons.md)
 - [Endless Corridor Quests](quest-endless-corridor.md)
 - [Monsters](monsters.md)
-- [Maps](maps.md)
+- [All Maps](maps.md)
 - [Stamps](stamps.md)

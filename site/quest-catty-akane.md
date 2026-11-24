@@ -7,7 +7,7 @@ Help [Rita's Marionette Craftshop](maps.html#map:10062000) find a computer part 
 ## Before you start
 
 - Finish the [Catty (Momo) Quest](quest-catty-momo.md) and **equip a Catty** for the whole quest.
-- Part of the quest takes place in the **Light Tower**, among [Onyx](monsters.html#monster:26090900) and [Incubus](monsters.html#monster:10410200).
+- Part of the quest takes place in the **[Light Tower](light-tower.md)**, among [Onyx](monsters.html#monster:26090900) and [Incubus](monsters.html#monster:10410200).
 
 ## Walkthrough
 
@@ -29,13 +29,13 @@ Help [Rita's Marionette Craftshop](maps.html#map:10062000) find a computer part 
 - Go to [Downtown](maps.html#map:10024000) and talk to the [Elegant Lady](maps.html#map:10024000).
    **Elegant Lady**
 - Go to the [South Faction Command Center Entrance](maps.html#map:10023300) on the [Acropolis South Bridge](maps.html#map:10023300) and talk to **Marcia**. You board her airship.
-- On her airship, talk to **Emil**, then to **Marcia** again. They take you to the **Light Tower**.
+- On her airship, talk to **Emil**, then to **Marcia** again. They take you to the **[Light Tower](light-tower.md)**.
 
 ### 4. The Light Tower
 
 - Go down the stairs, through the room, and out to the open area of the **4th floor**, where [Onyx](monsters.html#monster:26090900) and [Incubus](monsters.html#monster:10410200) live.
 - Destroy the [Machine Cluster](monsters.html#monster:30330003) that appears in the **northwest** and pick up the **Computer ROM(Event)**.
-- If you die here, come back to the Light Tower yourself, without anyone possessing you, and look for the Computer ROM again.
+- If you die here, come back to the [Light Tower](light-tower.md) yourself, without anyone possessing you, and look for the Computer ROM again.
 
 ### 5. Back to Rita
 

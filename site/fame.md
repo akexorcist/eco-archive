@@ -21,8 +21,8 @@ Source page: [fame.html](fame.html)
 
 | Fame | Unlocks |
 |---|---|
-| 1 or more | An **Acropolis City Pass** from the [Elegant Lady](maps.html#map:10024000) in [Downtown](maps.html#map:10024000). See [City Passes](city-passes.md) |
-| 10 | The [Ancient Ruins](dungeons.md) quests |
+| 1 or more | An **Acropolis City Pass** from the [Elegant Lady](maps.html#map:10024000) in [Downtown](maps.html#map:10024000). See [City Passes](city-passes.md#uptown) |
+| 10 | The [Ancient Ruins](ancient-ruins.md) quests |
 | 10 | The Spell User part of the [Lv 55 Armor Quest](quest-lv55-armor.md) |
 | 10 | [Catty (Yamabuki) Quest](quest-catty-yamabuki.md) |
 | 20 | [Catty (Ai)](quest-catty-ai.md), [Catty (Sumire)](quest-catty-sumire.md), [Catty (Akane)](quest-catty-akane.md) and [Catty (Anzu)](quest-catty-anzu.md) |
@@ -31,10 +31,10 @@ Source page: [fame.html](fame.html)
 
 ## Good to know
 
-- **Do quests before your third job.** The Ancient Ruins need 10 Fame; a character who already has a third job can earn it in the Endless Corridor quests at [Staff Desert](maps.html#map:10042000) instead.
+- **Do quests before your third job.** The [Ancient Ruins](ancient-ruins.md) need 10 Fame; a character who already has a third job can earn it in the Endless Corridor quests at [Staff Desert](maps.html#map:10042000) instead.
 
 ## Related
 
 - [Quest Counter](quest-counter.md)
 - [Ring](ring.md)
-- [Dungeons](dungeons.md)
+- [Ancient Ruins](ancient-ruins.md)

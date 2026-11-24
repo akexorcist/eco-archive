@@ -21,21 +21,21 @@ The battle to defend [West Fort City](maps.html#map:12021000) from the DEM, and 
 
 - **Defend the 7 Symbols** in the city for 45 minutes. If all 7 are destroyed, the battle is lost.
 - **The DEM come in waves.** A new wave appears around every Symbol each minute. Some waves are stronger and bring a **Champ DEM**.
-- **Champ DEM take only 1/10 damage** from players who aren't Field Champs.
-- **Field Champs** are the top 10 players of the WRP (War Record Point) ranking. You earn WRP by winning PvP fights in the Champ Battle on the Dominion World maps.
+- **Champ DEM take only 1/10 damage** from players who aren't Field Champions.
+- **[Field Champions](champion-battle.md#field-champions)** are the top 10 players of the [WRP](champion-battle.md#wrp) (War Record Point) ranking. You earn WRP by winning PvP fights in the [Champion Battle](champion-battle.md) on the Dominion World maps.
 - **Every player gets a Symbol repair skill** during the battle. Backpacker jobs repair more with it.
 - **Use the traps** that lie around the battlefield against the DEM.
 - Up to 600 players can join.
 
 ## Earning CP
 
-- A win pays up to **3,000 CP**. Field Champs get 1.5 × as much, up to **4,500 CP**.
+- A win pays up to **3,000 CP**. Field Champions get 1.5 × as much, up to **4,500 CP**.
 - A loss pays 0.75 × your share. A win always pays at least 200 CP.
 - Your share depends on:
-   - how many Symbols survive
-   - the DEM you hit and the damage you deal
-   - the Symbols you repair, 12 CP per repair
-   - your deaths: each one lowers your CP
+   - How many Symbols survive
+   - The DEM you hit and the damage you deal
+   - The Symbols you repair, 12 CP per repair
+   - Your deaths: each one lowers your CP
 - The main story in the Dominion World, [The World Begins to Move](story-the-world-begins-to-move.md), gives a one-time 50 CP.
 
 ### CP quests
@@ -115,6 +115,7 @@ Talk to **Supplier Doga** in [Silk Gate Passage](maps.html#map:12021000) and cho
 
 ## Related
 
+- [Champion Battle](champion-battle.md)
 - [Lv 99 Weapon Quest](quest-lv99-weapon.md)
 - [Quest Counter](quest-counter.md)
 - [Shops & Merchants](shops.md)

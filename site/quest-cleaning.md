@@ -26,7 +26,7 @@ Source page: [quest-cleaning.html](quest-cleaning.html)
 | Tin Plate Cleaning | 44 | 15 hours | [Briking RX1](monsters.html#monster:26000000) [Maoa](monsters.html#monster:14310000) [Briking Cannon](monsters.html#monster:10380000) [Briking Custom-Made](monsters.html#monster:10390000) |
 | Wisp Dust Cleaning | 49 | 15 hours | [Andante](monsters.html#monster:10220101) [Bubi](monsters.html#monster:10220700) [Banshee](monsters.html#monster:26010400) |
 | Sticky Subtance Cleaning | 54 | 15 hours | [Gekko](monsters.html#monster:10630000) in [Breadbasket](maps.html#map:10068000), near [Fareast City](maps.html#map:10057000) |
-| Machine Fragment Cleaning | 59 | 15 hours | Monsters on the Light Tower floors, from [Main Floor 1F](maps.html#map:20140000) up [Machinery Cluster](monsters.html#monster:30330000) junk piles |
+| Machine Fragment Cleaning | 59 | 15 hours | Monsters on the [Light Tower](light-tower.md) floors, from [Main Floor 1F](maps.html#map:20140000) up [Machinery Cluster](monsters.html#monster:30330000) junk piles |
 
 ## Related
 
