@@ -14,10 +14,16 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 ## Story
 
 - [Story Overview](story.md): [HTML](story.html)
+
+### Main Story
+
 - [The Path We Walk](story-the-path-we-walk.md): [HTML](story-the-path-we-walk.html)
 - [The World Begins to Move](story-the-world-begins-to-move.md): [HTML](story-the-world-begins-to-move.html)
 - [Beyond the Truth](story-beyond-the-truth.md): [HTML](story-beyond-the-truth.html)
 - [Final Battle](story-final-battle.md): [HTML](story-final-battle.html)
+
+### Bonus Story
+
 - [Gate of Emerald Forest](story-saga14.md): [HTML](story-saga14.html)
 - [Everlasting Union](story-saga15.md): [HTML](story-saga15.html)
 - [Memories of the Ice Queen](story-saga16.md): [HTML](story-saga16.html)
@@ -73,6 +79,9 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 ## Jobs
 
 - [Jobs](jobs.md): [HTML](jobs.html)
+
+### Fighter
+
 - [Scout](job-scout.md): [HTML](job-scout.html)
 - [Assassin](job-assassin.md): [HTML](job-assassin.html)
 - [Commando](job-commando.md): [HTML](job-commando.html)
@@ -89,6 +98,9 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 - [Striker](job-striker.md): [HTML](job-striker.html)
 - [Gunner](job-gunner.md): [HTML](job-gunner.html)
 - [Hawkeye](job-hawkeye.md): [HTML](job-hawkeye.html)
+
+### Spell User
+
 - [Warlock](job-warlock.md): [HTML](job-warlock.html)
 - [Cabalist](job-cabalist.md): [HTML](job-cabalist.html)
 - [Necromancer](job-necromancer.md): [HTML](job-necromancer.html)
@@ -105,6 +117,9 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 - [Sorcerer](job-sorcerer.md): [HTML](job-sorcerer.html)
 - [Sage](job-sage.md): [HTML](job-sage.html)
 - [Force Master](job-force-master.md): [HTML](job-force-master.html)
+
+### Backpacker
+
 - [Farmer](job-farmer.md): [HTML](job-farmer.html)
 - [Alchemist](job-alchemist.md): [HTML](job-alchemist.html)
 - [Marionettist](job-marionettist.md): [HTML](job-marionettist.html)
@@ -121,6 +136,9 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 - [Trader](job-trader.md): [HTML](job-trader.html)
 - [Gambler](job-gambler.md): [HTML](job-gambler.html)
 - [Royal Dealer](job-royal-dealer.md): [HTML](job-royal-dealer.html)
+
+### Other jobs
+
 - [Breeder](job-breeder.md): [HTML](job-breeder.html)
 - [Gardener](job-gardener.md): [HTML](job-gardener.html)
 - [Joker](job-joker.md): [HTML](job-joker.html)
@@ -170,8 +188,6 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 - [Armor Crafting](armor-crafting.md): [HTML](armor-crafting.html)
 - [Chemical Preparation](chemical-preparation.md): [HTML](chemical-preparation.html)
 - [Cooking](cooking.md): [HTML](cooking.html)
-- [Craftable Items](crafting.md): [HTML](crafting.html)
-- [Crafting Materials](materials.md): [HTML](materials.html)
 - [Fairy Scrolls](fairy-scrolls.md): [HTML](fairy-scrolls.html)
 - [Machinery Crafting](machinery-crafting.md): [HTML](machinery-crafting.html)
 - [Metal Refining](metal-refining.md): [HTML](metal-refining.html)
@@ -180,9 +196,17 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 - [Weapon Crafting](weapon-crafting.md): [HTML](weapon-crafting.html)
 - [Woodcraft](woodcraft.md): [HTML](woodcraft.html)
 
+### Recipes & Materials
+
+- [Craftable Items](crafting.md): [HTML](crafting.html)
+- [Crafting Materials](materials.md): [HTML](materials.html)
+
 ## Maps
 
 - [All Maps](maps.md): [HTML](maps.html)
+
+### Travel
+
 - [Airships & Rides](airships-and-rides.md): [HTML](airships-and-rides.html)
 - [Between the Worlds](between-the-worlds.md): [HTML](between-the-worlds.html)
 - [City Passes](city-passes.md): [HTML](city-passes.html)
@@ -192,6 +216,9 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 - [Sky Tower Pass](sky-tower-pass.md): [HTML](sky-tower-pass.html)
 - [Titania World](titania-world.md): [HTML](titania-world.html)
 - [Tonka Pass](tonka-pass.md): [HTML](tonka-pass.html)
+
+### Dungeons
+
 - [Ancient Ruins](ancient-ruins.md): [HTML](ancient-ruins.html)
 - [Carmine Brick Ruins](carmine-brick-ruins.md): [HTML](carmine-brick-ruins.html)
 - [Dimension Dungeons](dimension-dungeons.md): [HTML](dimension-dungeons.html)
@@ -211,6 +238,10 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 
 - [Logo](misc-logo.md): [HTML](misc-logo.html)
 - [Trailer](misc-videos.md): [HTML](misc-videos.html)
+- [Official Servers](misc-servers.md): [HTML](misc-servers.html)
+
+### Artwork
+
 - [Catty & Pet Art](misc-catty-art.md): [HTML](misc-catty-art.html)
 - [Partner Art](art-partners.md): [HTML](art-partners.html)
 - [Character Art](art-races.md): [HTML](art-races.html)
@@ -218,7 +249,6 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 - [Marionette & Monster Artwork](misc-monster-artwork.md): [HTML](misc-monster-artwork.html)
 - [Seasonal Art](art-seasonal.md): [HTML](art-seasonal.html)
 - [Concept Sketches](art-sketches.md): [HTML](art-sketches.html)
-- [Official Servers](misc-servers.md): [HTML](misc-servers.html)
 
 ## Data
 
