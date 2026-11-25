@@ -40,7 +40,6 @@ Passes that get you past the guards at the borders and at the gates of [Uptown](
 | **Morg Land Pass** | **Merchant Master** in the [Merchant Guild](maps.html#map:10023000), [Guild Palace Lobby 4F](maps.html#map:10023000), [Uptown](maps.html#map:10023000), 500 G [Black Marketeer](maps.html#map:10035000) on [Battleship Island](maps.html#map:10035000), 5,000 G **Mr. Specialist** in his shop, [Downtown](maps.html#map:10024000), 1,000 G |
 
 - The guild masters are in the guild rooms off [Guild Palace Lobby 2F](maps.html#map:10023000), [Guild Palace Lobby 3F](maps.html#map:10023000) and [Guild Palace Lobby 4F](maps.html#map:10023000) in [Uptown](maps.html#map:10023000), so each job group can buy the pass to its own home country there.
-   **Mr. Specialist**
 
 ## Good to know
 
