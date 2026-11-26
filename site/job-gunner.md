@@ -110,7 +110,7 @@ Consumes 1 bullet and fires along a direct path up to 9 cells toward the selecte
 
 **Job Lv 18 Tear Bomb Active debuff · Max Lv 3**
 
-- Consumes 1 Grenade and attempts to Stun valid non-boss enemies in a 5x5 area around the target.
+- Consumes 1 [Grenade](shops.html#npc:11000846) and attempts to Stun valid non-boss enemies in a 5x5 area around the target.
 - A stunned target is also forced out of Hiding.
 
 | Lv | SP | Cast time | Cooldown | Area | Stun chance | Stun duration |
@@ -156,7 +156,7 @@ Increases the caster's attack range for 30 seconds.
 
 **Job Lv 27 Slow Grenade Active debuff · Max Lv 3**
 
-- Consumes 1 Grenade, adds a small amount of aggro to valid enemies in a 5x5 area around the target, and attempts to apply Slow for 6 seconds.
+- Consumes 1 [Grenade](shops.html#npc:11000846), adds a small amount of aggro to valid enemies in a 5x5 area around the target, and attempts to apply Slow for 6 seconds.
 - A Slowed target is also forced out of Hiding.
 
 | Lv | SP | Cast time | Cooldown | Area | Slow chance | Slow duration |

@@ -153,7 +153,7 @@ A basic single-target blow attack.
 
 **Job Lv 15 Camp Active utility skill · Max Lv 10**
 
-- Sets up a tent at the selected ground location.
+- Sets up a [tent](crafting.html#recipe:1291) at the selected ground location.
 - Requires a tent item with durability, cannot be used on restricted maps or occupied spots, and creates a tent instance with a level-based visitor limit.
 
 | Lv | SP | Cast time | Cooldown | Max visitors | Tent durability loss chance |
@@ -172,7 +172,7 @@ A basic single-target blow attack.
 **Job Lv 16 Pit Trap Active trap · Max Lv 5**
 
 - Places a one-time pit trap at the caster's position.
-- It consumes trap tool durability and can apply Stiffness to a non-flying enemy that steps on it.
+- It consumes [trap tool](materials.html#item:10021901) durability and can apply Stiffness to a non-flying enemy that steps on it.
 
 | Lv | SP | Cast time | Cooldown | Trap duration | Stiffness chance | Stiffness duration |
 |---|---|---|---|---|---|---|
@@ -184,7 +184,7 @@ A basic single-target blow attack.
 
 **Job Lv 17 Bonfire Active field support · Max Lv 3**
 
-- Consumes one Wood Chip and places a bonfire for 60 seconds.
+- Consumes one [Wood Chip](materials.html#item:10016200) and places a bonfire for 60 seconds.
 - Allies in the 5x5 area are healed every 5 seconds.
 
 | Lv | SP | Cast time | Cooldown | Duration | Area | Healing |
@@ -232,7 +232,7 @@ A basic single-target blow attack.
 **Job Lv 25 Grass Trap Active trap · Max Lv 5**
 
 - Places a one-time grass trap at the caster's position.
-- It consumes trap tool durability and triggers on a non-flying enemy, dealing fixed Neutral damage based on the target's current HP.
+- It consumes [trap tool](materials.html#item:10021901) durability and triggers on a non-flying enemy, dealing fixed Neutral damage based on the target's current HP.
 - The trap damage modifier comes from Increase Trap Damage and other trap-damage bonuses.
 
 | Lv | SP | Cast time | Cooldown | Trap duration | Damage | Damage cap |

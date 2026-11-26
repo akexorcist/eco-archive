@@ -125,7 +125,7 @@ Increases attack range while using a throwing weapon or card.
 
 **Job Lv 10 Poison Needle Active physical attack · Max Lv 5**
 
-Consumes 1 Poison Needdle, deals physical damage, and may Poison the target for 10 seconds if the hit deals HP damage.
+Consumes 1 [Poison Needdle](crafting.html#item:10038102), deals physical damage, and may Poison the target for 10 seconds if the hit deals HP damage.
 
 | Lv | SP | Cast time | Cooldown | Damage rate | Poison chance | Poison duration |
 |---|---|---|---|---|---|---|
@@ -137,7 +137,7 @@ Consumes 1 Poison Needdle, deals physical damage, and may Poison the target for 
 
 **Job Lv 13 Intoxicative Defense Active self-buff · Max Lv 3**
 
-- Consumes 1 Assassin Potion and increases DEF and Additive DEF.
+- Consumes 1 [Assassin Potion](shops.html#npc:11000017) and increases DEF and Additive DEF.
 - Without Increase Poison Chance , the caster may also be Poisoned for 7 seconds; with Increase Poison Chance learned, the buff lasts longer, gains extra DEF scaling, and the self-Poison chance becomes 0%.
 
 | Lv | SP | Cast time | Cooldown | Duration | DEF scaling | Additive DEF | Self-Poison chance |
@@ -210,7 +210,7 @@ Deals physical damage; applies Stiffness.
 
 **Job Lv 23 Intoxicative Onslaught Active self-buff · Max Lv 3**
 
-- Consumes 1 Assassin Potion, increases minimum and maximum ATK from the caster's base ATK, and may Poison the caster for 7 seconds.
+- Consumes 1 [Assassin Potion](shops.html#npc:11000017), increases minimum and maximum ATK from the caster's base ATK, and may Poison the caster for 7 seconds.
 - If Increase Poison Chance is learned, the buff lasts longer, gains extra ATK scaling, and the Poison chance becomes 0%.
 
 | Lv | SP | Cast time | Cooldown | Duration | Min/Max ATK scaling | Poison chance |
@@ -221,7 +221,7 @@ Deals physical damage; applies Stiffness.
 
 **Job Lv 25 Apply Poison Active self-buff · Max Lv 3**
 
-- Consumes 1 Poison Potion.
+- Consumes 1 [Poison Potion](crafting.html#item:10000302).
 - While active, the caster's normal attacks can Poison the target for 7 seconds.
 
 | Lv | MP | SP | Cast time | Cooldown | Duration | Normal attack Poison chance | Poison duration |
@@ -244,7 +244,7 @@ Deals physical damage; applies Stiffness.
 
 **Job Lv 30 Poison Mist Active ground field · Max Lv 5**
 
-- Consumes 1 Poison Potion and creates a 5x5 poison field at the caster's position.
+- Consumes 1 [Poison Potion](crafting.html#item:10000302) and creates a 5x5 poison field at the caster's position.
 - Every 0.5 seconds, the field damages valid enemies using the caster's attack element.
 - Damage is fixed from the caster's Max HP, and the field ends when its duration expires, its hit limit is reached, or the caster dies.
 
@@ -282,7 +282,7 @@ Increases damage dealt by critical hits.
 
 **Job Lv 35 Intoxicative Berserk Active self-buff · Max Lv 3**
 
-- Consumes 1 Assassin Potion, removes any existing delay-cancel buff, then increases ASPD.
+- Consumes 1 [Assassin Potion](shops.html#npc:11000017), removes any existing delay-cancel buff, then increases ASPD.
 - Without Increase Poison Chance , the caster may also be Poisoned for 7 seconds; with Increase Poison Chance learned, the ASPD buff lasts longer and the self-Poison chance is reduced.
 
 | Lv | SP | Cast time | Cooldown | Duration | ASPD bonus | Self-Poison chance |
@@ -305,7 +305,7 @@ Increases the chance for the character's Poison applications to succeed.
 
 **Job Lv 40 Mirror Image Active summon · Max Lv 3**
 
-- Consumes Straw Dolls equal to the skill level and creates a temporary decoy or mirror at the selected position for 120 seconds.
+- Consumes [Straw Dolls](shops.html#npc:11000017) equal to the skill level and creates a temporary decoy or mirror at the selected position for 120 seconds.
 - Cannot be used in Knight Training maps.
 - If the caster already has the maximum number of mirror partners for that level, the oldest one is removed first.
 

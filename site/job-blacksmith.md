@@ -90,7 +90,7 @@ Orders all current partners to stop attacking and clear their current attack tar
 
 **Job Lv 8 First Aid Active skill · Max Lv 5**
 
-Consumes 1 First Aid item and heals the target for a percentage of the target's maximum HP.
+Consumes 1 [First Aid](crafting.html#recipe:575) item and heals the target for a percentage of the target's maximum HP.
 
 | Lv | SP | Cast time | Cooldown | Healing |
 |---|---|---|---|---|
@@ -327,11 +327,11 @@ Deals physical damage and consumes one lump item based on skill level.
 
 | Lv | SP | Cast time | Cooldown | Consumed item | Damage rate |
 |---|---|---|---|---|---|
-| 1 | 6 | 1 sec | 1 sec | Lead Lump | 200% |
-| 2 | 11 | 1.7 sec | 1 sec | Copper Lump | 300% |
-| 3 | 16 | 2.4 sec | 1 sec | Iron Lump | 400% |
-| 4 | 21 | 3.1 sec | 1 sec | Silver Lump | 500% |
-| 5 | 26 | 3.8 sec | 1 sec | Gold Lump | 600% |
+| 1 | 6 | 1 sec | 1 sec | [Lead Lump](crafting.html#recipe:106) | 200% |
+| 2 | 11 | 1.7 sec | 1 sec | [Copper Lump](crafting.html#recipe:102) | 300% |
+| 3 | 16 | 2.4 sec | 1 sec | [Iron Lump](crafting.html#item:10015600) | 400% |
+| 4 | 21 | 3.1 sec | 1 sec | [Silver Lump](crafting.html#item:10015710) | 500% |
+| 5 | 26 | 3.8 sec | 1 sec | [Gold Lump](crafting.html#item:10015300) | 600% |
 
 **Job Lv 47 Earth Shock Active physical attack · Max Lv 5**
 

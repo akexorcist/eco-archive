@@ -92,7 +92,7 @@ Allows latent armor enhancement.
 
 **Job Lv 20 Negative Harvest Active area debuff · Max Lv 5**
 
-- Consumes durability from a Toxicate Potion and affects only enemies in a 9x9 area that are already marked by Harvester .
+- Consumes durability from a [Toxicate Potion](crafting.html#item:10088701) and affects only enemies in a 9x9 area that are already marked by Harvester .
 - The skill starts a 30 second reuse timer and adds monster aggro to affected targets.
 - Harvest Master increases the normal debuff duration from 40 seconds to 60 seconds.
 - Player targets and boss monsters use the shorter listed special duration.

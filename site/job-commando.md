@@ -68,7 +68,7 @@ Deals physical damage; can knock the target back.
 **Job Lv 9 Land Mine Active trap · Max Lv 3**
 
 - Places a one-time trap at the caster's position for 60 seconds.
-- It triggers on a non-flying enemy in its 3x3 trigger area, consumes Trap Tool durability, and deals physical damage that cannot miss.
+- It triggers on a non-flying enemy in its 3x3 trigger area, consumes [Trap Tool](materials.html#item:10021901) durability, and deals physical damage that cannot miss.
 
 | Lv | SP | Cast time | Cooldown | Trap duration | Damage rate |
 |---|---|---|---|---|---|
@@ -152,7 +152,7 @@ A martial arts chain skill that activates the learned Leg Sweep, Somersault Kick
 
 **Job Lv 23 Flash Grenade Active debuff · Max Lv 3**
 
-- Consumes 1 Grenade and attempts to Stun valid enemies in a 3x3 area around the selected ground point.
+- Consumes 1 [Grenade](shops.html#npc:11000846) and attempts to Stun valid enemies in a 3x3 area around the selected ground point.
 - A stunned target is also forced out of Hiding.
 
 | Lv | SP | Cast time | Cooldown | Area | Stun chance | Stun duration |
@@ -163,7 +163,7 @@ A martial arts chain skill that activates the learned Leg Sweep, Somersault Kick
 
 **Job Lv 25 Choking Gas Active trap · Max Lv 5**
 
-- Places a trap at the caster's position for 30 seconds and consumes Choking Gas.
+- Places a trap at the caster's position for 30 seconds and consumes [Choking Gas](crafting.html#recipe:594).
 - When triggered by a non-flying enemy, it attempts to Silence valid non-boss enemies in a 5x5 area for 9 seconds.
 
 | Lv | SP | Cast time | Cooldown | Trap duration | Area | Silence chance | Silence duration |
@@ -189,7 +189,7 @@ A martial arts chain skill that activates the learned Leg Sweep, Somersault Kick
 
 **Job Lv 30 Claymore Trap Active trap · Max Lv 3**
 
-- Places a trap at the caster's position and consumes Trap Tool durability.
+- Places a trap at the caster's position and consumes [Trap Tool](materials.html#item:10021901) durability.
 - After it triggers, it repeatedly checks every 1.5 seconds and deals physical damage that cannot miss to non-flying enemies in a 7x7 area.
 
 | Lv | SP | Cast time | Cooldown | Trap duration | Area | Damage rate per pulse |
@@ -224,7 +224,7 @@ Deals physical damage; area: 3x3.
 
 **Job Lv 36 Detonate Active physical attack · Max Lv 5**
 
-- Consumes Trap Tool durability, deals direct physical damage, then creates a delayed blast 1 second later.
+- Consumes [Trap Tool](materials.html#item:10021901) durability, deals direct physical damage, then creates a delayed blast 1 second later.
 - The delayed blast deals physical damage that cannot miss to non-flying enemies in a 3x3 area around the target.
 
 | Lv | SP | Cast time | Cooldown | Direct damage rate | Delayed blast area | Delayed blast damage rate |
@@ -247,7 +247,7 @@ Changes monster aggro; applies Unrecoverable.
 
 **Job Lv 42 Backup Active summon · Max Lv 3**
 
-- Uses a Signal Bullet to call temporary Fellow's Command partners for 10 seconds.
+- Uses a **Signal Bullet** to call temporary Fellow's Command partners for 10 seconds.
 - Lv 1 calls a protection partner, Lv 2 calls an attack partner, and Lv 3 calls both; the called partners inherit the caster's level and core combat stats.
 
 | Lv | SP | Cast time | Cooldown | Called partners | Partner duration |
@@ -269,7 +269,7 @@ Changes monster aggro; applies Unrecoverable.
 
 **Job Lv 45 Rush Bomb Active physical attack · Max Lv 5**
 
-Consumes Trap Tool durability and starts a four-hit bomb sequence: 2 direct hits on the target, then 2 delayed area blasts that hit valid enemies in a 3x3 area around the target.
+Consumes [Trap Tool](materials.html#item:10021901) durability and starts a four-hit bomb sequence: 2 direct hits on the target, then 2 delayed area blasts that hit valid enemies in a 3x3 area around the target.
 
 | Lv | SP | Cast time | Cooldown | Direct hits | Direct damage rate per hit | Area hits | Area damage rate per hit |
 |---|---|---|---|---|---|---|---|

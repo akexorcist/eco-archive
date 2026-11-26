@@ -104,7 +104,7 @@ Reduces long-range physical damage falloff by treating the target as closer for 
 
 **Job Lv 10 Supportive Blaze Arrow Active physical attack · Max Lv 5**
 
-- Consumes 1 Fire Arrow and deals 100% physical damage to one target.
+- Consumes 1 [Fire Arrow](materials.html#item:10026500) and deals 100% physical damage to one target.
 - On a successful hit, the target gains Fire DEF +60 for the listed duration.
 - In PvP, the Fire DEF duration is doubled.
 
@@ -135,7 +135,7 @@ Orders all current partners to stop attacking and clear their current attack tar
 
 **Job Lv 15 Supportive Aqua Arrow Active physical attack · Max Lv 5**
 
-- Consumes 1 Water Arrow and deals 100% physical damage to one target.
+- Consumes 1 [Water Arrow](materials.html#item:10026504) and deals 100% physical damage to one target.
 - On a successful hit, the target gains Water DEF +60 for the listed duration.
 - In PvP, the Water DEF duration is doubled.
 
@@ -173,7 +173,7 @@ Improves Bird-type partners owned by the character.
 
 **Job Lv 20 Supportive Terra Arrow Active physical attack · Max Lv 5**
 
-- Consumes 1 Earth Arrow and deals 100% physical damage to one target.
+- Consumes 1 [Earth Arrow](materials.html#item:10026505) and deals 100% physical damage to one target.
 - On a successful hit, the target gains Earth DEF +60 for the listed duration.
 - In PvP, the Earth DEF duration is doubled.
 
@@ -213,7 +213,7 @@ Improves Bird-type partners owned by the character.
 
 **Job Lv 25 Potion Throw Active skill · Max Lv 3**
 
-- Consumes Recovery Arrow and restores HP, MP, and SP to one target.
+- Consumes [Recovery Arrow](crafting.html#item:10026493) and restores HP, MP, and SP to one target.
 - The number of arrows consumed depends on the skill level and is capped by the number of Recovery Arrows available.
 - HP recovery formula: (150 + floor(caster Lv / 3)) x arrows consumed .
 - MP and SP recovery: 8 x arrows consumed .
@@ -239,7 +239,7 @@ Improves Bird-type partners owned by the character.
 
 **Job Lv 25 Supportive Zephyr Arrow Active physical attack · Max Lv 5**
 
-- Consumes 1 Wind Arrow and deals 100% physical damage to one target.
+- Consumes 1 [Wind Arrow](materials.html#item:10026507) and deals 100% physical damage to one target.
 - On a successful hit, the target gains Wind DEF +60 for the listed duration.
 - In PvP, the Wind DEF duration is doubled.
 

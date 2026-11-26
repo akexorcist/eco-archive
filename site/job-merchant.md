@@ -159,7 +159,7 @@ A basic single-target blow attack.
 
 **Job Lv 15 Camp Active utility skill · Max Lv 10**
 
-- Sets up a tent at the selected ground location.
+- Sets up a [tent](crafting.html#recipe:1291) at the selected ground location.
 - Requires a tent item with durability, cannot be used on restricted maps or occupied spots, and creates a tent instance with a level-based visitor limit.
 
 | Lv | SP | Cast time | Cooldown | Max visitors | Tent durability loss chance |
@@ -195,7 +195,7 @@ A basic single-target blow attack.
 
 **Job Lv 20 Bonfire Active field support · Max Lv 3**
 
-- Consumes one Wood Chip and places a bonfire for 60 seconds.
+- Consumes one [Wood Chip](materials.html#item:10016200) and places a bonfire for 60 seconds.
 - Allies in the 5x5 area are healed every 5 seconds.
 
 | Lv | SP | Cast time | Cooldown | Duration | Area | Healing |

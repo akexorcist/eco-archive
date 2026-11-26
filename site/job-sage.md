@@ -165,7 +165,7 @@ Reduces the chance that the character is chosen as the possession target when an
 
 **Job Lv 30 Monster Sketch Active utility skill · Max Lv 5**
 
-- Consumes one Sketch Board and attempts to create a finished Sketch Board for the target monster.
+- Consumes one [Sketch Board](crafting.html#recipe:69) and attempts to create a finished Sketch Board for the target monster.
 - The target monster gains a small amount of aggro toward the caster.
 
 | Lv | SP | Cast time | Cooldown | Sketch chance |

@@ -240,7 +240,7 @@ Rolls dice and activates a random effect based on the result.
 
 **Job Lv 42 Arcana Card Active summon skill · Max Lv 5**
 
-- Consumes 1 Arcana Card and randomly triggers one card result at the selected ground cell.
+- Consumes 1 **Arcana Card** and randomly triggers one card result at the selected ground cell.
 - Heart is the fallback result.
 - Jack, Queen, and King chances change by skill level.
 

@@ -92,7 +92,7 @@ Orders all current partners to stop attacking and clear their current attack tar
 
 **Job Lv 10 First Aid Active skill · Max Lv 5**
 
-Consumes 1 First Aid item and heals the target for a percentage of the target's maximum HP.
+Consumes 1 [First Aid](crafting.html#recipe:575) item and heals the target for a percentage of the target's maximum HP.
 
 | Lv | SP | Cast time | Cooldown | Healing |
 |---|---|---|---|---|

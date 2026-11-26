@@ -171,7 +171,7 @@ Changes monster aggro.
 **Job Lv 45 Railgun Active physical attack · Max Lv 5**
 
 - Fires an unavoidable physical shot while riding a robot.
-- The skill requires a Railgun Bullet in the caster's inventory and deducts durability from that bullet when fired.
+- The skill requires a [Railgun Bullet](crafting.html#item:10122000) in the caster's inventory and deducts durability from that bullet when fired.
 - In PvP, damage is reduced to 50%.
 
 | Lv | SP | Cast time | Cooldown | Reuse lock | Damage rate | PvP damage rate |

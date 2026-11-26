@@ -112,7 +112,7 @@ Opens horticulture synthesis for gardening goods.
 **Job Lv 18 Log House Active field utility · Max Lv 1**
 
 - Sets up a log house at the selected ground location.
-- Requires a Log House item with durability, cannot be used on restricted maps or occupied spots, and creates a log house instance.
+- Requires a [Log House](crafting.html#recipe:1731) item with durability, cannot be used on restricted maps or occupied spots, and creates a log house instance.
 
 | Lv | SP | Cast time | Cooldown | Max visitors |
 |---|---|---|---|---|

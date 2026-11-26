@@ -139,7 +139,7 @@ Orders all current partners to stop attacking and clear their current attack tar
 
 **Job Lv 10 First Aid Active skill · Max Lv 5**
 
-Consumes 1 First Aid item and heals the target for a percentage of the target's maximum HP.
+Consumes 1 [First Aid](crafting.html#recipe:575) item and heals the target for a percentage of the target's maximum HP.
 
 | Lv | SP | Cast time | Cooldown | Healing |
 |---|---|---|---|---|
@@ -212,7 +212,7 @@ Opens the Chemical Preparation synthesis interface for the selected skill level.
 
 **Job Lv 18 Fortify Plant Sheath Active skill · Max Lv 3**
 
-- Commands a nearby living plant partner to consume 1 Plant Nutrient and gain DEF and M.DEF for 240 seconds.
+- Commands a nearby living plant partner to consume 1 [Plant Nutrient](crafting.html#recipe:551) and gain DEF and M.DEF for 240 seconds.
 - DEF and M.DEF are percentage values; Additive DEF and Additive M.DEF are flat values.
 
 | Lv | SP | Cast time | Cooldown | DEF | Additive DEF | M.DEF | Additive M.DEF |
@@ -350,11 +350,11 @@ Increases the success rate of equipment reinforcement when using Magic Crystal m
 
 | Lv | SP | Cast time | Cooldown | Required item | Status | Chance | Duration |
 |---|---|---|---|---|---|---|---|
-| 1 | 15 | 1.5 sec | 1.5 sec | Slow Potion | Slow | 35% | 10 sec |
-| 2 | 15 | 1.5 sec | 1.5 sec | Mute Potion | Silence | 30% | 10 sec |
-| 3 | 15 | 1.5 sec | 1.5 sec | Poison Potion | Poison | 25% | 10 sec |
-| 4 | 15 | 1.5 sec | 1.5 sec | Chaos Potion | Confusion | 20% | 10 sec |
-| 5 | 15 | 1.5 sec | 1.5 sec | Stun Potion | Stun | 15% | 10 sec |
+| 1 | 15 | 1.5 sec | 1.5 sec | [Slow Potion](crafting.html#recipe:545) | Slow | 35% | 10 sec |
+| 2 | 15 | 1.5 sec | 1.5 sec | [Mute Potion](crafting.html#recipe:544) | Silence | 30% | 10 sec |
+| 3 | 15 | 1.5 sec | 1.5 sec | [Poison Potion](crafting.html#item:10000302) | Poison | 25% | 10 sec |
+| 4 | 15 | 1.5 sec | 1.5 sec | [Chaos Potion](crafting.html#recipe:546) | Confusion | 20% | 10 sec |
+| 5 | 15 | 1.5 sec | 1.5 sec | [Stun Potion](crafting.html#item:10000307) | Stun | 15% | 10 sec |
 
 **Job Lv 44 Dust Explosion Active physical attack · Max Lv 5**
 
