@@ -41,11 +41,13 @@ Do the document delivery quest twice: carry the Compendium of Law from the **Sag
 
 1 point
 
-Talk to [Farmer Sam](maps.html#map:10057000) about the weeds, then talk to him again. You don't have to pull the weeds
+Take [Farmer Sam](maps.html#map:10057000)'s quest (no quest points needed) and destroy all 50 weeds around his farm. Once all 50 are gone, talk to him for the skill point, then report to the Quest Counter (**Cafe Master** in the [Fareast Cafe](maps.html#map:10057000)) for the quest rewards
 
 1 point
 
 Find the 7 lost chicks around the village for **Charles** in the top-left barn and try to catch each one, then report back
+
+Six chicks are around [Fareast City](maps.html#map:10057000). The seventh, **Piyo No. 7**, is inside the barn (square pin) with **Charles**
 
 1 point
 
