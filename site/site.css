@@ -1546,6 +1546,40 @@ td .wdot { display: inline-block; width: 10px; height: 10px; border-radius: 50%;
 .fspcard .where.wsc figure.mm { order: -1; }
 .fspcard .where.wsc figure.scene.wscene { width: 380px; max-width: 100%; }
 .fspcard .where.wsc figure.scene.wscene img { width: 380px; max-width: 100%; height: auto; aspect-ratio: 3 / 2; }
+/* [[pinlist:]]: one minimap with numbered pins beside a numbered NPC list; each row opens to its scene;
+   hover/open fades the other pins and rows (2026-11-27, Free Skill Points chicks) */
+.pinlist { display: flex; gap: 16px; align-items: flex-start; margin: 12px 0 0; }
+.pinlist .lmap { margin: 0; flex: none; width: 340px; max-width: 100%; }
+.pinlist .lbox { position: relative; aspect-ratio: 1; }
+.pinlist .lbox img { display: block; width: 100%; height: 100%; image-rendering: pixelated; border-radius: 12px; }
+.pinlist .lmap figcaption { margin-top: 8px; font-size: 16px; }
+.pinlist .lpin {
+  position: absolute; display: grid; place-items: center; width: 22px; height: 22px; padding: 0; border: 0; transform: translate(-50%, -50%);
+  border-radius: 50%; background: var(--pin); color: #fff; box-shadow: 0 0 0 2px #fff; cursor: pointer; transition: opacity .15s;
+  font: 700 16px/1 Roboto, "Google Sans Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+/* trim the line box to cap height + baseline so grid centring centres the digit itself, not the font's ascent/descent */
+.pinlist .lpin span { display: block; line-height: 1; text-box: trim-both cap alphabetic; }
+.pinlist .lpin.warp { background: var(--portal); color: #00303f; border-radius: 4px; }
+.pinlist .lrows { flex: 1; min-width: 0; max-width: 560px; }
+.pinlist .lrow { border-bottom: 1px solid var(--outline-variant); transition: opacity .15s; }
+.pinlist .lrow:last-child { border-bottom: 0; }
+.pinlist summary { display: grid; grid-template-columns: 24px auto 1fr 24px; gap: 12px; align-items: center; min-height: 44px; padding: 4px; cursor: pointer; list-style: none; }
+.pinlist summary::-webkit-details-marker { display: none; }
+.pinlist .lnum { color: var(--primary); font-weight: 700; }
+.pinlist .lhint { grid-column: 3; color: var(--on-surface-variant); }
+.pinlist summary .i { grid-column: 4; width: 24px; height: 24px; fill: var(--on-surface-variant); transition: transform .15s; }
+.pinlist .lrow[open] summary .i { transform: rotate(180deg); }
+.pinlist .lrow > img { display: block; width: 100%; height: auto; border-radius: 8px; margin: 4px 0 12px; }
+.pinlist[data-sel] .lpin:not(.on) { opacity: .25; }
+.pinlist[data-sel] .lrow:not(.on) { opacity: .5; }
+@media (max-width: 599px) {
+  .pinlist { flex-direction: column; }
+  .pinlist .lmap, .pinlist .lrows { width: 100%; }
+  .pinlist summary { grid-template-columns: 24px 1fr 24px; row-gap: 0; padding-block: 8px; }
+  .pinlist .lhint { grid-column: 2; grid-row: 2; }
+  .pinlist summary .i { grid-column: 3; grid-row: 1; }
+}
 /* Story Overview: one card per SAGA (cover or banner + English intro + original Japanese) */
 .sagacards { display: flex; flex-direction: column; gap: 24px; margin: 8px 0 32px; }
 .sagacard { display: grid; grid-template-columns: minmax(0, 335px) minmax(0, 1fr); gap: 24px; padding: 16px; border-radius: 16px; background: var(--surface-container-low); max-width: 1100px; }

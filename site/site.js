@@ -875,3 +875,38 @@
   if (det) { det.addEventListener('toggle', function () { if (det.open) start(); }); if (det.open) start(); }
   else start();
 })();
+
+// [[pinlist:]]: hovering/focusing a row or pin, or one open row, fades the other pins and rows; a pin opens its row
+(function () {
+  function init() {
+    document.querySelectorAll('.pinlist').forEach(function (root) {
+      var rows = [].slice.call(root.querySelectorAll('.lrow'));
+      function sel(i) {
+        if (i) root.dataset.sel = i; else delete root.dataset.sel;
+        root.querySelectorAll('[data-i]').forEach(function (e) { e.classList.toggle('on', e.dataset.i === i); });
+      }
+      function rest() {
+        var open = rows.filter(function (r) { return r.open; });
+        sel(open.length === 1 ? open[0].dataset.i : null);
+      }
+      rows.forEach(function (r) {
+        var s = r.querySelector('summary');
+        s.addEventListener('mouseenter', function () { sel(r.dataset.i); });
+        s.addEventListener('focus', function () { sel(r.dataset.i); });
+        s.addEventListener('mouseleave', rest);
+        s.addEventListener('blur', rest);
+        r.addEventListener('toggle', rest);
+      });
+      root.querySelectorAll('.lpin').forEach(function (p) {
+        p.addEventListener('mouseenter', function () { sel(p.dataset.i); });
+        p.addEventListener('mouseleave', rest);
+        p.addEventListener('click', function () {
+          var r = rows[p.dataset.i - 1];
+          r.open = true;
+          r.querySelector('summary').focus();
+        });
+      });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();

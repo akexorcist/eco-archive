@@ -47,7 +47,23 @@ Take [Farmer Sam](maps.html#map:10057000)'s quest (no quest points needed) and d
 
 Find the 7 lost chicks around the village for **Charles** in the top-left barn and try to catch each one, then report back
 
-Six chicks are around [Fareast City](maps.html#map:10057000). The seventh, **Piyo No. 7**, is inside the barn (square pin) with **Charles**
+Six chicks are around [Fareast City](maps.html#map:10057000). **Piyo No. 7** is inside the barn with **Charles**
+
+[Fareast City](maps.html#map:10057000)
+
+**1 Piyo No. 1 South of the river**
+
+**2 Piyo No. 2 By a ladder**
+
+**3 Piyo No. 3 East of the plaza**
+
+**4 Piyo No. 4 North-west corner**
+
+**5 Piyo No. 5 Next to a hay bale**
+
+**6 Piyo No. 6 North-east**
+
+**7 Piyo No. 7 Inside the barn**
 
 1 point
 
