@@ -21,7 +21,7 @@ Earn a **Jewel of Hope** from the **Emil Dragon** and trade it for a **Lv 99 job
 
 - In [Abyss of the Depth](maps.html#map:11027000), enter the house at **(134, 207)**. Read the book on the round table in the middle of the room. It costs **3 quest points** and takes you into the book world.
 - You go in alone. Your HP, MP and SP recover all the time, as in a town.
-- Defeat the [Unknown](monsters.html#monster:19010032) monsters there. They look like your own character. Each can drop a **Fragment of Courage**.
+- Defeat the **Unknown** monsters there. They look like your own character. Each can drop a **Fragment of Courage**.
 - Collect **100** × **Fragment of Courage**.
 
 ### 3. Defeat the Emil Dragon's human form

@@ -266,7 +266,7 @@ Every page is available as HTML (`page.html`) and as a clean Markdown copy (`pag
 - [data/maps.json](data/maps.json): Every map (190 entries)
 - [data/marionettes.json](data/marionettes.json): Marionettes and golems (56 entries)
 - [data/materials.json](data/materials.json): Crafting materials from Crafting Materials (1027 entries)
-- [data/monsters.json](data/monsters.json): Every monster (1316 entries)
+- [data/monsters.json](data/monsters.json): Every monster (1311 entries)
 - [data/npcs.json](data/npcs.json): Every NPC in the client data (5797 entries)
 - [data/partners.json](data/partners.json): Partners (674 entries)
 - [data/quests.json](data/quests.json): Quest counter quests from the client data (1377 entries)
