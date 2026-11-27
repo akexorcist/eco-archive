@@ -1,0 +1,2228 @@
+/* ECO Archive — Material 3 design preview */
+
+:root {
+  color-scheme: light;
+  --primary: #1b6e2a;
+  --on-primary: #ffffff;
+  --primary-container: #a3f5a8;
+  --on-primary-container: #00531a;
+  --secondary: #8a4522;
+  --on-secondary: #ffffff;
+  --secondary-container: #ffdbcb;
+  --on-secondary-container: #6e2e0d;
+  --tertiary: #8a6400;
+  --tertiary-container: #fee131;
+  --on-tertiary-container: #3d3000;
+  --error: #b3261e;
+  --surface: #f9f9f9;
+  --surface-dim: #dadada;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f3f3f3;
+  --surface-container: #eeeeee;
+  --surface-container-high: #e8e8e8;
+  --surface-container-highest: #e2e2e2;
+  --on-surface: #1b1b1b;
+  --on-surface-variant: #474747;
+  --outline: #777777;
+  --outline-variant: #c6c6c6;
+  --inverse-surface: #303030;
+  --inverse-on-surface: #f1f1f1;
+  --scrim: rgb(0 0 0 / 0.4);
+  --pin: #d32f2f;
+  --portal: #0277bd;
+  --shadow-1: 0 1px 2px rgb(0 0 0 / 0.3), 0 1px 3px 1px rgb(0 0 0 / 0.15);
+  --shadow-2: 0 1px 2px rgb(0 0 0 / 0.3), 0 2px 6px 2px rgb(0 0 0 / 0.15);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --primary: #7ed98c;
+  --on-primary: #00390f;
+  --primary-container: #005320;
+  --on-primary-container: #a3f5a8;
+  --secondary: #ffb68f;
+  --on-secondary: #532200;
+  --secondary-container: #6e2e0d;
+  --on-secondary-container: #ffdbcb;
+  --tertiary: #fee131;
+  --tertiary-container: #554500;
+  --on-tertiary-container: #fee131;
+  --error: #f2b8b5;
+  --surface: #121212;
+  --surface-dim: #121212;
+  --surface-container-lowest: #0d0d0d;
+  --surface-container-low: #1b1b1b;
+  --surface-container: #1f1f1f;
+  --surface-container-high: #2a2a2a;
+  --surface-container-highest: #353535;
+  --on-surface: #e2e2e2;
+  --on-surface-variant: #c6c6c6;
+  --outline: #919191;
+  --outline-variant: #474747;
+  --inverse-surface: #e2e2e2;
+  --inverse-on-surface: #303030;
+  --scrim: rgb(0 0 0 / 0.6);
+  --pin: #ff6e6e;
+  --portal: #4fc3f7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --primary: #7ed98c;
+    --on-primary: #00390f;
+    --primary-container: #005320;
+    --on-primary-container: #a3f5a8;
+    --secondary: #ffb68f;
+    --on-secondary: #532200;
+    --secondary-container: #6e2e0d;
+    --on-secondary-container: #ffdbcb;
+    --tertiary: #fee131;
+    --tertiary-container: #554500;
+    --on-tertiary-container: #fee131;
+    --error: #f2b8b5;
+    --surface: #121212;
+    --surface-dim: #121212;
+    --surface-container-lowest: #0d0d0d;
+    --surface-container-low: #1b1b1b;
+    --surface-container: #1f1f1f;
+    --surface-container-high: #2a2a2a;
+    --surface-container-highest: #353535;
+    --on-surface: #e2e2e2;
+    --on-surface-variant: #c6c6c6;
+    --outline: #919191;
+    --outline-variant: #474747;
+    --inverse-surface: #e2e2e2;
+    --inverse-on-surface: #303030;
+    --scrim: rgb(0 0 0 / 0.6);
+    --pin: #ff6e6e;
+    --portal: #4fc3f7;
+  }
+}
+
+/* ---------- base ---------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-padding-top: 88px; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--on-surface);
+  font: 18px/1.6 Roboto, "Google Sans Text", system-ui, -apple-system, "Segoe UI", "Noto Sans Thai", sans-serif;
+}
+img { max-width: 100%; }
+a { color: var(--primary); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3, h4 { line-height: 1.25; color: var(--on-surface); font-weight: 500; }
+h2 { font-size: 28px; margin: 56px 0 16px; }
+h3 { font-size: 22px; margin: 32px 0 12px; }
+p { margin: 12px 0; }
+.content p, .content li { max-width: 80ch; }
+strong { font-weight: 600; }
+.muted { color: var(--on-surface-variant); }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+
+.skip {
+  position: fixed; left: 16px; top: -100px; z-index: 100;
+  background: var(--primary); color: var(--on-primary);
+  padding: 12px 20px; border-radius: 100px; font-weight: 500; text-decoration: none;
+}
+.skip:focus { top: 12px; }
+
+svg.i { width: 24px; height: 24px; fill: currentColor; flex: none; }
+
+/* ---------- top app bar ---------- */
+
+.topbar {
+  position: sticky; top: 0; z-index: 30;
+  display: flex; align-items: center; gap: 8px;
+  height: 72px; padding-inline: clamp(8px, 2vw, 24px);
+  background: var(--surface);
+  transition: background .2s;
+}
+.topbar.scrolled { background: var(--surface-container); }
+.brand {
+  display: flex; align-items: center; gap: 12px; margin-right: 16px;
+  color: var(--on-surface); text-decoration: none; font-size: 22px; font-weight: 500; white-space: nowrap;
+}
+.brand .logo {
+  display: block; flex: none; height: 44px; width: auto; object-fit: contain;
+}
+.iconbtn {
+  display: inline-grid; place-items: center; width: 48px; height: 48px; flex: none;
+  border: 0; border-radius: 50%; background: transparent; color: var(--on-surface-variant); cursor: pointer;
+}
+.iconbtn:hover { background: color-mix(in srgb, var(--on-surface-variant) 8%, transparent); }
+.iconbtn:active { background: color-mix(in srgb, var(--on-surface-variant) 12%, transparent); }
+#menubtn { display: none; }
+
+/* search bar */
+.search { position: relative; flex: 1 1 auto; max-width: 720px; margin-inline: auto; }
+.search label { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--on-surface-variant); display: flex; }
+.search input {
+  width: 100%; height: 50px; padding: 0 20px 0 56px;
+  border: 0; border-radius: 28px; background: var(--surface-container-high); color: var(--on-surface);
+  font: inherit; font-size: 18px;
+}
+.search input::placeholder { color: var(--on-surface-variant); opacity: 1; }
+.search input:focus { outline: none; box-shadow: inset 0 0 0 2px var(--primary); }
+.search input[aria-expanded="true"] { border-radius: 28px 28px 0 0; background: var(--surface-container-high); }
+.results {
+  position: absolute; left: 0; right: 0; top: 50px; z-index: 40; margin: 0; padding: 8px 0; list-style: none;
+  background: var(--surface-container-high); border-radius: 0 0 28px 28px; box-shadow: var(--shadow-2);
+  max-height: min(70vh, 520px); overflow: auto;
+}
+.results[hidden] { display: none; }
+.results li { max-width: none; }
+.results a {
+  display: flex; align-items: center; gap: 16px; padding: 12px 24px; min-height: 56px;
+  color: var(--on-surface); text-decoration: none;
+}
+.results a span { color: var(--on-surface-variant); font-size: 16px; margin-left: auto; text-align: right; }
+.results li[aria-selected="true"] a, .results a:hover { background: color-mix(in srgb, var(--on-surface) 8%, transparent); }
+.results .none { padding: 12px 24px; color: var(--on-surface-variant); }
+
+/* theme menu */
+.thememenu { position: relative; }
+.menu {
+  position: absolute; right: 0; top: 52px; z-index: 50; min-width: 200px; padding: 8px 0; margin: 0; list-style: none;
+  background: var(--surface-container); border-radius: 4px; box-shadow: var(--shadow-2);
+}
+.menu[hidden] { display: none; }
+.menu button {
+  display: flex; align-items: center; gap: 12px; width: 100%; height: 48px; padding: 0 16px;
+  border: 0; background: transparent; color: var(--on-surface); font: inherit; font-size: 16px; text-align: left; cursor: pointer;
+}
+.menu button:hover, .menu button:focus-visible { background: color-mix(in srgb, var(--on-surface) 8%, transparent); outline: none; }
+.menu button[aria-checked="true"] { background: var(--secondary-container); color: var(--on-secondary-container); font-weight: 500; }
+.menu button .check { margin-left: auto; visibility: hidden; }
+.menu button[aria-checked="true"] .check { visibility: visible; }
+
+/* ---------- frame ---------- */
+
+.frame {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr) 260px;
+  gap: 0 clamp(24px, 3vw, 48px);
+  padding-right: clamp(16px, 3vw, 48px);
+}
+.content { min-width: 0; padding: 8px 0 96px; }
+.home .frame { grid-template-columns: 300px minmax(0, 1fr); }
+
+/* navigation drawer */
+.drawer {
+  position: sticky; top: 72px; align-self: start; height: calc(100vh - 72px); overflow: auto;
+  padding: 8px 12px 32px;
+  scrollbar-width: thin;
+}
+.drawer .head { display: none; }
+.drawer ul { list-style: none; margin: 0; padding: 0; }
+.drawer a, .drawer summary {
+  display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px 0 16px;
+  border-radius: 24px; color: var(--on-surface-variant); text-decoration: none; font-size: 16px; font-weight: 500; cursor: pointer;
+}
+.drawer a:hover, .drawer summary:hover { background: color-mix(in srgb, var(--on-surface) 8%, transparent); }
+.drawer a[aria-current="page"] { background: var(--secondary-container); color: var(--on-secondary-container); font-weight: 600; }
+.drawer summary { list-style: none; justify-content: space-between; }
+.drawer summary::-webkit-details-marker { display: none; }
+.drawer summary svg { transition: transform .2s; }
+.drawer details[open] > summary svg { transform: rotate(180deg); }
+.drawer details ul a { padding-left: 32px; font-weight: 400; }
+.drawer details details ul a { padding-left: 48px; }
+.drawer details details > summary { padding-left: 32px; font-weight: 400; }
+.drawer .sect {
+  margin: 16px 16px 4px; padding-top: 16px; border-top: 1px solid var(--outline-variant);
+  font-size: 16px; font-weight: 500; color: var(--on-surface-variant);
+}
+.drawer .count { margin-left: auto; font-weight: 400; font-size: 16px; }
+.scrim { position: fixed; inset: 0; z-index: 35; background: var(--scrim); }
+.scrim[hidden] { display: none; }
+
+/* table of contents */
+.toc { position: sticky; top: 88px; align-self: start; max-height: calc(100vh - 104px); overflow: auto; padding: 16px 0; }
+.toc h2 { font-size: 16px; font-weight: 500; margin: 0 0 8px 16px; color: var(--on-surface-variant); }
+.toc ul { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--outline-variant); }
+.toc a {
+  display: block; padding: 8px 16px; margin-left: -2px; border-left: 2px solid transparent;
+  color: var(--on-surface-variant); text-decoration: none; font-size: 16px; line-height: 1.4;
+}
+.toc a:hover { color: var(--on-surface); }
+.toc a.on { color: var(--primary); border-left-color: var(--primary); font-weight: 500; }
+.toc-inline { display: none; }
+
+/* ---------- page header ---------- */
+
+.crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin: 8px 0 16px; padding: 0; list-style: none; font-size: 16px; color: var(--on-surface-variant); }
+.crumbs li { display: flex; align-items: center; gap: 4px; max-width: none; }
+.crumbs li + li::before { content: "›"; padding: 0 4px; color: var(--outline); }
+.crumbs a { color: var(--on-surface-variant); }
+
+.hero {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 48px; align-items: start;
+  padding: clamp(24px, 3vw, 40px); border-radius: 28px; background: var(--surface-container-low);
+}
+.hero.plain { display: block; background: none; padding: 0; border-radius: 0; }
+.hero h1 { font-size: clamp(36px, 4vw, 45px); font-weight: 400; margin: 0 0 4px; }
+.hero .aka { margin: 0 0 16px; color: var(--on-surface-variant); font-size: 16px; }
+.hero .lead { font-size: 20px; margin: 16px 0 0; }
+.hero .art { margin: 0; width: clamp(180px, 22vw, 300px); }
+.hero .art img { display: block; width: 100%; border-radius: 16px; }
+.hero .chips { margin: 0; }
+
+.facts {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px;
+  margin: 24px 0 0; grid-column: 1 / -1;
+}
+.facts div { padding: 12px 16px; border-radius: 16px; background: var(--surface-container-highest); }
+.facts dt { font-size: 16px; color: var(--on-surface-variant); }
+.facts dd { margin: 2px 0 0; font-weight: 500; }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; }
+.chip {
+  display: inline-flex; align-items: center; gap: 8px; height: 32px; padding: 0 16px;
+  border-radius: 8px; border: 1px solid var(--outline-variant); background: transparent;
+  color: var(--on-surface-variant); font-size: 16px; font-weight: 500; line-height: 1; white-space: nowrap; text-decoration: none;
+}
+.chip.tonal { border-color: transparent; background: var(--secondary-container); color: var(--on-secondary-container); }
+.chip.primary { border-color: transparent; background: var(--primary-container); color: var(--on-primary-container); }
+.chip.tertiary { border-color: transparent; background: var(--tertiary-container); color: var(--on-tertiary-container); }
+a.chip:hover { background: color-mix(in srgb, var(--on-surface-variant) 8%, transparent); }
+
+/* buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 24px;
+  border: 0; border-radius: 20px; font: inherit; font-size: 16px; font-weight: 500; cursor: pointer; text-decoration: none;
+}
+.btn.text { background: transparent; color: var(--primary); padding: 0 12px; }
+.btn.text:hover { background: color-mix(in srgb, var(--primary) 8%, transparent); }
+.btn.tonal { background: var(--secondary-container); color: var(--on-secondary-container); }
+.btn.filled { background: var(--primary); color: var(--on-primary); }
+.btn.outlined { background: transparent; color: var(--primary); box-shadow: inset 0 0 0 1px var(--outline); }
+
+/* ---------- inline entities ---------- */
+
+.inicon { width: 24px; height: 24px; vertical-align: -6px; margin-right: 4px; image-rendering: pixelated; }
+.inpic { width: 28px; height: 28px; vertical-align: -8px; margin-right: 4px; object-fit: contain; }
+img.icon { width: 32px; height: 32px; vertical-align: middle; image-rendering: pixelated; }
+a.ent { text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--primary) 50%, transparent); }
+a.ent:hover { border-bottom-width: 2px; }
+.meta, .jlv { color: var(--on-surface-variant); font-size: 16px; }
+
+/* ---------- steps (top-level ordered lists) ---------- */
+
+.content > ol:not(.jobpath, .plainlist), section > ol:not(.jobpath, .plainlist) {
+  list-style: none; counter-reset: step; margin: 16px 0; padding: 0;
+}
+.content > ol:not(.jobpath, .plainlist) > li, section > ol:not(.jobpath, .plainlist) > li {
+  counter-increment: step; position: relative; padding: 4px 0 24px 64px; margin: 0; max-width: none;
+}
+.content > ol:not(.jobpath, .plainlist) > li > *:not(.npc), section > ol:not(.jobpath, .plainlist) > li > *:not(.npc) { max-width: 80ch; }
+.content > ol:not(.jobpath, .plainlist) > li::before, section > ol:not(.jobpath, .plainlist) > li::before {
+  content: counter(step); position: absolute; left: 0; top: 0;
+  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  background: var(--primary-container); color: var(--on-primary-container); font-weight: 600; font-size: 18px;
+}
+.content > ol:not(.jobpath, .plainlist) > li::after, section > ol:not(.jobpath, .plainlist) > li::after {
+  content: ""; position: absolute; left: 19px; top: 48px; bottom: 6px; width: 2px; background: var(--outline-variant);
+}
+.content > ol:not(.jobpath, .plainlist) > li:last-child::after, section > ol:not(.jobpath, .plainlist) > li:last-child::after { display: none; }
+.content > ol:not(.jobpath, .plainlist) > li > p:first-child, section > ol:not(.jobpath, .plainlist) > li > p:first-child { margin-top: 4px; }
+li { margin: 6px 0; }
+li > p { margin: 0; }
+li > p + p { margin-top: 8px; }
+ul, ol.plainlist { padding-left: 28px; }
+
+/* ---------- NPC card ---------- */
+
+.npc {
+  display: grid; grid-template-columns: auto auto minmax(0, 1fr); gap: 16px; align-items: start;
+  margin: 16px 0; padding: 16px; border-radius: 16px; background: var(--surface-container-low);
+  max-width: 1100px;
+}
+.npc .who { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 160px; text-align: center; }
+.npc .who img, .npc .who .noimg {
+  width: 120px; height: 120px; object-fit: contain; border-radius: 16px; background: var(--surface-container-highest);
+}
+.npc .who .noimg { display: grid; place-items: center; color: var(--on-surface-variant); font-size: 16px; }
+.npc .who b { font-weight: 600; line-height: 1.3; }
+.npc .mm { margin: 0; }
+.npc .mmbox { width: 220px !important; height: 220px !important; }
+.npc .scene { margin: 0; }
+.npc .scene img { display: block; width: 100%; max-width: 560px; border-radius: 12px; }
+.npc.noscene { grid-template-columns: auto auto; justify-content: start; }
+
+.mm { margin: 0; }
+.mm figcaption { margin-top: 8px; font-size: 16px; text-align: center; }
+.mmbox { position: relative; }
+.mmbox img { display: block; width: 100%; height: 100%; image-rendering: pixelated; border-radius: 12px; }
+.pin {
+  position: absolute; width: 12px; height: 12px; transform: translate(-50%, -50%); border-radius: 50%;
+  background: var(--pin); box-shadow: 0 0 0 2px #fff, 0 0 0 6px color-mix(in srgb, var(--pin) 35%, transparent);
+}
+.pin.warp { background: var(--portal); border-radius: 3px; }
+.pin.hl::after {
+  content: attr(data-name); position: absolute; left: 50%; bottom: calc(100% + 10px); transform: translateX(-50%);
+  white-space: nowrap; padding: 4px 8px; border-radius: 4px; background: var(--inverse-surface); color: var(--inverse-on-surface);
+  font-size: 16px; line-height: 1.2; pointer-events: none;
+}
+
+figure.scene { margin: 16px 0; }
+figure.scene img { display: block; border-radius: 12px; max-width: 100%; }
+figcaption { color: var(--on-surface-variant); font-size: 16px; margin-top: 8px; }
+.mapfigs { display: flex; flex-wrap: wrap; gap: 16px; margin: 16px 0; }
+.map img { border-radius: 12px; display: block; }
+.map.world img { width: 420px; }
+
+/* ---------- tables ---------- */
+
+.tablewrap { overflow-x: auto; margin: 16px 0; border-radius: 16px; background: var(--surface-container-low); max-width: 1100px; }
+.tablewrap table { width: 100%; border-collapse: collapse; font-size: 16px; }
+.tablewrap th {
+  position: sticky; top: 0; text-align: left; font-weight: 600; padding: 14px 16px;
+  background: var(--surface-container-high); color: var(--on-surface); white-space: nowrap;
+}
+.tablewrap td { padding: 12px 16px; border-top: 1px solid var(--outline-variant); vertical-align: top; }
+.tablewrap td.num, .tablewrap th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ---------- card grids (gear, items) ---------- */
+
+.mcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; margin: 12px 0; }
+.mcard {
+  display: flex; align-items: center; gap: 16px; padding: 12px 16px; min-height: 72px;
+  border-radius: 16px; background: var(--surface-container-low); color: var(--on-surface); text-decoration: none;
+}
+a.mcard:hover { background: var(--surface-container-high); }
+.mcard img, .mcard .noimg { width: 48px; height: 48px; flex: none; object-fit: contain; }
+.mcard.icard img { image-rendering: pixelated; width: 40px; height: 40px; }
+.mcard > span { display: flex; flex-direction: column; min-width: 0; line-height: 1.35; }
+.mcard small { color: var(--on-surface-variant); font-size: 16px; }
+.mapbody h3 { font-size: 20px; margin: 24px 0 8px; }
+
+/* ---------- skills (expandable list) ---------- */
+
+.skwrap { margin: 16px 0; max-width: 1100px; }
+.skexpand { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 8px; }
+.skexpand button {
+  height: 40px; padding: 0 12px; border: 0; border-radius: 20px; background: transparent;
+  color: var(--primary); font: inherit; font-size: 16px; font-weight: 500; cursor: pointer;
+}
+.skexpand button:hover { background: color-mix(in srgb, var(--primary) 8%, transparent); }
+.skills { border-radius: 16px; overflow: hidden; background: var(--surface-container-low); }
+details.skill + details.skill { border-top: 1px solid var(--outline-variant); }
+details.skill > summary {
+  display: grid; grid-template-columns: 40px minmax(0, 1fr) auto 24px; grid-template-areas: "icon name lv chev" "icon type lv chev";
+  align-items: center; column-gap: 16px; padding: 10px 16px; cursor: pointer; list-style: none; line-height: 1.4;
+}
+details.skill > summary::-webkit-details-marker { display: none; }
+details.skill > summary:hover { background: color-mix(in srgb, var(--on-surface) 6%, transparent); }
+details.skill > summary::after {
+  content: ""; grid-area: chev; width: 10px; height: 10px; justify-self: center;
+  border-right: 2px solid var(--on-surface-variant); border-bottom: 2px solid var(--on-surface-variant);
+  transform: rotate(45deg) translate(-2px, -2px); transition: transform .2s;
+}
+details.skill[open] > summary::after { transform: rotate(-135deg) translate(-2px, -2px); }
+details.skill .icon { grid-area: icon; width: 40px; height: 40px; }
+details.skill summary b { grid-area: name; font-weight: 500; }
+details.skill .st { grid-area: type; color: var(--on-surface-variant); font-size: 16px; }
+details.skill .jl { grid-area: lv; color: var(--primary); font-size: 16px; font-weight: 500; white-space: nowrap; }
+details.skill[open] { background: var(--surface-container); }
+details.skill .sk { padding: 0 24px 24px 72px; }
+details.skill .sk p { margin: 0 0 4px; }
+details.skill .sk .meta { margin-bottom: 4px; }
+details.skill .tablewrap {
+  margin: 16px 0 0; max-width: max-content; border-radius: 12px; background: var(--surface-container-low);
+  box-shadow: inset 0 0 0 1px var(--outline-variant);
+}
+details.skill .tablewrap table { font-variant-numeric: tabular-nums; }
+details.skill .tablewrap th {
+  position: static; padding: 10px 16px; background: var(--surface-container-highest);
+  color: var(--on-surface-variant); font-weight: 500; text-align: center; white-space: nowrap; vertical-align: bottom;
+}
+details.skill .tablewrap td { padding: 8px 16px; border-top: 1px solid var(--outline-variant); text-align: center; white-space: nowrap; }
+details.skill .tablewrap th:first-child, details.skill .tablewrap td:first-child { padding-inline: 16px; }
+details.skill .tablewrap td:first-child { font-weight: 600; color: var(--primary); }
+details.skill .tablewrap tbody tr:hover td { background: color-mix(in srgb, var(--on-surface) 5%, transparent); }
+
+.kindline { margin: 0 0 8px; }
+.kind { color: var(--primary); font-weight: 600; }
+.lvtext { color: var(--primary); font-weight: 500; font-size: 16px; }
+ul.rskills { list-style: none; padding: 0; margin: 12px 0; }
+ul.rskills li { display: flex; align-items: center; gap: 8px; margin: 0; padding: 4px 0; }
+ul.rskills .jlv { color: var(--primary); margin-left: 4px; }
+
+/* ---------- job path diagram ---------- */
+.herpath { grid-column: 1 / -1; }
+.herpath .jobpath { margin: 8px 0 0; }
+.herpath .jobpath .node { background: var(--surface-container-highest); }
+.herpath .jobpath .node.here { background: var(--primary); }
+.herpath p { margin: 12px 0 0; font-size: 16px; color: var(--on-surface-variant); }
+
+.jobpath { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 16px 0; padding: 0; list-style: none; }
+.jobpath li { display: flex; align-items: center; gap: 12px; margin: 0; max-width: none; }
+.jobpath .node {
+  display: inline-flex; flex-direction: column; justify-content: center; min-height: 64px; padding: 8px 20px;
+  border-radius: 16px; background: var(--surface-container-high); color: var(--on-surface); text-decoration: none; font-weight: 500; line-height: 1.3;
+}
+.jobpath .node small { font-size: 16px; font-weight: 400; color: var(--on-surface-variant); }
+.jobpath a.node:hover { background: var(--surface-container-highest); }
+.jobpath .node.here { background: var(--primary); color: var(--on-primary); }
+.jobpath .node.here small { color: var(--on-primary); }
+.jobpath .arrow { color: var(--on-surface-variant); font-size: 24px; text-decoration: none; }
+.jobpath a.arrow { color: var(--primary); padding: 0 4px; border-radius: 8px; }
+.jobpath a.arrow:hover { background: color-mix(in srgb, var(--primary) 8%, transparent); }
+
+/* ---------- outfit cards ---------- */
+
+.carousel { position: relative; margin: 16px 0; }
+.outfits {
+  display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 4px;
+  padding: 4px 4px 16px; scrollbar-width: thin;
+}
+.outfit {
+  flex: 0 0 440px; width: 440px; max-width: 85vw; scroll-snap-align: start;
+  display: flex; flex-direction: column; padding: 28px; border-radius: 24px; background: var(--surface-container-low);
+}
+.outfit header { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.outfit h4 { margin: 0; font-size: 22px; font-weight: 500; }
+.outfit .charrow { display: flex; flex-wrap: nowrap; justify-content: center; gap: 8px; margin: 20px 0 24px; padding: 12px; border-radius: 16px; background: var(--surface-container-highest); }
+.outfit .charrow img { width: 160px; height: 160px; min-width: 0; object-fit: contain; }
+.outfit .pieces { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.outfit .pieces h5 { margin: 0 0 8px; font-size: 16px; font-weight: 600; color: var(--on-surface-variant); }
+.outfit .pieces ul { list-style: none; padding: 0; margin: 0; font-size: 16px; }
+.outfit .pieces li { margin: 0 0 10px; line-height: 1.4; }
+.outfit .src { margin: 0 0 0; font-size: 16px; line-height: 1.5; color: var(--on-surface-variant); }
+.outfit .getit { margin-top: auto; padding-top: 20px; }
+.outfit .getit h5 { margin: 0 0 8px; padding-top: 16px; border-top: 1px solid var(--outline-variant); font-size: 16px; font-weight: 600; color: var(--on-surface-variant); }
+.outfit .getit ul { list-style: none; padding: 0; margin: 0; }
+.outfit .getit li { display: flex; flex-direction: column; margin: 0 0 8px; font-size: 16px; line-height: 1.4; }
+.outfit .getit li span:not(.questlink) { color: var(--on-surface-variant); }
+.outfit .questlink { font-weight: 500; }
+a.questlink::after { content: " →"; }
+.carnav { display: flex; justify-content: flex-end; gap: 8px; }
+.carnav button { background: var(--surface-container-high); color: var(--on-surface); }
+.carnav button:disabled { opacity: .38; cursor: default; }
+.carnav[hidden] { display: none; }
+.charrow { display: flex; flex-wrap: wrap; gap: 8px; }
+.charrow img { width: 150px; height: 150px; object-fit: contain; }
+
+/* ---------- home ---------- */
+
+.welcome { padding: clamp(32px, 5vw, 64px) clamp(24px, 4vw, 56px); border-radius: 28px; background: var(--primary-container); color: var(--on-primary-container); }
+.welcome h1 { margin: 0; font-size: clamp(36px, 5vw, 57px); font-weight: 400; color: inherit; }
+.welcome p { margin: 8px 0 0; font-size: 20px; }
+.cats { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin: 16px 0; }
+.cat {
+  display: flex; align-items: center; gap: 16px; padding: 16px 20px; min-height: 96px;
+  border-radius: 16px; background: var(--surface-container-low); color: var(--on-surface); text-decoration: none;
+}
+.cat:hover { background: var(--surface-container-high); }
+.cat img { width: 56px; height: 56px; object-fit: contain; flex: none; border-radius: 12px; }
+.cat b { display: block; font-size: 20px; font-weight: 500; }
+.cat span span { color: var(--on-surface-variant); font-size: 16px; }
+
+.seriescards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin: 16px 0; }
+.seriescard {
+  display: flex; flex-direction: column; overflow: hidden; border-radius: 24px;
+  background: var(--surface-container-low); color: var(--on-surface); text-decoration: none;
+}
+.seriescard:hover { background: var(--surface-container-high); }
+.seriescard .pic { display: block; height: 220px; padding: 16px; background: var(--surface-container-highest); }
+.seriescard .pic img { width: 100%; height: 100%; object-fit: contain; }
+.seriescard .txt { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 16px 20px; }
+.seriescard b { font-size: 20px; font-weight: 500; }
+.seriescard .txt span { color: var(--on-surface-variant); font-size: 16px; }
+
+/* tabs (M3 primary tabs) */
+.tabs { display: flex; gap: 0; margin: 24px 0 24px; border-bottom: 1px solid var(--outline-variant); overflow-x: auto; }
+.tabs button {
+  position: relative; flex: 0 0 auto; height: 48px; padding: 0 24px; border: 0; background: transparent;
+  color: var(--on-surface-variant); font: inherit; font-size: 16px; font-weight: 500; cursor: pointer;
+}
+.tabs button:hover { background: color-mix(in srgb, var(--on-surface) 8%, transparent); }
+.tabs button[aria-selected="true"] { color: var(--primary); }
+.tabs button[aria-selected="true"]::after {
+  content: ""; position: absolute; left: 16px; right: 16px; bottom: 0; height: 3px; border-radius: 3px 3px 0 0; background: var(--primary);
+}
+.tabpanel[hidden] { display: none; }
+.jobrow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 12px; max-width: 1100px; }
+.jobcard {
+  display: flex; flex-direction: column; overflow: hidden; border-radius: 16px;
+  background: var(--surface-container-low); color: var(--on-surface); text-decoration: none;
+}
+.jobcard:hover { background: var(--surface-container-high); }
+.jobcard .pic { display: block; height: 150px; padding: 8px; background: var(--surface-container-highest); }
+.jobcard .pic img { width: 100%; height: 100%; object-fit: contain; }
+.jobcard b { padding: 12px 16px 0; font-weight: 500; line-height: 1.3; }
+.jobcard .tier { padding: 0 16px 12px; color: var(--on-surface-variant); font-size: 16px; }
+.jobcard.chron .pic { background: var(--tertiary-container); }
+
+/* ---------- footer ---------- */
+
+.foot { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--outline-variant); color: var(--on-surface-variant); font-size: 16px; display: flex; flex-wrap: wrap; gap: 8px 24px; }
+.foot a { color: var(--on-surface-variant); }
+.linkbtn { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; cursor: pointer; }
+.linkbtn:hover { text-decoration-thickness: 2px; }
+.linkbtn[hidden] { display: none; }
+/* privacy page: the Cookie settings sentence hides with its button when no GA ID is configured */
+li:has(> [data-cookiebtn][hidden]) { display: none; }
+
+/* cookie consent bar (built by site.js only when window.ECO_GA_ID is set) */
+.consent {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 32;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px;
+  padding: 16px clamp(16px, 3vw, 48px);
+  background: var(--surface-container-highest); color: var(--on-surface); box-shadow: var(--shadow-2);
+  font-size: 16px;
+}
+.consent[hidden] { display: none; }
+.consent p { margin: 0; max-width: 80ch; }
+.consent .btns { display: flex; gap: 12px; }
+.consent .btn { justify-content: center; min-width: 112px; height: 44px; background: var(--secondary-container); color: var(--on-secondary-container); }
+.consent .btn:hover { background: color-mix(in srgb, var(--on-secondary-container) 12%, var(--secondary-container)); }
+body.has-consent { padding-bottom: var(--consent-h, 0px); }
+@media (max-width: 599px) {
+  .consent { padding: 12px 16px; }
+  .consent .btns { width: 100%; }
+  .consent .btn { flex: 1 1 0; }
+}
+
+/* ---------- responsive (M3 window classes) ---------- */
+
+@media (max-width: 1199px) {
+  .frame { grid-template-columns: 280px minmax(0, 1fr); }
+  .toc { display: none; }
+  .toc-inline { display: block; margin: 24px 0 0; border-radius: 16px; background: var(--surface-container-low); }
+  .toc-inline summary { padding: 14px 20px; cursor: pointer; font-weight: 500; font-size: 16px; }
+  .toc-inline ul { margin: 0; padding: 0 20px 16px 40px; columns: 2 220px; font-size: 16px; }
+}
+
+@media (max-width: 839px) {
+  #menubtn { display: inline-grid; }
+  .frame, .home .frame { display: block; padding: 0 16px; }
+  .drawer {
+    position: fixed; top: 0; left: 0; bottom: 0; z-index: 40; width: min(360px, 85vw); height: 100vh;
+    padding: 12px; background: var(--surface-container-low); border-radius: 0 16px 16px 0; box-shadow: var(--shadow-2);
+    transform: translateX(-105%); transition: transform .25s ease; visibility: hidden;
+  }
+  .drawer.open { transform: none; visibility: visible; }
+  .drawer .head { display: flex; align-items: center; justify-content: space-between; padding: 0 4px 8px 16px; font-size: 22px; }
+  .brand .name { display: none; }
+  .brand { margin-right: 4px; }
+  .hero { grid-template-columns: 1fr; }
+  .hero .art { width: 200px; grid-row: 1; }
+  .npc, .npc.noscene { grid-template-columns: 1fr; justify-items: center; }
+  .npc .who { width: auto; }
+  .jobrow { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 24px; }
+}
+
+@media (max-width: 599px) {
+  body { font-size: 17px; }
+  .search input { height: 48px; padding-left: 48px; }
+  .search label { left: 12px; }
+  .results { top: 48px; }
+  .content > ol:not(.jobpath, .plainlist) > li, section > ol:not(.jobpath, .plainlist) > li { padding-left: 52px; }
+  .content > ol:not(.jobpath, .plainlist) > li::before { width: 36px; height: 36px; }
+  .content > ol:not(.jobpath, .plainlist) > li::after { left: 17px; }
+  details.skill .sk { padding-left: 16px; }
+  details.skill > summary { grid-template-columns: 40px minmax(0, 1fr) 24px; grid-template-areas: "icon name chev" "icon type chev" "icon lv chev"; }
+  details.skill .jl { justify-self: start; margin-top: 4px; }
+  .outfit { padding: 20px; }
+  .outfit .charrow img { width: 120px; height: 120px; }
+  .tablewrap { border-radius: 12px; }
+}
+
+/* overflow guards */
+.search { min-width: 0; }
+.content { overflow-wrap: anywhere; }
+.hero > div { min-width: 0; }
+.tablewrap td, .tablewrap th { overflow-wrap: normal; }
+@media (max-width: 599px) {
+  .tablewrap td { min-width: 140px; }
+}
+
+/* equal-width job path nodes */
+.jobpath li:has(> .node) { flex: 1 1 0; min-width: 120px; max-width: 200px; }
+.jobpath li > .node { width: 100%; }
+.jobpath li:has(> .arrow) { flex: none; }
+.jobpath { gap: 8px 4px; flex-wrap: nowrap; }
+.jobpath li { gap: 4px; }
+.jobpath .node { padding: 8px 12px; font-size: 16px; font-weight: 600; overflow-wrap: normal; }
+.jobpath .node small { font-weight: 400; }
+.jobpath .arrow { font-size: 20px; width: 28px; text-align: center; }
+@media (max-width: 599px) {
+  .jobpath { flex-direction: column; align-items: stretch; }
+  .jobpath li:has(> .node) { max-width: none; flex: none; }
+  .jobpath li:has(> .arrow) { justify-content: center; }
+  .jobpath .arrow { transform: rotate(90deg); }
+  .jobpath .node { min-height: 56px; align-items: center; text-align: center; }
+}
+
+ul.skdesc { margin: 0 0 8px; padding-left: 24px; }
+ul.skdesc li { margin: 0 0 4px; line-height: 1.5; }
+ul.skdesc li::marker { color: var(--primary); }
+
+/* links: no underline, underline only on hover/focus */
+a, a.ent, .crumbs a, .foot a { text-decoration: none; border-bottom: 0; }
+a:hover, a:focus-visible, a.ent:hover { text-decoration: underline; text-decoration-thickness: 1px; border-bottom: 0; }
+.drawer a:hover, .toc a:hover, .mcard:hover, .cat:hover, .seriescard:hover, .jobcard:hover, .jobpath a:hover, .results a:hover, a.chip:hover, .brand:hover, .skip:hover { text-decoration: none; }
+
+/* outfit piece lists: normal weight */
+.outfit .pieces b, .outfit .pieces a { font-weight: 400; }
+
+dl.skmeta { margin: 8px 0 0; }
+dl.skmeta div { display: flex; gap: 8px; font-size: 16px; line-height: 1.5; }
+dl.skmeta dt { color: var(--on-surface-variant); min-width: 64px; }
+dl.skmeta dd { margin: 0; }
+
+/* NPC block: [portrait | scene] / [map | scene]; scene height = left column */
+.npc:not(.noscene) {
+  display: grid; grid-template-columns: 220px minmax(0, max-content); grid-template-rows: auto auto;
+  gap: 16px; align-items: stretch; justify-content: start; width: fit-content; max-width: 100%;
+}
+.npc:not(.noscene) .who { grid-column: 1; grid-row: 1; width: 220px; padding: 12px; border-radius: 12px; background: var(--surface-container-highest); }
+.npc:not(.noscene) .who img, .npc:not(.noscene) .who .noimg { background: none; }
+.npc:not(.noscene) .mm { grid-column: 1; grid-row: 2; }
+.npc:not(.noscene) .scene { grid-column: 2; grid-row: 1 / 3; height: 0; min-height: 100%; margin: 0; }
+.npc:not(.noscene) .scene img { height: 100%; width: auto; max-width: 100%; object-fit: cover; border-radius: 12px; }
+.npc:not(.noscene) { --who-h: 176px; --map-h: 252px; grid-template-columns: 220px auto; }
+.npc:not(.noscene) .who { height: var(--who-h); justify-content: center; }
+.npc:not(.noscene) .mm { height: var(--map-h); }
+.npc:not(.noscene) .mm figcaption { height: 24px; line-height: 24px; margin-top: 8px; }
+.npc.nowho:not(.noscene) .mm { grid-row: 1 / 3; }
+.npc:not(.noscene) .scene { height: auto; min-height: 0; }
+.npc:not(.noscene) .scene img {
+  height: calc(var(--who-h) + var(--map-h) + 16px); width: auto; aspect-ratio: 16 / 10; max-width: 100%; object-fit: cover;
+}
+
+/* NPC block sizing: compact left column, scene crops a little when space is short */
+.content > ol:not(.jobpath) > li, .content > ul > li, .content { container-type: inline-size; }
+.npc:not(.noscene) { --who-h: 152px; --map-h: 212px; grid-template-columns: 180px auto; }
+.npc:not(.noscene) .who { width: 180px; }
+.npc:not(.noscene) .who img { width: 96px; height: 96px; }
+.npc:not(.noscene) .mmbox { width: 180px !important; height: 180px !important; }
+.npc:not(.noscene) .scene img { object-position: center; }
+@container (max-width: 640px) {
+  .npc:not(.noscene) { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; width: 100%; justify-items: stretch; }
+  .npc:not(.noscene) .who { grid-column: 1; grid-row: 1; width: auto; height: auto; align-self: stretch; margin-bottom: 32px; }
+  .npc:not(.noscene) .mm { grid-column: 2; grid-row: 1; height: auto; }
+  .npc:not(.noscene) .mmbox { width: 100% !important; height: auto !important; aspect-ratio: 1; }
+  .npc:not(.noscene) .scene { grid-column: 1 / 3; grid-row: 2; }
+  .npc:not(.noscene) .scene img { width: 100%; height: auto; }
+}
+
+/* recommended skills: 2 columns (top-to-bottom order), 1 column when narrow */
+ul.rskills { columns: 2 300px; column-gap: 48px; max-width: 1100px; }
+ul.rskills li { break-inside: avoid; padding: 6px 0; }
+
+/* carousel edge fade: shows there is more to scroll */
+.outfits { --fl: 0px; --fr: 0px; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 var(--fl), #000 calc(100% - var(--fr)), transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 var(--fl), #000 calc(100% - var(--fr)), transparent 100%); }
+.outfits.fade-l { --fl: 64px; }
+.outfits.fade-r { --fr: 64px; }
+
+/* section heading row with actions on the right */
+.secthead { display: flex; align-items: center; justify-content: space-between; gap: 16px; max-width: 1100px; }
+.secthead h2, .secthead h3 { margin-right: auto; }
+h2 + .secthead, .secthead { margin-top: 0; }
+.secthead .skexpand, .secthead .carnav { display: flex; gap: 8px; margin: 0; flex: none; }
+.secthead .iconbtn { background: var(--surface-container-high); color: var(--on-surface); }
+.secthead .iconbtn:hover { background: var(--surface-container-highest); }
+.secthead .iconbtn:disabled { opacity: .38; cursor: default; }
+.carousel .secthead { margin-bottom: 8px; }
+.secthead h2, .secthead h3 { margin: 0; }
+.secthead:has(> h2) { margin: 56px 0 16px; }
+.secthead:has(> h3) { margin: 32px 0 12px; }
+.carousel .secthead { max-width: none; }
+.hero { max-width: 1100px; }
+.search { margin-inline: auto 0; max-width: 560px; }
+.outfit .getit li { display: block; }
+.outfit .getit li + li { margin-top: 8px; }
+
+/* review fixes */
+.carnav[hidden], .secthead .carnav[hidden] { display: none !important; }
+ul.rskills li { display: block; position: relative; padding: 6px 0 6px 44px; line-height: 1.4; }
+ul.rskills li img.icon { position: absolute; left: 0; top: 4px; }
+ul.rskills .jlv { white-space: nowrap; }
+.content figure.map:not(.world) img { width: 180px; height: auto; }
+/* NPC card: same look everywhere (Bard style) */
+.npc .who { width: 180px; padding: 12px; border-radius: 12px; background: var(--surface-container-highest); justify-content: center; }
+.npc .who img, .npc .who .noimg { width: 96px; height: 96px; background: none; }
+.npc.noscene .mmbox { width: 180px !important; height: 180px !important; }
+/* keep minimap aspect ratio inside the 180px map slot */
+.npc .mmbox { --ar: 1; width: calc(180px * min(1, var(--ar))) !important; height: calc(180px * min(1, 1 / var(--ar))) !important; margin-inline: auto; }
+.npc .mm { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+@container (max-width: 640px) {
+  .npc:not(.noscene) .mmbox { width: 100% !important; height: auto !important; aspect-ratio: var(--ar); max-width: calc(220px * var(--ar)); }
+}
+.outfit .pieces li { position: relative; padding-left: 30px; }
+.outfit .pieces li .inicon { position: absolute; left: 0; top: 0; }
+
+/* NPC group: no outer container */
+.npc { background: none; padding: 0; border-radius: 0; }
+/* room for 2-line NPC names; keep pin labels inside the map */
+.npc:not(.noscene) { --who-h: 184px; }
+.npc .who b { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.pin.hl::after { white-space: normal; width: max-content; max-width: 170px; text-align: center; }
+.pin.hl.below::after { bottom: auto; top: calc(100% + 10px); }
+/* NPC card grows for 2-line names; figures align with step text */
+.npc .who { height: auto !important; min-height: var(--who-h, 152px); padding: 16px 12px; }
+.npc .who b { line-height: 1.3; }
+.content figure.map, .content figure.shot, .content li > figure, .content li > p > figure { margin-left: 0; margin-right: 0; }
+.pin.many { width: 12px; height: 12px; z-index: 2; }
+
+/* job path never overflows the header: shrink, then stack when the header is narrow */
+.herpath { container-type: inline-size; }
+.jobpath li:has(> .node) { min-width: 0; }
+.jobpath .node { overflow-wrap: break-word; }
+@container (max-width: 520px) {
+  .herpath .jobpath { flex-direction: column; align-items: stretch; }
+  .herpath .jobpath li:has(> .node) { max-width: none; flex: none; }
+  .herpath .jobpath li:has(> .arrow) { justify-content: center; }
+  .herpath .jobpath .arrow { transform: rotate(90deg); }
+  .herpath .jobpath .node { min-height: 56px; align-items: center; text-align: center; }
+}
+.herpath .jobpath { align-items: stretch; }
+.herpath .jobpath li:has(> .node) { align-items: stretch; }
+/* groups of place maps (e.g. Joker book spots) */
+.mapfigs { display: grid; grid-template-columns: repeat(auto-fill, minmax(196px, 1fr)); gap: 24px 16px; max-width: 1100px; }
+.mapfigs .mm { display: flex; flex-direction: column; align-items: center; }
+.mapfigs .mmbox { --ar: 1; width: calc(180px * min(1, var(--ar))) !important; height: calc(180px * min(1, 1 / var(--ar))) !important; }
+.pin.hl.edge-l::after { left: -8px; transform: none; text-align: center; }
+.pin.hl.edge-r::after { left: auto; right: -8px; transform: none; text-align: center; }
+/* Knight Training faction pins: each Faction Commander's uniform colour, lightened for label contrast */
+.pin[data-faction="east"] { --pin: #299050; }
+.pin[data-faction="west"] { --pin: #a17812; }
+.pin[data-faction="south"] { --pin: #cc5a5a; }
+.pin[data-faction="north"] { --pin: #5b7bd0; }
+.pin[data-faction]::after { background: var(--pin); color: #fff; }
+
+/* place cards: number + map + place name + landmark (e.g. Joker book spots) */
+.spots { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 16px; margin: 16px 0; max-width: 1100px; }
+.spotcard { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border-radius: 16px; background: var(--surface-container-low); }
+.spotcard .spotnum { align-self: flex-start; color: var(--primary); font-weight: 600; font-size: 18px; line-height: 1; }
+.spotcard .mm { display: flex; flex-direction: column; align-items: center; }
+.spotcard .mmbox { --ar: 1; width: calc(180px * min(1, var(--ar))) !important; height: calc(180px * min(1, 1 / var(--ar))) !important; }
+.spotcard .mm figcaption { margin-top: 8px; font-weight: 600; }
+.spotcard .mm figcaption a { color: var(--on-surface); }
+.spotcard p { margin: 0; text-align: center; font-size: 16px; line-height: 1.45; color: var(--on-surface-variant); max-width: none; }
+.spotcard .pin.hl::after { display: none; }
+dl.skmeta dt { color: var(--primary); font-weight: 500; }
+details.skill .icon.noicon { display: block; width: 40px; height: 40px; border-radius: 8px; background: var(--surface-container-highest); }
+/* race sections: artwork beside sprites + notes */
+.racerow { display: grid; grid-template-columns: 200px 1fr; gap: 24px; align-items: start; margin: 8px 0 16px; }
+.racerow figure.art { margin: 0; }
+.racerow figure.art img { width: 100%; max-width: none; border-radius: 12px; display: block; }
+.racebody .charrow { display: flex; flex-wrap: nowrap; gap: 8px; margin: 0 0 8px; }
+.racebody .charrow img { flex: 1 1 0; min-width: 0; width: auto; height: auto; max-height: 120px; aspect-ratio: 1; object-fit: contain; }
+.racebody ul { margin-top: 0; }
+@container (max-width: 560px) { .racerow { grid-template-columns: 1fr; } .racerow figure.art img { max-width: 240px; } }
+.charrow img { width: 96px; height: 96px; }
+.artrow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: end; margin: 16px 0; }
+.artrow p { margin: 0; }
+.artrow figure.art { margin: 0; }
+.artrow figure.art img { width: 100%; max-width: 240px; height: auto; display: block; margin: 0 auto; }
+.racerow { grid-template-columns: 200px minmax(0, 1fr); }
+.racebody { min-width: 0; }
+@container (max-width: 560px) { .racerow { grid-template-columns: minmax(0, 1fr); } }
+/* section headings in primary (user, 2026-11-15) */
+.content h2, .content h3 { color: var(--primary); }
+/* races: card grid with stat bars (user, 2026-11-15) */
+.rc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 16px 0 24px; }
+.rc { background: var(--surface-container-low); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; min-width: 0; }
+.rc-art { background: #fff; border-radius: 12px; overflow: hidden; height: 220px; display: flex; justify-content: center; }
+.rc-art figure.art { margin: 0; height: 100%; width: 100%; }
+.rc-art img { display: block; width: 100%; height: 100%; max-width: none; object-fit: contain; }
+.content .rc h3 { margin: 16px 0 0; }
+.rc-suited { color: var(--on-surface-variant); margin: 2px 0 12px; }
+.statbars { display: grid; gap: 6px; margin-bottom: 12px; }
+.sb { display: grid; grid-template-columns: 44px minmax(0, 1fr) 28px; gap: 8px; align-items: center; }
+.sb > span:first-child { color: var(--on-surface-variant); }
+.sb .tr { height: 10px; border-radius: 5px; background: var(--surface-container-highest); overflow: hidden; }
+.sb .tr span { display: block; height: 100%; border-radius: 5px; background: var(--outline); }
+.sb.top .tr span { background: var(--primary); }
+.sb b { text-align: right; font-weight: 500; }
+.sb.top b, .sb.top > span:first-child { color: var(--primary); font-weight: 700; }
+.rc ul { margin: 0 0 12px; padding-left: 20px; flex: 1; }
+.rc .charrow { display: flex; flex-wrap: nowrap; gap: 4px; margin: 0; }
+.rc .charrow img { flex: 1 1 0; min-width: 0; width: auto; height: auto; max-height: 96px; aspect-ratio: 1; object-fit: contain; }
+/* race card sprites: bigger, scroll sideways with edge fade */
+.rc .charrow.hscroll { display: flex; flex-wrap: nowrap; gap: 8px; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: 4px; scrollbar-width: thin;
+  --fl: 0px; --fr: 0px; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 var(--fl), #000 calc(100% - var(--fr)), transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 var(--fl), #000 calc(100% - var(--fr)), transparent 100%); }
+.rc .charrow.hscroll.fade-l { --fl: 40px; }
+.rc .charrow.hscroll.fade-r { --fr: 40px; }
+.rc .charrow.hscroll img { flex: 0 0 128px; width: 128px; height: 128px; max-height: none; aspect-ratio: auto; scroll-snap-align: start; }
+.rc .charrow.hscroll:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 8px; }
+.rc-max { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin: 0 0 12px; padding: 12px 0; border-top: 1px solid var(--outline-variant); border-bottom: 1px solid var(--outline-variant); }
+.rc-max div { min-width: 0; text-align: center; }
+.rc-max dt { color: var(--on-surface-variant); font-size: 16px; }
+.rc-max dd { margin: 0; font-weight: 500; font-variant-numeric: tabular-nums; }
+@container (max-width: 380px) { .rc-max { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.rc .charrow.hscroll img { flex-basis: 144px; width: 144px; height: 144px; }
+.rc-max { grid-template-columns: repeat(5, auto); justify-content: space-between; column-gap: 12px; }
+.rc-max dt { white-space: nowrap; }
+@container (max-width: 380px) { .rc-max { grid-template-columns: repeat(3, auto); } }
+/* race card: stat bars 70% | max values 30% (user, 2026-11-15) */
+.rc { container-type: inline-size; }
+.rc-stats { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 3fr); gap: 16px; align-items: start; margin-bottom: 12px; }
+.rc-stats .statbars { margin: 0; }
+.rc-stats .rc-max { display: grid; grid-template-columns: none; gap: 6px; margin: 0; padding: 0 0 0 16px; border: 0; border-left: 1px solid var(--outline-variant); }
+.rc-stats .rc-max div { display: flex; justify-content: space-between; gap: 8px; text-align: left; }
+.rc-stats .rc-max dt { white-space: nowrap; }
+.rc-stats .rc-max dd { margin: 0; font-weight: 500; font-variant-numeric: tabular-nums; }
+.rc-stats { grid-template-columns: minmax(0, 6fr) minmax(0, 4fr); gap: 12px; } /* 60/40 (user, 2026-11-16) */
+.rc-stats .rc-max { padding-left: 12px; }
+@container (max-width: 260px) {
+  .rc-stats { grid-template-columns: minmax(0, 1fr); }
+  .rc-stats .rc-max { border-left: 0; padding: 12px 0 0; border-top: 1px solid var(--outline-variant); }
+}
+.rc-stats .rc-max dt { font-size: inherit; } .rc-stats .rc-max div, .rc-stats .sb { min-height: 28px; align-items: center; }
+.rc .charrow.hscroll img { flex: 0 0 140px; width: 140px; height: 220px; object-fit: cover; object-position: center; }
+/* reincarnation: one row per high race, art | details + bonus scroller */
+.hr-list { display: grid; gap: 16px; margin: 16px 0 24px; max-width: 1100px; }
+.hr { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 24px; align-items: start; background: var(--surface-container-low); border-radius: 16px; padding: 16px; container-type: inline-size; }
+.hr-art { display: flex; justify-content: center; }
+.hr-art figure.art { margin: 0; }
+.hr-art img { display: block; width: 100%; max-width: 240px; height: auto; }
+.content .hr h3 { margin: 0; }
+.hr-body p { margin: 4px 0 8px; }
+.hr-body .rc-suited { margin: 2px 0 8px; }
+.hr-note { color: var(--on-surface-variant); }
+.hr-sprites { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: 4px; scrollbar-width: thin;
+  --fl: 0px; --fr: 0px; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 var(--fl), #000 calc(100% - var(--fr)), transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 var(--fl), #000 calc(100% - var(--fr)), transparent 100%); }
+.hr-sprites.fade-l { --fl: 40px; }
+.hr-sprites.fade-r { --fr: 40px; }
+.hr-sprites:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 8px; }
+.hr-sprites figure { flex: 0 0 170px; margin: 0; scroll-snap-align: start; text-align: center; }
+.hr-sprites img { display: block; width: 170px; height: 240px; object-fit: cover; object-position: center; }
+.hr-sprites figcaption { color: var(--on-surface-variant); font-size: 16px; line-height: 1.3; }
+@container (max-width: 640px) { .hr { grid-template-columns: minmax(0, 1fr); } .hr-art img { max-width: 220px; } }
+/* pages without a hero card: the intro and paragraphs use the full content width (user, 2026-11-15) */
+.hero.plain { max-width: none; }
+.content p, .content li { max-width: none; }
+.content .hr h3 { margin-bottom: 8px; }
+.hr-note b { color: var(--on-surface); }
+/* ---------- list widget (.lp): filterable groups of expandable rows, same look as the skill list ---------- */
+.lp { max-width: 1100px; margin: 16px 0; }
+.lptools { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin: 0 0 12px; }
+.lptools .lpfilter { flex: 1 1 320px; height: 48px; padding: 0 16px; border: 1px solid var(--outline); border-radius: 24px; background: transparent; color: var(--on-surface); font: inherit; font-size: 16px; }
+.lptools .lpfilter::placeholder { color: var(--on-surface-variant); }
+.lptools .lpfilter:focus { outline: 2px solid var(--primary); outline-offset: -1px; border-color: transparent; }
+.lpgroupby[data-single] { display: none !important; }
+.lpgroupby { display: flex; align-items: center; gap: 8px; color: var(--on-surface-variant); font-size: 16px; }
+.lpgroupby button { height: 32px; padding: 0 16px; border: 1px solid var(--outline-variant); border-radius: 8px; background: transparent; color: var(--on-surface-variant); font: inherit; font-size: 16px; cursor: pointer; }
+.lpgroupby button[aria-pressed=true] { background: var(--secondary-container); color: var(--on-secondary-container); border-color: transparent; }
+.lpexpand { display: flex; gap: 8px; margin-left: auto; }
+.lplayout { display: flex; gap: 24px; align-items: flex-start; }
+.lplist { flex: 1 1 auto; min-width: 0; }
+.lpside { flex: 0 0 200px; position: sticky; top: 80px; max-height: calc(100vh - 96px); overflow: auto; }
+.lpside:has(.lpindex:empty) { display: none; }
+.lpside.closed { flex-basis: auto; }
+.lpside.closed .lpindex { display: none; }
+.lptoggle { height: 40px; padding: 0 16px; border: 0; border-radius: 20px; background: transparent; color: var(--primary); font: inherit; font-size: 16px; font-weight: 500; cursor: pointer; }
+.lpindex:empty { display: none; }
+.lpindex a { display: flex; justify-content: space-between; gap: 8px; padding: 8px 16px; border-radius: 20px; color: var(--on-surface-variant); text-decoration: none; font-size: 16px; }
+.lpindex a span { color: var(--on-surface-variant); }
+.lpindex a:hover { background: color-mix(in srgb, var(--on-surface) 8%, transparent); }
+.lpindex a.on { background: var(--secondary-container); color: var(--on-secondary-container); font-weight: 600; }
+section.lpgroup { scroll-margin-top: 80px; }
+section.lpgroup > h2 { font-size: 22px; margin: 24px 0 12px; }
+section.lpgroup:first-child > h2 { margin-top: 0; }
+.lpgroup .meta { color: var(--on-surface-variant); font-weight: 400; }
+.lpgrid { border-radius: 16px; overflow: hidden; background: var(--surface-container-low); }
+.lpgrid.cols { display: flex; gap: 0; align-items: flex-start; }
+.lpcol { flex: 1 1 0; min-width: 0; }
+details.lpitem { min-width: 0; scroll-margin-top: 80px; }
+details.lpitem + details.lpitem { border-top: 1px solid var(--outline-variant); }
+details.lpitem > summary { display: flex; align-items: center; gap: 16px; padding: 12px 16px; cursor: pointer; list-style: none; line-height: 1.4; }
+details.lpitem > summary::-webkit-details-marker { display: none; }
+details.lpitem > summary:hover { background: color-mix(in srgb, var(--on-surface) 6%, transparent); }
+details.lpitem > summary b { font-weight: 500; }
+details.lpitem > summary .meta { margin-left: auto; color: var(--on-surface-variant); }
+details.lpitem > summary::after { content: ""; flex: none; width: 10px; height: 10px; margin: 0 7px; border-right: 2px solid var(--on-surface-variant); border-bottom: 2px solid var(--on-surface-variant); transform: rotate(45deg) translate(-2px, -2px); transition: transform .2s; }
+details.lpitem[open] > summary::after { transform: rotate(-135deg) translate(-2px, -2px); }
+details.lpitem[open] { background: var(--surface-container); }
+details.lpitem > :not(summary) { padding: 0 16px 16px; }
+details.lpitem .glist { margin: 0 0 8px; }
+details.msec { margin: 8px 0; }
+details.msec > summary { display: flex; align-items: center; gap: 8px; cursor: pointer; list-style: none; }
+details.msec > summary::-webkit-details-marker { display: none; }
+details.msec > summary::before { content: ""; width: 8px; height: 8px; border-right: 2px solid var(--primary); border-bottom: 2px solid var(--primary); transform: rotate(-45deg); transition: transform .2s; }
+details.msec[open] > summary::before { transform: rotate(45deg); }
+details.msec > summary h3 { margin: 0; font-size: 18px; }
+details.msec .meta { color: var(--on-surface-variant); font-weight: 400; }
+details.lpitem .tablewrap { margin: 8px 0; background: var(--surface-container-high); }
+.mcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
+.mcard { display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 12px; background: var(--surface-container-high); color: var(--on-surface); text-decoration: none; }
+.mcard:hover { background: color-mix(in srgb, var(--on-surface) 10%, var(--surface-container-high)); }
+.mcard img, .mcard .noimg { width: 48px; height: 48px; flex: none; object-fit: contain; }
+.mcard > span { display: flex; flex-direction: column; min-width: 0; line-height: 1.3; }
+.mcard small { color: var(--on-surface-variant); font-size: 16px; }
+/* chips are shown as colored text, not filled pills (no decorative containers) */
+.chips { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 4px 0; }
+.chip { display: inline; padding: 0; border-radius: 0; background: none !important; box-shadow: none !important; font-size: 16px; font-weight: 500; color: var(--on-surface-variant); }
+.chip.boss { color: var(--error); }
+@media (max-width: 900px) {
+  .lplayout { display: block; }
+  .lpside { position: static; max-height: none; }
+  .lpindex { display: flex; flex-wrap: wrap; gap: 4px; padding: 0 0 8px; }
+}
+.lplayout.single .lpside { display: none; }
+.lplayout.single section.lpgroup > h2 { display: none; }
+details.lpitem > summary b { margin-right: auto; }
+details.lpitem > summary .meta { margin-left: 0; }
+details.lpitem .sumicon { width: 32px; height: 32px; flex: none; object-fit: contain; }
+.chip { border: 0; }
+/* list toolbar: keep Expand/Collapse on the first row; index counts never wrap */
+.lptools .lpfilter { flex: 1 1 220px; min-width: 0; }
+.lpindex a span { white-space: nowrap; flex: none; }
+/* Maps page: world map with world tabs and cell popup */
+.worldhdr { margin: 8px 0 24px; }
+.wtabs { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+.wtabs button { height: 32px; padding: 0 16px; border: 1px solid var(--outline-variant); border-radius: 8px; background: transparent; color: var(--on-surface-variant); font: inherit; font-size: 16px; cursor: pointer; }
+.wtabs button[aria-pressed=true] { background: var(--secondary-container); color: var(--on-secondary-container); border-color: transparent; }
+.wtabs button:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.wmap { position: relative; width: 520px; height: 520px; max-width: 100%; border-radius: 16px; background-size: 520px 520px; }
+.wc { position: absolute; width: 44px; height: 44px; box-sizing: border-box; border: 1.5px solid rgb(255 255 255 / .55); border-radius: 4px; }
+.wc:hover, .wc:focus-visible, .wc.on { border: 3px solid #ff5722; background: rgb(255 87 34 / .15); outline: none; }
+.wpop { position: absolute; z-index: 5; min-width: 180px; max-width: 280px; max-height: 300px; overflow: auto; padding: 8px 0; border-radius: 12px; background: var(--surface-container); box-shadow: var(--shadow-2); }
+.wpop a { display: block; padding: 8px 16px; color: var(--on-surface); text-decoration: none; font-size: 16px; line-height: 1.3; }
+.wpop a:hover, .wpop a:focus-visible { background: color-mix(in srgb, var(--on-surface) 10%, transparent); outline: none; }
+.wcell { position: absolute; width: 22px; height: 22px; box-sizing: border-box; border: 2.5px solid #ff5722; border-radius: 3px; box-shadow: 0 0 0 999px rgb(0 0 0 / .3); }
+/* map entries */
+.mapbody .mapfigs { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; margin: 8px 0; }
+.mapbody .mm { margin: 0; }
+.mapbody .mmbox { position: relative; }
+.mapbody .mmbox img { width: 100%; height: 100%; border-radius: 12px; display: block; }
+.mapbody .mm figcaption { color: var(--on-surface-variant); font-size: 16px; margin-top: 4px; }
+.mapbody h3 { font-size: 18px; margin: 16px 0 8px; display: block; }
+.ncard.hl { background: color-mix(in srgb, var(--pin) 18%, var(--surface-container-high)); }
+.mapbody table.lv { margin: 4px 0; }
+/* Equipment filters: M3 outlined fields */
+.eqfilters { display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: flex-end; margin: 8px 0 16px; color: var(--on-surface-variant); font-size: 16px; }
+.eqfilters label { display: flex; flex-direction: column; gap: 4px; }
+.eqfilters select, .eqfilters input { height: 40px; padding: 0 12px; border: 1px solid var(--outline); border-radius: 8px; background: transparent; color: var(--on-surface); font: inherit; font-size: 16px; min-width: 140px; }
+.eqfilters select option { background: var(--surface-container); color: var(--on-surface); }
+.eqfilters input { width: 100px; min-width: 0; }
+.eqfilters button { height: 40px; padding: 0 16px; border: 0; border-radius: 20px; background: transparent; color: var(--primary); font: inherit; font-size: 16px; font-weight: 500; cursor: pointer; }
+.eqfilters button:hover { background: color-mix(in srgb, var(--primary) 8%, transparent); }
+.eqfilters select:focus-visible, .eqfilters input:focus-visible { outline: 2px solid var(--primary); outline-offset: -1px; }
+/* Maps page entries: many pins, so smaller dots; name on hover */
+.mapbody .pin { width: 8px; height: 8px; box-shadow: 0 0 0 1.5px #fff; cursor: default; }
+.mapbody .pin.warp { width: 9px; height: 9px; }
+.mapbody .pin:hover, .mapbody .pin.hl { width: 13px; height: 13px; z-index: 3; box-shadow: 0 0 0 2px #fff, 0 0 0 5px color-mix(in srgb, var(--pin) 35%, transparent); }
+.mapbody .pin:hover::after {
+  content: attr(data-name); position: absolute; left: 50%; bottom: calc(100% + 10px); transform: translateX(-50%);
+  white-space: nowrap; padding: 4px 8px; border-radius: 4px; background: var(--inverse-surface); color: var(--inverse-on-surface);
+  font-size: 16px; line-height: 1.2; pointer-events: none;
+}
+.wbox { position: relative; width: 260px; height: 260px; border-radius: 12px; background-repeat: no-repeat; background-size: 260px 260px; overflow: hidden; }
+.mapkey { display: flex; gap: 16px; }
+.mapkey span { display: inline-flex; align-items: center; gap: 6px; }
+.mapkey i { width: 10px; height: 10px; border-radius: 50%; background: var(--pin); box-shadow: 0 0 0 1.5px #fff; }
+.mapkey i.w { border-radius: 2px; background: var(--portal); }
+.mapbody .tablewrap { background: var(--surface-container-high); }
+/* quest header facts: plain label / value text, no tiles (no decorative containers) */
+.hero .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px 24px; margin: 24px 0 0; }
+.hero .facts div { padding: 0; border-radius: 0; background: none; }
+.hero .facts dt { color: var(--primary); font-weight: 500; font-size: 16px; }
+.hero .facts dd { margin: 2px 0 0; font-weight: 400; }
+.tablewrap td.num { white-space: nowrap; }
+
+/* chips are coloured text: use the readable accent tone, not the on-container tone */
+.chip.primary { color: var(--primary); }
+.chip.tonal { color: var(--secondary); }
+.chip.tertiary { color: var(--tertiary); }
+
+/* NPC picture tooltip (site.js): shown on hover/focus of an NPC name */
+.enttip { cursor: help; }
+.enttip:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 2px; }
+.pictip { position: fixed; z-index: 1000; pointer-events: none; padding: 12px; border-radius: 12px;
+  background: var(--surface-container-high); box-shadow: var(--shadow-2); }
+.pictip img { display: block; max-width: 200px; max-height: 260px; width: auto; height: auto; }
+
+.pictip.map img { max-width: 260px; max-height: 260px; border-radius: 8px; }
+td .cellist { margin: 0; padding-left: 20px; }
+td .cellist li { margin: 2px 0; }
+td .cellist.stack, .facts dd .cellist.stack { list-style: none; padding-left: 0; }
+td .celllead + .cellist, td .cellist + .celllead { margin-top: 2px; }
+.rc-stats .rc-max dt, .rc-stats .rc-max dd { white-space: nowrap; }
+.rc-stats .rc-max div { gap: 4px; }
+@container (max-width: 300px) {
+  .rc-stats { grid-template-columns: minmax(0, 1fr); }
+  .rc-stats .rc-max { border-left: 0; padding: 12px 0 0; border-top: 1px solid var(--outline-variant); }
+}
+.hero h1 { color: var(--primary); } /* page titles use primary (user, 2026-11-16) */
+/* map name tooltip: world map + highlighted cell (user, 2026-11-16) */
+.pictip-box { position: relative; line-height: 0; }
+.pictip.map img { width: 320px; height: 320px; max-width: none; max-height: none; border-radius: 8px; }
+.pictip-cell { position: absolute; width: 8.46%; height: 8.46%; box-sizing: border-box; border: 3px solid #FF5722; border-radius: 4px; }
+.pictip-box { overflow: hidden; border-radius: 8px; }
+/* races: max values right-aligned (user, 2026-11-16) */
+.rc-stats .rc-max { justify-items: stretch; justify-content: stretch; grid-template-columns: minmax(0, 1fr); }
+.rc-stats .rc-max div { width: 100%; }
+.rc-stats .rc-max dd { margin-left: auto; text-align: right; }
+/* inline diagrams: drawn 1:1, scroll sideways on narrow screens */
+figure.diagram { margin: 16px 0; overflow-x: auto; }
+figure.diagram svg { display: block; max-width: none; }
+.jobcard b b { padding: 0; } /* item name inside a card: no double padding */
+/* Catties page: one card per Catty; her other forms sit inside the same card, split by a divider */
+.cattycard { max-width: 1100px; margin: 0 0 24px; padding: 16px; border-radius: 16px; background: var(--surface-container-low); }
+.cattycard > h2 { margin: 0 0 12px; }
+.cattycard > h3 { margin: 16px 0 12px; padding-top: 16px; border-top: 1px solid var(--outline-variant); }
+.cattycard .racerow { margin: 0; }
+.cattycard .racebody ul { margin-bottom: 0; }
+h2 + .cattycard, p + .cattycard, ul + .cattycard { margin-top: 32px; }
+/* reincarnation cards: short label paragraph sits right above its bullet list (2026-11-16) */
+.hr-body p:has(+ ul) { margin-bottom: 0; }
+.hr-body ul { margin: 4px 0 12px; }
+/* races: bigger official artwork (user, 2026-11-16). Sources are 720-840px (High) and ~500px (base), so these sizes never upscale */
+.hr { grid-template-columns: clamp(240px, 40%, 400px) minmax(0, 1fr); }
+.hr-art figure.art { width: 100%; }
+.hr-art img { width: 100%; max-width: none; }
+@container (max-width: 640px) {
+  .hr { grid-template-columns: minmax(0, 1fr); }
+  .hr-art figure.art { max-width: 420px; }
+  .hr-art img { max-width: none; }
+}
+.rc-art { height: auto; aspect-ratio: 1; max-height: 380px; }
+/* reincarnation cards: bonus sprite row spans the full card width under art + text (user, 2026-11-16) */
+.hr-body > :last-child { margin-bottom: 0; }
+.hr > .hr-sprites { grid-column: 1 / -1; margin-top: -8px; }
+/* indoor room tooltip: parent town minimap + pin at the entrance, town name below (2026-11-16) */
+.pictip.room img { max-width: none; max-height: none; border-radius: 8px; image-rendering: pixelated; }
+.pictip-pin { position: absolute; width: 12px; height: 12px; transform: translate(-50%, -50%); border-radius: 50%;
+  background: var(--pin); box-shadow: 0 0 0 2px #fff, 0 0 0 6px color-mix(in srgb, var(--pin) 35%, transparent); }
+.pictip-cap { margin-top: 8px; font-size: 16px; line-height: 1.3; text-align: center; color: var(--on-surface); }
+/* links use secondary (user, 2026-11-16): content text links stop looking like the primary-green headings.
+   :where() keeps this at the same weight as the base `a` rule, so class rules (cards, crumbs, toc, chips, buttons) still win.
+   Only inline text links (no class, .ent, .questlink) outside menus; UI menus/cards keep their own colour + hover background (user, 2026-11-16) */
+:where(.content) a:where(:not([class]), .ent, .questlink):not(:where(.wpop, .lpindex, .results, .toc, .toc-inline, .drawer, .crumbs, .foot, .jobpath, .spotcard .mm figcaption) a),
+:where(.content) a:where(:not([class]), .ent, .questlink):not(:where(.wpop, .lpindex, .results, .toc, .toc-inline, .drawer, .crumbs, .foot, .jobpath, .spotcard .mm figcaption) a):visited { color: var(--secondary); }
+:where(.content .toc-inline) a { color: var(--primary); }
+:where(.content) a:where(:not([class]), .ent, .questlink):not(:where(.wpop, .lpindex, .results, .toc, .toc-inline, .drawer, .crumbs, .foot, .jobpath, .spotcard .mm figcaption) a):hover,
+:where(.content) a:where(:not([class]), .ent, .questlink):not(:where(.wpop, .lpindex, .results, .toc, .toc-inline, .drawer, .crumbs, .foot, .jobpath, .spotcard .mm figcaption) a):focus-visible { text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+/* quest header facts: one fact per row, label on top, value below, full width (user, 2026-11-16) */
+.hero .facts { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+
+/* NPC-block minimap keeps the image's aspect ratio (--ar set inline); beats the earlier 180x180 !important rules */
+.npc:not(.noscene) .mmbox, .npc.noscene .mmbox { width: calc(180px * min(1, var(--ar))) !important; height: calc(180px * min(1, 1 / var(--ar))) !important; margin-inline: auto; }
+@container (max-width: 640px) {
+  .npc:not(.noscene) .mmbox { width: 100% !important; height: auto !important; aspect-ratio: var(--ar); max-width: calc(220px * min(1, var(--ar))); }
+}
+/* room and world-map tooltips: box hugs the image so % pins/cells stay on it when the caption is wider (2026-11-16) */
+.pictip.room .pictip-box, .pictip.map .pictip-box { width: fit-content; margin-inline: auto; }
+/* NPC block variants: [[npc:ID|card]] row, [[npc:ID|scene]] alone */
+.npcrow > .npc { margin: 0; }
+.npcrow { margin: 16px 0; }
+figure.scene.solo img { width: 560px; max-width: 100%; }
+/* standalone [[spot:]] figure hugs its map so the caption sits under it, not centred across the column (user, 2026-11-16).
+   NPC blocks, spot cards and map pages already centre their .mm in flex columns, so they are left out */
+figure.mm:not(.npc .mm, .spotcard .mm, .mapfigs .mm, .mapbody .mm) { width: fit-content; max-width: 100%; }
+figure.mm:not(.npc .mm, .spotcard .mm, .mapfigs .mm, .mapbody .mm, .where .mm, .ride .mm) .mmbox { margin-inline: auto; }
+/* content-level collapsible card groups (Farming > Crops): separate groups like the h3 + .mcards groups in Seeds
+   (32px between groups, 16px heading to cards); .mapbody groups keep their tighter spacing */
+.content > details.msec + details.msec { margin-top: 32px; }
+.content > details.msec > .mcards { margin: 16px 0 0; }
+/* collapsible section headers (details.msec: arrow + label + count): the clickable area and focus outline
+   hug the content instead of spanning the full width; the negative margins cancel the padding so the
+   arrow and label stay where they were. Row summaries (.lpitem, .skill) keep full width for their right-aligned values. */
+details.msec > summary { width: fit-content; max-width: calc(100% + 8px); box-sizing: border-box; padding: 4px 8px; margin: -4px 0 -4px -8px; }
+details.msec > summary::before { flex: none; }
+/* plain-text msec toggles ("Show all N … quests", Quest Counter; user, 2026-11-19): link colour (secondary peach) so they
+   read as an action, not as another green heading; the arrow follows. Heading summaries (h2/h3/h4 inside) are untouched.
+   Hover adds a peach tint; focus keeps the global ring. */
+details.msec > summary:not(:has(h2, h3, h4)) { color: var(--secondary); font-weight: 500; border-radius: 8px; }
+details.msec > summary:not(:has(h2, h3, h4))::before { border-color: var(--secondary); }
+details.msec > summary:not(:has(h2, h3, h4)):hover { background: color-mix(in srgb, var(--secondary) 12%, transparent); }
+
+/* job-path switch arrow (⇄, links to Job Switching): same colour as the one-way → arrows instead of primary green;
+   hover keeps a neutral tint and focus a neutral ring so it still reads as a link without turning green. */
+.jobpath a.arrow, .jobpath a.arrow:visited { color: var(--on-surface-variant); }
+.jobpath a.arrow:hover { color: var(--on-surface); background: color-mix(in srgb, var(--on-surface) 8%, transparent); }
+.jobpath a.arrow:focus-visible { color: var(--on-surface); outline: 2px solid var(--on-surface); outline-offset: 2px; border-radius: 8px; }
+/* tables: in the first (name) column an item / NPC name, icon + name, never breaks across lines, so that column gets the
+   width it needs instead of a proportional share next to a long "how to get it" column (user, 2026-11-16).
+   .nm = icon + bold name of an unlinked item, wrapped by design_preview.py. Other columns, and wide 5+ column tables, keep wrapping so tables still fit */
+.tablewrap table:not(:has(tr > :nth-child(5))) td:first-child :is(a.ent, .nm) { white-space: nowrap; }
+/* item tables (icon in the first column, up to 4 columns): the name column gets a third of the table plus extra right padding,
+   so names have clear space before the next column instead of a tight fit; the rest still goes to the other columns */
+.tablewrap table:not(:has(tr > :nth-child(5))) td:first-child:has(.inicon) { width: 34%; padding-right: 32px; }
+@media (max-width: 599px) {
+  .tablewrap table:not(:has(tr > :nth-child(5))) td:first-child:has(.inicon) { width: auto; padding-right: 16px; }
+}
+.bossgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px; margin: 16px 0 24px; }
+.bosscard { display: grid; grid-template-columns: 96px minmax(0, 1fr); grid-template-rows: auto auto 1fr; column-gap: 16px; padding: 16px; border-radius: 16px; background: var(--surface-container-low); }
+.bossbody { display: contents; }
+.bosscard figure.art { grid-row: 1 / span 2; margin: 0; }
+.bosscard figure.art img { display: block; width: 96px; height: 96px; max-width: none; }
+.bosscard h3 { grid-column: 2; align-self: end; margin: 0 0 8px; }
+.bosscard dl { margin: 0; }
+.bosscard dt { color: var(--primary); font-size: 16px; font-weight: 500; }
+.bosscard dd { margin: 0; }
+.bossstats { grid-column: 2; align-self: start; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.bossinfo { grid-column: 1 / -1; margin-top: 12px !important; }
+.bossinfo > div { display: grid; grid-template-columns: 80px minmax(0, 1fr); gap: 12px; padding: 8px 0; border-top: 1px solid var(--outline-variant); }
+.bossinfo > div:last-child { padding-bottom: 0; }
+/* compact tables (md opt-in "<!-- table:compact -->", wrapped by design_preview.py): a few short, mostly numeric columns
+   size to their content instead of stretching to the full content width (user, 2026-11-16); long headers wrap */
+.tablewrap.compact { width: fit-content; max-width: 100%; }
+.tablewrap.compact table { width: auto; min-width: 280px; }
+.tablewrap.compact th { white-space: normal; max-width: 12em; vertical-align: bottom; }
+.tablewrap.compact th, .tablewrap.compact td { padding-inline: 24px; }
+.tablewrap.compact td { white-space: nowrap; min-width: 0; }
+@media (max-width: 599px) {
+  .tablewrap.compact th, .tablewrap.compact td { padding-inline: 16px; }
+}
+/* formula blocks ([[formula: …]] in md, user 2026-11-16): the formula sits on its own line in monospace on a tonal block;
+   the result name before "=" uses the primary colour. Long formulas scroll inside the block on phones instead of wrapping */
+.formula {
+  display: block; width: fit-content; max-width: 100%; overflow-x: auto;
+  margin: 8px 0 16px; padding: 12px 20px; border-radius: 12px;
+  background: var(--surface-container-high); color: var(--on-surface);
+  font: 18px/1.5 ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Roboto Mono", monospace;
+  white-space: nowrap; overflow-wrap: normal;
+}
+.formula .fxout { color: var(--primary); font-weight: 600; }
+li .formula { margin: 8px 0 12px; }
+td .formula { margin: 0 0 4px; padding: 8px 12px; border-radius: 8px; font-size: 16px; white-space: normal; }
+@media (max-width: 599px) {
+  .formula { padding: 12px 16px; font-size: 16px; white-space: normal; }
+  .tablewrap td:has(> .formula) { min-width: 280px; }
+}
+/* Hairstyles page: one tonal card per style (render + name), Women and Men groups */
+.hsgroup { margin: 16px 0 8px; color: var(--on-surface); font-size: 18px; font-weight: 500; }
+.hsgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin: 0 0 24px; }
+.hsgrid figure { margin: 0; padding: 8px 8px 12px; border-radius: 16px; background: var(--surface-container-low); text-align: center; }
+.hsgrid img { display: block; width: 100%; max-width: 220px; aspect-ratio: 1; height: auto; margin: 0 auto 4px; }
+.hsgrid figcaption { color: var(--on-surface); font-size: 16px; line-height: 1.3; }
+/* Hairstyles page: one card per introduction letter, boxes as a wrapping list (names never break) */
+.lettergrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 440px), 1fr)); gap: 16px; margin: 16px 0 24px; }
+.lettercard { padding: 16px; border-radius: 16px; background: var(--surface-container-low); }
+.lettercard h4 { margin: 0 0 8px; font-size: 18px; }
+.lettercard dl { margin: 0; }
+.lettercard dl > div { display: grid; grid-template-columns: 136px minmax(0, 1fr); gap: 12px; padding: 8px 0; border-top: 1px solid var(--outline-variant); }
+.lettercard dl > div:last-child { padding-bottom: 0; }
+.lettercard dt { color: var(--primary); font-size: 16px; font-weight: 500; }
+.lettercard dd { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 24px; }
+.lettercard .nm { white-space: nowrap; }
+@media (max-width: 599px) {
+  .hsgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .hsgrid figure { padding: 4px 4px 8px; }
+  .lettercard dl > div { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+}
+/* Accessory Crafting page: one card per crystal colour (reuses .lettercard), one "crystal → gem" line each;
+   2 cards per row in the content column, 1 on phones; names never break, and "→ gem" wraps as one unit */
+.gemgrid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+.gemlines { list-style: none; margin: 0; padding: 0; }
+.gemlines li { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; padding: 8px 0; border-top: 1px solid var(--outline-variant); }
+.gemlines li:last-child { padding-bottom: 0; }
+.gemlines .nm, .gemlines .to { white-space: nowrap; }
+.gemlines .arr { margin-right: 8px; color: var(--primary); font-weight: 600; }
+/* Accessory Crafting page: "Tools and common parts" as one card per item (reuses .lettercard); 2 per row, 1 on phones;
+   each shop line breaks only between the room and the town */
+.toolgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.toolgrid dl > div { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+.toolgrid dd { display: block; }
+.toollist { margin: 4px 0; padding-left: 20px; }
+.toollist li { padding: 2px 0; }
+@media (max-width: 599px) { .toolgrid { grid-template-columns: minmax(0, 1fr); } }
+/* Hairstyles page: letter cards list each style as a bullet (reuses .toollist); groups of 5+ flow into 2 columns when wide enough */
+.lettercard dd:has(> .lettlist) { display: block; }
+.lettlist { margin: 0 0 -4px; padding-left: 20px; }
+.lettlist li { margin: 0; padding: 0 0 4px; break-inside: avoid; }
+.lettlist.cols { columns: 2 200px; column-gap: 32px; }
+/* Hairstyles page: letter cards show each style as a render card (reuses .hsgroup/.hsgrid); letters with many styles span the full row */
+.lettercard.hsletter.wide { grid-column: 1 / -1; }
+.lettercard.hsletter .hsgroup { margin: 16px 0 8px; color: var(--primary); font-size: 16px; }
+.lettercard.hsletter .hsgrid { margin: 0; }
+.lettercard.hsletter > p:not(.hsgroup) { margin: 0; color: var(--on-surface-variant); }
+.lettercard.hsletter .hsgrid figure { background: var(--surface-container); }
+.lettergrid.hsletters { grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
+.lettercard .hspair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.lettercard .hspair .hsgrid { grid-template-columns: minmax(0, 1fr); }
+/* Hairstyles page: each style card shows the front and back render side by side, name under both */
+.hsgrid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.hsfb { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; margin: 0 auto 4px; max-width: 400px; }
+.hsfb img { margin: 0; }
+@media (max-width: 599px) { .hsgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.lettercard .hspair { grid-template-columns: minmax(0, 1fr); gap: 0; }
+@media (max-width: 599px) { .lettercard .hspair .hsfb { max-width: 200px; } }
+/* Hairstyles page: "Where to find the letters" cards drop the row separators (other .lettercard pages keep theirs) */
+.lettergrid.hsfind .lettercard dl > div { border-top: 0; padding: 8px 0 4px; }
+/* Hairstyles page: style name sits at the top-left of each render card, above the front/back images */
+.hsgrid figure { display: flex; flex-direction: column; text-align: left; padding: 12px 8px 8px; }
+.hsgrid figcaption { order: -1; margin: 0 4px 8px; }
+@media (max-width: 599px) { .hsgrid figure { padding: 8px 4px 4px; } }
+/* medium tables (md opt-in "<!-- table:medium -->", wrapped by design_preview.py): tables with little content take their
+   content width plus some breathing room, not the full content width and not a tight fit (user, 2026-11-16). Text cells wrap */
+.tablewrap.medium { width: fit-content; min-width: min(100%, 520px); max-width: 100%; }
+.tablewrap.medium th, .tablewrap.medium td { padding-inline: 32px; }
+@media (max-width: 599px) {
+  .tablewrap.medium { width: auto; }
+  .tablewrap.medium th, .tablewrap.medium td { padding-inline: 16px; }
+}
+/* amounts: "N × item" (count + icon + name, wrapped by design_preview.py) never breaks, in tables and lists (user, 2026-11-16) */
+.amt { white-space: nowrap; }
+/* recipe tables (md opt-in "<!-- table:recipe -->", wrapped by design_preview.py): fixed shared column widths so
+   the 4-column recipe tables on one page line up (user, 2026-11-16). Phone: normal auto layout, scrolls in its box */
+.tablewrap.recipe table { table-layout: fixed; width: 100%; }
+.tablewrap.recipe th:nth-child(1) { width: 30%; }
+.tablewrap.recipe th:nth-child(2) { width: 34%; }
+.tablewrap.recipe th:nth-child(3) { width: 25%; }
+.tablewrap.recipe th:nth-child(4) { width: 11%; }
+@media (max-width: 599px) {
+  .tablewrap.recipe table { table-layout: auto; }
+  .tablewrap.recipe th:nth-child(n) { width: auto; }
+}
+
+/* matrix tables: compact, every column after the first the same width */
+.tablewrap.matrix { width: fit-content; max-width: 100%; }
+.tablewrap.matrix table { width: max-content; table-layout: fixed; }
+.tablewrap.matrix th:not(:first-child), .tablewrap.matrix td:not(:first-child) { width: 5.5em; padding-inline: 12px; }
+.tablewrap.matrix th:first-child, .tablewrap.matrix td:first-child { width: 9.5em; padding-right: 16px; }
+/* muted second line in a table header ("MATK<br><span class="thsub">weapon · Magic Crystal</span>") */
+.tablewrap th .thsub { display: block; font-weight: 400; font-size: 16px; color: var(--on-surface-variant); }
+.tablewrap th:has(.thsub) br { display: none; }
+/* number columns of compact tables with sublined headers (equipment-upgrades steps) */
+.tablewrap.compact table:has(.thsub) :is(th, td):not(:first-child) { text-align: right; font-variant-numeric: tabular-nums; }
+
+
+/* medium tables size to content: keep linked names whole, and don't force the 34% first column */
+@media (min-width: 800px) {
+  .tablewrap.medium td a.ent, .tablewrap.medium td .nm { white-space: nowrap; }
+  .tablewrap.medium table:not(:has(tr > :nth-child(5))) td:first-child:has(.inicon) { width: auto; }
+}
+.tablewrap th .thsub a.ent { white-space: nowrap; }
+
+/* Farming care grid: equal columns sized to the longest header, ✓ centred */
+table.caregrid { width: max-content; table-layout: fixed; }
+table.caregrid th:first-child, table.caregrid td:first-child { width: 9em; }
+table.caregrid th:not(:first-child), table.caregrid td:not(:first-child) { width: 7.5em; text-align: center; padding-inline: 8px; }
+.tablewrap:has(> table.caregrid) { width: fit-content; max-width: 100%; }
+table.caregrid th:not(:first-child), table.caregrid td:not(:first-child) { width: 7em; padding-inline: 12px; }
+table.caregrid th:first-child, table.caregrid td:first-child { width: 8.5em; }
+table.caregrid th:first-child, table.caregrid td:first-child { width: 10em; white-space: nowrap; }
+
+/* "same" tables: every table on the page has the same width and the same first column, so columns line up */
+.tablewrap.same table { width: 100%; table-layout: fixed; }
+.tablewrap.same th:first-child, .tablewrap.same td:first-child { width: 6.5em; }
+@media (max-width: 599px) { .tablewrap.same table { table-layout: auto; } }
+/* fishing place tooltip (data-tip="mapspot"): world map with the cell + minimap with the spot pin, side by side (2026-11-17) */
+.pictip-maps { display: flex; gap: 12px; align-items: center; }
+.pictip-world[hidden] { display: none; }
+.pictip-world img { width: 280px; height: 280px; border-radius: 8px; max-width: none; max-height: none; }
+.pictip-maps > .pictip-box { width: fit-content; }
+/* fishing "Where to fish" table: minimap thumbnail with a pin per fishing NPC (2026-11-17) */
+td.fishmap { width: 1%; }
+.tablewrap.medium td.fishmap { padding-inline: 8px 24px; }
+td.fishmap .mmbox { --ar: 1; width: calc(140px * min(1, var(--ar))); height: calc(140px * min(1, 1 / var(--ar))); }
+td.fishmap .mmbox img { border-radius: 8px; }
+td.fishmap .pin { width: 10px; height: 10px; }
+/* "Where" table cell ([[where:npc:ID]] / [[where:spot:...]]): small NPC card next to a small minimap with the pin (2026-11-17) */
+.tablewrap.same:has(.where) th:nth-child(2) { width: 300px; }
+.where { display: flex; align-items: flex-start; gap: 12px; }
+.where .mcards { display: block; margin: 0; flex: none; }
+.where .mcard { flex-direction: column; gap: 4px; width: 104px; min-height: 0; padding: 8px; text-align: center; }
+.where .mcard img { width: 64px; height: 64px; }
+.where .mcard > span { align-items: center; overflow-wrap: normal; }
+/* minimap sits at the start edge like its name, so every minimap in a Map column lines up (2026-11-22) */
+.where figure.mm { margin: 0; flex: none; width: 140px; }
+.where .mmbox { --ar: 1; width: calc(140px * min(1, var(--ar))) !important; height: calc(140px * min(1, 1 / var(--ar))) !important; margin-inline: 0; }
+.where .mmbox img { border-radius: 8px; }
+.where .pin { width: 10px; height: 10px; }
+.where figcaption { margin-top: 4px; }
+.where figcaption a { white-space: normal !important; }
+@media (max-width: 599px) { .where { flex-wrap: wrap; } }
+td .wdot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--pin); margin-right: 6px; }
+
+/* recipe tables: names in Item and Tool may wrap; amounts stay whole; Materials gets the most room */
+.tablewrap.recipe th:nth-child(1) { width: 27%; }
+.tablewrap.recipe th:nth-child(2) { width: 40%; }
+.tablewrap.recipe th:nth-child(3) { width: 21%; }
+.tablewrap.recipe th:nth-child(4) { width: 12%; }
+.tablewrap.recipe td:is(:nth-child(1), :nth-child(3)) :is(a.ent, .nm, .amt) { white-space: normal !important; }
+.tablewrap.recipe td { overflow-wrap: anywhere; }
+
+/* recipe-s: narrower recipe tables, all the same width on a page so columns still line up */
+.tablewrap.recipe-s { width: fit-content; max-width: 100%; }
+.tablewrap.recipe-s table { width: 40em; max-width: 100%; }
+.tablewrap.recipe-s table { width: 42em; }
+.tablewrap.recipe-s th:nth-child(1) { width: 26%; }
+.tablewrap.recipe-s th:nth-child(2) { width: 44%; }
+.tablewrap.recipe-s th:nth-child(3) { width: 19%; }
+.tablewrap.recipe-s th:nth-child(4) { width: 11%; }
+/* furniture "House styles": in-game render of each house above its name (2026-11-17) */
+.tablewrap td img.houseimg { display: block; width: 160px; height: 160px; margin: 0 0 4px; }
+
+.cattycard .racerow { grid-template-columns: 416px minmax(0, 1fr); }
+.cattycard .cattypics { display: grid; grid-template-columns: 200px 200px; gap: 16px; align-items: start; }
+.cattycard .cattypics figure.art img { max-width: none; }
+@container (max-width: 560px) { .cattycard .racerow { grid-template-columns: minmax(0, 1fr); } .cattycard .cattypics { grid-template-columns: repeat(2, minmax(0, 200px)); } .cattycard .cattypics figure.art img { max-width: 100%; } }
+
+/* house cards: fixed-width cards that wrap to a new row; picture left, details right */
+.housegrid { display: grid; grid-template-columns: repeat(auto-fill, 367px) !important; gap: 16px; max-width: none; }
+.housegrid .bosscard { grid-template-columns: 130px minmax(0, 1fr); grid-template-rows: auto; align-items: center; }
+.housegrid .bosscard figure.art { grid-column: 1; grid-row: 1; }
+.housegrid .bosscard figure.art img { width: 130px; height: 150px; object-fit: contain; }
+.housegrid .bossbody { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; grid-column: 2; grid-row: 1; }
+.housegrid .bossbody h3 { text-align: left !important; margin: 0 !important; align-self: flex-start !important; }
+.housegrid .bossinfo { grid-column: auto !important; margin: 0 !important; }
+.housegrid .bossinfo > div { display: block !important; border-top: 0 !important; padding: 2px 0 !important; }
+.housegrid .bossinfo dt { display: block; }
+.housegrid .bossinfo dd { margin: 2px 0 0; }
+@media (max-width: 599px) { .housegrid { grid-template-columns: 1fr !important; } }
+/* "Where" cell with the in-game scene instead of the NPC card ([[where:npc:ID|scene]]), for look-alike NPCs in different places (2026-11-17) */
+.where.wsc figure.scene.wscene { margin: 0; flex: none; width: 208px; }
+.where.wsc figure.scene.wscene img { width: 208px; height: 140px; object-fit: cover; border-radius: 8px; display: block; }
+.tablewrap.recipe-s th:nth-child(1) { width: 31%; }
+.tablewrap.recipe-s th:nth-child(2) { width: 40%; }
+.tablewrap.recipe-s th:nth-child(3) { width: 18%; }
+.tablewrap.recipe-s th:nth-child(4) { width: 11%; }
+.tablewrap.recipe-s th:nth-child(1) { width: 29%; }
+.tablewrap.recipe-s th:nth-child(3) { width: 20%; }
+.tablewrap.recipe td:is(:nth-child(1), :nth-child(3)) a.ent { display: inline-flex; align-items: flex-start; white-space: normal !important; }
+.tablewrap.recipe td:is(:nth-child(1), :nth-child(3)) a.ent img.inicon { flex: none; }
+
+/* Accessory Crafting cards: fixed width, wrap to a new row */
+.lettergrid.toolgrid, .lettergrid.gemgrid { grid-template-columns: repeat(auto-fill, 460px) !important; }
+@media (max-width: 599px) { .lettergrid.toolgrid, .lettergrid.gemgrid { grid-template-columns: 1fr !important; } }
+
+/* recipe-m: between full width and recipe-s */
+.tablewrap.recipe-m { width: fit-content; max-width: 100%; }
+.tablewrap.recipe-m table { width: 44em; max-width: 100%; }
+.tablewrap.recipe-m th:nth-child(1) { width: 30%; }
+.tablewrap.recipe-m th:nth-child(2) { width: 38%; }
+.tablewrap.recipe-m th:nth-child(3) { width: 20%; }
+.tablewrap.recipe-m th:nth-child(4) { width: 12%; }
+
+/* recipe-l: wider recipe table */
+.tablewrap.recipe-l { width: fit-content; max-width: 100%; }
+.tablewrap.recipe-l table { width: 50em; max-width: 100%; }
+.tablewrap.recipe-l th:nth-child(1) { width: 30%; }
+.tablewrap.recipe-l th:nth-child(2) { width: 38%; }
+.tablewrap.recipe-l th:nth-child(3) { width: 20%; }
+.tablewrap.recipe-l th:nth-child(4) { width: 12%; }
+.tablewrap.recipe-l th:nth-child(1) { width: 28%; }
+.tablewrap.recipe-l th:nth-child(2) { width: 34%; }
+.tablewrap.recipe-l th:nth-child(3) { width: 27%; }
+.tablewrap.recipe-l th:nth-child(4) { width: 11%; }
+.tablewrap.recipe-l th:nth-child(1) { width: 25%; }
+.tablewrap.recipe-l th:nth-child(2) { width: 40%; }
+.tablewrap.recipe-l th:nth-child(3) { width: 25%; }
+.tablewrap.recipe-l th:nth-child(4) { width: 10%; }
+
+/* searchspots: # | Spot | How to get there | Monsters (quest search spots): monster names stay whole, "How to get there" wraps (2026-11-18) */
+.tablewrap.searchspots td:nth-child(4) a.ent { white-space: nowrap; }
+/* prep: Item | Used for | Where to get it */
+.tablewrap.prep th:nth-child(1) { width: 24%; }
+.tablewrap.prep th:nth-child(2) { width: 30%; }
+.tablewrap.prep th:nth-child(3) { width: 46%; }
+.tablewrap.prep { width: fit-content; max-width: 100%; }
+.tablewrap.prep table { width: 60em; max-width: 100%; }
+.tablewrap.prep th:nth-child(1) { width: 20%; }
+.tablewrap.prep th:nth-child(2) { width: 30%; }
+.tablewrap.prep th:nth-child(3) { width: 50%; }
+.tablewrap.prep th:nth-child(1) { width: 17%; }
+.tablewrap.prep th:nth-child(2) { width: 35%; }
+.tablewrap.prep th:nth-child(3) { width: 48%; }
+.tablewrap.prep th:nth-child(1) { width: 15%; }
+.tablewrap.prep th:nth-child(2) { width: 40%; }
+.tablewrap.prep th:nth-child(3) { width: 45%; }
+.tablewrap.prep th:nth-child(1) { width: 13%; }
+.tablewrap.prep th:nth-child(2) { width: 32%; }
+.tablewrap.prep th:nth-child(3) { width: 55%; }
+
+/* petals: Petal | Flower | Where it grows | Also in boxes */
+.tablewrap.petals th:nth-child(1) { width: 18%; }
+.tablewrap.petals th:nth-child(2) { width: 17%; }
+.tablewrap.petals th:nth-child(3) { width: 36%; }
+.tablewrap.petals th:nth-child(4) { width: 29%; }
+.tablewrap.petals table { table-layout: fixed; }
+.tablewrap.petals th:nth-child(1) { width: 17%; }
+.tablewrap.petals th:nth-child(2) { width: 15%; }
+.tablewrap.petals th:nth-child(3) { width: 36%; }
+.tablewrap.petals th:nth-child(4) { width: 32%; }
+.tablewrap.petals td a.ent { white-space: nowrap; }
+
+/* outfit "How to get": several sources (one per part) show as bullets; a single source stays plain */
+.outfit .getit ul:has(> li + li) { list-style: disc; padding-left: 1.25em; }
+.outfit .getit ul:has(> li + li) > li { display: list-item; }
+.outfit .getit ul:has(> li + li) > li + li { margin-top: 4px; }
+
+/* Job outfit card, C2 (user, 2026-11-17): wide card, big renders, pieces left, Other options + How to get stacked right */
+.outfit { flex: 0 0 680px; width: 680px; max-width: 92vw; }
+.outfit .charrow { padding: 16px; justify-content: space-around; }
+.outfit .charrow img { width: 220px; height: 220px; }
+.outfit .ofbody { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+.outfit .ofbody .pieces { grid-template-columns: 1fr; gap: 16px; }
+.outfit .ofside > * + * { margin-top: 20px; }
+.outfit .ofopts h5, .outfit .ofside .getit h5 { margin: 0 0 8px; padding-top: 0; border-top: 0; font-size: 16px; font-weight: 600; color: var(--on-surface-variant); }
+.outfit .ofside .getit { margin-top: 20px; padding-top: 0; }
+.outfit .ofside > .getit:first-child { margin-top: 0; }
+.outfit .ofrow { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 12px; margin: 0 0 12px; font-size: 16px; line-height: 1.4; }
+.outfit .ofrow > span { color: var(--on-surface-variant); }
+.outfit .ofrow > div > div + div { margin-top: 6px; }
+.outfit .getlist { list-style: disc !important; padding-left: 1.25em !important; margin: 0 !important; }
+.outfit .getlist > li { display: list-item !important; margin: 0 0 10px !important; }
+.outfit .getlist ul { list-style: circle; padding-left: 1.25em; margin: 4px 0 0; }
+.outfit .getlist ul li { display: list-item !important; margin: 2px 0 !important; color: var(--on-surface-variant); }
+.outfit .getlist:not(:has(> li + li)) { list-style: none !important; padding-left: 0 !important; }
+@media (max-width: 760px) {
+  .outfit .ofbody { grid-template-columns: 1fr; }
+  .outfit .charrow img { width: 140px; height: 140px; }
+}
+
+/* Job outfit card body, vertical (user, 2026-11-17): Male | Female, then Other options, divider, How to get */
+.outfit .ofbody { display: block; }
+.outfit .ofbody .pieces { grid-template-columns: 1fr 1fr; gap: 24px; }
+.outfit .ofside { margin-top: 20px; }
+.outfit .ofside > .ofopts:first-child { margin-top: 0; }
+.outfit .ofside .getit, .outfit .ofside > .getit:first-child { margin-top: 20px; padding-top: 0; }
+.outfit .ofside .getit h5 { padding-top: 16px; border-top: 1px solid var(--outline-variant); }
+/* outfit card width x1.5 (user, 2026-11-17) */
+.outfit { flex: 0 0 550px; width: 550px; max-width: 92vw; }
+.outfit .charrow img { width: 200px; height: 200px; }
+/* outfit card section labels in primary (user, 2026-11-17) */
+.outfit .pieces h5, .outfit .ofopts h5, .outfit .ofside .getit h5, .outfit .getit h5 { color: var(--primary); }
+
+/* two-row table header: a group label over several columns (e.g. Fee over Other weapons | Throwing weapons) */
+.tablewrap thead th[colspan] { text-align: center; border-bottom: 1px solid var(--outline-variant); padding-bottom: 6px; }
+.tablewrap thead th[rowspan] { vertical-align: bottom; }
+.tablewrap thead tr + tr th { padding-top: 6px; }
+/* "N × item" in recipe Item/Tool cells: the name text sets the baseline, so the count lines up with it (icon stays at the top) */
+.tablewrap.recipe td:is(:nth-child(1), :nth-child(3)) a.ent { align-items: baseline; }
+.tablewrap.recipe td:is(:nth-child(1), :nth-child(3)) a.ent img.inicon { align-self: flex-start; }
+
+/* Story pages: character cards, picture on top, name, then the detail line */
+.charcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin: 16px 0 24px; }
+.charcard { display: flex; flex-direction: column; align-items: center; padding: 16px; border-radius: 16px; background: var(--surface-container-low); text-align: center; min-width: 0; }
+.charcard img { display: block; width: 180px; height: 180px; max-width: 100%; object-fit: contain; margin: 0 auto 8px; }
+.charcard .charname { font-weight: 600; font-size: 18px; margin-bottom: 4px; }
+.charcard p { margin: 0; }
+@media (max-width: 560px) { .charcards { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; } .charcard img { width: 140px; height: 140px; } }
+/* "<!-- table:parts -->": outfit parts (Part | Male | Female); names wrap instead of making the table scroll */
+.tablewrap.parts table { width: 100%; table-layout: fixed; }
+.tablewrap.parts th:first-child, .tablewrap.parts td:first-child { width: 6.5em; }
+.tablewrap.parts td { min-width: 0; white-space: normal; }
+.tablewrap.parts td .nm, .tablewrap.parts td a.ent { white-space: normal; }
+/* full-suit renders above an outfit parts table (story pages): a row of captioned figures */
+.suitrow { display: flex; flex-wrap: wrap; gap: 16px; margin: 8px 0 16px; }
+.suitrow figure { margin: 0; text-align: center; }
+.suitrow img { display: block; width: 200px; height: 200px; max-width: 42vw; max-height: 42vw; object-fit: contain; border-radius: 16px; background: var(--surface-container-highest); }
+.suitrow figcaption { margin-top: 4px; font-size: 16px; color: var(--on-surface-variant); }
+/* Chronicle armor: male + female share one card, like the job outfit cards */
+.suitcard { display: inline-flex; gap: 8px; margin: 8px 0 16px; padding: 12px 16px; border-radius: 16px; background: var(--surface-container-low); max-width: 100%; box-sizing: border-box; }
+.suitcard img { display: block; width: 200px; height: 200px; max-width: 40vw; max-height: 40vw; object-fit: contain; }
+/* Story Overview: SAGA banners (native 335x183, never upscaled) */
+.sagagrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 335px)); gap: 24px 16px; margin: 8px 0 24px; }
+.sagafig { min-width: 0; }
+.sagafig figure.art { margin: 0; text-align: left; }
+.sagafig figure.art img { display: block; width: 100%; max-width: 335px; height: auto; aspect-ratio: 335 / 183; margin: 0; border-radius: 12px; }
+.sagacap { display: flex; flex-direction: column; margin-top: 8px; line-height: 1.4; }
+.sagacap b { color: var(--on-surface); }
+.sagacap span { color: var(--on-surface-variant); }
+/* Where cell with an in-game scene (208px) + minimap (140px) needs a wider column than the card version */
+/* scene tables (Where | How): the How text on top, the minimap + scene row under it */
+.tablewrap.same:has(.where.wsc) :is(table, thead, tbody) { display: block; width: 100%; }
+.tablewrap.same:has(.where.wsc) tr { display: grid; grid-template-columns: minmax(0, 1fr); }
+.tablewrap.same:has(.where.wsc) :is(th, td) { width: auto !important; min-width: 0 !important; }
+.tablewrap.same:has(.where.wsc) th:first-child { display: none; }
+.tablewrap.same:has(.where.wsc) :is(th, td):nth-child(2) { grid-row: 1; }
+.tablewrap.same:has(.where.wsc) td:first-child { grid-row: 2; padding-top: 0; border-top: 0; }
+.tablewrap.same .where { flex-direction: row; flex-wrap: wrap; align-items: flex-start; gap: 12px; }
+.tablewrap.same .where.wsc figure.mm { order: -1; }
+.tablewrap.same .where.wsc figure.scene.wscene { width: 300px; }
+.tablewrap.same .where.wsc figure.scene.wscene img { width: 300px; height: 200px; }
+.tablewrap.same .where.wsc figure.scene.wscene { max-width: 100%; }
+.tablewrap.same .where.wsc figure.scene.wscene img { max-width: 100%; height: auto; aspect-ratio: 3 / 2; }
+/* Free Skill Points: one card per spot, points + how on top, minimap then in-game scene below (own class: .spotcard is taken) */
+.fspcards { display: grid; gap: 16px; margin: 16px 0 24px; }
+.fspcard { padding: 16px; border-radius: 16px; background: var(--surface-container-low); }
+.fspcard .fsppts { font-weight: 700; color: var(--primary); }
+.fspcard > p { margin: 4px 0 12px; }
+.fspcard .where { flex-wrap: wrap; gap: 12px; }
+.fspcard .where.wsc figure.mm { order: -1; }
+.fspcard .where.wsc figure.scene.wscene { width: 380px; max-width: 100%; }
+.fspcard .where.wsc figure.scene.wscene img { width: 380px; max-width: 100%; height: auto; aspect-ratio: 3 / 2; }
+/* [[pinlist:]]: one minimap with numbered pins beside a numbered NPC list; each row opens to its scene;
+   hover/open fades the other pins and rows (2026-11-27, Free Skill Points chicks) */
+.pinlist { display: flex; gap: 16px; align-items: flex-start; margin: 12px 0 0; }
+.pinlist .lmap { margin: 0; flex: none; width: 340px; max-width: 100%; }
+.pinlist .lbox { position: relative; aspect-ratio: 1; }
+.pinlist .lbox img { display: block; width: 100%; height: 100%; image-rendering: pixelated; border-radius: 12px; }
+.pinlist .lmap figcaption { margin-top: 8px; font-size: 16px; }
+.pinlist .lpin {
+  position: absolute; display: grid; place-items: center; width: 22px; height: 22px; padding: 0; border: 0; transform: translate(-50%, -50%);
+  border-radius: 50%; background: var(--pin); color: #fff; box-shadow: 0 0 0 2px #fff; cursor: pointer; transition: opacity .15s;
+  font: 700 16px/1 Roboto, "Google Sans Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+/* trim the line box to cap height + baseline so grid centring centres the digit itself, not the font's ascent/descent */
+.pinlist .lpin span { display: block; line-height: 1; text-box: trim-both cap alphabetic; }
+.pinlist .lpin.warp { background: var(--portal); color: #00303f; border-radius: 4px; }
+.pinlist .lrows { flex: 1; min-width: 0; max-width: 560px; }
+.pinlist .lrow { border-bottom: 1px solid var(--outline-variant); transition: opacity .15s; }
+.pinlist .lrow:last-child { border-bottom: 0; }
+.pinlist summary { display: grid; grid-template-columns: 24px auto 1fr 24px; gap: 12px; align-items: center; min-height: 44px; padding: 4px; cursor: pointer; list-style: none; }
+.pinlist summary::-webkit-details-marker { display: none; }
+.pinlist .lnum { color: var(--primary); font-weight: 700; }
+.pinlist .lhint { grid-column: 3; color: var(--on-surface-variant); }
+.pinlist summary .i { grid-column: 4; width: 24px; height: 24px; fill: var(--on-surface-variant); transition: transform .15s; }
+.pinlist .lrow[open] summary .i { transform: rotate(180deg); }
+.pinlist .lrow > img { display: block; width: 100%; height: auto; border-radius: 8px; margin: 4px 0 12px; }
+.pinlist[data-sel] .lpin:not(.on) { opacity: .25; }
+.pinlist[data-sel] .lrow:not(.on) { opacity: .5; }
+@media (max-width: 599px) {
+  .pinlist { flex-direction: column; }
+  .pinlist .lmap, .pinlist .lrows { width: 100%; }
+  .pinlist summary { grid-template-columns: 24px 1fr 24px; row-gap: 0; padding-block: 8px; }
+  .pinlist .lhint { grid-column: 2; grid-row: 2; }
+  .pinlist summary .i { grid-column: 3; grid-row: 1; }
+}
+/* Story Overview: one card per SAGA (cover or banner + English intro + original Japanese) */
+.sagacards { display: flex; flex-direction: column; gap: 24px; margin: 8px 0 32px; }
+.sagacard { display: grid; grid-template-columns: minmax(0, 335px) minmax(0, 1fr); gap: 24px; padding: 16px; border-radius: 16px; background: var(--surface-container-low); max-width: 1100px; }
+.sagamedia { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.sagamedia figure.art, .sagabanners figure.art { margin: 0; }
+.sagamedia figure.art img { display: block; width: 100%; max-width: 335px; height: auto; margin: 0; border-radius: 12px; }
+.sagamedia.cover figure.art img { max-width: 300px; }
+.sagabanners { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
+.sagabanners figure.art img { display: block; width: 200px; max-width: 100%; height: auto; margin: 0; border-radius: 8px; }
+.sagatext { min-width: 0; }
+.sagatext h3 { margin: 0 0 12px; }
+.sagatext p { margin: 0 0 8px; max-width: 75ch; }
+.sagajp { margin-top: 12px; }
+.sagajp summary { cursor: pointer; color: var(--primary); font-size: 16px; }
+.sagajp p { color: var(--on-surface-variant); font-size: 16px; line-height: 1.8; margin-top: 8px; }
+@container (max-width: 640px) { .sagacard { grid-template-columns: minmax(0, 1fr); } .sagamedia.cover figure.art img { max-width: 260px; } }
+@media (max-width: 640px) { .sagacard { grid-template-columns: minmax(0, 1fr); } .sagamedia.cover figure.art img { max-width: 260px; } }
+.sagacards, .sagacard { min-width: 0; box-sizing: border-box; width: 100%; }
+.sagatext h3, .sagatext p { overflow-wrap: anywhere; }
+/* SAGA stories, option B (approved): stacked; title first, then picture(s), then the story text */
+.sagacard { display: flex !important; flex-direction: column; gap: 16px; max-width: 1100px; }
+.sagacard .sagatext { display: contents; }
+.sagacard .sagatext h3 { order: -1; margin: 0; }
+.sagacard .sagamedia figure.art { margin: 0; }
+.sagacard .sagamedia figure.art img { max-width: 100%; width: auto; height: auto; }
+/* banners under a cover: original size (335px), not a 200px thumbnail */
+.sagacard .sagabanners figure.art img { width: auto; max-width: min(335px, 100%); }
+/* covers use the banner width (335px) so every picture in the SAGA cards lines up */
+.sagacard .sagamedia figure.art img { width: 335px; max-width: 100%; height: auto; }
+/* cover cards: cover with its banner(s) to the right; wraps under the cover when the card is too narrow */
+.sagacard .sagamedia.cover { flex-direction: row; flex-wrap: wrap; align-items: flex-start; gap: 16px; }
+.sagacard .sagamedia.cover .sagabanners { flex-direction: column; margin: 0; gap: 12px; }
+/* SAGA cards are a flex column with a 16px gap: drop paragraph/details margins so the gap is the only spacing */
+.sagacard > .sagatext > p, .sagacard > .sagatext > details { margin: 0; }
+.sagacard > .sagatext > details.sagajp { margin-top: 8px; }
+/* Miscellaneous: artwork grid (figure + linked caption) */
+.artgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 16px; margin: 16px 0 24px; }
+.artfig { min-width: 0; padding: 12px; border-radius: 16px; background: var(--surface-container-low); }
+.artfig figure.art { margin: 0; }
+.artfig figure.art img { display: block; width: 100%; max-width: 100%; height: auto; border-radius: 8px; }
+.artfig .artcap { margin-top: 8px; font-size: 16px; }
+/* SAGA logos: shown on a white rounded panel (the logos were made for a white page) */
+.sagacard img[src*="saga_img/logos/"] { background: #fff; border-radius: 12px; padding: 8px 12px; box-sizing: border-box; }
+/* SAGA cards are <details>: collapsed is a title row, open shows the picture(s) then the story text (2026-11-18) */
+.sagacards:has(> details.sagacard) { gap: 12px; }
+.secthead:has(> h2#saga-stories) { max-width: 760px; }
+details.sagacard { display: block !important; }
+details.sagacard > summary { display: flex; align-items: center; gap: 16px; list-style: none; cursor: pointer; border-radius: 8px; }
+details.sagacard > summary::-webkit-details-marker { display: none; }
+details.sagacard > summary h3 { flex: 1; min-width: 0; margin: 0; overflow-wrap: anywhere; color: var(--on-surface); }
+details.sagacard > summary::after { content: ""; flex: none; width: 10px; height: 10px; margin: 0 7px; border-right: 2px solid var(--on-surface-variant); border-bottom: 2px solid var(--on-surface-variant); transform: rotate(45deg) translate(-2px, -2px); transition: transform .2s; }
+details.sagacard[open] > summary::after { transform: rotate(-135deg) translate(-2px, -2px); }
+details.sagacard > .sagamedia { margin-top: 16px; }
+details.sagacard > .sagatext { display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+details.sagacard .sagajp > summary { color: var(--secondary); border-radius: 8px; }
+details.sagacard .sagajp > summary:hover { background: color-mix(in srgb, var(--secondary) 12%, transparent); }
+
+/* Automata page reuses .cattycard with a single portrait (no .cattypics): portrait column matches one Catty picture (2026-11-18) */
+.cattycard .racerow:not(:has(.cattypics)) { grid-template-columns: 200px minmax(0, 1fr); }
+@container (max-width: 560px) { .cattycard .racerow:not(:has(.cattypics)) { grid-template-columns: minmax(0, 1fr); } }
+
+/* Catty Art page: one justified-rows gallery, every image in a row the same height (2026-11-18) */
+.cgal { --cgal-h: 220px; display: flex; flex-wrap: wrap; gap: 4px; margin: 24px 0 0; padding: 0; }
+.cgal::after { content: ""; flex: 1000000 1 0; }
+.cgal-item { flex: var(--r) 1 calc(var(--r) * var(--cgal-h)); min-width: 0; margin: 0; }
+.cgal-item figure.art { margin: 0; width: 100%; }
+.cgal-item figure.art img { display: block; width: 100%; max-width: none; height: auto; margin: 0; border-radius: 12px; background: var(--surface-container-low); }
+.cgal-item figcaption { display: none; }
+@media (max-width: 599px) { .cgal { --cgal-h: 130px; } }
+@media (min-width: 1200px) { .frame:has(.cgal) { grid-template-columns: 300px minmax(0, 1fr); } }
+
+/* game logos: home welcome badge, Story Overview hero */
+.welcome.has-logo { display: flex; align-items: center; gap: clamp(16px, 3vw, 40px); }
+.welcome.has-logo .game-logo { flex: none; width: clamp(96px, 12vw, 150px); height: auto; }
+@media (max-width: 599px) { .welcome.has-logo { flex-direction: column; align-items: flex-start; gap: 12px; } }
+.hero .game-logo { display: block; width: auto; max-width: 100%; height: clamp(130px, 12vw, 175px); margin: 0 0 16px; }
+
+/* Catties page: official art moved to the Catty Art gallery, so a .cattypics block may hold one picture; size it like the Automata portrait column (2026-11-18) */
+.cattycard .racerow:has(> .cattypics > :only-child) { grid-template-columns: 200px minmax(0, 1fr); }
+.cattycard .cattypics:has(> :only-child) { grid-template-columns: 200px; }
+@container (max-width: 560px) { .cattycard .racerow:has(> .cattypics > :only-child) { grid-template-columns: minmax(0, 1fr); } .cattycard .cattypics:has(> :only-child) { grid-template-columns: minmax(0, 200px); } }
+
+/* Trailer page video: content width, capped near source size, 4:3 (2026-11-18) */
+.content video.trailer { display: block; width: 100%; max-width: 960px; height: auto; aspect-ratio: 4 / 3; margin: 16px 0; border-radius: 12px; background: #000; }
+
+/* Logo page: two logos side by side, wrapping to stacked when too narrow; each a fixed 200px tall (width from its aspect ratio, never shrinks; wordmark 331px, badge 253px, under its 265px source) with a centred bold label and muted, not-bold date line below, transparent, no frame (2026-11-19) */
+.content .logopair { display: flex; flex-wrap: wrap; gap: 24px 32px; margin: 16px 0; max-width: 1100px; }
+.content .logocol { flex: 1 0 auto; text-align: center; }
+.content .logocol > p { margin: 4px 0 0; font-size: max(16px, 1em); font-weight: 400; }
+.content .logocol > p.logolabel { margin-top: 12px; font-weight: 700; }
+.content .logocol > p.logodate { color: var(--on-surface-variant); }
+.content .logoshow figure.art { margin: 0; }
+.content .logoshow figure.art img { display: block; height: 200px; width: auto; max-width: none; margin: 0 auto; }
+
+/* Job-line reward cards (Lv 65 Armor Quest): one card per job line, 2x2 slot grid; cards min 520px so 1 per row in a ~722px column, 2 per row at 1100px; slot columns even on wide cards, sized by content on narrower ones so names stay on one line (2026-11-19) */
+.slotcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 520px), 1fr)); gap: 16px; margin: 16px 0; max-width: 1100px; }
+.slotcard { min-width: 0; container-type: inline-size; padding: 16px; border-radius: 16px; background: var(--surface-container-low); }
+.slotcard h4 { margin: 0 0 12px; font-size: 18px; font-weight: 600; }
+.slotgrid { display: grid; grid-template-columns: repeat(2, auto); gap: 12px; }
+.slotgrid .slot { min-width: 0; }
+.slotgrid .slotlbl { display: block; margin-bottom: 4px; font-size: 16px; color: var(--on-surface-variant); }
+.slotgrid .slotlbl b { font-weight: inherit; }
+.slotgrid .cellist { margin: 0; padding: 0; list-style: none; }
+.slotgrid .cellist li { margin: 2px 0; }
+.slotgrid .slotnone { color: var(--on-surface-variant); }
+@container (min-width: 560px) { .slotgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 16px; } }
+/* Lv 85 Armor Quest section 5 pair cards: label column + one "cursed → true" line per row; the true item wraps after the arrow, never mid-name (2026-11-19) */
+.slotcard.pairs .pairgrid { display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; align-items: baseline; }
+.pairgrid .slotlbl { font-size: 16px; color: var(--on-surface-variant); }
+.pairgrid .pairrow { display: flex; flex-wrap: wrap; column-gap: 0.4em; row-gap: 2px; min-width: 0; margin: 0; padding: 0; list-style: none; }
+.pairgrid .pairrow li { white-space: nowrap; }
+/* Lv 99 Weapon Quest "Swords and spears": a pair card with no row labels, one "Ancient → Lv 99" line per row (2026-11-19) */
+.slotcard.pairs .pairgrid.nolbl { grid-template-columns: 1fr; }
+/* Lv 99 Armor Quest job-line cards: Men / Women stacked, label left of its list, so long outfit names stay on one line (2026-11-19) */
+.slotgrid.stack { grid-template-columns: 1fr; gap: 8px; }
+.slotgrid.stack .slot { display: grid; grid-template-columns: max-content 1fr; column-gap: 16px; }
+.slotgrid.stack .slotlbl { min-width: 3.6em; margin: 2px 0; }
+/* Quest Counter quest cards (design D2): closed = name left, muted level right; open = muted label then value rows, no borders, several values one per line (2026-11-19) */
+.qdl { display: grid; gap: 8px; margin: 12px 0; }
+.qd { background: var(--surface-container-high); border-radius: 12px; }
+.qd > summary { display: flex; align-items: baseline; gap: 12px; padding: 12px 16px; cursor: pointer; list-style: none; border-radius: 12px; }
+.qd > summary::-webkit-details-marker { display: none; }
+.qd > summary::before { content: ""; width: 8px; height: 8px; flex: none; border-right: 2px solid var(--primary); border-bottom: 2px solid var(--primary); transform: rotate(-45deg); transition: transform .2s; align-self: center; }
+.qd[open] > summary::before { transform: rotate(45deg); }
+.qd > summary:hover { background: color-mix(in srgb, var(--on-surface) 6%, transparent); }
+.qd > summary > b { font-weight: 500; min-width: 0; }
+.qd > summary > span { margin-left: auto; color: var(--on-surface-variant); font-size: 16px; white-space: nowrap; }
+.qd > dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); align-items: baseline; gap: 4px 16px; margin: 0; padding: 4px 16px 16px 36px; line-height: 1.45; }
+.qd > dl > dt { color: var(--on-surface-variant); font-size: 16px; }
+.qd > dl > dd { margin: 0; min-width: 0; }
+.qd > dl > dd :is(.amt, .nm, a.ent) { white-space: normal; }
+@media (max-width: 600px) { .qd > dl { padding: 4px 12px 16px; } }
+
+/* ===== List filter component (.lf), the standard filter-and-list (2026-11-19). Self-contained: rules are scoped to .lf / .lf-*, plus --lf-plus (its own token) and .frame:has(.lf) at the end. Used by Weapons & Armor, Monsters and Partners. ===== */
+.lf { --lf-inset: 14px; max-width: 1100px; margin: 16px 0; }
+/* --lf-inset: the search icon's left edge; the More filters toggle and its panel line up with it, not with the pill's rounded edge */
+/* focus: same thickness/offset as the site's :focus-visible, in peach (--secondary), inside the component only */
+.lf :focus-visible { outline: 3px solid var(--secondary); outline-offset: 2px; border-radius: 4px; }
+/* rows and the list fill a clipped box, so their ring sits just inside the edge */
+.lf .lf-row > summary:focus-visible { outline-offset: -3px; border-radius: 8px; }
+
+/* filter row */
+.lf-bar { display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: flex-end; }
+.lf-search { position: relative; display: flex; align-items: center; flex: 1 1 260px; min-width: 0; }
+.lf-search svg.i { position: absolute; left: 14px; color: var(--on-surface-variant); pointer-events: none; }
+.lf-search input { width: 100%; height: 48px; padding: 0 16px 0 48px; border: 1px solid var(--outline); border-radius: 24px; background: transparent; color: var(--on-surface); font: inherit; font-size: 16px; }
+.lf-search input::placeholder { color: var(--on-surface-variant); }
+.lf-field { display: flex; flex-direction: column; gap: 4px; min-width: 0; color: var(--on-surface-variant); font-size: 16px; }
+.lf-field input { width: 120px; height: 40px; padding: 0 12px; border: 1px solid var(--outline); border-radius: 8px; background: transparent; color: var(--on-surface); font: inherit; font-size: 16px; }
+.lf-field input::placeholder { color: var(--on-surface-variant); }
+.lf-field.on > span:first-child { color: var(--secondary); font-weight: 500; }
+.lf-field.on select, .lf-field.on input { border-color: var(--secondary); box-shadow: inset 0 0 0 1px var(--secondary); }
+
+/* select with the site's chevron (i-down) instead of the native arrow */
+.lf-select { position: relative; display: flex; min-width: 0; }
+.lf-select select { appearance: none; -webkit-appearance: none; width: 100%; min-width: 168px; height: 40px; padding: 0 44px 0 12px; border: 1px solid var(--outline); border-radius: 8px;
+  background: transparent; color: var(--on-surface); font: inherit; font-size: 16px; text-overflow: ellipsis; cursor: pointer; }
+.lf-select select option, .lf-select select optgroup { background: var(--surface-container); color: var(--on-surface); }
+.lf-select::after { content: ""; position: absolute; right: 12px; top: 50%; width: 24px; height: 24px; transform: translateY(-50%); pointer-events: none; background: var(--on-surface-variant);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z'/%3E%3C/svg%3E") center / 24px 24px no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z'/%3E%3C/svg%3E") center / 24px 24px no-repeat; }
+.lf-select:hover::after, .lf-select:focus-within::after, .lf-field.on .lf-select::after { background: var(--secondary); }
+.lf-select select:hover, .lf-field input:hover, .lf-search input:hover { border-color: var(--on-surface-variant); }
+
+/* control row: [More filters (n on)] [Race: Any] [Gender: Any] ...... [Sort] */
+.lf-status { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin: 15px 0 4px; min-height: 40px; }
+/* symmetric 14px padding; the arrow starts at --lf-inset (the search icon's edge), the hover pill reaches into the gutter */
+.lf-moretoggle { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 14px; margin-left: calc(var(--lf-inset) - 14px); border: 0; border-radius: 20px;
+  background: transparent; color: var(--secondary); font: inherit; font-size: 16px; font-weight: 500; cursor: pointer; white-space: nowrap; }
+.lf-moretoggle::before { content: ""; width: 12px; height: 12px; flex: none;
+  background: linear-gradient(var(--secondary), var(--secondary)) center / 12px 2px no-repeat, linear-gradient(var(--secondary), var(--secondary)) center / 2px 12px no-repeat; }
+/* open: the vertical bar goes, leaving a minus (− Fewer filters) */
+.lf-moretoggle[aria-expanded=true]::before { background: linear-gradient(var(--secondary), var(--secondary)) center / 12px 2px no-repeat; }
+.lf-moretoggle:hover { background: color-mix(in srgb, var(--secondary) 12%, transparent); }
+.lf-morecount { color: var(--secondary); font-weight: 400; }
+.lf-morecount:empty { display: none; }
+.lf-more { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+.lf-more[hidden] { display: none; }
+/* no More filters and no Sort: the control row goes */
+.lf-status:empty { display: none; }
+.lf-sort { margin-left: auto; }
+.lf-sort select { min-width: 176px; }
+.lf-vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+/* list summary just above the list box: count (+ Reset) on the left from --lf-inset, Expand/Collapse all on the right edge;
+   when both don't fit (phone), the buttons wrap to their own line, still right-aligned */
+.lf-summary { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-height: 48px; margin: 11px 0 4px; padding-left: var(--lf-inset); }
+.lf-count { color: var(--on-surface-variant); font-size: 16px; }
+/* the Story Overview's neutral round icon buttons (.secthead .iconbtn): fill, hover, disabled */
+.lf-expand { display: flex; gap: 8px; margin-left: auto; flex: none; }
+.lf-expand .iconbtn { background: var(--surface-container-high); color: var(--on-surface); }
+.lf-expand .iconbtn:hover { background: var(--surface-container-highest); }
+.lf-expand .iconbtn:disabled { opacity: .38; cursor: default; background: var(--surface-container-high); }
+.lf .lf-expand .iconbtn:focus-visible { border-radius: 50%; }
+.lf-reset { height: 40px; padding: 0 16px; border: 0; border-radius: 20px; background: transparent; color: var(--secondary); font: inherit; font-size: 16px; font-weight: 500; cursor: pointer; }
+.lf-reset:hover { background: color-mix(in srgb, var(--secondary) 12%, transparent); }
+.lf-reset[hidden] { display: none; }
+
+/* list: closed row = picture, name, type, level */
+.lf-list { container-type: inline-size; border-radius: 16px; overflow: hidden; background: var(--surface-container-low); }
+.lf-list.none { display: none; }
+/* level column: at least 4.5em so "Lv 1" and "Lv 100" rows keep the Type column in line */
+.lf-head, .lf-row > summary { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(4.5em, max-content) 24px; gap: 16px; align-items: center; padding: 10px 16px; }
+.lf-head { border-bottom: 1px solid var(--outline-variant); }
+.lf-head button { justify-self: start; padding: 4px 8px; margin: 0 -8px; border: 0; border-radius: 8px; background: transparent; color: var(--on-surface-variant); font: inherit; font-size: 16px; font-weight: 600; cursor: pointer; }
+.lf-head button:hover { color: var(--on-surface); background: color-mix(in srgb, var(--on-surface) 6%, transparent); }
+.lf-head button[aria-pressed=true] { color: var(--secondary); font-weight: 600; }
+.lf-head button[aria-pressed=true]::after { content: " ↓"; }
+/* a column that isn't a sort option: plain bold label, same look as an unpressed header button */
+.lf-head > span { padding: 4px 0; color: var(--on-surface-variant); font-size: 16px; font-weight: 600; }
+.lf-head .lf-lv { justify-self: end; }
+.lf-row[hidden] { display: none; }
+.lf-row + .lf-row { border-top: 1px solid var(--outline-variant); }
+.lf-row > summary { cursor: pointer; list-style: none; }
+.lf-row > summary::-webkit-details-marker { display: none; }
+.lf-row > summary:hover { background: color-mix(in srgb, var(--on-surface) 6%, transparent); }
+.lf-row > summary::after { content: ""; width: 10px; height: 10px; justify-self: center; border-right: 2px solid var(--on-surface-variant); border-bottom: 2px solid var(--on-surface-variant); transform: rotate(45deg) translate(-2px, -2px); transition: transform .2s; }
+.lf-row[open] > summary::after { transform: rotate(-135deg) translate(-2px, -2px); }
+.lf-row[open] { background: var(--surface-container); }
+.lf-name { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.lf-name img, .lf-name .lf-noimg { width: 32px; height: 32px; flex: none; object-fit: contain; }
+.lf-name > span { display: flex; flex-direction: column; min-width: 0; line-height: 1.3; }
+.lf-name b { font-weight: 500; }
+.lf-name .lf-sub { display: none; }
+.lf-row > summary .lf-type { color: var(--on-surface-variant); min-width: 0; overflow-wrap: anywhere; }
+.lf-row > summary .lf-lv { justify-self: end; white-space: nowrap; }
+.lf-empty { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 24px; border-radius: 16px; background: var(--surface-container-low); color: var(--on-surface-variant); font-size: 18px; }
+.lf-empty p { margin: 0; }
+.lf-empty[hidden] { display: none; }
+
+/* opened detail: renders stacked on the left, labelled rows, no borders */
+.lf-body { display: flex; gap: 16px 24px; align-items: flex-start; padding: 4px 16px 26px; }
+.lf-renders { flex: none; display: flex; flex-direction: column; gap: 8px; }
+.lf-render { margin: 0; }
+.lf-render img { display: block; width: 220px; height: 220px; object-fit: contain; }
+/* small pixel art (stamps) at an exact inline size, scaled up without blur */
+.lf-render img.lf-pix { image-rendering: pixelated; }
+/* stamp art sits on a filled circle, 16px of room on every side (96px behind the 64px art) */
+.lf-render.lf-stamp > a { display: block; padding: 16px; border-radius: 50%; background: #fff; }
+.lf-dl { flex: 1 1 auto; min-width: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); align-items: baseline; gap: 6px 16px; margin: 0; line-height: 1.45; }
+.lf-dl > dt { color: var(--on-surface-variant); font-size: 16px; }
+.lf-dl > dt .meta { color: var(--on-surface-variant); }
+.lf-dl > dd { margin: 0; min-width: 0; }
+.lf-dl > dt.lf-nolabel { display: none; }
+.lf-dl > dt.lf-nolabel + dd { grid-column: 1 / -1; }
+.lf-dl p { margin: 0; }
+.lf-dl .cellist { margin: 0; padding-left: 20px; }
+.lf-dl .cellist li { margin: 2px 0; }
+/* multi-value lists in the detail (Jobs, ATK, ...): a grid, 11rem min, max 3 columns, items read across rows;
+   every list gets the same column count at a given width (CSS columns balance short lists into fewer columns) */
+.lf-body .lf-cols { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, max(11rem, calc((100% - 48px) / 3))), 1fr)); column-gap: 24px; }
+/* longer lines (price + name, recipe + note): same grid, 22rem min */
+.lf-body .lf-cols.lf-wide { grid-template-columns: repeat(auto-fill, minmax(min(100%, max(22rem, calc((100% - 48px) / 3))), 1fr)); }
+.lf-body ul.cellist.lf-cols { margin: 0; padding-left: 0; list-style: disc outside; }
+.lf-body ul.cellist.lf-cols > li { margin: 0 0 4px 20px; min-width: 0; overflow-wrap: anywhere; }
+/* Ability Vectors Cards: same grid, no bullet markers (user, 2026-11-20) */
+.lf-body ul.cellist.lf-cols.lf-nobullet { list-style: none; }
+.lf-body ul.cellist.lf-cols.lf-nobullet > li { margin-left: 0; }
+.lf-lines { list-style: none; margin: 0; padding: 0; }
+.lf-lines li { margin: 0 0 2px; }
+.lf-sub { color: var(--on-surface-variant); font-size: 16px; }
+.lf-lines .lf-sub { white-space: nowrap; }
+/* opened detail: Stats / Who can use / How to get sections; colour carries meaning */
+.lf-secs { flex: 1 1 auto; min-width: 0; display: grid; gap: 20px; }
+.lf-secs > .lf-chips { margin: 0; }
+.lf-sec { min-width: 0; }
+/* the one allowed use of --primary in the component: section titles match the site's headings (user, 2026-11-19) */
+.lf-sech { margin: 0 0 6px; color: var(--primary); font-size: 17px; font-weight: 600; line-height: 1.3; }
+.lf-sec .lf-dl dt { min-width: 7.5em; }
+.lf-body .lf-v, .lf-body .lf-num, .lf-body .lf-price { font-weight: 600; color: var(--on-surface); }
+.lf-body .lf-num.lf-zero { color: var(--on-surface-variant); font-weight: 400; }
+.lf-body .lf-plus { color: var(--lf-plus); }
+.lf-body .lf-minus { color: var(--error); }
+:root { --lf-plus: #00695c; }
+:root[data-theme="dark"] { --lf-plus: #7fd4b8; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --lf-plus: #7fd4b8; } }
+/* ATK by attack type: Blow / Slash / Thrust lines, muted labels, right-aligned values */
+.lf-atk { display: block; }
+.lf-atkp { display: flex; align-items: baseline; gap: 12px; margin: 0 0 4px; break-inside: avoid; }
+.lf-atkp > span:first-child { min-width: 3.5em; color: var(--on-surface-variant); font-size: 16px; }
+.lf-num { font-variant-numeric: tabular-nums; }
+.lf-zero { color: var(--on-surface-variant); }
+.lf-price { font-variant-numeric: tabular-nums; white-space: nowrap; }
+/* Sold by: the NPC icon separates price and name; without an icon, a wider gap (no punctuation) */
+.lf-noicon .lf-price { margin-right: 8px; }
+.lf-chips { display: flex; flex-wrap: wrap; gap: 4px 12px; }
+
+/* narrow list: type moves under the name; Type header stays as a sort button */
+@container (max-width: 560px) {
+  .lf-row > summary { grid-template-columns: minmax(0, 1fr) minmax(4.5em, max-content) 24px; }
+  .lf-row > summary .lf-type { display: none; }
+  .lf-name .lf-sub { display: block; }
+  .lf-head { display: flex; gap: 24px; }
+  .lf-head .lf-lv { margin-left: auto; margin-right: 32px; }
+}
+@media (max-width: 600px) {
+  .lf-bar > .lf-field { flex: 1 1 100%; }
+  .lf-field input { width: 100%; }
+  .lf-select select { min-width: 0; }
+  .lf-body { flex-direction: column; padding: 4px 12px 22px; }
+  .lf-render img { width: 150px; height: 150px; }
+  .lf-status { gap: 8px 12px; }
+  .lf-moretoggle { flex: 0 0 auto; }
+  .lf-moretoggle + .lf-more, .lf-moretoggle + .lf-more + .lf-sort { flex: 1 1 100%; }
+  .lf-more:not([hidden]) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 12px; }
+  .lf-sort { margin-left: 0; }
+  .lf-empty { padding: 20px 16px; }
+  .lf-body .lf-cols, .lf-body .lf-cols.lf-wide { grid-template-columns: minmax(0, 1fr); }
+  .lf-dl { grid-template-columns: minmax(0, max-content) minmax(0, 1fr); gap: 6px 12px; }
+}
+/* .lf-grid (Monsters): closed-row columns from --lf-grid / --lf-grid-phone on the .lf root; non-name columns are fixed blocks packed right */
+.lf.lf-grid .lf-head, .lf.lf-grid .lf-row > summary { grid-template-columns: var(--lf-grid); }
+.lf.lf-grid .lf-head > :not(:first-child), .lf.lf-grid .lf-row > summary > :not(.lf-name) { justify-self: end; text-align: right; }
+.lf.lf-grid .lf-head > button:not(:first-child) { margin: 0 -8px 0 0; }
+/* the sort arrow hangs just past the label, so the label never moves when the sort changes */
+.lf.lf-grid .lf-head button { position: relative; }
+.lf.lf-grid .lf-head button[aria-pressed=true]::after { position: absolute; left: calc(100% - 8px); top: 4px; white-space: pre; pointer-events: none; }
+@container (max-width: 560px) { .lf.lf-grid .lf-row > summary { grid-template-columns: var(--lf-grid-phone); } }
+.lf-body .lf-nw { white-space: nowrap; }
+.lf-body .lf-sec > p { margin: 0 0 6px; }
+/* a plain list straight under a section title (Crafting Materials Sold by), and extra lines in a dd */
+.lf-body .lf-sec > ul.cellist:not(.lf-cols) { margin: 0; padding-left: 20px; }
+.lf-dl dd > p + p, .lf-dl dd > p + .cellist { margin-top: 4px; }
+/* a result with several recipes: Recipe 1 / Recipe 2 sub-labels, each with its materials */
+.lf-recipes { margin: 2px 0 6px; }
+.lf-recipes .lf-rlab { margin: 4px 0 0; }
+.lf-recipes .cellist { margin: 0; padding-left: 20px; }
+/* Fishing: Catch | Used in side by side, 40/60; Catch alone keeps its natural width; stacked when narrow */
+.lf-secs.lf-pair { grid-template-columns: max-content minmax(0, 1fr); column-gap: 64px; align-items: start; }
+.lf-secs.lf-pair:has(> .lf-sec + .lf-sec) { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
+@container (max-width: 640px) { .lf-secs.lf-pair, .lf-secs.lf-pair:has(> .lf-sec + .lf-sec) { grid-template-columns: minmax(0, 1fr); } }
+/* Crafting: an item's recipes as groups, side by side on desktop, stacked on phone */
+.lf-secs.lf-recs { grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr)); column-gap: 48px; align-items: start; }
+/* a single recipe keeps the empty second column (auto-fill), so it is exactly one recipe column wide */
+.lf-secs.lf-recs.lf-recs1 { grid-template-columns: repeat(auto-fill, minmax(min(100%, 28rem), 1fr)); }
+.lf-rec1 { display: grid; gap: 20px; min-width: 0; }
+/* Crafting (trial, 2026-11-21): the list fills the content column; recipes stay at most 3 columns */
+.lf.lf-craft { max-width: none; }
+.lf-craft .lf-secs.lf-recs { grid-template-columns: repeat(auto-fit, minmax(min(100%, max(28rem, calc((100% - 96px) / 3))), 1fr)); }
+.lf-craft .lf-secs.lf-recs.lf-recs1 { grid-template-columns: repeat(auto-fill, minmax(min(100%, max(28rem, calc((100% - 96px) / 3))), 1fr)); }
+.lf-recs .lf-sec > ul.cellist:not(.lf-cols) { margin: 0; padding-left: 20px; }
+.lf-body .cdot { display: inline-block; width: 12px; height: 12px; margin-right: 8px; border-radius: 50%; vertical-align: -1px; box-shadow: 0 0 0 1px var(--outline); }
+/* Show all: a long list shows its first 12 */
+.lf-cut:not(.open) .lf-x { display: none; }
+.lf-showall { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 14px; margin: 4px 0 0 -14px; border: 0; border-radius: 20px; background: transparent;
+  color: var(--secondary); font: inherit; font-size: 16px; font-weight: 500; cursor: pointer; }
+.lf-showall::before { content: ""; width: 12px; height: 12px; flex: none;
+  background: linear-gradient(var(--secondary), var(--secondary)) center / 12px 2px no-repeat, linear-gradient(var(--secondary), var(--secondary)) center / 2px 12px no-repeat; }
+.lf-showall[aria-expanded=true]::before { background: linear-gradient(var(--secondary), var(--secondary)) center / 12px 2px no-repeat; }
+.lf-showall:hover { background: color-mix(in srgb, var(--secondary) 12%, transparent); }
+/* a .lf page with no "On this page" column: the list takes that width too, like .cgal (wide screens only); a .lf page with a TOC keeps the normal 3 columns */
+@media (min-width: 1200px) { .frame:has(.lf):not(:has(> .toc)) { grid-template-columns: 300px minmax(0, 1fr); } }
+/* Maps (trial, 2026-11-21): the list fills the content column instead of the 1100px cap */
+.lf.lf-maps { max-width: none; }
+/* Maps: World tabs above the filter bar; the map pictures (minimap with pins + world crop, one 256px box each) full width above the sections */
+.lf-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+.lf-tabs button { height: 40px; padding: 0 16px; border: 1px solid var(--outline); border-radius: 20px; background: transparent; color: var(--on-surface); font: inherit; font-size: 16px; cursor: pointer; }
+.lf-tabs button:hover { border-color: var(--on-surface-variant); }
+.lf-tabs button[aria-pressed=true] { border-color: var(--secondary); box-shadow: inset 0 0 0 1px var(--secondary); color: var(--secondary); font-weight: 500; }
+.lf-tabsel[hidden] { display: none; }
+.lf-body.lf-wide { flex-direction: column; }
+.lf-body.lf-wide > .lf-secs { width: 100%; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); align-items: start; }
+.lf-mapfigs { display: flex !important; flex-wrap: wrap; gap: 16px 24px; margin: 4px 0 0 !important; max-width: none !important; width: 100%; align-items: flex-start; }
+.lf-mapfigs .mm { align-items: flex-start !important; }
+.lf-mapfigs figure.mm { flex: none; }
+/* a 128px minimap stays at its natural size, centred in the 256px box, never up-scaled */
+.lf-mmframe { width: 256px; height: 256px; display: flex; align-items: center; justify-content: center; }
+.lf-mapfigs .mmbox { width: var(--mw) !important; height: var(--mh) !important; }
+.lf-mapfigs .wbox { width: 256px; height: 256px; background-size: 256px 256px; }
+.lf-mapfigs .wbox .wcell { width: 21.7px; height: 21.7px; }
+/* two independently stacked columns: Place / Shops / Monsters | NPCs / Gathering points (no row alignment); a lone column keeps
+   its own half (the right one stays in column 2); phone: one column, reading order */
+.lf-body.lf-wide > .lf-secs.lf-mapgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 48px; row-gap: 24px; align-items: start; }
+.lf-secs.lf-mapgrid > .lf-mapcol { min-width: 0; display: flex; flex-direction: column; gap: 24px; }
+.lf-secs.lf-mapgrid > .lf-mapcol-r { grid-column: 2; }
+@container (max-width: 640px) {
+  .lf-body.lf-wide > .lf-secs.lf-mapgrid { grid-template-columns: minmax(0, 1fr); }
+  .lf-secs.lf-mapgrid > .lf-mapcol-r { grid-column: auto; }
+}
+/* NPC lines: the padding is always there (transparent), so the highlight pill appears without moving text, icons or bullets */
+.lf-body ul.cellist.lf-cols > li:has(> .lf-ncard) { margin-bottom: 6px; }
+.lf-ncard { display: inline-block; max-width: 100%; box-sizing: border-box; padding: 5px 9px; border-radius: 8px; background: transparent; }
+.lf-ncard.hl { background: color-mix(in srgb, var(--secondary) 18%, transparent); }
+/* Maps minimap: the hovered pin (and its name label) stacks above every other pin and portal; each pin's transform makes its own stacking context, so the z-index goes on the pin itself */
+.lf-mapfigs .pin:hover, .lf-mapfigs .pin.hl { z-index: 10; }
+/* Maps minimap: the hovered pin and its name label stack above every other pin and portal (each pin's transform makes its own stacking context, so the z-index goes on the pin) */
+.lf-mapfigs .pin:hover, .lf-mapfigs .pin.hl { z-index: 10; }
+/* near the left / right edge the label starts at the pin centre, so a portal on the very edge of the map is not cut off by the rounded list on phones */
+.lf-mapfigs .pin.hl.edge-l::after { left: 50%; }
+.lf-mapfigs .pin.hl.edge-r::after { right: 50%; }
+/* Maps minimap: a portal pin with a known destination is a link to that map's entry (2026-11-24); same look, pointer cursor, focus ring */
+.lf-mapfigs a.pin.go { cursor: pointer; text-decoration: none; border: 0; }
+.lf-mapfigs a.pin.go:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; border-radius: 3px; z-index: 10; }
+/* tables inside the opened detail (Ability Vectors levels) */
+.lf-table { margin: 4px 0 0; overflow-x: auto; }
+.lf-table > .tablewrap { margin: 0; }
+.lf-table td, .lf-table th { font-size: 16px; }
+/* the Unlocks column wraps only when the table would not fit, so the levels table never scrolls sideways */
+.lf-table .tablewrap.compact td:last-child { white-space: normal; min-width: 0; }
+/* Iris Cards: Card No. is a start column, after the picture and before the name (--lf-start on the .lf root); hidden on phone */
+.lf-name > .lf-start { flex: none; width: var(--lf-start); }
+.lf .lf-head > .lf-hname { display: flex; align-items: center; min-width: 0; padding: 0 0 0 44px; }
+.lf-hname > .lf-start { flex: none; width: var(--lf-start); margin-right: 12px; }
+.lf .lf-head > .lf-hname > button.lf-start { flex: none; width: calc(var(--lf-start) + 20px); text-align: left; margin: 0 0 0 -8px; }
+/* its header is a fixed-width block, so the arrow simply follows the label inside it */
+.lf.lf-grid .lf-head .lf-hname > button.lf-start[aria-pressed=true]::after { position: static; }
+/* below 720px of list width the Card No. column would squeeze the name to a few letters, so the column and its header go
+   (Sort: Card No. stays in the Sort menu); on phone the header labels never break */
+@container (max-width: 720px) { .lf-name > .lf-start, .lf .lf-head > .lf-hname > .lf-start { display: none; } }
+@container (max-width: 560px) { .lf .lf-head > .lf-hname > button, .lf .lf-head:has(> .lf-hname) > button { white-space: nowrap; } }
+/* Iris points: vectors as rows, ranks as columns; the box scrolls sideways when too wide, the vector column stays */
+.lf-pts th.lf-stick { position: sticky; left: 0; z-index: 1; background: var(--surface-container-low); text-align: left; white-space: nowrap; }
+.lf-pts tr:first-child th.lf-stick { background: var(--surface-container-high); z-index: 2; }
+.lf-pts tr + tr th.lf-stick { border-top: 1px solid var(--outline-variant); }
+.lf-table.lf-pts .tablewrap.compact td.num, .lf-table.lf-pts .tablewrap.compact th.num { white-space: nowrap; }
+.lf-table th a.ent { font-weight: 600; }
+/* Dual Job skills: one level grid per job under its job name */
+.lf-skills { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; }
+.lf-skh { margin: 12px 0 0; color: var(--on-surface); font-size: 16px; font-weight: 600; }
+.lf-skh:first-child { margin-top: 0; }
+/* Dual Job D1 level grid: the table scrolls inside its own box, the skill column stays; Lv columns one fixed width so numbers line up across rows and tables.
+   The design build wraps the table in .tablewrap: that wrapper and its th defaults step aside, so .dj-scroll is the scroll box */
+.dj-scroll { --dj-stick: 15em; --dj-col: 4em; width: fit-content; max-width: 100%; overflow-x: auto; margin: 4px 0 0; border-radius: 12px; background: var(--surface-container-low); }
+.dj-scroll > .tablewrap { margin: 0; overflow: visible; border-radius: 0; background: none; max-width: none; }
+.dj-scroll table.lv.dj-grid { margin: 0; width: auto; border-collapse: separate; border-spacing: 0; font-size: inherit; font-variant-numeric: tabular-nums; }
+.dj-grid th { position: static; background: none; color: inherit; white-space: normal; }
+.dj-grid th, .dj-grid td { font-size: 16px; line-height: 1.4; padding: 11px 8px; border-top: 1px solid var(--outline-variant); vertical-align: middle; overflow-wrap: inherit; }
+.dj-grid tr:first-child > * { border-top: 0; }
+.dj-grid th.dj-stick { position: sticky; left: 0; z-index: 1; background: var(--surface-container-low); text-align: left; font-weight: 400; color: var(--on-surface);
+  width: var(--dj-stick); min-width: var(--dj-stick); max-width: var(--dj-stick); padding-inline: 16px 12px; white-space: normal; box-sizing: border-box; }
+.dj-grid th.dj-stick[rowspan] { font-weight: 600; z-index: 2; vertical-align: bottom; }
+.dj-grid .dj-lv { width: var(--dj-col); min-width: var(--dj-col); max-width: var(--dj-col); box-sizing: border-box; text-align: center; white-space: nowrap; }
+.dj-grid th.dj-span { text-align: left; font-weight: 600; padding-bottom: 4px; }
+.dj-grid th.dj-span > span { position: sticky; left: calc(var(--dj-stick) + 8px); }
+.dj-grid tr:nth-child(2) th { font-weight: 400; color: var(--on-surface-variant); border-top: 0; padding-top: 4px; }
+.dj-grid td.dj-on { background: color-mix(in srgb, var(--on-surface) 7%, transparent); color: var(--on-surface); }
+.dj-grid td.dj-on .lf-v { font-weight: 600; }
+.dj-grid td.dj-off { background: transparent; }
+.dj-grid th.dj-stick a.dj-sk { font-weight: 400; }
+/* skill hover tip (site.js .pictip with the skill icon + data-cap): a readable text width; no icon (blank data: picture) -> no picture */
+.pictip:not(.map):not(.room):has(img[src*="/skills/"], img[src^="data:"]) .pictip-cap { max-width: 320px; text-align: left; }
+.pictip:has(img[src^="data:"]) .pictip-box { display: none; }
+.pictip:has(img[src^="data:"]) .pictip-cap { margin-top: 0; }
+@media (max-width: 600px) { .dj-scroll { --dj-stick: 9.5em; --dj-col: 3.5em; } .dj-grid th.dj-span > span { display: inline-block; white-space: normal; max-width: 9em; } }
+/* Marionettes Stats (M2): the D1 look: centred equal-width cells, light shade on filled cells, 11px rows, subtle lines; the table scrolls
+   in its own box (page never scrolls sideways); every column is a stat, so all columns scroll together and only the full-width group label stays in view.
+   The design build's .tablewrap steps aside */
+.ms-scroll { --ms-col: 5.5em; width: fit-content; max-width: 100%; overflow-x: auto; margin: 0; border-radius: 12px; background: var(--surface-container-low); }
+.ms-scroll > .tablewrap { margin: 0; overflow: visible; border-radius: 0; background: none; max-width: none; }
+.ms-scroll table.ms-grid { margin: 0; width: auto; border-collapse: separate; border-spacing: 0; font-size: inherit; font-variant-numeric: tabular-nums; }
+.ms-grid th { position: static; background: none; color: inherit; white-space: normal; text-align: center; }
+.ms-grid th, .ms-grid td { font-size: 16px; line-height: 1.4; padding: 11px 6px; border-top: 1px solid var(--outline-variant); vertical-align: middle; background-clip: padding-box; overflow-wrap: inherit; min-width: 0; }
+.ms-grid tr:first-child > * { border-top: 0; }
+.ms-grid .ms-c { width: var(--ms-col); min-width: var(--ms-col); max-width: var(--ms-col); box-sizing: border-box; text-align: center; white-space: normal; }
+.ms-grid tr.ms-names > th { font-weight: 400; color: var(--on-surface-variant); padding-bottom: 4px; vertical-align: bottom; border-top: 0; }
+.ms-grid tr.ms-vals > td { border-top: 0; }
+.ms-grid td.ms-on { background: color-mix(in srgb, var(--on-surface) 7%, var(--surface-container-low)); white-space: nowrap; }
+.ms-grid td.ms-off { background: transparent; }
+.ms-grid th.ms-g { text-align: left; font-weight: 600; color: var(--on-surface); padding: 11px 12px 2px; }
+.ms-grid th.ms-g > span { position: sticky; left: 12px; }
+.ms-grid tr.ms-glab:not(:first-child) > th { border-top: 1px solid var(--outline); }
+.lf-sec > .ms-scroll + .lf-dl { margin-top: 12px; }
+/* Marionette skills: 32px skill icon before the name, text wraps beside it and is the baseline, so a bullet lines up with the first text line;
+   several skills: 8px between items */
+.lf-skill { display: inline-flex; align-items: flex-start; gap: 8px; }
+.lf-skill > .lf-skicon { flex: none; width: 32px; height: 32px; image-rendering: pixelated; }
+.lf-skill > span { align-self: baseline; padding-top: 4px; }
+.lf-dl dd .cellist li:has(> .lf-skill) + li { margin-top: 8px; }
+
+/* titles: Title | Rarity | How to get | Bonus (Titles page): Bonus gets the width so stat lines don't wrap word-by-word.
+   Phone: normal auto layout, scrolls in its box */
+.tablewrap.titles table { table-layout: fixed; }
+.tablewrap.titles th:nth-child(1) { width: 22.5%; }
+.tablewrap.titles th:nth-child(2) { width: 11.5%; }
+.tablewrap.titles th:nth-child(3) { width: 29%; }
+.tablewrap.titles th:nth-child(4) { width: 37%; }
+@media (max-width: 599px) {
+  .tablewrap.titles table { table-layout: auto; }
+  .tablewrap.titles th:nth-child(n) { width: auto; }
+}
+/* phones (2026-11-22): nothing runs past the screen edge. Pin labels get .fit from site.js (width and shift that keep the label inside its minimap box, wrapping as needed);
+   "N × item", the Lv 85/99 quest "cursed → true" rows and the free-skill-point cards wrap or shrink instead of keeping one line */
+/* .fit is on every pin label on phones, and on desktop only on a label that would run past its minimap box (2026-11-22) */
+:root .pin.hl.fit::after { left: var(--lbl-x); right: auto; width: var(--lbl-w); max-width: none; box-sizing: border-box; transform: none; text-align: center; overflow-wrap: anywhere; }
+@media (max-width: 599px) {
+  .amt, .amt a.ent { white-space: normal; }
+  .fspcards { grid-template-columns: minmax(0, 1fr); }
+  .fspcards > * { min-width: 0; }
+  .slotcard.pairs .pairgrid { grid-template-columns: auto minmax(0, 1fr); }
+  .slotcard.pairs .pairgrid.nolbl { grid-template-columns: minmax(0, 1fr); }
+  .pairgrid .pairrow li, .pairgrid .pairrow li :is(a.ent, .nm, .amt, b) { white-space: normal; min-width: 0; }
+}
+
+/* dungeon-mobs: Map | Monsters on dungeon pages (2026-11-22). Map column shrinks to a bigger minimap (184px, was 140px);
+   the monster list fills the rest in up to 3 columns (one monster per line). Phones: one column, 140px minimap */
+.tablewrap.dungeon-mobs th:first-child { width: 1%; }
+.tablewrap.dungeon-mobs .where figure.mm { width: 184px; }
+.tablewrap.dungeon-mobs .where .mmbox { width: calc(184px * min(1, var(--ar))) !important; height: calc(184px * min(1, 1 / var(--ar))) !important; }
+.tablewrap.dungeon-mobs td ul.cellist { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, max(9rem, calc((100% - 32px) / 3))), 1fr)); column-gap: 16px; padding-left: 0; list-style: disc outside; }
+.tablewrap.dungeon-mobs td ul.cellist > li { margin: 2px 0 2px 20px; min-width: 0; }
+@media (max-width: 599px) {
+  .tablewrap.dungeon-mobs td ul.cellist { grid-template-columns: minmax(0, 1fr); }
+  .tablewrap.dungeon-mobs .where figure.mm { width: 140px; }
+  .tablewrap.dungeon-mobs .where .mmbox { width: calc(140px * min(1, var(--ar))) !important; height: calc(140px * min(1, 1 / var(--ar))) !important; }
+}
+
+/* quests: Quest | Defeat | Reward on Ancient Ruins (2026-11-24, option C). Roomy 20/24px cells; the name over muted level and
+   time lines; one target per line with its 40px monster picture (.qmob; empty slot for "any monster"), "(boss)" muted */
+.tablewrap.quests table { width: 100%; }
+.tablewrap.quests th { padding: 14px 24px; }
+.tablewrap.quests td { padding: 20px 24px; line-height: 1.5; }
+.tablewrap.quests td:first-child { width: 28%; }
+.tablewrap.quests td:nth-child(2) { width: 40%; }
+.tablewrap.quests td:nth-child(3) a.ent { white-space: nowrap; }
+.tablewrap.quests .qname { display: block; font-weight: 600; margin-bottom: 6px; }
+.tablewrap.quests .qmeta { display: block; color: var(--on-surface-variant); }
+.tablewrap.quests .cellist.stack li { margin: 0 0 8px; }
+.tablewrap.quests .cellist:not(.stack) li { margin: 0 0 4px; }
+.tablewrap.quests .qmob { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.tablewrap.quests .qmob img, .tablewrap.quests .qmob .qnopic { width: 40px; height: 40px; flex: none; object-fit: contain; }
+.tablewrap.quests .qmob > span:last-child { min-width: 0; }
+.tablewrap.quests .qmob .amt { white-space: normal; }
+.tablewrap.quests .qboss { color: var(--on-surface-variant); }
+@media (max-width: 599px) {
+  .tablewrap.quests th, .tablewrap.quests td { padding: 16px; }
+  .tablewrap.quests td { min-width: 200px; }
+  .tablewrap.quests td:first-child { min-width: 150px; }
+}
+
+/* ride: one route section on Airships & Rides (2026-11-24): the From map's 184px minimap with a pin on the ride NPC or dock,
+   How:/Cost: lines beside it (dl.skmeta, muted label per user 2026-11-24, value beside it); stacked on phones */
+.ride { display: flex; align-items: flex-start; gap: 24px; margin: 16px 0; }
+.ride figure.mm { margin: 0; flex: none; width: 184px; }
+.ride figure.mm .mmbox { --ar: 1; width: calc(184px * min(1, var(--ar))) !important; height: calc(184px * min(1, 1 / var(--ar))) !important; }
+.ride figure.mm .mmbox img { border-radius: 8px; }
+.ride dl.skmeta { margin: 0; flex: 1; min-width: 0; }
+.ride dl.skmeta dt { flex: none; min-width: 0; white-space: nowrap; color: var(--on-surface-variant); font-weight: 500; }
+.ride dl.skmeta dd { min-width: 0; }
+.ride dl.skmeta div + div { margin-top: 4px; }
+@media (max-width: 599px) { .ride { flex-direction: column; gap: 12px; } }
+.ride.ride-next { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--outline-variant); }
+/* dungeon Monsters section: one bigger minimap per map under its own map-name heading, no caption (2026-11-24) */
+.dmap .where figure.mm { width: auto; }
+.dmap .where .mmbox { width: calc(300px * min(1, var(--ar))) !important; height: calc(300px * min(1, 1 / var(--ar))) !important; }
+.dmap .where figcaption { display: none; }
+.bosscard h3 .btag { color: var(--on-surface-variant); font-weight: 400; }
+/* ride block with an NPC render: minimap and render side by side on top, the From/How lines below at full width (2026-11-24) */
+.ride:has(figure.scene) { flex-wrap: wrap; row-gap: 16px; }
+.ride figure.scene { margin: 0; flex: none; }
+.ride figure.scene img, .ride figure.scene.solo img { width: 276px; height: 184px; object-fit: cover; border-radius: 8px; display: block; }
+.ride:has(figure.scene) dl.skmeta { flex: 1 0 100%; }
+@media (max-width: 599px) { .ride figure.scene img, .ride figure.scene.solo img { width: 100%; max-width: 360px; height: auto; aspect-ratio: 3 / 2; } }
+/* ride block: every minimap takes the same 184 x 184 frame; a tall or wide map keeps its own shape, centred in it (2026-11-24) */
+.ride > figure.mm { width: 184px !important; height: 184px; display: flex; align-items: center; justify-content: center; }
+/* Knight Training crystals: the client crystal models (rendered like monster pictures) shown bigger than the 48px card icons (2026-11-24) */
+.mcards.crystals { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.mcards.crystals .mcard img { width: 88px; height: 88px; }
+/* Champion Battle maps: a minimap per PvP field with its name(s) below, Night versions under their day map (2026-11-24) */
+.mapfigs.bmaps .bmap { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.mapfigs.bmaps .bmap figure.mm { margin: 0; }
+.mapfigs.bmaps .bmap .mmbox { width: 184px !important; height: 184px !important; }
+.mapfigs.bmaps .bmap p { margin: 0; text-align: center; }
+/* a place minimap with an in-game render to its right, both the same height (Sky Tower Pass: Miner's Room door + the Pot) (2026-11-25) */
+.spotscene { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 16px; margin: 16px 0; }
+.spotscene figure.mm, .spotscene figure.scene { margin: 0; flex: none; }
+.spotscene figure.mm .mmbox { width: 184px !important; height: 184px !important; }
+.spotscene figure.mm figcaption { display: none; }
+.spotscene figure.scene img, .spotscene figure.scene.solo img { width: 276px; max-width: 100%; height: 184px; object-fit: cover; border-radius: 8px; display: block; }
+@media (max-width: 599px) { .spotscene figure.scene img, .spotscene figure.scene.solo img { width: 100%; height: auto; aspect-ratio: 3 / 2; } }
+/* Light Tower floor map: collapsible diagram of all 29 floors, one line per connected floor pair, numbered portal dots, hover/tap fades the unconnected (2026-11-25) */
+details.ltmap-wrap { margin: 16px 0; }
+details.ltmap-wrap > summary { cursor: pointer; font-size: inherit; color: var(--secondary); font-weight: 400; width: max-content; max-width: 100%; }
+details.ltmap-wrap > summary:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+.ltmap { margin-top: 12px; }
+.ltmap .ltm-note { font-size: 16px; color: var(--on-surface-variant); margin: 0 0 8px; }
+.ltmap .ltm-hint { font-size: 16px; color: var(--on-surface-variant); margin: 0 0 8px; }
+.ltmap .ltm-hint.fits { display: none; }
+.ltmap .ltm-sw { position: relative; }
+.ltmap .ltm-sw::after { content: ""; position: absolute; top: 0; right: 0; bottom: 8px; width: 56px; pointer-events: none; background: linear-gradient(to right, transparent, var(--surface)); transition: opacity .2s; }
+.ltmap .ltm-sw.end::after { opacity: 0; }
+.ltmap .ltm-scroll { overflow-x: auto; overflow-y: hidden; padding-bottom: 8px; }
+.ltmap .ltm-flow { display: block; max-width: none; }
+.ltmap .ltm-t { font: 500 16px Roboto, system-ui, sans-serif; }
+.ltmap .ltm-lb { paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; pointer-events: none; }
+.ltmap .ltm-exit { fill: var(--portal); }
+.ltmap .ltm-ed { fill: none; stroke-width: 2.5; opacity: .9; }
+.ltmap .ltm-f, .ltmap .ltm-zone { transition: opacity .15s; }
+.ltmap .fx .ltm-f:not(.keep) { opacity: .1; }
+.ltmap .fx .ltm-zone { opacity: .35; }
+.ltmap .fx .ltm-ed.keep { opacity: 1; }
+.ltmap .ltm-node { cursor: pointer; outline: none; }
+.ltmap .ltm-lb.kf { text-decoration: underline; text-decoration-thickness: 2px; }
+.ltmap .ltm-pp { cursor: pointer; outline: none; }
+.ltmap .ltm-hit { fill: transparent; }
+.ltmap .ltm-dot { stroke: #000; stroke-width: 1.5; }
+.ltmap .ltm-pp:focus-visible .ltm-dot { stroke: #fff; stroke-width: 2.5; }
+.ltmap .ltm-bn { font: 700 16px Roboto, system-ui, sans-serif; fill: #000; pointer-events: none; }
+
+/* All Maps viewer (.mview, 2026-11-25): current map in the middle, the maps its portals lead to around it on the portal's side;
+   hover/tap a portal or a map to fade everything else, click (or tap again) to move there. Narrow screens list neighbours under the map. */
+details.mview-wrap { margin: 16px 0; }
+details.mview-wrap > summary { cursor: pointer; font-size: inherit; color: var(--secondary); font-weight: 400; width: max-content; max-width: 100%; }
+details.mview-wrap > summary:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+.mview { margin-top: 12px; --mv-t: 102px; --mv-c: 106px; }
+.mview .mv-wrap { display: flex; flex-direction: column-reverse; align-items: stretch; gap: 28px; width: max-content; max-width: 100%; }
+.mview .mv-stage { position: relative; flex: none; min-width: 0; }
+.mview .mv-layer { position: relative; display: grid; grid-template-columns: var(--mv-t) repeat(3, var(--mv-c)) var(--mv-t); grid-template-rows: var(--mv-t) repeat(3, var(--mv-c)) var(--mv-t); gap: 4px; transition: opacity .2s ease; }
+.mview .mv-layer.hide { opacity: 0; }
+.mview .mv-center { grid-area: 2 / 2 / 5 / 5; display: flex; align-items: center; justify-content: center; min-width: 0; }
+.mview .mv-mm { position: relative; flex: none; }
+.mview .mv-mm img { display: block; width: 100%; height: 100%; image-rendering: pixelated; border-radius: 10px; }
+.mview .mv-lines { position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.mview .mv-lines line { stroke: var(--portal); stroke-width: 2; stroke-dasharray: 5 4; opacity: .7; }
+.mview .mv-pin { position: absolute; width: 12px; height: 12px; margin: 0; padding: 0; border: 0; border-radius: 3px; transform: translate(-50%, -50%); background: var(--portal); box-shadow: 0 0 0 1.5px #000; cursor: pointer; z-index: 2; }
+.mview .mv-pin::before { content: ""; position: absolute; inset: -7px; }
+.mview .mv-pin.dead { background: var(--outline); cursor: default; z-index: 1; }
+.mview .mv-nb { display: flex; flex-direction: column; align-items: center; gap: 2px; min-width: 0; min-height: 0; padding: 3px 2px; margin: 0; border: 0; border-radius: 10px; background: var(--surface-container-low); color: var(--secondary); font: inherit; cursor: pointer; overflow: hidden; }
+.mview .mv-nb .im { flex: none; height: 40px; width: 100%; display: flex; align-items: center; justify-content: center; }
+.mview .mv-nb img { max-width: 100%; max-height: 100%; image-rendering: pixelated; border-radius: 4px; display: block; }
+.mview .mv-nb .nm { font-size: 16px; line-height: 17px; text-align: center; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; width: 100%; }
+.mview .mv-f { transition: opacity .15s; }
+.mview .fx .mv-f:not(.keep) { opacity: .12; }
+.mview .mv-pin:focus, .mview .mv-nb:focus { outline: none; }
+.mview .mv-pin:focus-visible { outline: 3px solid var(--tertiary); outline-offset: 2px; }
+.mview .mv-nb:focus-visible { outline: 3px solid var(--tertiary); outline-offset: -3px; }
+.mview .mv-ghost { position: absolute; image-rendering: pixelated; border-radius: 8px; z-index: 6; pointer-events: none; transition: left .35s ease, top .35s ease, width .35s ease, height .35s ease; }
+.mview .mv-none { grid-area: 5 / 1 / 6 / 6; align-self: center; margin: 0; text-align: center; font-size: 16px; color: var(--on-surface-variant); }
+.mview .mv-side { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: flex-end; gap: 8px 12px; min-width: 0; }
+.mview .mv-jump { flex: 0 1 240px; }
+.mview .mv-jump .lf-select select { min-width: 0; }
+.mview.narrow .mv-wrap { width: auto; }
+.mview.narrow .mv-jump { flex: 0 1 220px; }
+.mview.narrow .mv-stage { width: 100%; display: flex; flex-direction: column; }
+.mview.narrow .mv-layer { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); grid-template-rows: none; grid-auto-rows: auto; gap: 6px; }
+.mview.narrow .mv-nb { height: 100px; }
+.mview.narrow .mv-center { grid-column: 1 / -1; grid-row: auto; }
+.mview.narrow .mv-nb, .mview.narrow .mv-none { grid-area: auto; }
+.mview.narrow .mv-none { grid-column: 1 / -1; }
+.mview.narrow .mv-lines { display: none; }
+@media (prefers-reduced-motion: reduce) { .mview .mv-layer, .mview .mv-ghost, .mview .mv-f { transition: none; } }
+/* All Maps viewer: the "Map Viewer" title and the "Jump to" menu share one row, the menu at the right end (2026-11-25) */
+.mv-headrow { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 12px 24px; margin: 56px 0 24px; }
+.mv-headrow > h2 { margin: 0; }
+.mv-headrow > .mv-side { flex: 0 1 260px; }
+.mv-headrow .mv-jump { flex: 1 1 auto; }
+.mv-headrow > .mv-side { align-items: flex-start; }
+.mv-headrow > h2 { line-height: 1.1; }

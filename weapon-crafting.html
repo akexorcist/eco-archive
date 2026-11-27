@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weapon Crafting · ECO Archive – Emil Chronicle Online Wiki</title>
+<meta name="description" content="Four crafting skills make weapons, bows, staves, arrows and throwing weapons.">
+<link rel="canonical" href="https://eco.akexorcist.dev/weapon-crafting.html">
+<link rel="alternate" type="text/markdown" href="https://eco.akexorcist.dev/weapon-crafting.md">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ECO Archive">
+<meta property="og:title" content="Weapon Crafting">
+<meta property="og:description" content="Four crafting skills make weapons, bows, staves, arrows and throwing weapons.">
+<meta property="og:url" content="https://eco.akexorcist.dev/weapon-crafting.html">
+<meta property="og:image" content="https://eco.akexorcist.dev/assets/scene_img/npc_11000159.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="1000">
+<meta property="og:image:alt" content="Weaponsmith in the game">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eco.akexorcist.dev/"}, {"@type": "ListItem", "position": 2, "name": "Crafting", "item": "https://eco.akexorcist.dev/accessory-crafting.html"}, {"@type": "ListItem", "position": 3, "name": "Weapon Crafting", "item": "https://eco.akexorcist.dev/weapon-crafting.html"}]}</script>
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="stylesheet" href="site.css">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body class="article">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/></symbol>
+<symbol id="i-left" viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></symbol>
+<symbol id="i-right" viewBox="0 0 24 24"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></symbol>
+<symbol id="i-unfold" viewBox="0 0 24 24"><path d="M12 5.83 15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"/></symbol>
+<symbol id="i-fold" viewBox="0 0 24 24"><path d="M7.41 18.59 8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM2 13h2a1 1 0 0 0 0-2H2a1 1 0 0 0 0 2zm18 0h2a1 1 0 0 0 0-2h-2a1 1 0 0 0 0 2zM11 2v2a1 1 0 0 0 2 0V2a1 1 0 0 0-2 0zm0 18v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-2 0zM5.99 4.58a1 1 0 0 0-1.41 1.41l1.06 1.06a1 1 0 0 0 1.41-1.41L5.99 4.58zm12.37 12.37a1 1 0 0 0-1.41 1.41l1.06 1.06a1 1 0 0 0 1.41-1.41l-1.06-1.06zm1.06-10.96a1 1 0 0 0-1.41-1.41l-1.06 1.06a1 1 0 0 0 1.41 1.41l1.06-1.06zM7.05 18.36a1 1 0 0 0-1.41-1.41l-1.06 1.06a1 1 0 0 0 1.41 1.41l1.06-1.06z"/></symbol>
+<symbol id="i-auto" viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zm1-17.93a8 8 0 0 1 0 15.86V4.07z"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="iconbtn" id="menubtn" aria-label="Open navigation" aria-controls="drawer" aria-expanded="false"><svg class="i"><use href="#i-menu"/></svg></button>
+  <a class="brand" href="index.html"><img class="logo" src="assets/misc_img/logo/eco_logo_topbar.png" alt="" width="56" height="44"><span class="name">ECO Archive</span></a>
+  <div class="search" role="search">
+    <label for="q"><svg class="i"><use href="#i-search"/></svg><span class="visually-hidden">Search pages</span></label>
+    <input id="q" type="search" placeholder="Search jobs, quests, items…" aria-label="Search jobs, quests, items" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list">
+    <ul class="results" id="results" role="listbox" aria-label="Search results" hidden></ul>
+  </div>
+  <div class="thememenu">
+    <button class="iconbtn" id="themebtn" aria-haspopup="menu" aria-expanded="false" aria-controls="thememenu" aria-label="Theme"><svg class="i"><use href="#i-auto"/></svg></button>
+    <div class="menu" id="thememenu" role="menu" aria-label="Theme" hidden>
+      <button role="menuitemradio" data-mode="system" aria-checked="true"><svg class="i"><use href="#i-auto"/></svg>System<svg class="i check"><use href="#i-check"/></svg></button>
+      <button role="menuitemradio" data-mode="light" aria-checked="false"><svg class="i"><use href="#i-sun"/></svg>Light<svg class="i check"><use href="#i-check"/></svg></button>
+      <button role="menuitemradio" data-mode="dark" aria-checked="false"><svg class="i"><use href="#i-moon"/></svg>Dark<svg class="i check"><use href="#i-check"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+<div class="frame">
+  <nav class="drawer" id="drawer" aria-label="Site">
+    <div class="head"><span>ECO Archive</span><button class="iconbtn" aria-label="Close navigation"><svg class="i"><use href="#i-close"/></svg></button></div>
+    <ul><li><a href="index.html">Home</a></li><li><details><summary>Story<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="story.html">Story Overview</a></li><li><details><summary>Main Story<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="story-the-path-we-walk.html">The Path We Walk</a></li><li><a href="story-the-world-begins-to-move.html">The World Begins to Move</a></li><li><a href="story-beyond-the-truth.html">Beyond the Truth</a></li><li><a href="story-final-battle.html">Final Battle</a></li></ul></details></li><li><details><summary>Bonus Story<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="story-saga14.html">Gate of Emerald Forest</a></li><li><a href="story-saga15.html">Everlasting Union</a></li><li><a href="story-saga16.html">Memories of the Ice Queen</a></li><li><a href="story-saga18.html">Carmine Brick</a></li></ul></details></li></ul></details></li><li><details><summary>Getting started<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="game-basics.html">Game Basics</a></li><li><a href="races.html">Races</a></li><li><a href="stat-points.html">Status Points</a></li></ul></details></li><li><details><summary>Game systems<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="arena-pvp.html">Arena PvP</a></li><li><a href="automata.html">Automata</a></li><li><a href="bosses.html">Bosses</a></li><li><a href="catties.html">Catties</a></li><li><a href="champion-battle.html">Champion Battle</a></li><li><a href="city-defense-battle.html">City Defense Battle</a></li><li><a href="demic-chips.html">DEMIC Chips</a></li><li><a href="dragon-mount.html">Dragon Mount</a></li><li><a href="dual-job.html">Dual Job</a></li><li><a href="element-fairies.html">Element Fairies</a></li><li><a href="equipment-upgrades.html">Equipment Upgrades</a></li><li><a href="factions.html">Factions</a></li><li><a href="fame.html">Fame</a></li><li><a href="farming.html">Farming</a></li><li><a href="fishing.html">Fishing</a></li><li><a href="flying-garden.html">Flying Garden</a></li><li><a href="flying-garden-parts.html">Flying Garden Parts</a></li><li><a href="furniture.html">Furniture</a></li><li><a href="hair-dye.html">Hair Dye</a></li><li><a href="hairstyles.html">Hairstyles</a></li><li><a href="getting-pets.html">How to Get Pets</a></li><li><a href="iris-cards.html">Iris Cards</a></li><li><a href="ability-vectors.html">Iris Cards – Ability Vectors</a></li><li><a href="item-repair.html">Item Repair</a></li><li><a href="job-switching.html">Job Switching</a></li><li><a href="knight-training.html">Knight Training</a></li><li><a href="marionettes.html">Marionettes &amp; Golems</a></li><li><a href="medal-machines.html">Medal Machines</a></li><li><a href="partners.html">Partners</a></li><li><a href="pet-raising.html">Pet Raising</a></li><li><a href="possession.html">Possession</a></li><li><a href="pvp-skill-changes.html">PvP Skill Changes</a></li><li><a href="ring.html">Ring</a></li><li><a href="shops.html">Shops &amp; Merchants</a></li><li><a href="stamps.html">Stamps</a></li><li><a href="tiny-island.html">Tiny Island</a></li><li><a href="titles.html">Titles</a></li><li><a href="wedding.html">Wedding</a></li></ul></details></li><li><details><summary>Jobs<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="jobs.html">All jobs</a></li><li><details><summary>Fighter<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-scout.html">Scout</a></li><li><a href="job-assassin.html">Assassin</a></li><li><a href="job-commando.html">Commando</a></li><li><a href="job-eraser.html">Eraser</a></li><li><a href="job-swordsman.html">Swordsman</a></li><li><a href="job-blade-master.html">Blade Master</a></li><li><a href="job-bounty-hunter.html">Bounty Hunter</a></li><li><a href="job-gladiator.html">Gladiator</a></li><li><a href="job-fencer.html">Fencer</a></li><li><a href="job-knight.html">Knight</a></li><li><a href="job-dark-stalker.html">Dark Stalker</a></li><li><a href="job-guardian.html">Guardian</a></li><li><a href="job-archer.html">Archer</a></li><li><a href="job-striker.html">Striker</a></li><li><a href="job-gunner.html">Gunner</a></li><li><a href="job-hawkeye.html">Hawkeye</a></li></ul></details></li><li><details><summary>Spell User<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-warlock.html">Warlock</a></li><li><a href="job-cabalist.html">Cabalist</a></li><li><a href="job-necromancer.html">Necromancer</a></li><li><a href="job-soultaker.html">Soul Taker</a></li><li><a href="job-vates.html">Vates</a></li><li><a href="job-druid.html">Druid</a></li><li><a href="job-bard.html">Bard</a></li><li><a href="job-cardinal.html">Cardinal</a></li><li><a href="job-shaman.html">Shaman</a></li><li><a href="job-elementalist.html">Elementalist</a></li><li><a href="job-enchanter.html">Enchanter</a></li><li><a href="job-astralist.html">Astralist</a></li><li><a href="job-wizard.html">Wizard</a></li><li><a href="job-sorcerer.html">Sorcerer</a></li><li><a href="job-sage.html">Sage</a></li><li><a href="job-force-master.html">Force Master</a></li></ul></details></li><li><details><summary>Backpacker<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-farmer.html">Farmer</a></li><li><a href="job-alchemist.html">Alchemist</a></li><li><a href="job-marionettist.html">Marionettist</a></li><li><a href="job-harvester.html">Harvester</a></li><li><a href="job-miner.html">Miner (Tatarabe)</a></li><li><a href="job-blacksmith.html">Blacksmith</a></li><li><a href="job-engineer.html">Engineer (Machinery)</a></li><li><a href="job-maestro.html">Maestro</a></li><li><a href="job-ranger.html">Ranger</a></li><li><a href="job-explorer.html">Explorer</a></li><li><a href="job-treasure-hunter.html">Treasure Hunter</a></li><li><a href="job-strider.html">Strider</a></li><li><a href="job-merchant.html">Merchant</a></li><li><a href="job-trader.html">Trader</a></li><li><a href="job-gambler.html">Gambler</a></li><li><a href="job-royal-dealer.html">Royal Dealer</a></li></ul></details></li><li><details><summary>Other jobs<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-breeder.html">Breeder</a></li><li><a href="job-gardener.html">Gardener</a></li><li><a href="job-joker.html">Joker</a></li><li><a href="job-novice.html">Novice</a></li></ul></details></li></ul></details></li><li><details><summary>Quests<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="quest-catty-ai.html">Catty (Ai) Quest</a></li><li><a href="quest-catty-akane.html">Catty (Akane) Quest</a></li><li><a href="quest-catty-anzu.html">Catty (Anzu) Quest</a></li><li><a href="quest-catty-kurumi.html">Catty (Kurumi Wakana) Quest</a></li><li><a href="quest-catty-momo.html">Catty (Momo) Quest</a></li><li><a href="quest-catty-sora.html">Catty (Sora) Quest</a></li><li><a href="quest-catty-sumire.html">Catty (Sumire) Quest</a></li><li><a href="quest-catty-yamabuki.html">Catty (Yamabuki) Quest</a></li><li><a href="quest-cleaning.html">Cleaning Quests</a></li><li><a href="quest-endless-corridor.html">Endless Corridor Quests</a></li><li><a href="free-skill-points.html">Free Skill Points</a></li><li><a href="quest-heart-of-the-machine.html">Heart of the Machine</a></li><li><a href="quest-lv35-armor.html">Lv 35 Armor Quest</a></li><li><a href="quest-lv45-armor.html">Lv 45 Armor Quest</a></li><li><a href="quest-lv55-armor.html">Lv 55 Armor Quest</a></li><li><a href="quest-lv55-hat-shoes.html">Lv 55 Backpacker Hat &amp; Shoes Quest</a></li><li><a href="quest-lv60-weapon.html">Lv 60 Weapon Quest</a></li><li><a href="quest-lv65-armor.html">Lv 65 Armor Quest</a></li><li><a href="quest-lv75-armor.html">Lv 75 Armor Quest</a></li><li><a href="quest-lv85-armor.html">Lv 85 Armor Quest</a></li><li><a href="quest-lv90-weapon.html">Lv 90 Weapon Quest</a></li><li><a href="quest-lv99-armor.html">Lv 99 Armor Quest</a></li><li><a href="quest-lv99-weapon.html">Lv 99 Weapon Quest</a></li><li><a href="quest-counter.html">Quest Counter</a></li><li><a href="quest-reincarnation.html">Reincarnation Quest</a></li><li><a href="quest-ride-crawler.html">Ride Crawler Quest</a></li><li><a href="quest-tutorial.html">Tutorial Quests</a></li></ul></details></li><li><details><summary>Items<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="boxes.html">Boxes</a></li><li><a href="petals.html">Flower Petals</a></li><li><a href="food-items.html">Food and Healing Items</a></li><li><a href="upgrade-crystals.html">Upgrade Crystals</a></li><li><a href="equipment.html">Weapons &amp; Armor</a></li></ul></details></li><li><details open><summary>Crafting<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="accessory-crafting.html">Accessory Crafting</a></li><li><a href="armor-crafting.html">Armor Crafting</a></li><li><a href="chemical-preparation.html">Chemical Preparation</a></li><li><a href="cooking.html">Cooking</a></li><li><details><summary>Recipes &amp; Materials<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="crafting.html">Craftable Items</a></li><li><a href="materials.html">Crafting Materials</a></li></ul></details></li><li><a href="fairy-scrolls.html">Fairy Scrolls</a></li><li><a href="machinery-crafting.html">Machinery Crafting</a></li><li><a href="metal-refining.html">Metal Refining</a></li><li><a href="refining.html">Refining</a></li><li><a href="tailoring.html">Tailoring</a></li><li><a href="weapon-crafting.html" aria-current="page">Weapon Crafting</a></li><li><a href="woodcraft.html">Woodcraft</a></li></ul></details></li><li><a href="monsters.html">Monsters</a></li><li><details><summary>Maps<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="maps.html">All Maps</a></li><li><details><summary>Travel<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="airships-and-rides.html">Airships &amp; Rides</a></li><li><a href="between-the-worlds.html">Between the Worlds</a></li><li><a href="city-passes.html">City Passes</a></li><li><a href="dominion-world.html">Dominion World</a></li><li><a href="emil-world-cities.html">Emil World Cities</a></li><li><a href="enigma-group-fortress.html">Enigma Group Fortress</a></li><li><a href="sky-tower-pass.html">Sky Tower Pass</a></li><li><a href="titania-world.html">Titania World</a></li><li><a href="tonka-pass.html">Tonka Pass</a></li></ul></details></li><li><details><summary>Dungeons<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="ancient-ruins.html">Ancient Ruins</a></li><li><a href="carmine-brick-ruins.html">Carmine Brick Ruins</a></li><li><a href="dimension-dungeons.html">Dimension Dungeons</a></li><li><a href="eastern-dungeon.html">Eastern Dungeon</a></li><li><a href="endless-corridor.html">Endless Corridor</a></li><li><a href="light-tower.html">Light Tower</a></li><li><a href="mai-mai-ruins.html">Mai Mai Ruins</a></li><li><a href="northern-underground.html">Northern Underground</a></li><li><a href="old-acropolis.html">Old Acropolis</a></li><li><a href="oracle-wind-cave.html">Oracle Wind Cave</a></li><li><a href="sky-tower.html">Sky Tower</a></li><li><a href="submarine-cave.html">Submarine Cave</a></li><li><a href="undead-castle.html">Undead Castle</a></li><li><a href="underground-water-facility.html">Underground Water Facility</a></li></ul></details></li></ul></details></li><li><details><summary>Miscellaneous<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="misc-logo.html">Logo</a></li><li><a href="misc-videos.html">Trailer</a></li><li><details><summary>Artwork<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="misc-catty-art.html">Catty &amp; Pet Art</a></li><li><a href="art-partners.html">Partner Art</a></li><li><a href="art-races.html">Character Art</a></li><li><a href="art-jobs.html">Job Art</a></li><li><a href="misc-monster-artwork.html">Marionette &amp; Monster Artwork</a></li><li><a href="art-seasonal.html">Seasonal Art</a></li><li><a href="art-sketches.html">Concept Sketches</a></li></ul></details></li><li><a href="misc-servers.html">Official Servers</a></li></ul></details></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="references.html">Sources &amp; Credits</a></li></ul>
+  </nav>
+  <main class="content" id="main" tabindex="-1">
+<nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li>Crafting</li></ol></nav><header class="hero plain"><div><h1>Weapon Crafting</h1><p class="lead">Four crafting skills make weapons, bows, staves, arrows and throwing weapons.</p></div></header><details class="toc-inline"><summary>On this page</summary><ul><li><a href="#how-it-works">How it works</a></li><li><a href="#craft-with-an-npc">Craft with an NPC</a></li><li><a href="#tools">Tools</a></li><li><a href="#weapon-construction">Weapon Construction</a></li><li><a href="#throwing-weapon-construction">Throwing Weapon Construction</a></li><li><a href="#bow-construction">Bow Construction</a></li><li><a href="#staff-crafting">Staff Crafting</a></li><li><a href="#related">Related</a></li></ul></details>
+
+
+
+<h2 id="how-it-works">How it works</h2>
+<ul>
+<li>Each skill level opens the recipes of that level. The <a href="crafting.html">Crafting</a> page lists every recipe.</li>
+<li>Finished weapons succeed 100% of the time. Many come out better some of the time:<ul>
+<li>5%: the +1 version, such as <img class="inicon" src="assets/item_icon/60040000.png" alt=""><b>Club +1</b></li>
+<li>3%: the +2 version</li>
+<li>1%: the +3 version</li>
+</ul>
+</li>
+</ul>
+<h2 id="craft-with-an-npc">Craft with an NPC</h2>
+<p>Talk to one of these NPCs with the materials and the tool in your inventory. Each makes every recipe of the four skills, and also <a class="ent" href="job-blacksmith.html#skill:2017"><img class="inicon skicon" src="assets/ext/nekogame-wiki/assets/images/wiki/skills/SI_2017.png" alt="" loading="lazy" decoding="async">Armor Construction</a> and <a class="ent" href="job-miner.html#skill:2051"><img class="inicon skicon" src="assets/ext/nekogame-wiki/assets/images/wiki/skills/SI_2051.png" alt="" loading="lazy" decoding="async">Advanced Metal Refining</a> recipes.</p>
+<p>The fee depends on the recipe level:</p>
+<div class="tablewrap compact"><table class="compact"><thead><tr><th rowspan="2">Recipe level</th><th colspan="2">Fee</th></tr><tr><th class="num">Throwing<br>weapons</th><th class="num">Other<br>weapons</th></tr></thead><tbody><tr><td>Lv 1</td><td class="num">0 G</td><td class="num">100 G</td></tr><tr><td>Lv 2</td><td class="num">10 G</td><td class="num">1,000 G</td></tr><tr><td>Lv 3</td><td class="num">20 G</td><td class="num">2,000 G</td></tr><tr><td>Lv 4</td><td class="num">30 G</td><td class="num">4,000 G</td></tr><tr><td>Lv 5</td><td class="num">30 G</td><td class="num">5,000 G</td></tr><tr><td>Lv 6</td><td class="num">-</td><td class="num">6,000 G</td></tr><tr><td>Lv 7</td><td class="num">-</td><td class="num">7,000 G</td></tr><tr><td>Lv 8</td><td class="num">-</td><td class="num">8,000 G</td></tr><tr><td>Lv 9</td><td class="num">-</td><td class="num">9,000 G</td></tr><tr><td>Lv 10</td><td class="num">-</td><td class="num">10,000 G</td></tr></tbody></table></div>
+
+<p>They stand in these places:</p>
+<ul>
+<li>
+<p><b>Weaponsmith</b> in the <a class="ent" data-pic="assets/minimap/m024.png" data-tip="room" data-pin="47.1%,81.1%" data-cap="Downtown" href="maps.html#map:10024000">Weaponsmith</a>, <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10024000">Downtown</a>.</p>
+<div class="npc" role="group" aria-label="Weaponsmith"><div class="who"><img src="assets/npc_thumb/11000159.png" alt="" loading="lazy" decoding="async"><b>Weaponsmith</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m024.png" alt="Map of Downtown" loading="lazy" decoding="async"><span class="pin hl" data-name="Weaponsmith entrance" style="left:47.1%;top:81.1%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10024000">Downtown</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11000159.webp" alt="Weaponsmith in the game" loading="lazy" decoding="async"></figure></div>
+</li>
+<li>
+<p><b>Weaponsmith</b> in the <a class="ent" data-pic="assets/minimap/m066.png" data-tip="room" data-pin="52.9%,24.8%" data-cap="Lower Part of Iron City" href="maps.html#map:10066000">Iron City Weaponsmith</a>, <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="28.46,87.69" href="maps.html#map:10066000">Lower Part of Iron City</a>.</p>
+<div class="npc" role="group" aria-label="Weaponsmith"><div class="who"><img src="assets/npc_thumb/11000277.png" alt="" loading="lazy" decoding="async"><b>Weaponsmith</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m066.png" alt="Map of Lower Part of Iron City" loading="lazy" decoding="async"><span class="pin hl below" data-name="Iron City Weaponsmith entrance" style="left:52.9%;top:24.8%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="28.46,87.69" href="maps.html#map:10066000">Lower Part of Iron City</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11000277.webp" alt="Weaponsmith in the game" loading="lazy" decoding="async"></figure></div>
+</li>
+<li>
+<p><b>Weaponsmith</b> in the <a class="ent" data-pic="assets/minimap/m054.png" data-tip="room" data-pin="67.0%,53.7%" data-cap="Enigma Group Fortress" href="maps.html#map:10054001">Fortress Weaponsmith</a>, <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="87.69,28.46" href="maps.html#map:10054001">Enigma Group Fortress</a>.</p>
+<div class="npc" role="group" aria-label="Weaponsmith"><div class="who"><img src="assets/npc_thumb/11000687.png" alt="" loading="lazy" decoding="async"><b>Weaponsmith</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m054.png" alt="Map of Enigma Group Fortress" loading="lazy" decoding="async"><span class="pin hl" data-name="Fortress Weaponsmith entrance" style="left:67.0%;top:53.7%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="87.69,28.46" href="maps.html#map:10054001">Enigma Group Fortress</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11000687.webp" alt="Weaponsmith in the game" loading="lazy" decoding="async"></figure></div>
+</li>
+<li>
+<p><b>Ironworks Receptionist</b> in the <a class="ent" data-pic="assets/minimap/m066.png" data-tip="room" data-pin="60.7%,24.0%" data-cap="Lower Part of Iron City" href="maps.html#map:10066000">Forge Lobby</a>, <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="28.46,87.69" href="maps.html#map:10066000">Lower Part of Iron City</a>.</p>
+<div class="npc" role="group" aria-label="Ironworks Receptionist"><div class="who"><img src="assets/npc_thumb/11000302.png" alt="" loading="lazy" decoding="async"><b>Ironworks Receptionist</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m066.png" alt="Map of Lower Part of Iron City" loading="lazy" decoding="async"><span class="pin hl below" data-name="Forge Lobby entrance" style="left:60.7%;top:24.0%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="28.46,87.69" href="maps.html#map:10066000">Lower Part of Iron City</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11000302.webp" alt="Ironworks Receptionist in the game" loading="lazy" decoding="async"></figure></div>
+</li>
+</ul>
+<h2 id="tools">Tools</h2>
+<p>Some recipes need a tool. The tool is listed with each recipe on the <a href="crafting.html">Crafting</a> page.</p>
+<div class="tablewrap medium"><table class="medium">
+<thead>
+<tr>
+<th>Tool</th>
+<th>Where to get it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="materials.html#item:10033100"><img class="inicon" src="assets/item_icon/10033100.png" alt="" loading="lazy" decoding="async">Miner Furnace</a></td>
+<td><div class="celllead">Sold by:</div><ul class="cellist"><li><a class="ent" data-pic="assets/npc_img/11000007.png" href="maps.html#map:10024000">West Vending Shopkeeper</a> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10024000">Downtown</a></li><li><b class="enttip" tabindex="0" data-pic="assets/npc_img/11000302.png">Ironworks Receptionist</b> in the <a class="ent" data-pic="assets/minimap/m066.png" data-tip="room" data-pin="60.7%,24.0%" data-cap="Lower Part of Iron City" href="maps.html#map:10066000">Forge Lobby</a>, <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="28.46,87.69" href="maps.html#map:10066000">Lower Part of Iron City</a></li><li><b class="enttip" tabindex="0" data-pic="assets/npc_img/11000278.png">Junk Shopkeeper</b> in the <a class="ent" data-pic="assets/minimap/m066.png" data-tip="room" data-pin="54.5%,24.8%" data-cap="Lower Part of Iron City" href="maps.html#map:10066000">Iron City Junk Shop</a>, <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="28.46,87.69" href="maps.html#map:10066000">Lower Part of Iron City</a></li><li><b class="enttip" tabindex="0" data-pic="assets/npc_img/11000838.png">Junk Shopkeeper</b> in the <a class="ent" data-pic="assets/minimap/m060.png" data-tip="room" data-pin="66.6%,35.7%" data-cap="Morg City" href="maps.html#map:10060000">Morg Junk Shop</a>, <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="11.54,79.23" href="maps.html#map:10060000">Morg City</a></li><li><a class="ent" data-pic="assets/npc_img/11000661.png" href="maps.html#map:10054001">Black Market Employee</a> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="87.69,28.46" href="maps.html#map:10054001">Enigma Group Fortress</a></li><li><a class="ent" data-pic="assets/npc_img/11001581.png" href="maps.html#map:12021000">Junk Shop</a> in <a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10023800"><img class="inicon" src="assets/item_icon/10023800.png" alt="" loading="lazy" decoding="async">Iron Hammer</a></td>
+<td><div class="celllead">Jewelry shops:</div><ul class="cellist"><li><a class="ent" data-pic="assets/minimap/m065.png" data-tip="room" data-pin="37.0%,69.1%" data-cap="Northern Promenade" href="maps.html#map:10065000">Northern Jewelry Shop</a>, <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,3.08" href="maps.html#map:10065000">Northern Promenade</a></li><li><a class="ent" data-pic="assets/minimap/m063.png" data-tip="room" data-pin="53.7%,69.3%" data-cap="Upper Iron City" href="maps.html#map:10063100">Iron City Jewelry Shop</a>, <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="28.46,87.69" href="maps.html#map:10063100">Upper Iron City</a></li><li><a class="ent" data-pic="assets/minimap/m057.png" data-tip="room" data-pin="55.3%,33.8%" data-cap="Fareast City" href="maps.html#map:10057000">Fareast Jewelry Shop</a>, <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="87.69,36.92" href="maps.html#map:10057000">Fareast City</a></li><li><a class="ent" data-pic="assets/minimap/m060.png" data-tip="room" data-pin="65.4%,51.0%" data-cap="Morg City" href="maps.html#map:10060000">Morg Jewelry Shop</a>, <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="11.54,79.23" href="maps.html#map:10060000">Morg City</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10031500"><img class="inicon" src="assets/item_icon/10031500.png" alt="" loading="lazy" decoding="async">Scissors</a></td>
+<td>The same jewelry shops</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60010000"><img class="inicon" src="assets/item_icon/60010000.png" alt="" loading="lazy" decoding="async">Knife</a></td>
+<td><div class="celllead">Sold by:</div><ul class="cellist"><li><b class="enttip" tabindex="0" data-pic="assets/npc_img/11000004.png">Weapon Shopkeeper</b> in the <a class="ent" data-pic="assets/minimap/m024.png" data-tip="room" data-pin="49.8%,81.1%" data-cap="Downtown" href="maps.html#map:10024000">Weapon Shop</a>, <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10024000">Downtown</a></li><li><a class="ent" data-pic="assets/npc_img/11001641.png" href="maps.html#map:12058000">Arms Merchant</a> in <a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="3.08,53.85" href="maps.html#map:12058000">Sky Tower Island</a></li></ul></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="weapon-construction">Weapon Construction</h2>
+<ul>
+<li><a class="ent" href="job-blacksmith.html#skill:2010"><img class="inicon skicon" src="assets/ext/nekogame-wiki/assets/images/wiki/skills/SI_2010.png" alt="" loading="lazy" decoding="async">Weapon Construction</a> is a <a href="job-blacksmith.html">Blacksmith</a> skill, learned at Job Level 10, with 10 levels.</li>
+<li>Most weapons are joined from parts. Metal parts need a <a class="ent" href="materials.html#item:10033100"><img class="inicon" src="assets/item_icon/10033100.png" alt="" loading="lazy" decoding="async">Miner Furnace</a> and metal from <a href="metal-refining.html">Metal Refining</a>.</li>
+</ul>
+<h3 id="parts">Parts</h3>
+<div class="tablewrap recipe recipe-l"><table class="recipe-l">
+<thead>
+<tr>
+<th>Item</th>
+<th>Materials</th>
+<th>Tool</th>
+<th>Recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="materials.html#item:10044700"><img class="inicon" src="assets/item_icon/10044700.png" alt="" loading="lazy" decoding="async">Iron Handle</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10015600"><img class="inicon" src="assets/item_icon/10015600.png" alt="" loading="lazy" decoding="async">Iron Lump</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10000204"><img class="inicon" src="assets/item_icon/10000204.png" alt="" loading="lazy" decoding="async">Distilled Water</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10033100"><img class="inicon" src="assets/item_icon/10033100.png" alt="" loading="lazy" decoding="async">Miner Furnace</a></td>
+<td><a href="crafting.html#recipe:826">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10045100"><img class="inicon" src="assets/item_icon/10045100.png" alt="" loading="lazy" decoding="async">Iron Knife Frame</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10015600"><img class="inicon" src="assets/item_icon/10015600.png" alt="" loading="lazy" decoding="async">Iron Lump</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10000204"><img class="inicon" src="assets/item_icon/10000204.png" alt="" loading="lazy" decoding="async">Distilled Water</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038611"><img class="inicon" src="assets/item_icon/10038600.png" alt="" loading="lazy" decoding="async">Old Mold</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10023800"><img class="inicon" src="assets/item_icon/10023800.png" alt="" loading="lazy" decoding="async">Iron Hammer</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10033100"><img class="inicon" src="assets/item_icon/10033100.png" alt="" loading="lazy" decoding="async">Miner Furnace</a></td>
+<td><a href="crafting.html#recipe:821">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10045002"><img class="inicon" src="assets/item_icon/10045000.png" alt="" loading="lazy" decoding="async">Iron Sword Frame</a></td>
+<td><ul class="cellist stack"><li><span class="amt">3 × <a class="ent" href="materials.html#item:10015600"><img class="inicon" src="assets/item_icon/10015600.png" alt="" loading="lazy" decoding="async">Iron Lump</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10000204"><img class="inicon" src="assets/item_icon/10000204.png" alt="" loading="lazy" decoding="async">Distilled Water</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038611"><img class="inicon" src="assets/item_icon/10038600.png" alt="" loading="lazy" decoding="async">Old Mold</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10023800"><img class="inicon" src="assets/item_icon/10023800.png" alt="" loading="lazy" decoding="async">Iron Hammer</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10033100"><img class="inicon" src="assets/item_icon/10033100.png" alt="" loading="lazy" decoding="async">Miner Furnace</a></td>
+<td><a href="crafting.html#recipe:822">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10042900"><img class="inicon" src="assets/item_icon/60010500.png" alt="" loading="lazy" decoding="async">Giant Iron Sword Frame</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016100"><img class="inicon" src="assets/item_icon/10016100.png" alt="" loading="lazy" decoding="async">Iron Bullion</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10000204"><img class="inicon" src="assets/item_icon/10000204.png" alt="" loading="lazy" decoding="async">Distilled Water</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038611"><img class="inicon" src="assets/item_icon/10038600.png" alt="" loading="lazy" decoding="async">Old Mold</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10023800"><img class="inicon" src="assets/item_icon/10023800.png" alt="" loading="lazy" decoding="async">Iron Hammer</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10033100"><img class="inicon" src="assets/item_icon/10033100.png" alt="" loading="lazy" decoding="async">Miner Furnace</a></td>
+<td><a href="crafting.html#recipe:823">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10044500"><img class="inicon" src="assets/item_icon/10044500.png" alt="" loading="lazy" decoding="async">Iron Hammer</a></td>
+<td><ul class="cellist stack"><li><span class="amt">2 × <a class="ent" href="materials.html#item:10015600"><img class="inicon" src="assets/item_icon/10015600.png" alt="" loading="lazy" decoding="async">Iron Lump</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10000204"><img class="inicon" src="assets/item_icon/10000204.png" alt="" loading="lazy" decoding="async">Distilled Water</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038611"><img class="inicon" src="assets/item_icon/10038600.png" alt="" loading="lazy" decoding="async">Old Mold</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10023800"><img class="inicon" src="assets/item_icon/10023800.png" alt="" loading="lazy" decoding="async">Iron Hammer</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10033100"><img class="inicon" src="assets/item_icon/10033100.png" alt="" loading="lazy" decoding="async">Miner Furnace</a></td>
+<td><a href="crafting.html#recipe:824">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10040000"><img class="inicon" src="assets/item_icon/10039100.png" alt="" loading="lazy" decoding="async">Iron Rod</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038611"><img class="inicon" src="assets/item_icon/10038600.png" alt="" loading="lazy" decoding="async">Old Mold</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016100"><img class="inicon" src="assets/item_icon/10016100.png" alt="" loading="lazy" decoding="async">Iron Bullion</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10000204"><img class="inicon" src="assets/item_icon/10000204.png" alt="" loading="lazy" decoding="async">Distilled Water</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10033100"><img class="inicon" src="assets/item_icon/10033100.png" alt="" loading="lazy" decoding="async">Miner Furnace</a></td>
+<td><a href="crafting.html#recipe:825">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10044400"><img class="inicon" src="assets/item_icon/10044400.png" alt="" loading="lazy" decoding="async">Iron Axe Blade</a></td>
+<td><ul class="cellist stack"><li><span class="amt">6 × <a class="ent" href="materials.html#item:10015600"><img class="inicon" src="assets/item_icon/10015600.png" alt="" loading="lazy" decoding="async">Iron Lump</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10000204"><img class="inicon" src="assets/item_icon/10000204.png" alt="" loading="lazy" decoding="async">Distilled Water</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038611"><img class="inicon" src="assets/item_icon/10038600.png" alt="" loading="lazy" decoding="async">Old Mold</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10023800"><img class="inicon" src="assets/item_icon/10023800.png" alt="" loading="lazy" decoding="async">Iron Hammer</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10033100"><img class="inicon" src="assets/item_icon/10033100.png" alt="" loading="lazy" decoding="async">Miner Furnace</a></td>
+<td><a href="crafting.html#recipe:831">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10045150"><img class="inicon" src="assets/item_icon/10045100.png" alt="" loading="lazy" decoding="async">Silver Knife Frame</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10015710"><img class="inicon" src="assets/item_icon/10015800.png" alt="" loading="lazy" decoding="async">Silver Lump</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10000204"><img class="inicon" src="assets/item_icon/10000204.png" alt="" loading="lazy" decoding="async">Distilled Water</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038611"><img class="inicon" src="assets/item_icon/10038600.png" alt="" loading="lazy" decoding="async">Old Mold</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10023800"><img class="inicon" src="assets/item_icon/10023800.png" alt="" loading="lazy" decoding="async">Iron Hammer</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10033100"><img class="inicon" src="assets/item_icon/10033100.png" alt="" loading="lazy" decoding="async">Miner Furnace</a></td>
+<td><a href="crafting.html#recipe:842">Lv 3</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10044800"><img class="inicon" src="assets/item_icon/10044800.png" alt="" loading="lazy" decoding="async">Gold Handle</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10015300"><img class="inicon" src="assets/item_icon/10015707.png" alt="" loading="lazy" decoding="async">Gold Lump</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10000204"><img class="inicon" src="assets/item_icon/10000204.png" alt="" loading="lazy" decoding="async">Distilled Water</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10033100"><img class="inicon" src="assets/item_icon/10033100.png" alt="" loading="lazy" decoding="async">Miner Furnace</a></td>
+<td><a href="crafting.html#recipe:843">Lv 3</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10045000"><img class="inicon" src="assets/item_icon/10045000.png" alt="" loading="lazy" decoding="async">Steel Sword Frame</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10015200"><img class="inicon" src="assets/item_icon/10015200.png" alt="" loading="lazy" decoding="async">Tamahagane</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10000204"><img class="inicon" src="assets/item_icon/10000204.png" alt="" loading="lazy" decoding="async">Distilled Water</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038612"><img class="inicon" src="assets/item_icon/10038600.png" alt="" loading="lazy" decoding="async">Common Mold</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10023800"><img class="inicon" src="assets/item_icon/10023800.png" alt="" loading="lazy" decoding="async">Iron Hammer</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10033100"><img class="inicon" src="assets/item_icon/10033100.png" alt="" loading="lazy" decoding="async">Miner Furnace</a></td>
+<td><a href="crafting.html#recipe:961">Lv 9</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10044900"><img class="inicon" src="assets/item_icon/10044900.png" alt="" loading="lazy" decoding="async">Japanese Cypress Handle</a></td>
+<td><span class="amt">1 × <a class="ent" href="materials.html#item:10016401"><img class="inicon" src="assets/item_icon/10016400.png" alt="" loading="lazy" decoding="async">Japanese Cypress Timber</a></span></td>
+<td><a class="ent" href="equipment.html#item:60010000"><img class="inicon" src="assets/item_icon/60010000.png" alt="" loading="lazy" decoding="async">Knife</a></td>
+<td><a href="crafting.html#recipe:962">Lv 9</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10045003"><img class="inicon" src="assets/item_icon/10045000.png" alt="" loading="lazy" decoding="async">Orihalcon Frame</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10013300"><img class="inicon" src="assets/item_icon/10013300.png" alt="" loading="lazy" decoding="async">Orihalcon</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10000204"><img class="inicon" src="assets/item_icon/10000204.png" alt="" loading="lazy" decoding="async">Distilled Water</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038612"><img class="inicon" src="assets/item_icon/10038600.png" alt="" loading="lazy" decoding="async">Common Mold</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10023800"><img class="inicon" src="assets/item_icon/10023800.png" alt="" loading="lazy" decoding="async">Iron Hammer</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10033100"><img class="inicon" src="assets/item_icon/10033100.png" alt="" loading="lazy" decoding="async">Miner Furnace</a></td>
+<td><a href="crafting.html#recipe:984">Lv 10</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="swords">Swords</h3>
+<div class="tablewrap recipe recipe-l"><table class="recipe-l">
+<thead>
+<tr>
+<th>Item</th>
+<th>Materials</th>
+<th>Tool</th>
+<th>Recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="equipment.html#item:60010400"><img class="inicon" src="assets/item_icon/60010400.png" alt="" loading="lazy" decoding="async">Long Sword</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10045002"><img class="inicon" src="assets/item_icon/10045000.png" alt="" loading="lazy" decoding="async">Iron Sword Frame</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10044700"><img class="inicon" src="assets/item_icon/10044700.png" alt="" loading="lazy" decoding="async">Iron Handle</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024000"><img class="inicon" src="assets/item_icon/10024000.png" alt="" loading="lazy" decoding="async">Braid</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:941">Lv 8</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60011200"><img class="inicon" src="assets/item_icon/60011200.png" alt="" loading="lazy" decoding="async">Katana</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10045000"><img class="inicon" src="assets/item_icon/10045000.png" alt="" loading="lazy" decoding="async">Steel Sword Frame</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10044900"><img class="inicon" src="assets/item_icon/10044900.png" alt="" loading="lazy" decoding="async">Japanese Cypress Handle</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024000"><img class="inicon" src="assets/item_icon/10024000.png" alt="" loading="lazy" decoding="async">Braid</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:963">Lv 9</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60010600"><img class="inicon" src="assets/item_icon/60010600.png" alt="" loading="lazy" decoding="async">Broad Sword</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10042900"><img class="inicon" src="assets/item_icon/60010500.png" alt="" loading="lazy" decoding="async">Giant Iron Sword Frame</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10044700"><img class="inicon" src="assets/item_icon/10044700.png" alt="" loading="lazy" decoding="async">Iron Handle</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024000"><img class="inicon" src="assets/item_icon/10024000.png" alt="" loading="lazy" decoding="async">Braid</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:982">Lv 10</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="short-swords">Short Swords</h3>
+<div class="tablewrap recipe recipe-l"><table class="recipe-l">
+<thead>
+<tr>
+<th>Item</th>
+<th>Materials</th>
+<th>Tool</th>
+<th>Recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="equipment.html#item:60010000"><img class="inicon" src="assets/item_icon/60010000.png" alt="" loading="lazy" decoding="async">Knife</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10045100"><img class="inicon" src="assets/item_icon/10045100.png" alt="" loading="lazy" decoding="async">Iron Knife Frame</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10021300"><img class="inicon" src="assets/item_icon/10021300.png" alt="" loading="lazy" decoding="async">Cloth</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:841">Lv 3</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60010100"><img class="inicon" src="assets/item_icon/60010100.png" alt="" loading="lazy" decoding="async">Jambiya</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10045100"><img class="inicon" src="assets/item_icon/10045100.png" alt="" loading="lazy" decoding="async">Iron Knife Frame</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10044700"><img class="inicon" src="assets/item_icon/10044700.png" alt="" loading="lazy" decoding="async">Iron Handle</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10045901"><img class="inicon" src="assets/item_icon/10021300.png" alt="" loading="lazy" decoding="async">Noble Fabric</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:861">Lv 4</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60011600"><img class="inicon" src="assets/item_icon/60011600.png" alt="" loading="lazy" decoding="async">Tooth Dagger</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10045150"><img class="inicon" src="assets/item_icon/10045100.png" alt="" loading="lazy" decoding="async">Silver Knife Frame</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10025210"><img class="inicon" src="assets/item_icon/10025210.png" alt="" loading="lazy" decoding="async">Metal Urchin Spine</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038300"><img class="inicon" src="assets/item_icon/10038300.png" alt="" loading="lazy" decoding="async">Tack</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:881">Lv 5</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="rapiers">Rapiers</h3>
+<div class="tablewrap recipe recipe-l"><table class="recipe-l">
+<thead>
+<tr>
+<th>Item</th>
+<th>Materials</th>
+<th>Tool</th>
+<th>Recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="equipment.html#item:60022250"><img class="inicon" src="assets/item_icon/60022250.png" alt="" loading="lazy" decoding="async">Dragon Piercer</a></td>
+<td><ul class="cellist stack"><li><span class="amt">4 × <a class="ent" href="materials.html#item:10045004"><img class="inicon" src="assets/item_icon/10045001.png" alt="" loading="lazy" decoding="async">Flame Iron Frame</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10044700"><img class="inicon" src="assets/item_icon/10044700.png" alt="" loading="lazy" decoding="async">Iron Handle</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:951">Lv 8</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="axes">Axes</h3>
+<div class="tablewrap recipe recipe-l"><table class="recipe-l">
+<thead>
+<tr>
+<th>Item</th>
+<th>Materials</th>
+<th>Tool</th>
+<th>Recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="equipment.html#item:60050000"><img class="inicon" src="assets/item_icon/60050000.png" alt="" loading="lazy" decoding="async">Stone Axe</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016300"><img class="inicon" src="assets/item_icon/10016300.png" alt="" loading="lazy" decoding="async">Timber</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10014650"><img class="inicon" src="assets/item_icon/10014600.png" alt="" loading="lazy" decoding="async">Solid Pebble</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:829">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60050100"><img class="inicon" src="assets/item_icon/60050100.png" alt="" loading="lazy" decoding="async">Axe</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10044100"><img class="inicon" src="assets/item_icon/10044100.png" alt="" loading="lazy" decoding="async">Wooden Rod</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10044400"><img class="inicon" src="assets/item_icon/10044400.png" alt="" loading="lazy" decoding="async">Iron Axe Blade</a></span></li><li><span class="amt">2 × <a class="ent" href="materials.html#item:10023300"><img class="inicon" src="assets/item_icon/10023300.png" alt="" loading="lazy" decoding="async">Screw</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:862">Lv 4</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60050300"><img class="inicon" src="assets/item_icon/60050300.png" alt="" loading="lazy" decoding="async">Battle Axe</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10040000"><img class="inicon" src="assets/item_icon/10039100.png" alt="" loading="lazy" decoding="async">Iron Rod</a></span></li><li><span class="amt">2 × <a class="ent" href="materials.html#item:10044400"><img class="inicon" src="assets/item_icon/10044400.png" alt="" loading="lazy" decoding="async">Iron Axe Blade</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10018001"><img class="inicon" src="assets/item_icon/10018000.png" alt="" loading="lazy" decoding="async">Iron Parts</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:903">Lv 6</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="hammers">Hammers</h3>
+<div class="tablewrap recipe recipe-l"><table class="recipe-l">
+<thead>
+<tr>
+<th>Item</th>
+<th>Materials</th>
+<th>Tool</th>
+<th>Recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="equipment.html#item:60040000"><img class="inicon" src="assets/item_icon/60040000.png" alt="" loading="lazy" decoding="async">Club</a></td>
+<td><span class="amt">1 × <a class="ent" href="materials.html#item:10016300"><img class="inicon" src="assets/item_icon/10016300.png" alt="" loading="lazy" decoding="async">Timber</a></span></td>
+<td><a class="ent" href="equipment.html#item:60010000"><img class="inicon" src="assets/item_icon/60010000.png" alt="" loading="lazy" decoding="async">Knife</a></td>
+<td><a href="crafting.html#recipe:804">Lv 1</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60040200"><img class="inicon" src="assets/item_icon/60040200.png" alt="" loading="lazy" decoding="async">Mace</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10044100"><img class="inicon" src="assets/item_icon/10044100.png" alt="" loading="lazy" decoding="async">Wooden Rod</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10044500"><img class="inicon" src="assets/item_icon/10044500.png" alt="" loading="lazy" decoding="async">Iron Hammer</a></span></li><li><span class="amt">8 × <a class="ent" href="materials.html#item:10038300"><img class="inicon" src="assets/item_icon/10038300.png" alt="" loading="lazy" decoding="async">Tack</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:844">Lv 3</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60040300"><img class="inicon" src="assets/item_icon/60040300.png" alt="" loading="lazy" decoding="async">Morning Star</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10040000"><img class="inicon" src="assets/item_icon/10039100.png" alt="" loading="lazy" decoding="async">Iron Rod</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10044500"><img class="inicon" src="assets/item_icon/10044500.png" alt="" loading="lazy" decoding="async">Iron Hammer</a></span></li><li><span class="amt">8 × <a class="ent" href="materials.html#item:10038300"><img class="inicon" src="assets/item_icon/10038300.png" alt="" loading="lazy" decoding="async">Tack</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:882">Lv 5</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="spears">Spears</h3>
+<div class="tablewrap recipe recipe-l"><table class="recipe-l">
+<thead>
+<tr>
+<th>Item</th>
+<th>Materials</th>
+<th>Tool</th>
+<th>Recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="equipment.html#item:60060100"><img class="inicon" src="assets/item_icon/60060100.png" alt="" loading="lazy" decoding="async">Stone Spear</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10044100"><img class="inicon" src="assets/item_icon/10044100.png" alt="" loading="lazy" decoding="async">Wooden Rod</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10014700"><img class="inicon" src="assets/item_icon/10014700.png" alt="" loading="lazy" decoding="async">Sharp Stone</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:830">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60060200"><img class="inicon" src="assets/item_icon/60060200.png" alt="" loading="lazy" decoding="async">Spear</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10044100"><img class="inicon" src="assets/item_icon/10044100.png" alt="" loading="lazy" decoding="async">Wooden Rod</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10045100"><img class="inicon" src="assets/item_icon/10045100.png" alt="" loading="lazy" decoding="async">Iron Knife Frame</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024008"><img class="inicon" src="assets/item_icon/10024008.png" alt="" loading="lazy" decoding="async">Bawoo Strap</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:902">Lv 6</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60060400"><img class="inicon" src="assets/item_icon/60060400.png" alt="" loading="lazy" decoding="async">Lance</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10040000"><img class="inicon" src="assets/item_icon/10039100.png" alt="" loading="lazy" decoding="async">Iron Rod</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10045000"><img class="inicon" src="assets/item_icon/10045000.png" alt="" loading="lazy" decoding="async">Steel Sword Frame</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10035601"><img class="inicon" src="assets/item_icon/10035601.png" alt="" loading="lazy" decoding="async">Chimera Crest</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:964">Lv 9</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60062900"><img class="inicon" src="assets/item_icon/60062900.png" alt="" loading="lazy" decoding="async">God Spear Brionac</a></td>
+<td><ul class="cellist stack"><li><span class="amt">2 × <a class="ent" href="materials.html#item:10045004"><img class="inicon" src="assets/item_icon/10045001.png" alt="" loading="lazy" decoding="async">Flame Iron Frame</a></span></li><li><span class="amt">2 × <a class="ent" href="materials.html#item:10015200"><img class="inicon" src="assets/item_icon/10015200.png" alt="" loading="lazy" decoding="async">Tamahagane</a></span></li><li><span class="amt">10 × <a class="ent" href="materials.html#item:10134800"><img class="inicon" src="assets/item_icon/10015900.png" alt="" loading="lazy" decoding="async">Sun Scarlet Gold</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:993">Lv 10</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="claws">Claws</h3>
+<div class="tablewrap recipe recipe-l"><table class="recipe-l">
+<thead>
+<tr>
+<th>Item</th>
+<th>Materials</th>
+<th>Tool</th>
+<th>Recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="equipment.html#item:60023500"><img class="inicon" src="assets/item_icon/60023500.png" alt="" loading="lazy" decoding="async">Battle Knuckle</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10054700"><img class="inicon" src="assets/item_icon/10054700.png" alt="" loading="lazy" decoding="async">Knuckle Guard</a></span></li><li><span class="amt">1 × <a class="ent" href="equipment.html#item:60023400"><img class="inicon" src="assets/item_icon/60023400.png" alt="" loading="lazy" decoding="async">Iron Knuckle</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:923">Lv 7</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60023300"><img class="inicon" src="assets/item_icon/60023300.png" alt="" loading="lazy" decoding="async">Pang Claw</a></td>
+<td><ul class="cellist stack"><li><span class="amt">2 × <a class="ent" href="materials.html#item:10054600"><img class="inicon" src="assets/item_icon/10054600.png" alt="" loading="lazy" decoding="async">Sharp Canine</a></span></li><li><span class="amt">2 × <a class="ent" href="materials.html#item:10039300"><img class="inicon" src="assets/item_icon/10024208.png" alt="" loading="lazy" decoding="async">Leather Belt</a></span></li><li><span class="amt">2 × <a class="ent" href="materials.html#item:10020205"><img class="inicon" src="assets/item_icon/10020205.png" alt="" loading="lazy" decoding="async">Snakehead Fish Leather</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038007"><img class="inicon" src="assets/item_icon/10038007.png" alt="" loading="lazy" decoding="async">Leather Conditioner</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:946">Lv 8</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60021650"><img class="inicon" src="assets/item_icon/60021650.png" alt="" loading="lazy" decoding="async">Ruby Eyes</a></td>
+<td><ul class="cellist stack"><li><span class="amt">4 × <a class="ent" href="materials.html#item:10012100"><img class="inicon" src="assets/item_icon/10012100.png" alt="" loading="lazy" decoding="async">Heart Ruby</a></span></li><li><span class="amt">2 × <a class="ent" href="materials.html#item:10054600"><img class="inicon" src="assets/item_icon/10054600.png" alt="" loading="lazy" decoding="async">Sharp Canine</a></span></li><li><span class="amt">4 × <a class="ent" href="materials.html#item:10039300"><img class="inicon" src="assets/item_icon/10024208.png" alt="" loading="lazy" decoding="async">Leather Belt</a></span></li><li><span class="amt">2 × <a class="ent" href="materials.html#item:10015702"><img class="inicon" src="assets/item_icon/10015702.png" alt="" loading="lazy" decoding="async">Ghost Iron</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:971">Lv 9</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="ropes">Ropes</h3>
+<div class="tablewrap recipe recipe-l"><table class="recipe-l">
+<thead>
+<tr>
+<th>Item</th>
+<th>Materials</th>
+<th>Tool</th>
+<th>Recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="equipment.html#item:61030000"><img class="inicon" src="assets/item_icon/61030000.png" alt="" loading="lazy" decoding="async">Momo Whip</a></td>
+<td><ul class="cellist stack"><li><span class="amt">8 × <a class="ent" href="materials.html#item:10020351"><img class="inicon" src="assets/item_icon/10020351.png" alt="" loading="lazy" decoding="async">Cowhide</a></span></li><li><span class="amt">4 × <a class="ent" href="materials.html#item:10038007"><img class="inicon" src="assets/item_icon/10038007.png" alt="" loading="lazy" decoding="async">Leather Conditioner</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016502"><img class="inicon" src="assets/item_icon/10016500.png" alt="" loading="lazy" decoding="async">Highest Class Bowstring</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10044700"><img class="inicon" src="assets/item_icon/10044700.png" alt="" loading="lazy" decoding="async">Iron Handle</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:883">Lv 5</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="books">Books</h3>
+<div class="tablewrap recipe recipe-l"><table class="recipe-l">
+<thead>
+<tr>
+<th>Item</th>
+<th>Materials</th>
+<th>Tool</th>
+<th>Recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="equipment.html#item:60081900"><img class="inicon" src="assets/item_icon/60081900.png" alt="" loading="lazy" decoding="async">Black Ledger</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10000507"><img class="inicon" src="assets/item_icon/10000507.png" alt="" loading="lazy" decoding="async">Lucky Perfume</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10025051"><img class="inicon" src="assets/item_icon/10025000.png" alt="" loading="lazy" decoding="async">Faith Charm</a></span></li><li><span class="amt">50 × <a class="ent" href="materials.html#item:10020000"><img class="inicon" src="assets/item_icon/10020000.png" alt="" loading="lazy" decoding="async">Paper</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:927">Lv 7</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="throwing-weapon-construction">Throwing Weapon Construction</h2>
+<ul>
+<li><a class="ent" href="job-assassin.html#skill:2035"><img class="inicon skicon" src="assets/ext/nekogame-wiki/assets/images/wiki/skills/SI_2035.png" alt="" loading="lazy" decoding="async">Throwing Weapon Construction</a> has 5 levels. It is learned at:<ul>
+<li><a href="job-archer.html">Archer</a>: Job Level 1</li>
+<li><a href="job-assassin.html">Assassin</a>: Job Level 5</li>
+<li><a href="job-gambler.html">Gambler</a>: Job Level 5</li>
+</ul>
+</li>
+<li>It makes arrows, bullets, cards and throwing weapons.</li>
+<li>Most recipes succeed 100% of the time. The <a class="ent" href="equipment.html#item:61010200"><img class="inicon" src="assets/item_icon/10014600.png" alt="" loading="lazy" decoding="async">Throwing Stone</a>, <a class="ent" href="equipment.html#item:61010300"><img class="inicon" src="assets/item_icon/10025200.png" alt="" loading="lazy" decoding="async">Urchin Throw</a> and <a class="ent" href="materials.html#item:10038200"><img class="inicon" src="assets/item_icon/10038200.png" alt="" loading="lazy" decoding="async">Grindstone</a> recipes succeed 90%, and a failed try gives a <img class="inicon" src="assets/item_icon/10001200.png" alt="" loading="lazy" decoding="async"><b>Failure Compound</b>.</li>
+</ul>
+<div class="tablewrap recipe recipe-l"><table class="recipe-l">
+<thead>
+<tr>
+<th>Item</th>
+<th>Materials</th>
+<th>Tool</th>
+<th>Recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="amt">50 × <a class="ent" href="materials.html#item:10026401"><img class="inicon" src="assets/item_icon/10047000.png" alt="" loading="lazy" decoding="async">Self-Made Arrow</a></span></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10018208"><img class="inicon" src="assets/item_icon/10018208.png" alt="" loading="lazy" decoding="async">Cockko Wing</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016605"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Tree Branch</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:601">Lv 1</a></td>
+</tr>
+<tr>
+<td><span class="amt">50 × <a class="ent" href="materials.html#item:10026402"><img class="inicon" src="assets/item_icon/10047000.png" alt="" loading="lazy" decoding="async">Self-Made Arrow+1</a></span></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10018208"><img class="inicon" src="assets/item_icon/10018208.png" alt="" loading="lazy" decoding="async">Cockko Wing</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016606"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Hard Tree Branch</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:602">Lv 1</a></td>
+</tr>
+<tr>
+<td><span class="amt">50 × <a class="ent" href="materials.html#item:10026403"><img class="inicon" src="assets/item_icon/10047000.png" alt="" loading="lazy" decoding="async">Self-Made Arrow+2</a></span></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10018208"><img class="inicon" src="assets/item_icon/10018208.png" alt="" loading="lazy" decoding="async">Cockko Wing</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016607"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Japanese Cypress Branch</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:603">Lv 1</a></td>
+</tr>
+<tr>
+<td><span class="amt">50 × <a class="ent" href="materials.html#item:10026493"><img class="inicon" src="assets/item_icon/10047003.png" alt="" loading="lazy" decoding="async">Recovery Arrow</a></span></td>
+<td><ul class="cellist stack"><li><span class="amt">50 × <a class="ent" href="materials.html#item:10026400"><img class="inicon" src="assets/item_icon/10047000.png" alt="" loading="lazy" decoding="async">Wooden Arrow</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10000103"><img class="inicon" src="assets/item_icon/10000103.png" alt="" loading="lazy" decoding="async">Heal Potion</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10000108"><img class="inicon" src="assets/item_icon/10000108.png" alt="" loading="lazy" decoding="async">Stamina Potion</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10000102"><img class="inicon" src="assets/item_icon/10000102.png" alt="" loading="lazy" decoding="async">Magic Potion</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:607">Lv 1</a></td>
+</tr>
+<tr>
+<td><span class="amt">50 × <a class="ent" href="equipment.html#item:61050000"><img class="inicon" src="assets/item_icon/10020904.png" alt="" loading="lazy" decoding="async">Pururu Card</a></span></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10020000"><img class="inicon" src="assets/item_icon/10020000.png" alt="" loading="lazy" decoding="async">Paper</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10032800"><img class="inicon" src="assets/item_icon/10032800.png" alt="" loading="lazy" decoding="async">Jerico</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10031500"><img class="inicon" src="assets/item_icon/10031500.png" alt="" loading="lazy" decoding="async">Scissors</a></td>
+<td><a href="crafting.html#recipe:606">Lv 1</a></td>
+</tr>
+<tr>
+<td><span class="amt">10 × <a class="ent" href="equipment.html#item:61010200"><img class="inicon" src="assets/item_icon/10014600.png" alt="" loading="lazy" decoding="async">Throwing Stone</a></span></td>
+<td><span class="amt">1 × <a class="ent" href="materials.html#item:10014600"><img class="inicon" src="assets/item_icon/10014600.png" alt="" loading="lazy" decoding="async">Pebble</a></span></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:605">Lv 1</a></td>
+</tr>
+<tr>
+<td><span class="amt">10 × <a class="ent" href="equipment.html#item:61010300"><img class="inicon" src="assets/item_icon/10025200.png" alt="" loading="lazy" decoding="async">Urchin Throw</a></span></td>
+<td><span class="amt">1 × <a class="ent" href="materials.html#item:10025200"><img class="inicon" src="assets/item_icon/10025200.png" alt="" loading="lazy" decoding="async">Urchin Spine</a></span></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:604">Lv 1</a></td>
+</tr>
+<tr>
+<td><span class="amt">50 × <a class="ent" href="materials.html#item:10047100"><img class="inicon" src="assets/item_icon/10047100.png" alt="" loading="lazy" decoding="async">Arrowhead</a></span></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10015600"><img class="inicon" src="assets/item_icon/10015600.png" alt="" loading="lazy" decoding="async">Iron Lump</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038200"><img class="inicon" src="assets/item_icon/10038200.png" alt="" loading="lazy" decoding="async">Grindstone</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:621">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10026600"><img class="inicon" src="assets/item_icon/10026400.png" alt="" loading="lazy" decoding="async">Steel Arrow</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10026401"><img class="inicon" src="assets/item_icon/10047000.png" alt="" loading="lazy" decoding="async">Self-Made Arrow</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10047100"><img class="inicon" src="assets/item_icon/10047100.png" alt="" loading="lazy" decoding="async">Arrowhead</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:622">Lv 2</a></td>
+</tr>
+<tr>
+<td><span class="amt">100 × <a class="ent" href="materials.html#item:10026100"><img class="inicon" src="assets/item_icon/10026100.png" alt="" loading="lazy" decoding="async">Bullet</a></span></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10015708"><img class="inicon" src="assets/item_icon/10015708.png" alt="" loading="lazy" decoding="async">Lead Lump</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038200"><img class="inicon" src="assets/item_icon/10038200.png" alt="" loading="lazy" decoding="async">Grindstone</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:626">Lv 2</a></td>
+</tr>
+<tr>
+<td><span class="amt">100 × <a class="ent" href="materials.html#item:10025900"><img class="inicon" src="assets/item_icon/10025900.png" alt="" loading="lazy" decoding="async">Lead Bullet</a></span></td>
+<td><ul class="cellist stack"><li><span class="amt">100 × <a class="ent" href="materials.html#item:10026100"><img class="inicon" src="assets/item_icon/10026100.png" alt="" loading="lazy" decoding="async">Bullet</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10001550"><img class="inicon" src="assets/item_icon/10001500.png" alt="" loading="lazy" decoding="async">Black Gunpowder</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:625">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10038200"><img class="inicon" src="assets/item_icon/10038200.png" alt="" loading="lazy" decoding="async">Grindstone</a></td>
+<td><span class="amt">1 × <a class="ent" href="materials.html#item:10014650"><img class="inicon" src="assets/item_icon/10014600.png" alt="" loading="lazy" decoding="async">Solid Pebble</a></span></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:647">Lv 3</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="crafting.html#recipe:644"><img class="inicon" src="assets/item_icon/10026451.png" alt="" loading="lazy" decoding="async">Self-Made Arrow Bundle</a></td>
+<td><ul class="cellist stack"><li><span class="amt">100 × <a class="ent" href="materials.html#item:10026401"><img class="inicon" src="assets/item_icon/10047000.png" alt="" loading="lazy" decoding="async">Self-Made Arrow</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024000"><img class="inicon" src="assets/item_icon/10024000.png" alt="" loading="lazy" decoding="async">Braid</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:644">Lv 3</a></td>
+</tr>
+<tr>
+<td><span class="amt">20 × <a class="ent" href="equipment.html#item:61010400"><img class="inicon" src="assets/item_icon/61010400.png" alt="" loading="lazy" decoding="async">Throwing Knife</a></span></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10015600"><img class="inicon" src="assets/item_icon/10015600.png" alt="" loading="lazy" decoding="async">Iron Lump</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10023800"><img class="inicon" src="assets/item_icon/10023800.png" alt="" loading="lazy" decoding="async">Iron Hammer</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10033100"><img class="inicon" src="assets/item_icon/10033100.png" alt="" loading="lazy" decoding="async">Miner Furnace</a></td>
+<td><a href="crafting.html#recipe:642">Lv 3</a></td>
+</tr>
+<tr>
+<td><span class="amt">20 × <a class="ent" href="equipment.html#item:61010500"><img class="inicon" src="assets/item_icon/61010500.png" alt="" loading="lazy" decoding="async">Chakram</a></span></td>
+<td><ul class="cellist stack"><li><span class="amt">3 × <a class="ent" href="materials.html#item:10015600"><img class="inicon" src="assets/item_icon/10015600.png" alt="" loading="lazy" decoding="async">Iron Lump</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10023800"><img class="inicon" src="assets/item_icon/10023800.png" alt="" loading="lazy" decoding="async">Iron Hammer</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10033100"><img class="inicon" src="assets/item_icon/10033100.png" alt="" loading="lazy" decoding="async">Miner Furnace</a></td>
+<td><a href="crafting.html#recipe:662">Lv 4</a></td>
+</tr>
+<tr>
+<td><span class="amt">20 × <a class="ent" href="equipment.html#item:61010600"><img class="inicon" src="assets/item_icon/61010600.png" alt="" loading="lazy" decoding="async">Shuriken</a></span></td>
+<td><ul class="cellist stack"><li><span class="amt">4 × <a class="ent" href="materials.html#item:10015600"><img class="inicon" src="assets/item_icon/10015600.png" alt="" loading="lazy" decoding="async">Iron Lump</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10023800"><img class="inicon" src="assets/item_icon/10023800.png" alt="" loading="lazy" decoding="async">Iron Hammer</a></span></li></ul></td>
+<td><a class="ent" href="materials.html#item:10033100"><img class="inicon" src="assets/item_icon/10033100.png" alt="" loading="lazy" decoding="async">Miner Furnace</a></td>
+<td><a href="crafting.html#recipe:669">Lv 4</a></td>
+</tr>
+<tr>
+<td><span class="amt">100 × <a class="ent" href="crafting.html#recipe:663"><img class="inicon" src="assets/item_icon/10026200.png" alt="" loading="lazy" decoding="async">Magnum Bullet</a></span></td>
+<td><ul class="cellist stack"><li><span class="amt">100 × <a class="ent" href="materials.html#item:10026100"><img class="inicon" src="assets/item_icon/10026100.png" alt="" loading="lazy" decoding="async">Bullet</a></span></li><li><span class="amt">2 × <a class="ent" href="materials.html#item:10001550"><img class="inicon" src="assets/item_icon/10001500.png" alt="" loading="lazy" decoding="async">Black Gunpowder</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:663">Lv 4</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="crafting.html#recipe:671"><img class="inicon" src="assets/item_icon/10026520.png" alt="" loading="lazy" decoding="async">Fire Beam</a></td>
+<td><ul class="cellist stack"><li><span class="amt">100 × <a class="ent" href="materials.html#item:10026500"><img class="inicon" src="assets/item_icon/10026500.png" alt="" loading="lazy" decoding="async">Fire Arrow</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024000"><img class="inicon" src="assets/item_icon/10024000.png" alt="" loading="lazy" decoding="async">Braid</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:671">Lv 4</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="bow-construction">Bow Construction</h2>
+<ul>
+<li><a class="ent" href="job-farmer.html#skill:2034"><img class="inicon skicon" src="assets/ext/nekogame-wiki/assets/images/wiki/skills/SI_2034.png" alt="" loading="lazy" decoding="async">Bow Construction</a> is a <a href="job-farmer.html">Farmer</a> skill, learned at Job Level 45, with 5 levels.</li>
+<li>Bows are joined from a pick, a bowstring and a third part, all made with the same skill.</li>
+</ul>
+<div class="tablewrap recipe recipe-l"><table class="recipe-l">
+<thead>
+<tr>
+<th>Item</th>
+<th>Materials</th>
+<th>Tool</th>
+<th>Recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="materials.html#item:10016600"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Pick</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016300"><img class="inicon" src="assets/item_icon/10016300.png" alt="" loading="lazy" decoding="async">Timber</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10034508"><img class="inicon" src="assets/item_icon/10034508.png" alt="" loading="lazy" decoding="async">Wax</a></span></li></ul></td>
+<td><a class="ent" href="equipment.html#item:60010000"><img class="inicon" src="assets/item_icon/60010000.png" alt="" loading="lazy" decoding="async">Knife</a></td>
+<td><a href="crafting.html#recipe:1101">Lv 1</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10016500"><img class="inicon" src="assets/item_icon/10016500.png" alt="" loading="lazy" decoding="async">Bowstring</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024000"><img class="inicon" src="assets/item_icon/10024000.png" alt="" loading="lazy" decoding="async">Braid</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10034507"><img class="inicon" src="assets/item_icon/10034507.png" alt="" loading="lazy" decoding="async">Paraffin</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1102">Lv 1</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10016602"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Solid String</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016400"><img class="inicon" src="assets/item_icon/10016400.png" alt="" loading="lazy" decoding="async">Harder Timber</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10034508"><img class="inicon" src="assets/item_icon/10034508.png" alt="" loading="lazy" decoding="async">Wax</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038500"><img class="inicon" src="assets/item_icon/10038500.png" alt="" loading="lazy" decoding="async">Sandpaper</a></span></li></ul></td>
+<td><a class="ent" href="equipment.html#item:60010000"><img class="inicon" src="assets/item_icon/60010000.png" alt="" loading="lazy" decoding="async">Knife</a></td>
+<td><a href="crafting.html#recipe:1141">Lv 3</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10016501"><img class="inicon" src="assets/item_icon/10016500.png" alt="" loading="lazy" decoding="async">High Class Bowstring</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024003"><img class="inicon" src="assets/item_icon/10024003.png" alt="" loading="lazy" decoding="async">Durable Braid</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10034507"><img class="inicon" src="assets/item_icon/10034507.png" alt="" loading="lazy" decoding="async">Paraffin</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1142">Lv 3</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10016502"><img class="inicon" src="assets/item_icon/10016500.png" alt="" loading="lazy" decoding="async">Highest Class Bowstring</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016501"><img class="inicon" src="assets/item_icon/10016500.png" alt="" loading="lazy" decoding="async">High Class Bowstring</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10007600"><img class="inicon" src="assets/item_icon/10007600.png" alt="" loading="lazy" decoding="async">Plastic</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038500"><img class="inicon" src="assets/item_icon/10038500.png" alt="" loading="lazy" decoding="async">Sandpaper</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1162">Lv 4</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10016603"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Platinum Pick</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016602"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Solid String</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10018003"><img class="inicon" src="assets/item_icon/10018000.png" alt="" loading="lazy" decoding="async">Platinum Parts</a></span></li><li><span class="amt">4 × <a class="ent" href="materials.html#item:10023300"><img class="inicon" src="assets/item_icon/10023300.png" alt="" loading="lazy" decoding="async">Screw</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1184">Lv 5</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10016604"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Orihalcon Pick</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016602"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Solid String</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10018004"><img class="inicon" src="assets/item_icon/10018000.png" alt="" loading="lazy" decoding="async">Orihalcon Parts</a></span></li><li><span class="amt">4 × <a class="ent" href="materials.html#item:10023300"><img class="inicon" src="assets/item_icon/10023300.png" alt="" loading="lazy" decoding="async">Screw</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1185">Lv 5</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60090000"><img class="inicon" src="assets/item_icon/60090000.png" alt="" loading="lazy" decoding="async">Bow</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016600"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Pick</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016500"><img class="inicon" src="assets/item_icon/10016500.png" alt="" loading="lazy" decoding="async">Bowstring</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10021300"><img class="inicon" src="assets/item_icon/10021300.png" alt="" loading="lazy" decoding="async">Cloth</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1121">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60090100"><img class="inicon" src="assets/item_icon/60090100.png" alt="" loading="lazy" decoding="async">Long Bow</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016600"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Pick</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016501"><img class="inicon" src="assets/item_icon/10016500.png" alt="" loading="lazy" decoding="async">High Class Bowstring</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10045901"><img class="inicon" src="assets/item_icon/10021300.png" alt="" loading="lazy" decoding="async">Noble Fabric</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1122">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60090400"><img class="inicon" src="assets/item_icon/60090400.png" alt="" loading="lazy" decoding="async">Crossbow Gun</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016602"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Solid String</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016501"><img class="inicon" src="assets/item_icon/10016500.png" alt="" loading="lazy" decoding="async">High Class Bowstring</a></span></li><li><span class="amt">2 × <a class="ent" href="materials.html#item:10018000"><img class="inicon" src="assets/item_icon/10018000.png" alt="" loading="lazy" decoding="async">Tin Parts</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10045901"><img class="inicon" src="assets/item_icon/10021300.png" alt="" loading="lazy" decoding="async">Noble Fabric</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1161">Lv 4</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60090300"><img class="inicon" src="assets/item_icon/60090300.png" alt="" loading="lazy" decoding="async">Composite Bow</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016602"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Solid String</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016502"><img class="inicon" src="assets/item_icon/10016500.png" alt="" loading="lazy" decoding="async">Highest Class Bowstring</a></span></li><li><span class="amt">2 × <a class="ent" href="materials.html#item:10018001"><img class="inicon" src="assets/item_icon/10018000.png" alt="" loading="lazy" decoding="async">Iron Parts</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10020202"><img class="inicon" src="assets/item_icon/10020202.png" alt="" loading="lazy" decoding="async">High Quality Processed Leather</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1181">Lv 5</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60090200"><img class="inicon" src="assets/item_icon/60090200.png" alt="" loading="lazy" decoding="async">Barrier Tap</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016603"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Platinum Pick</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016502"><img class="inicon" src="assets/item_icon/10016500.png" alt="" loading="lazy" decoding="async">Highest Class Bowstring</a></span></li><li><span class="amt">2 × <a class="ent" href="materials.html#item:10018001"><img class="inicon" src="assets/item_icon/10018000.png" alt="" loading="lazy" decoding="async">Iron Parts</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10020400"><img class="inicon" src="assets/item_icon/10020302.png" alt="" loading="lazy" decoding="async">Luxury Leather</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1183">Lv 5</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60092200"><img class="inicon" src="assets/item_icon/60092200.png" alt="" loading="lazy" decoding="async">Dragon Slayer</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10037700"><img class="inicon" src="assets/item_icon/10037700.png" alt="" loading="lazy" decoding="async">Jewel Money Platinum</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016604"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Orihalcon Pick</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016502"><img class="inicon" src="assets/item_icon/10016500.png" alt="" loading="lazy" decoding="async">Highest Class Bowstring</a></span></li><li><span class="amt">4 × <a class="ent" href="materials.html#item:10015304"><img class="inicon" src="assets/item_icon/10015304.png" alt="" loading="lazy" decoding="async">Dragon Leather</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1188">Lv 5</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="staff-crafting">Staff Crafting</h2>
+<ul>
+<li><a class="ent" href="job-sorcerer.html#skill:2021"><img class="inicon skicon" src="assets/ext/nekogame-wiki/assets/images/wiki/skills/SI_2021.png" alt="" loading="lazy" decoding="async">Staff Crafting</a> has 5 levels. It is learned at:<ul>
+<li><a href="job-blacksmith.html">Blacksmith</a>: Job Level 17</li>
+<li><a href="job-sorcerer.html">Sorcerer</a>: Job Level 20</li>
+</ul>
+</li>
+<li>It makes staves, books and string instruments.</li>
+</ul>
+<div class="tablewrap recipe recipe-l"><table class="recipe-l">
+<thead>
+<tr>
+<th>Item</th>
+<th>Materials</th>
+<th>Tool</th>
+<th>Recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="equipment.html#item:60070000"><img class="inicon" src="assets/item_icon/60070000.png" alt="" loading="lazy" decoding="async">Wild Staff</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016605"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Tree Branch</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10002202"><img class="inicon" src="assets/item_icon/10001902.png" alt="" loading="lazy" decoding="async">Mana Water</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1501">Lv 1</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60070100"><img class="inicon" src="assets/item_icon/60070100.png" alt="" loading="lazy" decoding="async">Wooden Staff</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10044100"><img class="inicon" src="assets/item_icon/10044100.png" alt="" loading="lazy" decoding="async">Wooden Rod</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10002202"><img class="inicon" src="assets/item_icon/10001902.png" alt="" loading="lazy" decoding="async">Mana Water</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1521">Lv 2</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60070200"><img class="inicon" src="assets/item_icon/60070200.png" alt="" loading="lazy" decoding="async">Rod</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10044100"><img class="inicon" src="assets/item_icon/10044100.png" alt="" loading="lazy" decoding="async">Wooden Rod</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10038500"><img class="inicon" src="assets/item_icon/10038500.png" alt="" loading="lazy" decoding="async">Sandpaper</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10002202"><img class="inicon" src="assets/item_icon/10001902.png" alt="" loading="lazy" decoding="async">Mana Water</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1541">Lv 3</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60073700"><img class="inicon" src="assets/item_icon/60073700.png" alt="" loading="lazy" decoding="async">Tomato Staff</a></td>
+<td><ul class="cellist stack"><li><span class="amt">10 × <a class="ent" href="materials.html#item:10094600"><img class="inicon" src="assets/item_icon/10094600.png" alt="" loading="lazy" decoding="async">Alchemy Fruit (Magic Tool)</a></span></li><li><span class="amt">30 × <a class="ent" href="materials.html#item:10101200"><img class="inicon" src="assets/item_icon/10101200.png" alt="" loading="lazy" decoding="async">Cherry Tomato</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1544">Lv 3</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60073700"><img class="inicon" src="assets/item_icon/60073700.png" alt="" loading="lazy" decoding="async">Tomato Staff</a></td>
+<td><ul class="cellist stack"><li><span class="amt">5 × <a class="ent" href="materials.html#item:10094600"><img class="inicon" src="assets/item_icon/10094600.png" alt="" loading="lazy" decoding="async">Alchemy Fruit (Magic Tool)</a></span></li><li><span class="amt">15 × <a class="ent" href="materials.html#item:10095300"><img class="inicon" src="assets/item_icon/10095300.png" alt="" loading="lazy" decoding="async">Tomato</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1545">Lv 3</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:61040100"><img class="inicon" src="assets/item_icon/61040100.png" alt="" loading="lazy" decoding="async">Lute</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:61040180"><img class="inicon" src="assets/item_icon/61040100.png" alt="" loading="lazy" decoding="async">Broken Lute</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016603"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Platinum Pick</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1542">Lv 3</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60070300"><img class="inicon" src="assets/item_icon/60070300.png" alt="" loading="lazy" decoding="async">Noble Rod</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10044101"><img class="inicon" src="assets/item_icon/10044100.png" alt="" loading="lazy" decoding="async">Japanese Cypress Rod</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10012500"><img class="inicon" src="assets/item_icon/10012500.png" alt="" loading="lazy" decoding="async">Lapis Lazuli</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10002202"><img class="inicon" src="assets/item_icon/10001902.png" alt="" loading="lazy" decoding="async">Mana Water</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1561">Lv 4</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:61040200"><img class="inicon" src="assets/item_icon/61040200.png" alt="" loading="lazy" decoding="async">Fairy Harp</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10034506"><img class="inicon" src="assets/item_icon/10034506.png" alt="" loading="lazy" decoding="async">Fairy Water</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016603"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Platinum Pick</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016601"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">World Tree Branch</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1562">Lv 4</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60072300"><img class="inicon" src="assets/item_icon/60072300.png" alt="" loading="lazy" decoding="async">Titania Rod</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10040003"><img class="inicon" src="assets/item_icon/10039100.png" alt="" loading="lazy" decoding="async">Platinum Rod</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10043707"><img class="inicon" src="assets/item_icon/10043707.png" alt="" loading="lazy" decoding="async">Golden Ribbon</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10012300"><img class="inicon" src="assets/item_icon/10012300.png" alt="" loading="lazy" decoding="async">Peridot</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1583">Lv 5</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60072000"><img class="inicon" src="assets/item_icon/60072000.png" alt="" loading="lazy" decoding="async">Novel Staff</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10025206"><img class="inicon" src="assets/item_icon/10025206.png" alt="" loading="lazy" decoding="async">Urchin Lime Green Spine</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10040003"><img class="inicon" src="assets/item_icon/10039100.png" alt="" loading="lazy" decoding="async">Platinum Rod</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10014300"><img class="inicon" src="assets/item_icon/10014300.png" alt="" loading="lazy" decoding="async">Crystal</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1587">Lv 5</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60071000"><img class="inicon" src="assets/item_icon/60071000.png" alt="" loading="lazy" decoding="async">Minstrel Note</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10030300"><img class="inicon" src="assets/item_icon/10030300.png" alt="" loading="lazy" decoding="async">Tuning Fork</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10011302"><img class="inicon" src="assets/item_icon/10011302.png" alt="" loading="lazy" decoding="async">Melody Stone</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1586">Lv 5</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60081300"><img class="inicon" src="assets/item_icon/60081300.png" alt="" loading="lazy" decoding="async">Mage Book</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10029400"><img class="inicon" src="assets/item_icon/10029400.png" alt="" loading="lazy" decoding="async">Old Book</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10024000"><img class="inicon" src="assets/item_icon/10024000.png" alt="" loading="lazy" decoding="async">Braid</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1585">Lv 5</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:61040300"><img class="inicon" src="assets/item_icon/61040300.png" alt="" loading="lazy" decoding="async">Guitar</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:61040380"><img class="inicon" src="assets/item_icon/61040300.png" alt="" loading="lazy" decoding="async">Broken Guitar</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10016603"><img class="inicon" src="assets/item_icon/10016600.png" alt="" loading="lazy" decoding="async">Platinum Pick</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1584">Lv 5</a></td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60040800"><img class="inicon" src="assets/item_icon/60040800.png" alt="" loading="lazy" decoding="async">Parasol</a></td>
+<td><ul class="cellist stack"><li><span class="amt">1 × <a class="ent" href="materials.html#item:10046000"><img class="inicon" src="assets/item_icon/10021400.png" alt="" loading="lazy" decoding="async">Aromatic Fabric</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10037601"><img class="inicon" src="assets/item_icon/10037600.png" alt="" loading="lazy" decoding="async">Golden Decoration</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10044102"><img class="inicon" src="assets/item_icon/10044100.png" alt="" loading="lazy" decoding="async">World Tree Rod</a></span></li><li><span class="amt">1 × <a class="ent" href="materials.html#item:10043900"><img class="inicon" src="assets/item_icon/10043700.png" alt="" loading="lazy" decoding="async">Lace</a></span></li></ul></td>
+<td>-</td>
+<td><a href="crafting.html#recipe:1582">Lv 5</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="crafting.html">Crafting</a></li>
+<li><a href="armor-crafting.html">Armor Crafting</a></li>
+<li><a href="metal-refining.html">Metal Refining</a></li>
+<li><a href="refining.html">Refining</a></li>
+<li><a href="equipment-upgrades.html">Equipment Upgrades</a></li>
+<li><a href="equipment.html">Weapons &amp; Armor</a></li>
+<li><a href="job-blacksmith.html">Blacksmith</a></li>
+<li><a href="job-archer.html">Archer</a></li>
+<li><a href="job-farmer.html">Farmer</a></li>
+<li><a href="job-sorcerer.html">Sorcerer</a></li>
+</ul>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">On this page</h2><ul><li><a href="#how-it-works">How it works</a></li><li><a href="#craft-with-an-npc">Craft with an NPC</a></li><li><a href="#tools">Tools</a></li><li><a href="#weapon-construction">Weapon Construction</a></li><li><a href="#throwing-weapon-construction">Throwing Weapon Construction</a></li><li><a href="#bow-construction">Bow Construction</a></li><li><a href="#staff-crafting">Staff Crafting</a></li><li><a href="#related">Related</a></li></ul></aside>
+</div>
+<script src="ga-config.js"></script>
+<script src="search-index.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medal Machines · ECO Archive – Emil Chronicle Online Wiki</title>
+<meta name="description" content="Medal machines give you a random item for a medal.">
+<link rel="canonical" href="https://eco.akexorcist.dev/medal-machines.html">
+<link rel="alternate" type="text/markdown" href="https://eco.akexorcist.dev/medal-machines.md">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ECO Archive">
+<meta property="og:title" content="Medal Machines">
+<meta property="og:description" content="Medal machines give you a random item for a medal.">
+<meta property="og:url" content="https://eco.akexorcist.dev/medal-machines.html">
+<meta property="og:image" content="https://eco.akexorcist.dev/assets/scene_img/npc_11000049.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="1000">
+<meta property="og:image:alt" content="Village Boy in the game">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eco.akexorcist.dev/"}, {"@type": "ListItem", "position": 2, "name": "Game systems", "item": "https://eco.akexorcist.dev/arena-pvp.html"}, {"@type": "ListItem", "position": 3, "name": "Medal Machines", "item": "https://eco.akexorcist.dev/medal-machines.html"}]}</script>
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="stylesheet" href="site.css">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body class="article">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/></symbol>
+<symbol id="i-left" viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></symbol>
+<symbol id="i-right" viewBox="0 0 24 24"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></symbol>
+<symbol id="i-unfold" viewBox="0 0 24 24"><path d="M12 5.83 15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"/></symbol>
+<symbol id="i-fold" viewBox="0 0 24 24"><path d="M7.41 18.59 8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM2 13h2a1 1 0 0 0 0-2H2a1 1 0 0 0 0 2zm18 0h2a1 1 0 0 0 0-2h-2a1 1 0 0 0 0 2zM11 2v2a1 1 0 0 0 2 0V2a1 1 0 0 0-2 0zm0 18v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-2 0zM5.99 4.58a1 1 0 0 0-1.41 1.41l1.06 1.06a1 1 0 0 0 1.41-1.41L5.99 4.58zm12.37 12.37a1 1 0 0 0-1.41 1.41l1.06 1.06a1 1 0 0 0 1.41-1.41l-1.06-1.06zm1.06-10.96a1 1 0 0 0-1.41-1.41l-1.06 1.06a1 1 0 0 0 1.41 1.41l1.06-1.06zM7.05 18.36a1 1 0 0 0-1.41-1.41l-1.06 1.06a1 1 0 0 0 1.41 1.41l1.06-1.06z"/></symbol>
+<symbol id="i-auto" viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zm1-17.93a8 8 0 0 1 0 15.86V4.07z"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="iconbtn" id="menubtn" aria-label="Open navigation" aria-controls="drawer" aria-expanded="false"><svg class="i"><use href="#i-menu"/></svg></button>
+  <a class="brand" href="index.html"><img class="logo" src="assets/misc_img/logo/eco_logo_topbar.png" alt="" width="56" height="44"><span class="name">ECO Archive</span></a>
+  <div class="search" role="search">
+    <label for="q"><svg class="i"><use href="#i-search"/></svg><span class="visually-hidden">Search pages</span></label>
+    <input id="q" type="search" placeholder="Search jobs, quests, items…" aria-label="Search jobs, quests, items" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list">
+    <ul class="results" id="results" role="listbox" aria-label="Search results" hidden></ul>
+  </div>
+  <div class="thememenu">
+    <button class="iconbtn" id="themebtn" aria-haspopup="menu" aria-expanded="false" aria-controls="thememenu" aria-label="Theme"><svg class="i"><use href="#i-auto"/></svg></button>
+    <div class="menu" id="thememenu" role="menu" aria-label="Theme" hidden>
+      <button role="menuitemradio" data-mode="system" aria-checked="true"><svg class="i"><use href="#i-auto"/></svg>System<svg class="i check"><use href="#i-check"/></svg></button>
+      <button role="menuitemradio" data-mode="light" aria-checked="false"><svg class="i"><use href="#i-sun"/></svg>Light<svg class="i check"><use href="#i-check"/></svg></button>
+      <button role="menuitemradio" data-mode="dark" aria-checked="false"><svg class="i"><use href="#i-moon"/></svg>Dark<svg class="i check"><use href="#i-check"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+<div class="frame">
+  <nav class="drawer" id="drawer" aria-label="Site">
+    <div class="head"><span>ECO Archive</span><button class="iconbtn" aria-label="Close navigation"><svg class="i"><use href="#i-close"/></svg></button></div>
+    <ul><li><a href="index.html">Home</a></li><li><details><summary>Story<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="story.html">Story Overview</a></li><li><details><summary>Main Story<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="story-the-path-we-walk.html">The Path We Walk</a></li><li><a href="story-the-world-begins-to-move.html">The World Begins to Move</a></li><li><a href="story-beyond-the-truth.html">Beyond the Truth</a></li><li><a href="story-final-battle.html">Final Battle</a></li></ul></details></li><li><details><summary>Bonus Story<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="story-saga14.html">Gate of Emerald Forest</a></li><li><a href="story-saga15.html">Everlasting Union</a></li><li><a href="story-saga16.html">Memories of the Ice Queen</a></li><li><a href="story-saga18.html">Carmine Brick</a></li></ul></details></li></ul></details></li><li><details><summary>Getting started<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="game-basics.html">Game Basics</a></li><li><a href="races.html">Races</a></li><li><a href="stat-points.html">Status Points</a></li></ul></details></li><li><details open><summary>Game systems<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="arena-pvp.html">Arena PvP</a></li><li><a href="automata.html">Automata</a></li><li><a href="bosses.html">Bosses</a></li><li><a href="catties.html">Catties</a></li><li><a href="champion-battle.html">Champion Battle</a></li><li><a href="city-defense-battle.html">City Defense Battle</a></li><li><a href="demic-chips.html">DEMIC Chips</a></li><li><a href="dragon-mount.html">Dragon Mount</a></li><li><a href="dual-job.html">Dual Job</a></li><li><a href="element-fairies.html">Element Fairies</a></li><li><a href="equipment-upgrades.html">Equipment Upgrades</a></li><li><a href="factions.html">Factions</a></li><li><a href="fame.html">Fame</a></li><li><a href="farming.html">Farming</a></li><li><a href="fishing.html">Fishing</a></li><li><a href="flying-garden.html">Flying Garden</a></li><li><a href="flying-garden-parts.html">Flying Garden Parts</a></li><li><a href="furniture.html">Furniture</a></li><li><a href="hair-dye.html">Hair Dye</a></li><li><a href="hairstyles.html">Hairstyles</a></li><li><a href="getting-pets.html">How to Get Pets</a></li><li><a href="iris-cards.html">Iris Cards</a></li><li><a href="ability-vectors.html">Iris Cards – Ability Vectors</a></li><li><a href="item-repair.html">Item Repair</a></li><li><a href="job-switching.html">Job Switching</a></li><li><a href="knight-training.html">Knight Training</a></li><li><a href="marionettes.html">Marionettes &amp; Golems</a></li><li><a href="medal-machines.html" aria-current="page">Medal Machines</a></li><li><a href="partners.html">Partners</a></li><li><a href="pet-raising.html">Pet Raising</a></li><li><a href="possession.html">Possession</a></li><li><a href="pvp-skill-changes.html">PvP Skill Changes</a></li><li><a href="ring.html">Ring</a></li><li><a href="shops.html">Shops &amp; Merchants</a></li><li><a href="stamps.html">Stamps</a></li><li><a href="tiny-island.html">Tiny Island</a></li><li><a href="titles.html">Titles</a></li><li><a href="wedding.html">Wedding</a></li></ul></details></li><li><details><summary>Jobs<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="jobs.html">All jobs</a></li><li><details><summary>Fighter<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-scout.html">Scout</a></li><li><a href="job-assassin.html">Assassin</a></li><li><a href="job-commando.html">Commando</a></li><li><a href="job-eraser.html">Eraser</a></li><li><a href="job-swordsman.html">Swordsman</a></li><li><a href="job-blade-master.html">Blade Master</a></li><li><a href="job-bounty-hunter.html">Bounty Hunter</a></li><li><a href="job-gladiator.html">Gladiator</a></li><li><a href="job-fencer.html">Fencer</a></li><li><a href="job-knight.html">Knight</a></li><li><a href="job-dark-stalker.html">Dark Stalker</a></li><li><a href="job-guardian.html">Guardian</a></li><li><a href="job-archer.html">Archer</a></li><li><a href="job-striker.html">Striker</a></li><li><a href="job-gunner.html">Gunner</a></li><li><a href="job-hawkeye.html">Hawkeye</a></li></ul></details></li><li><details><summary>Spell User<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-warlock.html">Warlock</a></li><li><a href="job-cabalist.html">Cabalist</a></li><li><a href="job-necromancer.html">Necromancer</a></li><li><a href="job-soultaker.html">Soul Taker</a></li><li><a href="job-vates.html">Vates</a></li><li><a href="job-druid.html">Druid</a></li><li><a href="job-bard.html">Bard</a></li><li><a href="job-cardinal.html">Cardinal</a></li><li><a href="job-shaman.html">Shaman</a></li><li><a href="job-elementalist.html">Elementalist</a></li><li><a href="job-enchanter.html">Enchanter</a></li><li><a href="job-astralist.html">Astralist</a></li><li><a href="job-wizard.html">Wizard</a></li><li><a href="job-sorcerer.html">Sorcerer</a></li><li><a href="job-sage.html">Sage</a></li><li><a href="job-force-master.html">Force Master</a></li></ul></details></li><li><details><summary>Backpacker<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-farmer.html">Farmer</a></li><li><a href="job-alchemist.html">Alchemist</a></li><li><a href="job-marionettist.html">Marionettist</a></li><li><a href="job-harvester.html">Harvester</a></li><li><a href="job-miner.html">Miner (Tatarabe)</a></li><li><a href="job-blacksmith.html">Blacksmith</a></li><li><a href="job-engineer.html">Engineer (Machinery)</a></li><li><a href="job-maestro.html">Maestro</a></li><li><a href="job-ranger.html">Ranger</a></li><li><a href="job-explorer.html">Explorer</a></li><li><a href="job-treasure-hunter.html">Treasure Hunter</a></li><li><a href="job-strider.html">Strider</a></li><li><a href="job-merchant.html">Merchant</a></li><li><a href="job-trader.html">Trader</a></li><li><a href="job-gambler.html">Gambler</a></li><li><a href="job-royal-dealer.html">Royal Dealer</a></li></ul></details></li><li><details><summary>Other jobs<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-breeder.html">Breeder</a></li><li><a href="job-gardener.html">Gardener</a></li><li><a href="job-joker.html">Joker</a></li><li><a href="job-novice.html">Novice</a></li></ul></details></li></ul></details></li><li><details><summary>Quests<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="quest-catty-ai.html">Catty (Ai) Quest</a></li><li><a href="quest-catty-akane.html">Catty (Akane) Quest</a></li><li><a href="quest-catty-anzu.html">Catty (Anzu) Quest</a></li><li><a href="quest-catty-kurumi.html">Catty (Kurumi Wakana) Quest</a></li><li><a href="quest-catty-momo.html">Catty (Momo) Quest</a></li><li><a href="quest-catty-sora.html">Catty (Sora) Quest</a></li><li><a href="quest-catty-sumire.html">Catty (Sumire) Quest</a></li><li><a href="quest-catty-yamabuki.html">Catty (Yamabuki) Quest</a></li><li><a href="quest-cleaning.html">Cleaning Quests</a></li><li><a href="quest-endless-corridor.html">Endless Corridor Quests</a></li><li><a href="free-skill-points.html">Free Skill Points</a></li><li><a href="quest-heart-of-the-machine.html">Heart of the Machine</a></li><li><a href="quest-lv35-armor.html">Lv 35 Armor Quest</a></li><li><a href="quest-lv45-armor.html">Lv 45 Armor Quest</a></li><li><a href="quest-lv55-armor.html">Lv 55 Armor Quest</a></li><li><a href="quest-lv55-hat-shoes.html">Lv 55 Backpacker Hat &amp; Shoes Quest</a></li><li><a href="quest-lv60-weapon.html">Lv 60 Weapon Quest</a></li><li><a href="quest-lv65-armor.html">Lv 65 Armor Quest</a></li><li><a href="quest-lv75-armor.html">Lv 75 Armor Quest</a></li><li><a href="quest-lv85-armor.html">Lv 85 Armor Quest</a></li><li><a href="quest-lv90-weapon.html">Lv 90 Weapon Quest</a></li><li><a href="quest-lv99-armor.html">Lv 99 Armor Quest</a></li><li><a href="quest-lv99-weapon.html">Lv 99 Weapon Quest</a></li><li><a href="quest-counter.html">Quest Counter</a></li><li><a href="quest-reincarnation.html">Reincarnation Quest</a></li><li><a href="quest-ride-crawler.html">Ride Crawler Quest</a></li><li><a href="quest-tutorial.html">Tutorial Quests</a></li></ul></details></li><li><details><summary>Items<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="boxes.html">Boxes</a></li><li><a href="petals.html">Flower Petals</a></li><li><a href="food-items.html">Food and Healing Items</a></li><li><a href="upgrade-crystals.html">Upgrade Crystals</a></li><li><a href="equipment.html">Weapons &amp; Armor</a></li></ul></details></li><li><details><summary>Crafting<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="accessory-crafting.html">Accessory Crafting</a></li><li><a href="armor-crafting.html">Armor Crafting</a></li><li><a href="chemical-preparation.html">Chemical Preparation</a></li><li><a href="cooking.html">Cooking</a></li><li><details><summary>Recipes &amp; Materials<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="crafting.html">Craftable Items</a></li><li><a href="materials.html">Crafting Materials</a></li></ul></details></li><li><a href="fairy-scrolls.html">Fairy Scrolls</a></li><li><a href="machinery-crafting.html">Machinery Crafting</a></li><li><a href="metal-refining.html">Metal Refining</a></li><li><a href="refining.html">Refining</a></li><li><a href="tailoring.html">Tailoring</a></li><li><a href="weapon-crafting.html">Weapon Crafting</a></li><li><a href="woodcraft.html">Woodcraft</a></li></ul></details></li><li><a href="monsters.html">Monsters</a></li><li><details><summary>Maps<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="maps.html">All Maps</a></li><li><details><summary>Travel<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="airships-and-rides.html">Airships &amp; Rides</a></li><li><a href="between-the-worlds.html">Between the Worlds</a></li><li><a href="city-passes.html">City Passes</a></li><li><a href="dominion-world.html">Dominion World</a></li><li><a href="emil-world-cities.html">Emil World Cities</a></li><li><a href="enigma-group-fortress.html">Enigma Group Fortress</a></li><li><a href="sky-tower-pass.html">Sky Tower Pass</a></li><li><a href="titania-world.html">Titania World</a></li><li><a href="tonka-pass.html">Tonka Pass</a></li></ul></details></li><li><details><summary>Dungeons<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="ancient-ruins.html">Ancient Ruins</a></li><li><a href="carmine-brick-ruins.html">Carmine Brick Ruins</a></li><li><a href="dimension-dungeons.html">Dimension Dungeons</a></li><li><a href="eastern-dungeon.html">Eastern Dungeon</a></li><li><a href="endless-corridor.html">Endless Corridor</a></li><li><a href="light-tower.html">Light Tower</a></li><li><a href="mai-mai-ruins.html">Mai Mai Ruins</a></li><li><a href="northern-underground.html">Northern Underground</a></li><li><a href="old-acropolis.html">Old Acropolis</a></li><li><a href="oracle-wind-cave.html">Oracle Wind Cave</a></li><li><a href="sky-tower.html">Sky Tower</a></li><li><a href="submarine-cave.html">Submarine Cave</a></li><li><a href="undead-castle.html">Undead Castle</a></li><li><a href="underground-water-facility.html">Underground Water Facility</a></li></ul></details></li></ul></details></li><li><details><summary>Miscellaneous<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="misc-logo.html">Logo</a></li><li><a href="misc-videos.html">Trailer</a></li><li><details><summary>Artwork<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="misc-catty-art.html">Catty &amp; Pet Art</a></li><li><a href="art-partners.html">Partner Art</a></li><li><a href="art-races.html">Character Art</a></li><li><a href="art-jobs.html">Job Art</a></li><li><a href="misc-monster-artwork.html">Marionette &amp; Monster Artwork</a></li><li><a href="art-seasonal.html">Seasonal Art</a></li><li><a href="art-sketches.html">Concept Sketches</a></li></ul></details></li><li><a href="misc-servers.html">Official Servers</a></li></ul></details></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="references.html">Sources &amp; Credits</a></li></ul>
+  </nav>
+  <main class="content" id="main" tabindex="-1">
+<nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li>Game systems</li></ol></nav><header class="hero plain"><div><h1>Medal Machines</h1><p class="lead"><strong>Medal machines</strong> give you a random item for a medal.</p></div></header><details class="toc-inline"><summary>On this page</summary><ul><li><a href="#medals">Medals</a></li><li><a href="#where-the-machines-are">Where the machines are</a></li><li><a href="#what-you-can-get">What you can get</a></li><li><a href="#related">Related</a></li></ul></details>
+
+
+
+<h2 id="medals">Medals</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Medal</th>
+<th>How to get it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="nm"><img class="inicon" src="assets/item_icon/10009500.png" alt=""><b>Emil Medal</b></span></td>
+<td>From the beginner tutorial</td>
+</tr>
+<tr>
+<td><span class="nm"><img class="inicon" src="assets/item_icon/10009500.png" alt="" loading="lazy" decoding="async"><b>Copper Medal</b></span></td>
+<td>Give <span class="amt">10 × <span class="nm"><img class="inicon" src="assets/item_icon/10019900.png" alt="" loading="lazy" decoding="async"><b>Torn Magic Book</b></span></span> to the <a class="ent" data-pic="assets/npc_img/11000049.png" href="maps.html#map:10024000">Village Boy</a> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10024000">Downtown</a></td>
+</tr>
+<tr>
+<td><span class="nm"><img class="inicon" src="assets/item_icon/10009600.png" alt="" loading="lazy" decoding="async"><b>Silver Medal</b></span></td>
+<td>Trade <span class="amt">10 × <span class="nm"><img class="inicon" src="assets/item_icon/10009500.png" alt="" loading="lazy" decoding="async"><b>Copper Medal</b></span></span> with the <a class="ent" data-pic="assets/npc_img/11000056.png" href="maps.html#map:10001000">Northern Border Guard</a> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,20.00" href="maps.html#map:10001000">Cape Northerin</a></td>
+</tr>
+<tr>
+<td><span class="nm"><img class="inicon" src="assets/item_icon/10009700.png" alt="" loading="lazy" decoding="async"><b>Gold Medal</b></span></td>
+<td>Trade <span class="amt">10 × <span class="nm"><img class="inicon" src="assets/item_icon/10009600.png" alt="" loading="lazy" decoding="async"><b>Silver Medal</b></span></span> with the <a class="ent" data-pic="assets/npc_img/11000167.png" href="maps.html#map:10046000">Iron South Border Guard</a> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="36.92,70.77" href="maps.html#map:10046000">Cape Southerin</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="copper-medals-from-torn-books">Copper Medals from torn books</h3>
+<ul>
+<li>
+<p>Talk to the <a class="ent" href="maps.html#map:10024000">Village Boy</a> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10024000">Downtown</a>, near the <a class="ent" data-pic="assets/npc_img/11000001.png" href="maps.html#map:10024000">Elegant Lady</a>. He trades <span class="amt"><strong>10</strong> × <img class="inicon" src="assets/item_icon/10019900.png" alt="" loading="lazy" decoding="async"><b>Torn Magic Book</b></span> for a <img class="inicon" src="assets/item_icon/10009500.png" alt="" loading="lazy" decoding="async"><b>Copper Medal</b>.</p>
+<div class="npc" role="group" aria-label="Village Boy"><div class="who"><img src="assets/npc_thumb/11000049.png" alt="" loading="lazy" decoding="async"><b>Village Boy</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m024.png" alt="Map of Downtown" loading="lazy" decoding="async"><span class="pin hl" data-name="Downtown" style="left:50.2%;top:61.1%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10024000">Downtown</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11000049.webp" alt="Village Boy in the game" loading="lazy" decoding="async"></figure></div>
+</li>
+<li>
+<p><img class="inicon" src="assets/item_icon/10019900.png" alt="" loading="lazy" decoding="async"><b>Torn Magic Book</b> drops often from <a class="ent" data-pic="assets/monster_img/10620000.png" href="monsters.html#monster:10620000">Young CockKo</a> and sometimes from <a class="ent" data-pic="assets/monster_img/10030400.png" href="monsters.html#monster:10030400">Polar Bear</a>.</p>
+</li>
+</ul>
+<h3 id="trade-up">Trade up</h3>
+<ul>
+<li>
+<p>The <a class="ent" href="maps.html#map:10001000">Northern Border Guard</a> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,20.00" href="maps.html#map:10001000">Cape Northerin</a> trades <span class="amt"><strong>10</strong> × <img class="inicon" src="assets/item_icon/10009500.png" alt="" loading="lazy" decoding="async"><b>Copper Medal</b></span> for <span class="amt"><strong>1</strong> × <img class="inicon" src="assets/item_icon/10009600.png" alt="" loading="lazy" decoding="async"><b>Silver Medal</b></span>.</p>
+<div class="npc" role="group" aria-label="Northern Border Guard"><div class="who"><img src="assets/npc_thumb/11000056.png" alt="" loading="lazy" decoding="async"><b>Northern Border Guard</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m001.png" alt="Map of Cape Northerin" loading="lazy" decoding="async"><span class="pin hl below" data-name="Cape Northerin" style="left:37.3%;top:17.0%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,20.00" href="maps.html#map:10001000">Cape Northerin</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11000056.webp" alt="Northern Border Guard in the game" loading="lazy" decoding="async"></figure></div>
+</li>
+<li>
+<p>The <a class="ent" href="maps.html#map:10046000">Iron South Border Guard</a> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="36.92,70.77" href="maps.html#map:10046000">Cape Southerin</a> trades <span class="amt"><strong>10</strong> × <img class="inicon" src="assets/item_icon/10009600.png" alt="" loading="lazy" decoding="async"><b>Silver Medal</b></span> for <span class="amt"><strong>1</strong> × <img class="inicon" src="assets/item_icon/10009700.png" alt="" loading="lazy" decoding="async"><b>Gold Medal</b></span>.</p>
+<div class="npc" role="group" aria-label="Iron South Border Guard"><div class="who"><img src="assets/npc_thumb/11000167.png" alt="" loading="lazy" decoding="async"><b>Iron South Border Guard</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m046.png" alt="Map of Cape Southerin" loading="lazy" decoding="async"><span class="pin hl edge-r" data-name="Cape Southerin" style="left:81.1%;top:89.6%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="36.92,70.77" href="maps.html#map:10046000">Cape Southerin</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11000167.webp" alt="Iron South Border Guard in the game" loading="lazy" decoding="async"></figure></div>
+</li>
+</ul>
+<h2 id="where-the-machines-are">Where the machines are</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Machine</th>
+<th>Medals it takes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b class="enttip" tabindex="0" data-pic="assets/npc_img/12001002.png">Item Box</b> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10023400">Acropolis North Bridge</a></td>
+<td><ul class="cellist"><li><span class="nm"><img class="inicon" src="assets/item_icon/10009500.png" alt="" loading="lazy" decoding="async"><b>Emil Medal</b></span></li><li><span class="nm"><img class="inicon" src="assets/item_icon/10009500.png" alt="" loading="lazy" decoding="async"><b>Copper Medal</b></span></li></ul></td>
+</tr>
+<tr>
+<td><b class="enttip" tabindex="0" data-pic="assets/npc_img/12001006.png">Item Box</b> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10023300">Acropolis South Bridge</a></td>
+<td><ul class="cellist"><li><span class="nm"><img class="inicon" src="assets/item_icon/10009500.png" alt="" loading="lazy" decoding="async"><b>Emil Medal</b></span></li><li><span class="nm"><img class="inicon" src="assets/item_icon/10009500.png" alt="" loading="lazy" decoding="async"><b>Copper Medal</b></span></li></ul></td>
+</tr>
+<tr>
+<td><b class="enttip" tabindex="0" data-pic="assets/npc_img/12001004.png">Item Box</b> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10023100">Acropolis East Bridge</a></td>
+<td><ul class="cellist"><li><span class="nm"><img class="inicon" src="assets/item_icon/10009600.png" alt="" loading="lazy" decoding="async"><b>Silver Medal</b></span></li></ul></td>
+</tr>
+<tr>
+<td><b class="enttip" tabindex="0" data-pic="assets/npc_img/12001000.png">Item Box</b> in <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10023200">Acropolis West Bridge</a></td>
+<td><ul class="cellist"><li><span class="nm"><img class="inicon" src="assets/item_icon/10009700.png" alt="" loading="lazy" decoding="async"><b>Gold Medal</b></span></li></ul></td>
+</tr>
+<tr>
+<td><b class="enttip" tabindex="0" data-pic="assets/npc_img/12001086.png">Item Box</b> in <a class="ent" data-pic="assets/minimap/m065.png" data-tip="room" data-pin="31.2%,3.1%" data-cap="Northern Promenade" href="maps.html#map:10065000">Northern Kingdom&#x27;s Army Station</a>, <a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="53.85,3.08" href="maps.html#map:10065000">Northern Promenade</a></td>
+<td><ul class="cellist"><li><span class="nm"><img class="inicon" src="assets/item_icon/10009600.png" alt="" loading="lazy" decoding="async"><b>Silver Medal</b></span></li></ul></td>
+</tr>
+<tr>
+<td><b class="enttip" tabindex="0" data-pic="assets/npc_img/12002093.png">Item Box</b> in <a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a></td>
+<td><ul class="cellist"><li><span class="nm"><img class="inicon" src="assets/item_icon/10009700.png" alt="" loading="lazy" decoding="async"><b>Gold Medal</b></span></li></ul></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="what-you-can-get">What you can get</h2>
+<p>Put in a medal and pick a handle (<strong>Cute</strong>, <strong>Cool</strong> or <strong>Useful</strong>). You get a random item from that group: clothes, accessories, furniture or useful items.</p>
+<p>Each machine has its own prize list, and higher medals give better prizes. Some examples:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Medal</th>
+<th>Machine</th>
+<th>Example prizes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><ul class="cellist stack"><li><span class="nm"><img class="inicon" src="assets/item_icon/10009500.png" alt="" loading="lazy" decoding="async"><b>Emil Medal</b></span></li><li><span class="nm"><img class="inicon" src="assets/item_icon/10009500.png" alt="" loading="lazy" decoding="async"><b>Copper Medal</b></span></li></ul></td>
+<td><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10023400">Acropolis North Bridge</a></td>
+<td><ul class="cellist"><li><a class="ent" href="equipment.html#item:50030100"><img class="inicon" src="assets/item_icon/50030100.png" alt="" loading="lazy" decoding="async">Hair Ribbon</a></li><li><a class="ent" href="equipment.html#item:50030200"><img class="inicon" src="assets/item_icon/50030200.png" alt="" loading="lazy" decoding="async">Large Hair Ribbon</a></li><li><a class="ent" href="equipment.html#item:50021900"><img class="inicon" src="assets/item_icon/50021900.png" alt="" loading="lazy" decoding="async">Beret</a></li><li><a class="ent" href="equipment.html#item:50021909"><img class="inicon" src="assets/item_icon/50021900.png" alt="" loading="lazy" decoding="async">Black Beret</a></li><li><a class="ent" href="equipment.html#item:50021905"><img class="inicon" src="assets/item_icon/50021900.png" alt="" loading="lazy" decoding="async">Lime Green Beret</a></li><li><a class="ent" href="equipment.html#item:50003251"><img class="inicon" src="assets/item_icon/50003200.png" alt="" loading="lazy" decoding="async">Pink Work Pants</a></li><li><a class="ent" href="equipment.html#item:50003250"><img class="inicon" src="assets/item_icon/50003200.png" alt="" loading="lazy" decoding="async">Khaki Work Pants</a></li><li><a class="ent" href="materials.html#item:10000503"><img class="inicon" src="assets/item_icon/10000503.png" alt="" loading="lazy" decoding="async">High Heal Potion</a></li><li><a class="ent" href="crafting.html#recipe:643"><img class="inicon" src="assets/item_icon/10026451.png" alt="" loading="lazy" decoding="async">Arrow Bundle</a></li><li><a class="ent" href="equipment.html#item:61010000"><img class="inicon" src="assets/item_icon/61010000.png" alt="" loading="lazy" decoding="async">Throwing Dagger</a></li></ul></td>
+</tr>
+<tr>
+<td><span class="nm"><img class="inicon" src="assets/item_icon/10009600.png" alt="" loading="lazy" decoding="async"><b>Silver Medal</b></span></td>
+<td><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10023100">Acropolis East Bridge</a></td>
+<td><ul class="cellist"><li><a class="ent" href="equipment.html#item:50030300"><img class="inicon" src="assets/item_icon/50030300.png" alt="" loading="lazy" decoding="async">Red Hair Ribbon A</a></li><li><a class="ent" href="equipment.html#item:50011111"><img class="inicon" src="assets/item_icon/50011111.png" alt="" loading="lazy" decoding="async">White Knee-High Socks</a></li><li><a class="ent" href="equipment.html#item:50050400"><img class="inicon" src="assets/item_icon/50050400.png" alt="" loading="lazy" decoding="async">Amethyst Pendant</a></li><li><a class="ent" href="equipment.html#item:50021509"><img class="inicon" src="assets/item_icon/50021500.png" alt="" loading="lazy" decoding="async">Black Wizard Hat</a></li></ul></td>
+</tr>
+<tr>
+<td><span class="nm"><img class="inicon" src="assets/item_icon/10009700.png" alt="" loading="lazy" decoding="async"><b>Gold Medal</b></span></td>
+<td><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a></td>
+<td><ul class="cellist"><li><a class="ent" href="equipment.html#item:50090115"><img class="inicon" src="assets/item_icon/50090100.png" alt="" loading="lazy" decoding="async">Magic Ribbon (Pink)</a></li><li><a class="ent" href="equipment.html#item:50090109"><img class="inicon" src="assets/item_icon/50090100.png" alt="" loading="lazy" decoding="async">Magic Ribbon (Black)</a></li><li><a class="ent" href="equipment.html#item:50070951"><img class="inicon" src="assets/item_icon/50070950.png" alt="" loading="lazy" decoding="async">Red Suitcase</a></li><li><a class="ent" href="equipment.html#item:50071651"><img class="inicon" src="assets/item_icon/50070950.png" alt="" loading="lazy" decoding="async">Left-Hand Red Suitcase</a></li><li><a class="ent" href="equipment.html#item:50070950"><img class="inicon" src="assets/item_icon/50070950.png" alt="" loading="lazy" decoding="async">Black Suitcase</a></li><li><a class="ent" href="equipment.html#item:50071650"><img class="inicon" src="assets/item_icon/50070950.png" alt="" loading="lazy" decoding="async">Left-Hand Black Suitcase</a></li><li><a class="ent" href="equipment.html#item:50071052"><img class="inicon" src="assets/item_icon/50071051.png" alt="" loading="lazy" decoding="async">Tiny Light Pink Suitcase</a></li><li><a class="ent" href="equipment.html#item:50071051"><img class="inicon" src="assets/item_icon/50071051.png" alt="" loading="lazy" decoding="async">Tiny Navy Blue Suitcase</a></li><li><a class="ent" href="equipment.html#item:60081200"><img class="inicon" src="assets/item_icon/60081200.png" alt="" loading="lazy" decoding="async">Book of Power</a></li><li><a class="ent" href="equipment.html#item:60072300"><img class="inicon" src="assets/item_icon/60072300.png" alt="" loading="lazy" decoding="async">Titania Rod</a></li><li><a class="ent" href="equipment.html#item:60052900"><img class="inicon" src="assets/item_icon/60052900.png" alt="" loading="lazy" decoding="async">Scythe of Death</a></li></ul></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="boxes.html">Boxes</a></li>
+<li><a href="hair-dye.html">Hair Dye</a></li>
+<li><a class="ent" data-pic="assets/minimap/world_0.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:10024000">Downtown</a></li>
+</ul>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">On this page</h2><ul><li><a href="#medals">Medals</a></li><li><a href="#where-the-machines-are">Where the machines are</a></li><li><a href="#what-you-can-get">What you can get</a></li><li><a href="#related">Related</a></li></ul></aside>
+</div>
+<script src="ga-config.js"></script>
+<script src="search-index.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

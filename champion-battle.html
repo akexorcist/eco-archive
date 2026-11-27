@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Champion Battle · ECO Archive – Emil Chronicle Online Wiki</title>
+<meta name="description" content="Champion Battle in Emil Chronicle Online: Player-versus-player fighting on some Dominion World maps.">
+<link rel="canonical" href="https://eco.akexorcist.dev/champion-battle.html">
+<link rel="alternate" type="text/markdown" href="https://eco.akexorcist.dev/champion-battle.md">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ECO Archive">
+<meta property="og:title" content="Champion Battle">
+<meta property="og:description" content="Champion Battle in Emil Chronicle Online: Player-versus-player fighting on some Dominion World maps.">
+<meta property="og:url" content="https://eco.akexorcist.dev/champion-battle.html">
+<meta property="og:image" content="https://eco.akexorcist.dev/assets/scene_img/npc_11001727.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="1000">
+<meta property="og:image:alt" content="Battle Tuner in the game">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eco.akexorcist.dev/"}, {"@type": "ListItem", "position": 2, "name": "Game systems", "item": "https://eco.akexorcist.dev/arena-pvp.html"}, {"@type": "ListItem", "position": 3, "name": "Champion Battle", "item": "https://eco.akexorcist.dev/champion-battle.html"}]}</script>
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="stylesheet" href="site.css">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body class="article">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/></symbol>
+<symbol id="i-left" viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></symbol>
+<symbol id="i-right" viewBox="0 0 24 24"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></symbol>
+<symbol id="i-unfold" viewBox="0 0 24 24"><path d="M12 5.83 15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"/></symbol>
+<symbol id="i-fold" viewBox="0 0 24 24"><path d="M7.41 18.59 8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM2 13h2a1 1 0 0 0 0-2H2a1 1 0 0 0 0 2zm18 0h2a1 1 0 0 0 0-2h-2a1 1 0 0 0 0 2zM11 2v2a1 1 0 0 0 2 0V2a1 1 0 0 0-2 0zm0 18v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-2 0zM5.99 4.58a1 1 0 0 0-1.41 1.41l1.06 1.06a1 1 0 0 0 1.41-1.41L5.99 4.58zm12.37 12.37a1 1 0 0 0-1.41 1.41l1.06 1.06a1 1 0 0 0 1.41-1.41l-1.06-1.06zm1.06-10.96a1 1 0 0 0-1.41-1.41l-1.06 1.06a1 1 0 0 0 1.41 1.41l1.06-1.06zM7.05 18.36a1 1 0 0 0-1.41-1.41l-1.06 1.06a1 1 0 0 0 1.41 1.41l1.06-1.06z"/></symbol>
+<symbol id="i-auto" viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zm1-17.93a8 8 0 0 1 0 15.86V4.07z"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="iconbtn" id="menubtn" aria-label="Open navigation" aria-controls="drawer" aria-expanded="false"><svg class="i"><use href="#i-menu"/></svg></button>
+  <a class="brand" href="index.html"><img class="logo" src="assets/misc_img/logo/eco_logo_topbar.png" alt="" width="56" height="44"><span class="name">ECO Archive</span></a>
+  <div class="search" role="search">
+    <label for="q"><svg class="i"><use href="#i-search"/></svg><span class="visually-hidden">Search pages</span></label>
+    <input id="q" type="search" placeholder="Search jobs, quests, items…" aria-label="Search jobs, quests, items" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list">
+    <ul class="results" id="results" role="listbox" aria-label="Search results" hidden></ul>
+  </div>
+  <div class="thememenu">
+    <button class="iconbtn" id="themebtn" aria-haspopup="menu" aria-expanded="false" aria-controls="thememenu" aria-label="Theme"><svg class="i"><use href="#i-auto"/></svg></button>
+    <div class="menu" id="thememenu" role="menu" aria-label="Theme" hidden>
+      <button role="menuitemradio" data-mode="system" aria-checked="true"><svg class="i"><use href="#i-auto"/></svg>System<svg class="i check"><use href="#i-check"/></svg></button>
+      <button role="menuitemradio" data-mode="light" aria-checked="false"><svg class="i"><use href="#i-sun"/></svg>Light<svg class="i check"><use href="#i-check"/></svg></button>
+      <button role="menuitemradio" data-mode="dark" aria-checked="false"><svg class="i"><use href="#i-moon"/></svg>Dark<svg class="i check"><use href="#i-check"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+<div class="frame">
+  <nav class="drawer" id="drawer" aria-label="Site">
+    <div class="head"><span>ECO Archive</span><button class="iconbtn" aria-label="Close navigation"><svg class="i"><use href="#i-close"/></svg></button></div>
+    <ul><li><a href="index.html">Home</a></li><li><details><summary>Story<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="story.html">Story Overview</a></li><li><details><summary>Main Story<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="story-the-path-we-walk.html">The Path We Walk</a></li><li><a href="story-the-world-begins-to-move.html">The World Begins to Move</a></li><li><a href="story-beyond-the-truth.html">Beyond the Truth</a></li><li><a href="story-final-battle.html">Final Battle</a></li></ul></details></li><li><details><summary>Bonus Story<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="story-saga14.html">Gate of Emerald Forest</a></li><li><a href="story-saga15.html">Everlasting Union</a></li><li><a href="story-saga16.html">Memories of the Ice Queen</a></li><li><a href="story-saga18.html">Carmine Brick</a></li></ul></details></li></ul></details></li><li><details><summary>Getting started<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="game-basics.html">Game Basics</a></li><li><a href="races.html">Races</a></li><li><a href="stat-points.html">Status Points</a></li></ul></details></li><li><details open><summary>Game systems<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="arena-pvp.html">Arena PvP</a></li><li><a href="automata.html">Automata</a></li><li><a href="bosses.html">Bosses</a></li><li><a href="catties.html">Catties</a></li><li><a href="champion-battle.html" aria-current="page">Champion Battle</a></li><li><a href="city-defense-battle.html">City Defense Battle</a></li><li><a href="demic-chips.html">DEMIC Chips</a></li><li><a href="dragon-mount.html">Dragon Mount</a></li><li><a href="dual-job.html">Dual Job</a></li><li><a href="element-fairies.html">Element Fairies</a></li><li><a href="equipment-upgrades.html">Equipment Upgrades</a></li><li><a href="factions.html">Factions</a></li><li><a href="fame.html">Fame</a></li><li><a href="farming.html">Farming</a></li><li><a href="fishing.html">Fishing</a></li><li><a href="flying-garden.html">Flying Garden</a></li><li><a href="flying-garden-parts.html">Flying Garden Parts</a></li><li><a href="furniture.html">Furniture</a></li><li><a href="hair-dye.html">Hair Dye</a></li><li><a href="hairstyles.html">Hairstyles</a></li><li><a href="getting-pets.html">How to Get Pets</a></li><li><a href="iris-cards.html">Iris Cards</a></li><li><a href="ability-vectors.html">Iris Cards – Ability Vectors</a></li><li><a href="item-repair.html">Item Repair</a></li><li><a href="job-switching.html">Job Switching</a></li><li><a href="knight-training.html">Knight Training</a></li><li><a href="marionettes.html">Marionettes &amp; Golems</a></li><li><a href="medal-machines.html">Medal Machines</a></li><li><a href="partners.html">Partners</a></li><li><a href="pet-raising.html">Pet Raising</a></li><li><a href="possession.html">Possession</a></li><li><a href="pvp-skill-changes.html">PvP Skill Changes</a></li><li><a href="ring.html">Ring</a></li><li><a href="shops.html">Shops &amp; Merchants</a></li><li><a href="stamps.html">Stamps</a></li><li><a href="tiny-island.html">Tiny Island</a></li><li><a href="titles.html">Titles</a></li><li><a href="wedding.html">Wedding</a></li></ul></details></li><li><details><summary>Jobs<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="jobs.html">All jobs</a></li><li><details><summary>Fighter<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-scout.html">Scout</a></li><li><a href="job-assassin.html">Assassin</a></li><li><a href="job-commando.html">Commando</a></li><li><a href="job-eraser.html">Eraser</a></li><li><a href="job-swordsman.html">Swordsman</a></li><li><a href="job-blade-master.html">Blade Master</a></li><li><a href="job-bounty-hunter.html">Bounty Hunter</a></li><li><a href="job-gladiator.html">Gladiator</a></li><li><a href="job-fencer.html">Fencer</a></li><li><a href="job-knight.html">Knight</a></li><li><a href="job-dark-stalker.html">Dark Stalker</a></li><li><a href="job-guardian.html">Guardian</a></li><li><a href="job-archer.html">Archer</a></li><li><a href="job-striker.html">Striker</a></li><li><a href="job-gunner.html">Gunner</a></li><li><a href="job-hawkeye.html">Hawkeye</a></li></ul></details></li><li><details><summary>Spell User<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-warlock.html">Warlock</a></li><li><a href="job-cabalist.html">Cabalist</a></li><li><a href="job-necromancer.html">Necromancer</a></li><li><a href="job-soultaker.html">Soul Taker</a></li><li><a href="job-vates.html">Vates</a></li><li><a href="job-druid.html">Druid</a></li><li><a href="job-bard.html">Bard</a></li><li><a href="job-cardinal.html">Cardinal</a></li><li><a href="job-shaman.html">Shaman</a></li><li><a href="job-elementalist.html">Elementalist</a></li><li><a href="job-enchanter.html">Enchanter</a></li><li><a href="job-astralist.html">Astralist</a></li><li><a href="job-wizard.html">Wizard</a></li><li><a href="job-sorcerer.html">Sorcerer</a></li><li><a href="job-sage.html">Sage</a></li><li><a href="job-force-master.html">Force Master</a></li></ul></details></li><li><details><summary>Backpacker<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-farmer.html">Farmer</a></li><li><a href="job-alchemist.html">Alchemist</a></li><li><a href="job-marionettist.html">Marionettist</a></li><li><a href="job-harvester.html">Harvester</a></li><li><a href="job-miner.html">Miner (Tatarabe)</a></li><li><a href="job-blacksmith.html">Blacksmith</a></li><li><a href="job-engineer.html">Engineer (Machinery)</a></li><li><a href="job-maestro.html">Maestro</a></li><li><a href="job-ranger.html">Ranger</a></li><li><a href="job-explorer.html">Explorer</a></li><li><a href="job-treasure-hunter.html">Treasure Hunter</a></li><li><a href="job-strider.html">Strider</a></li><li><a href="job-merchant.html">Merchant</a></li><li><a href="job-trader.html">Trader</a></li><li><a href="job-gambler.html">Gambler</a></li><li><a href="job-royal-dealer.html">Royal Dealer</a></li></ul></details></li><li><details><summary>Other jobs<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="job-breeder.html">Breeder</a></li><li><a href="job-gardener.html">Gardener</a></li><li><a href="job-joker.html">Joker</a></li><li><a href="job-novice.html">Novice</a></li></ul></details></li></ul></details></li><li><details><summary>Quests<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="quest-catty-ai.html">Catty (Ai) Quest</a></li><li><a href="quest-catty-akane.html">Catty (Akane) Quest</a></li><li><a href="quest-catty-anzu.html">Catty (Anzu) Quest</a></li><li><a href="quest-catty-kurumi.html">Catty (Kurumi Wakana) Quest</a></li><li><a href="quest-catty-momo.html">Catty (Momo) Quest</a></li><li><a href="quest-catty-sora.html">Catty (Sora) Quest</a></li><li><a href="quest-catty-sumire.html">Catty (Sumire) Quest</a></li><li><a href="quest-catty-yamabuki.html">Catty (Yamabuki) Quest</a></li><li><a href="quest-cleaning.html">Cleaning Quests</a></li><li><a href="quest-endless-corridor.html">Endless Corridor Quests</a></li><li><a href="free-skill-points.html">Free Skill Points</a></li><li><a href="quest-heart-of-the-machine.html">Heart of the Machine</a></li><li><a href="quest-lv35-armor.html">Lv 35 Armor Quest</a></li><li><a href="quest-lv45-armor.html">Lv 45 Armor Quest</a></li><li><a href="quest-lv55-armor.html">Lv 55 Armor Quest</a></li><li><a href="quest-lv55-hat-shoes.html">Lv 55 Backpacker Hat &amp; Shoes Quest</a></li><li><a href="quest-lv60-weapon.html">Lv 60 Weapon Quest</a></li><li><a href="quest-lv65-armor.html">Lv 65 Armor Quest</a></li><li><a href="quest-lv75-armor.html">Lv 75 Armor Quest</a></li><li><a href="quest-lv85-armor.html">Lv 85 Armor Quest</a></li><li><a href="quest-lv90-weapon.html">Lv 90 Weapon Quest</a></li><li><a href="quest-lv99-armor.html">Lv 99 Armor Quest</a></li><li><a href="quest-lv99-weapon.html">Lv 99 Weapon Quest</a></li><li><a href="quest-counter.html">Quest Counter</a></li><li><a href="quest-reincarnation.html">Reincarnation Quest</a></li><li><a href="quest-ride-crawler.html">Ride Crawler Quest</a></li><li><a href="quest-tutorial.html">Tutorial Quests</a></li></ul></details></li><li><details><summary>Items<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="boxes.html">Boxes</a></li><li><a href="petals.html">Flower Petals</a></li><li><a href="food-items.html">Food and Healing Items</a></li><li><a href="upgrade-crystals.html">Upgrade Crystals</a></li><li><a href="equipment.html">Weapons &amp; Armor</a></li></ul></details></li><li><details><summary>Crafting<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="accessory-crafting.html">Accessory Crafting</a></li><li><a href="armor-crafting.html">Armor Crafting</a></li><li><a href="chemical-preparation.html">Chemical Preparation</a></li><li><a href="cooking.html">Cooking</a></li><li><details><summary>Recipes &amp; Materials<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="crafting.html">Craftable Items</a></li><li><a href="materials.html">Crafting Materials</a></li></ul></details></li><li><a href="fairy-scrolls.html">Fairy Scrolls</a></li><li><a href="machinery-crafting.html">Machinery Crafting</a></li><li><a href="metal-refining.html">Metal Refining</a></li><li><a href="refining.html">Refining</a></li><li><a href="tailoring.html">Tailoring</a></li><li><a href="weapon-crafting.html">Weapon Crafting</a></li><li><a href="woodcraft.html">Woodcraft</a></li></ul></details></li><li><a href="monsters.html">Monsters</a></li><li><details><summary>Maps<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="maps.html">All Maps</a></li><li><details><summary>Travel<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="airships-and-rides.html">Airships &amp; Rides</a></li><li><a href="between-the-worlds.html">Between the Worlds</a></li><li><a href="city-passes.html">City Passes</a></li><li><a href="dominion-world.html">Dominion World</a></li><li><a href="emil-world-cities.html">Emil World Cities</a></li><li><a href="enigma-group-fortress.html">Enigma Group Fortress</a></li><li><a href="sky-tower-pass.html">Sky Tower Pass</a></li><li><a href="titania-world.html">Titania World</a></li><li><a href="tonka-pass.html">Tonka Pass</a></li></ul></details></li><li><details><summary>Dungeons<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="ancient-ruins.html">Ancient Ruins</a></li><li><a href="carmine-brick-ruins.html">Carmine Brick Ruins</a></li><li><a href="dimension-dungeons.html">Dimension Dungeons</a></li><li><a href="eastern-dungeon.html">Eastern Dungeon</a></li><li><a href="endless-corridor.html">Endless Corridor</a></li><li><a href="light-tower.html">Light Tower</a></li><li><a href="mai-mai-ruins.html">Mai Mai Ruins</a></li><li><a href="northern-underground.html">Northern Underground</a></li><li><a href="old-acropolis.html">Old Acropolis</a></li><li><a href="oracle-wind-cave.html">Oracle Wind Cave</a></li><li><a href="sky-tower.html">Sky Tower</a></li><li><a href="submarine-cave.html">Submarine Cave</a></li><li><a href="undead-castle.html">Undead Castle</a></li><li><a href="underground-water-facility.html">Underground Water Facility</a></li></ul></details></li></ul></details></li><li><details><summary>Miscellaneous<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="misc-logo.html">Logo</a></li><li><a href="misc-videos.html">Trailer</a></li><li><details><summary>Artwork<svg class="i"><use href="#i-down"/></svg></summary><ul><li><a href="misc-catty-art.html">Catty &amp; Pet Art</a></li><li><a href="art-partners.html">Partner Art</a></li><li><a href="art-races.html">Character Art</a></li><li><a href="art-jobs.html">Job Art</a></li><li><a href="misc-monster-artwork.html">Marionette &amp; Monster Artwork</a></li><li><a href="art-seasonal.html">Seasonal Art</a></li><li><a href="art-sketches.html">Concept Sketches</a></li></ul></details></li><li><a href="misc-servers.html">Official Servers</a></li></ul></details></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="references.html">Sources &amp; Credits</a></li></ul>
+  </nav>
+  <main class="content" id="main" tabindex="-1">
+<nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li>Game systems</li></ol></nav><header class="hero plain"><div><h1>Champion Battle</h1><p class="lead">Player-versus-player fighting on some Dominion World maps.</p></div></header><details class="toc-inline"><summary>On this page</summary><ul><li><a href="#how-to-join">How to join</a></li><li><a href="#battle-maps">Battle maps</a></li><li><a href="#rules">Rules</a></li><li><a href="#wrp">WRP</a></li><li><a href="#field-champions">Field Champions</a></li><li><a href="#field-champion-shops">Field Champion shops</a></li><li><a href="#related">Related</a></li></ul></details>
+
+
+
+<h2 id="how-to-join">How to join</h2>
+<ol>
+<li>
+<p>Talk to a <a class="ent" href="maps.html#map:12021000">Battle Tuner</a> and choose to <strong>join the Champion Battle</strong>. One stands in each of these places:</p>
+<ul>
+<li>
+<p><a class="ent" data-pic="assets/npc_img/11001727.png" href="maps.html#map:12021000">Battle Tuner</a> in <a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a></p>
+<div class="npc" role="group" aria-label="Battle Tuner"><div class="who"><img src="assets/npc_thumb/11001727.png" alt="" loading="lazy"><b>Battle Tuner</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m021.png" alt="Map of West Fort City" loading="lazy" decoding="async"><span class="pin hl edge-l" data-name="West Fort City" style="left:24.0%;top:46.3%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11001727.webp" alt="Battle Tuner in the game" loading="lazy" decoding="async"></figure></div>
+</li>
+<li>
+<p><a class="ent" data-pic="assets/npc_img/11001728.png" href="maps.html#map:12058000">Battle Tuner</a> in <a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="3.08,53.85" href="maps.html#map:12058000">Sky Tower Island</a></p>
+<div class="npc" role="group" aria-label="Battle Tuner"><div class="who"><img src="assets/npc_thumb/11001728.png" alt="" loading="lazy" decoding="async"><b>Battle Tuner</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m058_02.png" alt="Map of Sky Tower Island" loading="lazy" decoding="async"><span class="pin hl" data-name="Sky Tower Island" style="left:53.3%;top:67.8%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="3.08,53.85" href="maps.html#map:12058000">Sky Tower Island</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_11001728.webp" alt="Battle Tuner in the game" loading="lazy" decoding="async"></figure></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Go to one of the <a href="#battle-maps">battle maps</a> and fight other participants.</p>
+</li>
+</ol>
+<h2 id="battle-maps">Battle maps</h2>
+<p>These maps are PvP fields:</p>
+<div class="mapfigs bmaps"><div class="bmap"><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m019_02.png" alt="Map of Golden Bridge" loading="lazy" decoding="async"></div></figure><p><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="20.00,45.38" href="maps.html#map:12019000">Golden Bridge</a><br><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="20.00,45.38" href="maps.html#map:12019001">Golden Bridge (Night)</a></p></div><div class="bmap"><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m020_02.png" alt="Map of Hell Desert" loading="lazy" decoding="async"></div></figure><p><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="28.46,45.38" href="maps.html#map:12020000">Hell Desert</a><br><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="28.46,45.38" href="maps.html#map:12020001">Hell Desert (Night)</a></p></div><div class="bmap"><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m022_02.png" alt="Map of Acronia Western Plains" loading="lazy" decoding="async"></div></figure><p><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="36.92,45.38" href="maps.html#map:12022000">Acronia Western Plains</a></p></div><div class="bmap"><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m028_02.png" alt="Map of Step Canyon" loading="lazy" decoding="async"></div></figure><p><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="28.46,53.85" href="maps.html#map:12028000">Step Canyon</a><br><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="28.46,53.85" href="maps.html#map:12028001">Step Canyon (Night)</a></p></div><div class="bmap"><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m035_02.png" alt="Map of Battleship Island" loading="lazy" decoding="async"></div></figure><p><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="20.00,62.31" href="maps.html#map:12035000">Battleship Island</a><br><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="20.00,62.31" href="maps.html#map:12035001">Battleship Island (Night)</a></p></div><div class="bmap"><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/d198_02.png" alt="Map of Underground Water Facility" loading="lazy" decoding="async"></div></figure><p><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="20.00,62.31" href="maps.html#map:22198000">Underground Water Facility</a></p></div><div class="bmap"><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/d200_02.png" alt="Map of Old Acropolis B1F" loading="lazy" decoding="async"></div></figure><p><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:22200000">Old Acropolis B1F</a></p></div><div class="bmap"><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/d201_02.png" alt="Map of Old Acropolis B2F" loading="lazy" decoding="async"></div></figure><p><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="45.38,45.38" href="maps.html#map:22201000">Old Acropolis B2F</a></p></div></div>
+
+<ul>
+<li>No minimap:<ul>
+<li><strong>Underground Waterway</strong></li>
+<li><strong>Old Acropolis Command Room</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="rules">Rules</h2>
+<ul>
+<li>You can possess only other participants. Only participants can pick up a possession item.</li>
+<li>Dying in the battle costs EXP as usual.</li>
+<li>Some skills work differently against players: see <a href="pvp-skill-changes.html">PvP Skill Changes</a>.</li>
+</ul>
+<h2 id="wrp">WRP</h2>
+<p>WRP (War Record Point) is your Champion Battle score, shown in the status window. You earn it by defeating:</p>
+<ul>
+<li>Monsters in the Dominion World</li>
+<li>Other participants:<ul>
+<li>A higher-level player: the level difference + 10 WRP</li>
+<li>A player of the same or a lower level: 5 WRP</li>
+</ul>
+</li>
+</ul>
+<p>In a party, the WRP is split between the members on the same map near the fight, at least 1 each. The defeated player loses half the amount.</p>
+<p>Check your rank on a <b class="enttip" tabindex="0" data-pic="assets/npc_img/12001169.png">WRP Ranking</b> board. One stands next to each <a class="ent" data-pic="assets/npc_img/11001727.png" href="maps.html#map:12021000">Battle Tuner</a>:</p>
+<ul>
+<li>
+<p><b>WRP Ranking</b> in <a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a></p>
+<div class="npc" role="group" aria-label="WRP Ranking"><div class="who"><img src="assets/npc_thumb/12001171.png" alt="" loading="lazy" decoding="async"><b>WRP Ranking</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m021.png" alt="Map of West Fort City" loading="lazy" decoding="async"><span class="pin hl edge-l" data-name="West Fort City" style="left:24.0%;top:47.1%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_12001171.webp" alt="WRP Ranking in the game" loading="lazy" decoding="async"></figure></div>
+</li>
+<li>
+<p><b>WRP Ranking</b> in <a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="3.08,53.85" href="maps.html#map:12058000">Sky Tower Island</a></p>
+<div class="npc" role="group" aria-label="WRP Ranking"><div class="who"><img src="assets/npc_thumb/12001170.png" alt="" loading="lazy" decoding="async"><b>WRP Ranking</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m058_02.png" alt="Map of Sky Tower Island" loading="lazy" decoding="async"><span class="pin hl" data-name="Sky Tower Island" style="left:52.5%;top:67.8%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="3.08,53.85" href="maps.html#map:12058000">Sky Tower Island</a></figcaption></figure><figure class="scene"><img src="assets/scene_img/npc_12001170.webp" alt="WRP Ranking in the game" loading="lazy" decoding="async"></figure></div>
+</li>
+</ul>
+<h2 id="field-champions">Field Champions</h2>
+<ul>
+<li>The top 10 of the WRP ranking are <strong>Field Champions</strong>.</li>
+<li>A Field Champion gets a <img class="inicon" src="assets/item_icon/50106100.png" alt="" loading="lazy" decoding="async"><b>Champion Mark</b> from either <a class="ent" data-pic="assets/npc_img/11001727.png" href="maps.html#map:12021000">Battle Tuner</a>. If you lose it, talk to a <a class="ent" data-pic="assets/npc_img/11001727.png" href="maps.html#map:12021000">Battle Tuner</a> again.</li>
+<li>Wear the <img class="inicon" src="assets/item_icon/50106100.png" alt="" loading="lazy" decoding="async"><b>Champion Mark</b> to use its champion skill. It gives every player around you <strong>Champion Monster Killer</strong> for 3 minutes: full damage against Champ DEM.</li>
+<li>In the <a href="city-defense-battle.html">City Defense Battle</a>, Field Champions earn 1.5 × the CP.</li>
+</ul>
+<h2 id="field-champion-shops">Field Champion shops</h2>
+<p>These shops in <a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a> sell extra items to Field Champions. Choose the shopping option for ranking holders.</p>
+<h3 id="junk-shop">Junk Shop</h3>
+<p>Talk to the <a class="ent" data-pic="assets/npc_img/11001581.png" href="maps.html#map:12021000">Junk Shop</a> in <a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a>.</p>
+<div class="npc" role="group" aria-label="Junk Shop"><div class="who"><img src="assets/npc_thumb/11001581.png" alt="" loading="lazy" decoding="async"><b>Junk Shop</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m021.png" alt="Map of West Fort City" loading="lazy" decoding="async"><span class="pin hl" data-name="West Fort City" style="left:32.2%;top:67.0%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a></figcaption></figure>
+<figure class="scene"><img src="assets/scene_img/npc_11001581.webp" alt="Junk Shop in the game" loading="lazy" decoding="async"></figure></div>
+
+<div class="tablewrap medium"><table class="medium">
+<thead>
+<tr>
+<th>Item</th>
+<th class="num">Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="materials.html#item:10019706"><img class="inicon" src="assets/item_icon/10019700.png" alt="" loading="lazy" decoding="async">Gold Needle</a></td>
+<td class="num">8,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10031552"><img class="inicon" src="assets/item_icon/10031500.png" alt="" loading="lazy" decoding="async">Gold Scissors</a></td>
+<td class="num">8,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10023852"><img class="inicon" src="assets/item_icon/10023800.png" alt="" loading="lazy" decoding="async">Golden Hammer</a></td>
+<td class="num">8,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10047951"><img class="inicon" src="assets/item_icon/10047900.png" alt="" loading="lazy" decoding="async">Gold Scalper</a></td>
+<td class="num">8,300 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10023652"><img class="inicon" src="assets/item_icon/10023600.png" alt="" loading="lazy" decoding="async">Gold Screwdriver</a></td>
+<td class="num">10,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10023752"><img class="inicon" src="assets/item_icon/10023700.png" alt="" loading="lazy" decoding="async">Gold Pliers</a></td>
+<td class="num">30,000 G</td>
+</tr>
+</tbody>
+</table></div>
+
+<h3 id="weapon-shop">Weapon Shop</h3>
+<p>Talk to the <a class="ent" data-pic="assets/npc_img/11001582.png" href="maps.html#map:12021000">Weapon Shop</a> in <a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a>.</p>
+<div class="npc" role="group" aria-label="Weapon Shop"><div class="who"><img src="assets/npc_thumb/11001582.png" alt="" loading="lazy" decoding="async"><b>Weapon Shop</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m021.png" alt="Map of West Fort City" loading="lazy" decoding="async"><span class="pin hl" data-name="West Fort City" style="left:32.2%;top:63.9%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a></figcaption></figure>
+<figure class="scene"><img src="assets/scene_img/npc_11001582.webp" alt="Weapon Shop in the game" loading="lazy" decoding="async"></figure></div>
+
+<div class="tablewrap medium"><table class="medium">
+<thead>
+<tr>
+<th>Item</th>
+<th class="num">Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="equipment.html#item:60010600"><img class="inicon" src="assets/item_icon/60010600.png" alt="" loading="lazy" decoding="async">Broad Sword</a></td>
+<td class="num">10,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60070300"><img class="inicon" src="assets/item_icon/60070300.png" alt="" loading="lazy" decoding="async">Noble Rod</a></td>
+<td class="num">18,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60040400"><img class="inicon" src="assets/item_icon/60040400.png" alt="" loading="lazy" decoding="async">Spring Cooler</a></td>
+<td class="num">23,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60022200"><img class="inicon" src="assets/item_icon/60022200.png" alt="" loading="lazy" decoding="async">Armor Piercer</a></td>
+<td class="num">24,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60092000"><img class="inicon" src="assets/item_icon/60092000.png" alt="" loading="lazy" decoding="async">Firelock</a></td>
+<td class="num">29,800 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60090300"><img class="inicon" src="assets/item_icon/60090300.png" alt="" loading="lazy" decoding="async">Composite Bow</a></td>
+<td class="num">35,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60050600"><img class="inicon" src="assets/item_icon/60050600.png" alt="" loading="lazy" decoding="async">Long Axe</a></td>
+<td class="num">35,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60021900"><img class="inicon" src="assets/item_icon/60021900.png" alt="" loading="lazy" decoding="async">Combat Knife</a></td>
+<td class="num">38,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60010900"><img class="inicon" src="assets/item_icon/60010900.png" alt="" loading="lazy" decoding="async">Mail Breaker</a></td>
+<td class="num">40,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60050400"><img class="inicon" src="assets/item_icon/60050400.png" alt="" loading="lazy" decoding="async">Ornate Axe</a></td>
+<td class="num">48,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60091151"><img class="inicon" src="assets/item_icon/60091151.png" alt="" loading="lazy" decoding="async">Dual Pistol</a></td>
+<td class="num">58,000 G</td>
+</tr>
+</tbody>
+</table></div>
+
+<h3 id="tailor">Tailor</h3>
+<p>Talk to the <a class="ent" data-pic="assets/npc_img/11001583.png" href="maps.html#map:12021000">Tailor</a> in <a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a>.</p>
+<div class="npc" role="group" aria-label="Tailor"><div class="who"><img src="assets/npc_thumb/11001583.png" alt="" loading="lazy" decoding="async"><b>Tailor</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m021.png" alt="Map of West Fort City" loading="lazy" decoding="async"><span class="pin hl" data-name="West Fort City" style="left:32.2%;top:60.7%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a></figcaption></figure>
+<figure class="scene"><img src="assets/scene_img/npc_11001583.webp" alt="Tailor in the game" loading="lazy" decoding="async"></figure></div>
+
+<div class="tablewrap medium"><table class="medium">
+<thead>
+<tr>
+<th>Item</th>
+<th class="num">Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="equipment.html#item:50031500"><img class="inicon" src="assets/item_icon/50031500.png" alt="" loading="lazy" decoding="async">Leather Headband</a></td>
+<td class="num">1,500 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50010252"><img class="inicon" src="assets/item_icon/50010252.png" alt="" loading="lazy" decoding="async">Checker Pants</a></td>
+<td class="num">6,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50010452"><img class="inicon" src="assets/item_icon/50010452.png" alt="" loading="lazy" decoding="async">Military Pants</a></td>
+<td class="num">6,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60112000"><img class="inicon" src="assets/item_icon/60112000.png" alt="" loading="lazy" decoding="async">Sector Mail</a></td>
+<td class="num">6,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60112100"><img class="inicon" src="assets/item_icon/60112100.png" alt="" loading="lazy" decoding="async">Centurion Armor</a></td>
+<td class="num">6,500 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50001452"><img class="inicon" src="assets/item_icon/50001452.png" alt="" loading="lazy" decoding="async">Natural Top(F)</a></td>
+<td class="num">7,700 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50022151"><img class="inicon" src="assets/item_icon/50022100.png" alt="" loading="lazy" decoding="async">Metallic Plate Helm</a></td>
+<td class="num">11,200 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50010951"><img class="inicon" src="assets/item_icon/50010900.png" alt="" loading="lazy" decoding="async">Nailed Plate Boots</a></td>
+<td class="num">18,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50023100"><img class="inicon" src="assets/item_icon/50023100.png" alt="" loading="lazy" decoding="async">Tiny Hat</a></td>
+<td class="num">18,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60000400"><img class="inicon" src="assets/item_icon/60000400.png" alt="" loading="lazy" decoding="async">Navy Blue Plate Armor</a></td>
+<td class="num">33,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60031152"><img class="inicon" src="assets/item_icon/60031152.png" alt="" loading="lazy" decoding="async">Magic Sword Stopper</a></td>
+<td class="num">35,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:60031151"><img class="inicon" src="assets/item_icon/60031151.png" alt="" loading="lazy" decoding="async">Steel Sword Stopper</a></td>
+<td class="num">35,000 G</td>
+</tr>
+</tbody>
+</table></div>
+
+<h3 id="merchant-bags-and-pendants">Merchant (bags and pendants)</h3>
+<p>Talk to the <a class="ent" data-pic="assets/npc_img/11001584.png" href="maps.html#map:12021000">Merchant</a> in <a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a>. For Field Champions, his storage costs 100 G instead of 500 G.</p>
+<div class="npc" role="group" aria-label="Merchant"><div class="who"><img src="assets/npc_thumb/11001584.png" alt="" loading="lazy" decoding="async"><b>Merchant</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m021.png" alt="Map of West Fort City" loading="lazy" decoding="async"><span class="pin hl below" data-name="West Fort City" style="left:32.2%;top:38.9%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a></figcaption></figure>
+<figure class="scene"><img src="assets/scene_img/npc_11001584.webp" alt="Merchant in the game" loading="lazy" decoding="async"></figure></div>
+
+<div class="tablewrap medium"><table class="medium">
+<thead>
+<tr>
+<th>Item</th>
+<th class="num">Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="equipment.html#item:50070400"><img class="inicon" src="assets/item_icon/50070300.png" alt="" loading="lazy" decoding="async">Belt Quiver</a></td>
+<td class="num">3,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50070300"><img class="inicon" src="assets/item_icon/50070300.png" alt="" loading="lazy" decoding="async">Quiver</a></td>
+<td class="num">3,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50071500"><img class="inicon" src="assets/item_icon/50070800.png" alt="" loading="lazy" decoding="async">Left-Hand Small Size Travel Bag</a></td>
+<td class="num">6,800 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50070800"><img class="inicon" src="assets/item_icon/50070800.png" alt="" loading="lazy" decoding="async">Small Size Travel Bag</a></td>
+<td class="num">6,800 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50050400"><img class="inicon" src="assets/item_icon/50050400.png" alt="" loading="lazy" decoding="async">Amethyst Pendant</a></td>
+<td class="num">7,500 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50071954"><img class="inicon" src="assets/item_icon/50071954.png" alt="" loading="lazy" decoding="async">Black Hipsack</a></td>
+<td class="num">8,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50050100"><img class="inicon" src="assets/item_icon/50050100.png" alt="" loading="lazy" decoding="async">Blue Gemstone Pendant</a></td>
+<td class="num">8,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50071955"><img class="inicon" src="assets/item_icon/50071954.png" alt="" loading="lazy" decoding="async">Blue Hipsack</a></td>
+<td class="num">8,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50070900"><img class="inicon" src="assets/item_icon/50070900.png" alt="" loading="lazy" decoding="async">Big Size Travel Bag</a></td>
+<td class="num">8,900 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:50070100"><img class="inicon" src="assets/item_icon/50070100.png" alt="" loading="lazy" decoding="async">Knapsack</a></td>
+<td class="num">11,000 G</td>
+</tr>
+</tbody>
+</table></div>
+
+<h3 id="merchant-ammunition-and-potions">Merchant (ammunition and potions)</h3>
+<p>Talk to the <a class="ent" data-pic="assets/npc_img/11001599.png" href="maps.html#map:12021000">Merchant</a> in <a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a>. For Field Champions, his storage costs 100 G instead of 500 G.</p>
+<div class="npc" role="group" aria-label="Merchant"><div class="who"><img src="assets/npc_thumb/11001599.png" alt="" loading="lazy" decoding="async"><b>Merchant</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m021.png" alt="Map of West Fort City" loading="lazy" decoding="async"><span class="pin hl" data-name="West Fort City" style="left:60.7%;top:57.6%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a></figcaption></figure>
+<figure class="scene"><img src="assets/scene_img/npc_11001599.webp" alt="Merchant in the game" loading="lazy" decoding="async"></figure></div>
+
+<div class="tablewrap medium"><table class="medium">
+<thead>
+<tr>
+<th>Item</th>
+<th class="num">Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="materials.html#item:10026401"><img class="inicon" src="assets/item_icon/10047000.png" alt="" loading="lazy" decoding="async">Self-Made Arrow</a></td>
+<td class="num">3 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10026402"><img class="inicon" src="assets/item_icon/10047000.png" alt="" loading="lazy" decoding="async">Self-Made Arrow+1</a></td>
+<td class="num">3 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="crafting.html#recipe:663"><img class="inicon" src="assets/item_icon/10026200.png" alt="" loading="lazy" decoding="async">Magnum Bullet</a></td>
+<td class="num">5 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="equipment.html#item:61010000"><img class="inicon" src="assets/item_icon/61010000.png" alt="" loading="lazy" decoding="async">Throwing Dagger</a></td>
+<td class="num">10 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10026493"><img class="inicon" src="assets/item_icon/10047003.png" alt="" loading="lazy" decoding="async">Recovery Arrow</a></td>
+<td class="num">20 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10000103"><img class="inicon" src="assets/item_icon/10000103.png" alt="" loading="lazy" decoding="async">Heal Potion</a></td>
+<td class="num">300 G</td>
+</tr>
+</tbody>
+</table></div>
+
+<h3 id="fortune-teller">Fortune Teller</h3>
+<p>Talk to the <a class="ent" data-pic="assets/npc_img/11001586.png" href="maps.html#map:12021000">Fortune Teller</a> in <a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a>. For Field Champions, her storage costs 100 G instead of 500 G.</p>
+<div class="npc" role="group" aria-label="Fortune Teller"><div class="who"><img src="assets/npc_thumb/11001586.png" alt="" loading="lazy" decoding="async"><b>Fortune Teller</b></div><figure class="mm"><div class="mmbox" style="width:260px;height:260px;--ar:1.0000"><img src="assets/minimap/m021.png" alt="Map of West Fort City" loading="lazy" decoding="async"><span class="pin hl below" data-name="West Fort City" style="left:32.2%;top:32.6%"></span></div><figcaption><a class="ent" data-pic="assets/minimap/world_2.png" data-tip="map" data-cell="11.54,45.38" href="maps.html#map:12021000">West Fort City</a></figcaption></figure>
+<figure class="scene"><img src="assets/scene_img/npc_11001586.webp" alt="Fortune Teller in the game" loading="lazy" decoding="async"></figure></div>
+
+<div class="tablewrap medium"><table class="medium">
+<thead>
+<tr>
+<th>Item</th>
+<th class="num">Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="ent" href="materials.html#item:10000503"><img class="inicon" src="assets/item_icon/10000503.png" alt="" loading="lazy" decoding="async">High Heal Potion</a></td>
+<td class="num">980 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="crafting.html#recipe:570"><img class="inicon" src="assets/item_icon/10000501.png" alt="" loading="lazy" decoding="async">High Magic Potion</a></td>
+<td class="num">980 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="crafting.html#recipe:571"><img class="inicon" src="assets/item_icon/10000508.png" alt="" loading="lazy" decoding="async">High Stamina Potion</a></td>
+<td class="num">980 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="crafting.html#recipe:572"><img class="inicon" src="assets/item_icon/10000603.png" alt="" loading="lazy" decoding="async">Highest Heal Potion</a></td>
+<td class="num">2,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="crafting.html#recipe:510"><img class="inicon" src="assets/item_icon/10000405.png" alt="" loading="lazy" decoding="async">Earth Perfume</a></td>
+<td class="num">3,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="crafting.html#recipe:508"><img class="inicon" src="assets/item_icon/10000401.png" alt="" loading="lazy" decoding="async">Flame Perfume</a></td>
+<td class="num">3,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="crafting.html#recipe:512"><img class="inicon" src="assets/item_icon/10000404.png" alt="" loading="lazy" decoding="async">Light Perfume</a></td>
+<td class="num">3,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="crafting.html#recipe:509"><img class="inicon" src="assets/item_icon/10000403.png" alt="" loading="lazy" decoding="async">Water Perfume</a></td>
+<td class="num">3,000 G</td>
+</tr>
+<tr>
+<td><a class="ent" href="materials.html#item:10000407"><img class="inicon" src="assets/item_icon/10000407.png" alt="" loading="lazy" decoding="async">Wind Perfume</a></td>
+<td class="num">3,000 G</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="arena-pvp.html">Arena PvP</a></li>
+<li><a href="city-defense-battle.html">City Defense Battle</a></li>
+<li><a href="knight-training.html">Knight Training</a></li>
+<li><a href="possession.html">Possession</a></li>
+<li><a href="pvp-skill-changes.html">PvP Skill Changes</a></li>
+<li><a href="shops.html">Shops &amp; Merchants</a></li>
+</ul>
+
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">On this page</h2><ul><li><a href="#how-to-join">How to join</a></li><li><a href="#battle-maps">Battle maps</a></li><li><a href="#rules">Rules</a></li><li><a href="#wrp">WRP</a></li><li><a href="#field-champions">Field Champions</a></li><li><a href="#field-champion-shops">Field Champion shops</a></li><li><a href="#related">Related</a></li></ul></aside>
+</div>
+<script src="ga-config.js"></script>
+<script src="search-index.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
