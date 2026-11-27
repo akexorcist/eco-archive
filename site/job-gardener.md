@@ -18,7 +18,6 @@ A Joint Job that grows plants in pots, builds decorations and changes the weathe
 4. Leave the cafe and talk to the [Commoner](maps.html#map:10057000) in front of it. He saw the Flying Garden fly toward [Mai Mai Island](maps.html#map:10059000).
    **Commoner**
 5. Travel to [Mai Mai Island](maps.html#map:10059000). Climb the [Airship Rope](maps.html#map:10059000) on the beach to board the [Gardener Guild's Garden](maps.html#map:10059000).
-   No picture **Airship Rope**
    - If the rope isn't there, you still have the Breeder Dark Dragon quest open. Finish it first.
 6. Talk to the **Gardener Master** next to the fountain behind the [Gardener Guild](maps.html#map:10059000). Answer the master's questions.
    **Gardener Master**
